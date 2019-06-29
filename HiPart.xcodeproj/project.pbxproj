@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1532BEB796BF96EC4694C777 /* Pods_HiPart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456534407704897DD70736D /* Pods_HiPart.framework */; };
 		6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014C98322C782C300ACB80E /* AppDelegate.swift */; };
 		6014C98622C782C300ACB80E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014C98522C782C300ACB80E /* ViewController.swift */; };
 		6014C98922C782C300ACB80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6014C98722C782C300ACB80E /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		6014C98A22C782C400ACB80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6014C98D22C782C400ACB80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6014C98F22C782C400ACB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8456534407704897DD70736D /* Pods_HiPart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiPart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7D5F761D12D65D8A6ABA039 /* Pods-HiPart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPart.debug.xcconfig"; path = "Target Support Files/Pods-HiPart/Pods-HiPart.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1799A0901C119E4607245D /* Pods-HiPart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPart.release.xcconfig"; path = "Target Support Files/Pods-HiPart/Pods-HiPart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1532BEB796BF96EC4694C777 /* Pods_HiPart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +43,11 @@
 		6014C97722C782C300ACB80E = {
 			isa = PBXGroup;
 			children = (
-				6014C98222C782C300ACB80E /* HiPart */,
+				60B2EED122C78468000724B6 /* Resources */,
+				6014C98222C782C300ACB80E /* Sources */,
 				6014C98122C782C300ACB80E /* Products */,
+				9527C0B00ACDF349E65578A5 /* Pods */,
+				D9E5528D4DD17A4177E97DF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,17 +59,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6014C98222C782C300ACB80E /* HiPart */ = {
+		6014C98222C782C300ACB80E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				6014C98322C782C300ACB80E /* AppDelegate.swift */,
 				6014C98522C782C300ACB80E /* ViewController.swift */,
 				6014C98722C782C300ACB80E /* Main.storyboard */,
-				6014C98A22C782C400ACB80E /* Assets.xcassets */,
 				6014C98C22C782C400ACB80E /* LaunchScreen.storyboard */,
 				6014C98F22C782C400ACB80E /* Info.plist */,
 			);
-			path = HiPart;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		60B2EED122C78468000724B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6014C98A22C782C400ACB80E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9527C0B00ACDF349E65578A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7D5F761D12D65D8A6ABA039 /* Pods-HiPart.debug.xcconfig */,
+				ED1799A0901C119E4607245D /* Pods-HiPart.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D9E5528D4DD17A4177E97DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8456534407704897DD70736D /* Pods_HiPart.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6014C99222C782C400ACB80E /* Build configuration list for PBXNativeTarget "HiPart" */;
 			buildPhases = (
+				42E47170DF843B27B4766658 /* [CP] Check Pods Manifest.lock */,
 				6014C97C22C782C300ACB80E /* Sources */,
 				6014C97D22C782C300ACB80E /* Frameworks */,
 				6014C97E22C782C300ACB80E /* Resources */,
@@ -129,6 +162,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42E47170DF843B27B4766658 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiPart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6014C97C22C782C300ACB80E /* Sources */ = {
@@ -280,10 +338,12 @@
 		};
 		6014C99322C782C400ACB80E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D5F761D12D65D8A6ABA039 /* Pods-HiPart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HiPart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,16 +351,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sopt.HiPart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6014C99422C782C400ACB80E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1799A0901C119E4607245D /* Pods-HiPart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HiPart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sopt.HiPart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
