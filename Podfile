@@ -6,5 +6,5 @@ target 'HiPart' do
   use_frameworks!
 
   # Pods for HiPart
-
+  pod "ESTabBarController-swift"
 end
