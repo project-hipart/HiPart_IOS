@@ -3,72 +3,99 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C6AE55E64AD971BEAF62807357EBF6A /* ESTabBarController-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 219CE3F7090C51A2C25586D528937941 /* ESTabBarController-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58BC030D8A0DBD21A5592C4167C5F868 /* Pods-HiPart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF72C275ABD15647CCF5D83855E6836 /* Pods-HiPart-dummy.m */; };
-		645E7D1EE74BAC7FA7B33168165596D8 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB50ADAF739DC1BEFEC43823D5514978 /* ESTabBar.swift */; };
-		656A361708D4A6962D49500DB85ED63B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7F374AC8B51E6C4BCA430B1B951D2671 /* Pods-HiPart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAB5D2EA8C3CFCE435221BE0120A8AC /* Pods-HiPart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		803E2222E5401682D12EE2B8B06EF0E2 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EB7CCF8638D20724D0C9F9841F380B /* ESTabBarItemContentView.swift */; };
-		B7CAEBE2F33EC8260D7C26D3BD874860 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 65823724C1F71C76702935C9C2A9D7F5 /* en.lproj */; };
-		B8C7BD36FAE85B9BE6A8E6BE3F2BA11F /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DB922BA3F21C35C2192E4ECA2CA401 /* ESTabBarItemMoreContentView.swift */; };
-		C732C6086DCC3567B47421B1076E6444 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614B4C28F44CE74E557A763059BAB64 /* ESTabBarController.swift */; };
+		1E18CA9A23D0DE878F5B2B84CE93D243 /* Pods-HiPart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAB5D2EA8C3CFCE435221BE0120A8AC /* Pods-HiPart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C63AB0D159A830DBD4F8E61F5CE5DE /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 353F0092D2D10A0172F2051E7811F9B5 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C6AE55E64AD971BEAF62807357EBF6A /* ESTabBarController-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC9D699257EA9F845A012075CC6EBB7 /* ESTabBarController-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		645E7D1EE74BAC7FA7B33168165596D8 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E805E48661E7867365D432C1C7EF4B /* ESTabBar.swift */; };
+		763EA582B030AB9A2FC93F6C1AF1EF19 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC9E798364498CE9FF85B5EA118698 /* SwiftyJSON-dummy.m */; };
+		803E2222E5401682D12EE2B8B06EF0E2 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACCFD505D7D6E146E0D1437532A0BA /* ESTabBarItemContentView.swift */; };
+		AA6397904B5D5288CDACFAA64D300833 /* Pods-HiPart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF72C275ABD15647CCF5D83855E6836 /* Pods-HiPart-dummy.m */; };
+		B7CAEBE2F33EC8260D7C26D3BD874860 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F0E984B27F078F276BB0B66B68EBA628 /* en.lproj */; };
+		B8B9F6DA9BE6BE3679EC77D89E028E73 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E37C991C61CC8C2FD1E1178A3B6AB1 /* SwiftyJSON.swift */; };
+		B8C7BD36FAE85B9BE6A8E6BE3F2BA11F /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03608E37BFC8627AD91837A8518FAB9E /* ESTabBarItemMoreContentView.swift */; };
+		BA6D4D69802EBF7C16A65FAE1F8965C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C732C6086DCC3567B47421B1076E6444 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694FB8D25C35B698AFF7F9EEE39DE14D /* ESTabBarController.swift */; };
 		C96CAF78228E4BEFB77219F2389003D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		CD51F85D8311FDEBDD9C256D8CE95021 /* ESTabBarController-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C7468174C576C00410012C7FD138FA /* ESTabBarController-swift-dummy.m */; };
-		D1713AC33F547F377ADE325610977D77 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1812B3A4A5DD8246395A26F486424E /* ESTabBarItemBadgeView.swift */; };
-		D25D81F848CDEAD4B64BC806E9FB7439 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBE1247503EF87327CB125C913FEAA /* ESTabBarItemContainer.swift */; };
-		DDE169B3292EEFD187FD9736200F6DFF /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEDA43ECBAE2CD52FC2C1FDE47E1AE5 /* ESTabBarItem.swift */; };
+		CD51F85D8311FDEBDD9C256D8CE95021 /* ESTabBarController-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906D518A2B9FC35AA0AA25E96F782B9 /* ESTabBarController-swift-dummy.m */; };
+		CD5B8BA24805BB63A7DAE07CC67E5F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D1713AC33F547F377ADE325610977D77 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025A3F5A74742B831F6723F906185C0 /* ESTabBarItemBadgeView.swift */; };
+		D25D81F848CDEAD4B64BC806E9FB7439 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06DAF7621547B88D728B178D607F175 /* ESTabBarItemContainer.swift */; };
+		DDE169B3292EEFD187FD9736200F6DFF /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5DFD292E8F7091622FFB356C24860 /* ESTabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E037F94045A369FC16612BFB3190990 /* PBXContainerItemProxy */ = {
+		92F210BA5E695B97FE70124E6D728BC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3F83465BA81F6E581B3A431642D2992E;
 			remoteInfo = "ESTabBarController-swift";
 		};
+		BD1738EA01A1BA696683E30012D65A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06EB7CCF8638D20724D0C9F9841F380B /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemContentView.swift; path = Sources/ESTabBarItemContentView.swift; sourceTree = "<group>"; };
-		219CE3F7090C51A2C25586D528937941 /* ESTabBarController-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ESTabBarController-swift-umbrella.h"; sourceTree = "<group>"; };
+		03608E37BFC8627AD91837A8518FAB9E /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemMoreContentView.swift; path = Sources/ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		0CACCFD505D7D6E146E0D1437532A0BA /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemContentView.swift; path = Sources/ESTabBarItemContentView.swift; sourceTree = "<group>"; };
+		2025A3F5A74742B831F6723F906185C0 /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemBadgeView.swift; path = Sources/ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		353F0092D2D10A0172F2051E7811F9B5 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		47DA4E970DEA0FD90D0205986BC107C0 /* Pods-HiPart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HiPart.modulemap"; sourceTree = "<group>"; };
 		4A68CE5E780DA56E437A46560493B451 /* Pods_HiPart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HiPart.framework; path = "Pods-HiPart.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8920FF05E400E4C3550CE8B62AD34 /* Pods-HiPart-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HiPart-frameworks.sh"; sourceTree = "<group>"; };
 		5DAB5D2EA8C3CFCE435221BE0120A8AC /* Pods-HiPart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HiPart-umbrella.h"; sourceTree = "<group>"; };
-		65823724C1F71C76702935C9C2A9D7F5 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/en.lproj; sourceTree = "<group>"; };
-		66C7468174C576C00410012C7FD138FA /* ESTabBarController-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ESTabBarController-swift-dummy.m"; sourceTree = "<group>"; };
-		691315B4A3AC60D0D1E9C5B027070664 /* ESTabBarController-swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ESTabBarController-swift.xcconfig"; sourceTree = "<group>"; };
-		6AFBE1247503EF87327CB125C913FEAA /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemContainer.swift; path = Sources/ESTabBarItemContainer.swift; sourceTree = "<group>"; };
-		7AEDA43ECBAE2CD52FC2C1FDE47E1AE5 /* ESTabBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItem.swift; path = Sources/ESTabBarItem.swift; sourceTree = "<group>"; };
-		9614B4C28F44CE74E557A763059BAB64 /* ESTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarController.swift; path = Sources/ESTabBarController.swift; sourceTree = "<group>"; };
+		60E37C991C61CC8C2FD1E1178A3B6AB1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		694FB8D25C35B698AFF7F9EEE39DE14D /* ESTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarController.swift; path = Sources/ESTabBarController.swift; sourceTree = "<group>"; };
+		7390D36C7376F4C95A9A8D8D5E44D9C7 /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		755004F99FFF63084A28C581D344F55E /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		81E805E48661E7867365D432C1C7EF4B /* ESTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBar.swift; path = Sources/ESTabBar.swift; sourceTree = "<group>"; };
+		9862BEDC1E77776B9D6A74FC5FD89679 /* ESTabBarController-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ESTabBarController-swift-prefix.pch"; sourceTree = "<group>"; };
 		98BD3DDE52D851160F3B9C5434C476B2 /* Pods-HiPart-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HiPart-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9B2AEABBF8AB8ED324B40BA2A88371C4 /* ESTabBarController-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ESTabBarController-swift-prefix.pch"; sourceTree = "<group>"; };
+		9ADC9E798364498CE9FF85B5EA118698 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EF36AD2896199B276A71957F93ED2D1 /* Pods-HiPart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiPart.release.xcconfig"; sourceTree = "<group>"; };
+		A037BC91EB7683D5514ACDC9278AD488 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		A541DE52CCD00DD98CA9755B317CA84E /* Pods-HiPart-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HiPart-acknowledgements.plist"; sourceTree = "<group>"; };
-		AF1812B3A4A5DD8246395A26F486424E /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemBadgeView.swift; path = Sources/ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
+		ACC39CFA491AF7E23973621FD735F585 /* ESTabBarController-swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ESTabBarController-swift.xcconfig"; sourceTree = "<group>"; };
 		B0718BA58EBE7EC7FEB903B66FC15981 /* Pods-HiPart-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HiPart-Info.plist"; sourceTree = "<group>"; };
-		B7BBC6CF6A1AB8A84E0A77D67192C370 /* ESTabBarController-swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ESTabBarController-swift-Info.plist"; sourceTree = "<group>"; };
-		C8FAEB73806904AB41B6C3BCF1F43C46 /* ESTabBarController-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ESTabBarController-swift.modulemap"; sourceTree = "<group>"; };
+		B63D80FFDBABFB75DF45514096A3A372 /* ESTabBarController-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ESTabBarController-swift.modulemap"; sourceTree = "<group>"; };
+		C906D518A2B9FC35AA0AA25E96F782B9 /* ESTabBarController-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ESTabBarController-swift-dummy.m"; sourceTree = "<group>"; };
+		C99AF9B9F16398DA68C9D530E64451AE /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		D06DAF7621547B88D728B178D607F175 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemContainer.swift; path = Sources/ESTabBarItemContainer.swift; sourceTree = "<group>"; };
 		D6839F0A93A32C982CBC921D3ABCD8D3 /* Pods-HiPart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiPart.debug.xcconfig"; sourceTree = "<group>"; };
-		D6DB922BA3F21C35C2192E4ECA2CA401 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItemMoreContentView.swift; path = Sources/ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		DD530D293230666CCBE5FA8CEE904B5F /* ESTabBarController-swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ESTabBarController-swift-Info.plist"; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD5DFD292E8F7091622FFB356C24860 /* ESTabBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBarItem.swift; path = Sources/ESTabBarItem.swift; sourceTree = "<group>"; };
+		EFC9D699257EA9F845A012075CC6EBB7 /* ESTabBarController-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ESTabBarController-swift-umbrella.h"; sourceTree = "<group>"; };
 		EFF72C275ABD15647CCF5D83855E6836 /* Pods-HiPart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HiPart-dummy.m"; sourceTree = "<group>"; };
+		F0E984B27F078F276BB0B66B68EBA628 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/en.lproj; sourceTree = "<group>"; };
 		F6D00CA03F52F8332AAD8FEEC4AFD406 /* ESTabBarController_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ESTabBarController_swift.framework; path = "ESTabBarController-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB50ADAF739DC1BEFEC43823D5514978 /* ESTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESTabBar.swift; path = Sources/ESTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B8E225714195B224B84798E9F36FB48 /* Frameworks */ = {
+		4DBB862484E78E4680F19F3760C2A0C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656A361708D4A6962D49500DB85ED63B /* Foundation.framework in Frameworks */,
+				CD5B8BA24805BB63A7DAE07CC67E5F02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F59F4F98A4C4810A148DF776B9B5BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA6D4D69802EBF7C16A65FAE1F8965C2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA56FD2D6F896239B1986FE99A8FCFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D00CA03F52F8332AAD8FEEC4AFD406 /* ESTabBarController_swift.framework */,
+				4A68CE5E780DA56E437A46560493B451 /* Pods_HiPart.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D696C8F094D5D66BCA01598557C879 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D0858EC4BC9F72E6236699A2CCB7E1F /* ESTabBarController-swift */,
+				76096A220B1B1444F2339637DA45075C /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4EF05DED242047EBF245CE366F499C9E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,18 +137,42 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5F4F24A941166227657F7A9132F8E6ED /* ESTabBarController-swift */ = {
+		76096A220B1B1444F2339637DA45075C /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				FB50ADAF739DC1BEFEC43823D5514978 /* ESTabBar.swift */,
-				9614B4C28F44CE74E557A763059BAB64 /* ESTabBarController.swift */,
-				7AEDA43ECBAE2CD52FC2C1FDE47E1AE5 /* ESTabBarItem.swift */,
-				AF1812B3A4A5DD8246395A26F486424E /* ESTabBarItemBadgeView.swift */,
-				6AFBE1247503EF87327CB125C913FEAA /* ESTabBarItemContainer.swift */,
-				06EB7CCF8638D20724D0C9F9841F380B /* ESTabBarItemContentView.swift */,
-				D6DB922BA3F21C35C2192E4ECA2CA401 /* ESTabBarItemMoreContentView.swift */,
-				9FEE074252C6E3E86F86A99BF9DD1FA5 /* Resources */,
-				FF3D936262ED3D6C520A7003F7295C22 /* Support Files */,
+				60E37C991C61CC8C2FD1E1178A3B6AB1 /* SwiftyJSON.swift */,
+				80ECF72AF15A2397B5D686A0B569E751 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		80ECF72AF15A2397B5D686A0B569E751 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				755004F99FFF63084A28C581D344F55E /* SwiftyJSON.modulemap */,
+				C99AF9B9F16398DA68C9D530E64451AE /* SwiftyJSON.xcconfig */,
+				9ADC9E798364498CE9FF85B5EA118698 /* SwiftyJSON-dummy.m */,
+				7390D36C7376F4C95A9A8D8D5E44D9C7 /* SwiftyJSON-Info.plist */,
+				A037BC91EB7683D5514ACDC9278AD488 /* SwiftyJSON-prefix.pch */,
+				353F0092D2D10A0172F2051E7811F9B5 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		8D0858EC4BC9F72E6236699A2CCB7E1F /* ESTabBarController-swift */ = {
+			isa = PBXGroup;
+			children = (
+				81E805E48661E7867365D432C1C7EF4B /* ESTabBar.swift */,
+				694FB8D25C35B698AFF7F9EEE39DE14D /* ESTabBarController.swift */,
+				EAD5DFD292E8F7091622FFB356C24860 /* ESTabBarItem.swift */,
+				2025A3F5A74742B831F6723F906185C0 /* ESTabBarItemBadgeView.swift */,
+				D06DAF7621547B88D728B178D607F175 /* ESTabBarItemContainer.swift */,
+				0CACCFD505D7D6E146E0D1437532A0BA /* ESTabBarItemContentView.swift */,
+				03608E37BFC8627AD91837A8518FAB9E /* ESTabBarItemMoreContentView.swift */,
+				B314252AB997DC55AF303AC79019A21D /* Resources */,
+				D0FB25F12D4A96CFD1F243C1AF7B20EA /* Support Files */,
 			);
 			name = "ESTabBarController-swift";
 			path = "ESTabBarController-swift";
@@ -125,10 +195,10 @@
 			path = "Target Support Files/Pods-HiPart";
 			sourceTree = "<group>";
 		};
-		9FEE074252C6E3E86F86A99BF9DD1FA5 /* Resources */ = {
+		B314252AB997DC55AF303AC79019A21D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65823724C1F71C76702935C9C2A9D7F5 /* en.lproj */,
+				F0E984B27F078F276BB0B66B68EBA628 /* en.lproj */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -141,24 +211,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CB83C28864854F0A5BF136B40AEAA3D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F6D00CA03F52F8332AAD8FEEC4AFD406 /* ESTabBarController_swift.framework */,
-				4A68CE5E780DA56E437A46560493B451 /* Pods_HiPart.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				D31A2993CE107662A23D6489D3E3EC58 /* Pods */,
-				CB83C28864854F0A5BF136B40AEAA3D5 /* Products */,
+				14D696C8F094D5D66BCA01598557C879 /* Pods */,
+				0AA56FD2D6F896239B1986FE99A8FCFC /* Products */,
 				4EF05DED242047EBF245CE366F499C9E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D0FB25F12D4A96CFD1F243C1AF7B20EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B63D80FFDBABFB75DF45514096A3A372 /* ESTabBarController-swift.modulemap */,
+				ACC39CFA491AF7E23973621FD735F585 /* ESTabBarController-swift.xcconfig */,
+				C906D518A2B9FC35AA0AA25E96F782B9 /* ESTabBarController-swift-dummy.m */,
+				DD530D293230666CCBE5FA8CEE904B5F /* ESTabBarController-swift-Info.plist */,
+				9862BEDC1E77776B9D6A74FC5FD89679 /* ESTabBarController-swift-prefix.pch */,
+				EFC9D699257EA9F845A012075CC6EBB7 /* ESTabBarController-swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ESTabBarController-swift";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -167,28 +242,6 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D31A2993CE107662A23D6489D3E3EC58 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5F4F24A941166227657F7A9132F8E6ED /* ESTabBarController-swift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FF3D936262ED3D6C520A7003F7295C22 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C8FAEB73806904AB41B6C3BCF1F43C46 /* ESTabBarController-swift.modulemap */,
-				691315B4A3AC60D0D1E9C5B027070664 /* ESTabBarController-swift.xcconfig */,
-				66C7468174C576C00410012C7FD138FA /* ESTabBarController-swift-dummy.m */,
-				B7BBC6CF6A1AB8A84E0A77D67192C370 /* ESTabBarController-swift-Info.plist */,
-				9B2AEABBF8AB8ED324B40BA2A88371C4 /* ESTabBarController-swift-prefix.pch */,
-				219CE3F7090C51A2C25586D528937941 /* ESTabBarController-swift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ESTabBarController-swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +255,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE160BF40EA97BA61C604A0654D913F6 /* Headers */ = {
+		D5FD500616E7B3585CDC612B217AB8EF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F374AC8B51E6C4BCA430B1B951D2671 /* Pods-HiPart-umbrella.h in Headers */,
+				29C63AB0D159A830DBD4F8E61F5CE5DE /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC7EC23B76C23357BAF2706EDC10E70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E18CA9A23D0DE878F5B2B84CE93D243 /* Pods-HiPart-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,17 +276,18 @@
 /* Begin PBXNativeTarget section */
 		02BF78D55CF47BA80B476BE00FBC91FA /* Pods-HiPart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46FE3F0227B8BDB563D484B173196218 /* Build configuration list for PBXNativeTarget "Pods-HiPart" */;
+			buildConfigurationList = 19B65F824C3814A4FE995562FE765FAD /* Build configuration list for PBXNativeTarget "Pods-HiPart" */;
 			buildPhases = (
-				FE160BF40EA97BA61C604A0654D913F6 /* Headers */,
-				F361FB9A259ACD902683CBE629FDCB44 /* Sources */,
-				5B8E225714195B224B84798E9F36FB48 /* Frameworks */,
-				233433143DFA44E00068F1F49B96B2A0 /* Resources */,
+				FFC7EC23B76C23357BAF2706EDC10E70 /* Headers */,
+				E1B69C70DED93BEE9303F75B4DA0ADE4 /* Sources */,
+				4DBB862484E78E4680F19F3760C2A0C8 /* Frameworks */,
+				E3C199825FDAA79E20319133A4A05C6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CF8F74477D93FA2A6709100034C9A623 /* PBXTargetDependency */,
+				A0E1E23A23B3E738D1817682F515D9F9 /* PBXTargetDependency */,
+				421BCA302D797F5744EA260DFE6D65E6 /* PBXTargetDependency */,
 			);
 			name = "Pods-HiPart";
 			productName = "Pods-HiPart";
@@ -250,6 +312,24 @@
 			productReference = F6D00CA03F52F8332AAD8FEEC4AFD406 /* ESTabBarController_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500983288FD27F691001EEF004174E82 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				D5FD500616E7B3585CDC612B217AB8EF /* Headers */,
+				1C23F93016AD02D1E2389C53E71EF604 /* Sources */,
+				57F59F4F98A4C4810A148DF776B9B5BE /* Frameworks */,
+				04D10243A21F1712662C92EBCC5385D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,25 +340,26 @@
 				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CB83C28864854F0A5BF136B40AEAA3D5 /* Products */;
+			productRefGroup = 0AA56FD2D6F896239B1986FE99A8FCFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3F83465BA81F6E581B3A431642D2992E /* ESTabBarController-swift */,
 				02BF78D55CF47BA80B476BE00FBC91FA /* Pods-HiPart */,
+				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		233433143DFA44E00068F1F49B96B2A0 /* Resources */ = {
+		04D10243A21F1712662C92EBCC5385D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,9 +374,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3C199825FDAA79E20319133A4A05C6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C23F93016AD02D1E2389C53E71EF604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763EA582B030AB9A2FC93F6C1AF1EF19 /* SwiftyJSON-dummy.m in Sources */,
+				B8B9F6DA9BE6BE3679EC77D89E028E73 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29B185474547051A5D2420EECD9035CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,22 +408,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F361FB9A259ACD902683CBE629FDCB44 /* Sources */ = {
+		E1B69C70DED93BEE9303F75B4DA0ADE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58BC030D8A0DBD21A5592C4167C5F868 /* Pods-HiPart-dummy.m in Sources */,
+				AA6397904B5D5288CDACFAA64D300833 /* Pods-HiPart-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CF8F74477D93FA2A6709100034C9A623 /* PBXTargetDependency */ = {
+		421BCA302D797F5744EA260DFE6D65E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = BD1738EA01A1BA696683E30012D65A1D /* PBXContainerItemProxy */;
+		};
+		A0E1E23A23B3E738D1817682F515D9F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ESTabBarController-swift";
 			target = 3F83465BA81F6E581B3A431642D2992E /* ESTabBarController-swift */;
-			targetProxy = 6E037F94045A369FC16612BFB3190990 /* PBXContainerItemProxy */;
+			targetProxy = 92F210BA5E695B97FE70124E6D728BC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,7 +496,7 @@
 		};
 		33E58275CB97BF037104FCA5CE11DB61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 691315B4A3AC60D0D1E9C5B027070664 /* ESTabBarController-swift.xcconfig */;
+			baseConfigurationReference = ACC39CFA491AF7E23973621FD735F585 /* ESTabBarController-swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -426,7 +529,7 @@
 			};
 			name = Debug;
 		};
-		844A3E99B3CEEB1BC842599888EA7BA2 /* Release */ = {
+		5A7AE392A3A79065F617C43236AF7A76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EF36AD2896199B276A71957F93ED2D1 /* Pods-HiPart.release.xcconfig */;
 			buildSettings = {
@@ -464,6 +567,80 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		96EFDB97F9EFB8EEBBA65C5AA6A9488E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99AF9B9F16398DA68C9D530E64451AE /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9B848B25A37C97C19B2FF822F2C8287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6839F0A93A32C982CBC921D3ABCD8D3 /* Pods-HiPart.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HiPart/Pods-HiPart-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HiPart/Pods-HiPart.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -529,12 +706,10 @@
 			};
 			name = Debug;
 		};
-		DF9FAA3313555895BE533A4F8251DC97 /* Debug */ = {
+		E7E18A3E8278024C2F3A5AA8E8C2EFCF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6839F0A93A32C982CBC921D3ABCD8D3 /* Pods-HiPart.debug.xcconfig */;
+			baseConfigurationReference = C99AF9B9F16398DA68C9D530E64451AE /* SwiftyJSON.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -544,23 +719,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HiPart/Pods-HiPart-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HiPart/Pods-HiPart.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -569,7 +743,7 @@
 		};
 		F5361F5783EC12642212D297719EAF41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 691315B4A3AC60D0D1E9C5B027070664 /* ESTabBarController-swift.xcconfig */;
+			baseConfigurationReference = ACC39CFA491AF7E23973621FD735F585 /* ESTabBarController-swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -606,11 +780,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46FE3F0227B8BDB563D484B173196218 /* Build configuration list for PBXNativeTarget "Pods-HiPart" */ = {
+		19B65F824C3814A4FE995562FE765FAD /* Build configuration list for PBXNativeTarget "Pods-HiPart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF9FAA3313555895BE533A4F8251DC97 /* Debug */,
-				844A3E99B3CEEB1BC842599888EA7BA2 /* Release */,
+				A9B848B25A37C97C19B2FF822F2C8287 /* Debug */,
+				5A7AE392A3A79065F617C43236AF7A76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -620,6 +794,15 @@
 			buildConfigurations = (
 				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
 				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		500983288FD27F691001EEF004174E82 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E18A3E8278024C2F3A5AA8E8C2EFCF /* Debug */,
+				96EFDB97F9EFB8EEBBA65C5AA6A9488E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

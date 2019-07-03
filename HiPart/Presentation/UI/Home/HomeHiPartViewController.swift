@@ -1,21 +1,22 @@
 //
-//  HomeViewController.swift
+//  HomeHiPartViewController.swift
 //  HiPart
 //
-//  Created by 최은희 on 30/06/2019.
+//  Created by 최은희 on 03/07/2019.
 //  Copyright © 2019 HiPart. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
+class HomeHiPartViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
- 
     
+
     /*
     // MARK: - Navigation
 

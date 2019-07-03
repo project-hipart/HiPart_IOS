@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Hi Part View Controller-->
+        <!--하이팟-->
         <scene sceneID="3DT-ZO-ppR">
             <objects>
                 <viewController id="yFz-2l-2Eu" customClass="HiPartViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kMv-VH-qRq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="9tm-cz-dlp"/>
+                    <tabBarItem key="tabBarItem" title="하이팟" image="mainTbHipotOffIcon" id="9tm-cz-dlp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZ3-jX-Os5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,4 +28,7 @@
             <point key="canvasLocation" x="191" y="-242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainTbHipotOffIcon" width="24" height="24"/>
+    </resources>
 </document>

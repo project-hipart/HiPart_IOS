@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Portfolio View Controller-->
+        <!--포트폴리오-->
         <scene sceneID="vOR-0N-HqH">
             <objects>
                 <viewController id="NzV-Wz-LBv" customClass="PortfolioViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uUN-NA-v4e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="KGQ-42-xis"/>
+                    <tabBarItem key="tabBarItem" title="포트폴리오" image="mainTbPofolOffIcon" id="KGQ-42-xis"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="SFu-Qh-bc2" id="6hG-Ih-0ep"/>
@@ -40,4 +40,7 @@
             <point key="canvasLocation" x="-199" y="-272"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainTbPofolOffIcon" width="24" height="24"/>
+    </resources>
 </document>

@@ -7,4 +7,5 @@ target 'HiPart' do
 
   # Pods for HiPart
   pod "ESTabBarController-swift"
+  pod "SwiftyJSON"
 end

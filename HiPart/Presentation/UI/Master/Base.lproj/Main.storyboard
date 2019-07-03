@@ -34,7 +34,7 @@
         <scene sceneID="Mg2-XY-CWW">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="yhW-YI-oz4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="aLJ-7k-lPJ"/>
+                    <tabBarItem key="tabBarItem" id="aLJ-7k-lPJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDi-qO-VjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
         <scene sceneID="oc6-5e-6EL">
             <objects>
                 <viewControllerPlaceholder storyboardName="HiPart" id="wAz-y1-ZUU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="atz-EF-pQJ"/>
+                    <tabBarItem key="tabBarItem" id="atz-EF-pQJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAY-Qq-rkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
         <scene sceneID="tY5-ac-09N">
             <objects>
                 <viewControllerPlaceholder storyboardName="Portfolio" id="3Fp-fP-fjy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0Uw-05-SBo"/>
+                    <tabBarItem key="tabBarItem" title="" id="0Uw-05-SBo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiM-FQ-vxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,11 +64,12 @@
         <scene sceneID="3YD-sa-uRI">
             <objects>
                 <viewControllerPlaceholder storyboardName="MyPage" id="3hB-Ka-iCo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LfU-Rz-nIf"/>
+                    <tabBarItem key="tabBarItem" title="" id="LfU-Rz-nIf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swN-hM-CFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="816" y="205"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.47450980392156861" green="0.27843137254901962" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
