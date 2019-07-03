@@ -24,6 +24,7 @@
 		60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E1B22CCD1DC00DFFF91 /* MyPageListCell.swift */; };
 		60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E1D22CCD43F00DFFF91 /* MyPageList.swift */; };
 		60463E2022CCF6BB00DFFF91 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E1F22CCF6BB00DFFF91 /* ViewControllerExtension.swift */; };
+		60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2122CD205A00DFFF91 /* ColorRes.swift */; };
 		60B2EEDD22C790F7000724B6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEDB22C790F7000724B6 /* Home.storyboard */; };
 		60B2EEE022C79555000724B6 /* HiPart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEDF22C79555000724B6 /* HiPart.storyboard */; };
 		60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEE122C795F3000724B6 /* Portfolio.storyboard */; };
@@ -59,6 +60,7 @@
 		60463E1B22CCD1DC00DFFF91 /* MyPageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListCell.swift; sourceTree = "<group>"; };
 		60463E1D22CCD43F00DFFF91 /* MyPageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageList.swift; sourceTree = "<group>"; };
 		60463E1F22CCF6BB00DFFF91 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		60463E2122CD205A00DFFF91 /* ColorRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRes.swift; sourceTree = "<group>"; };
 		60B2EEDC22C790F7000724B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		60B2EEDF22C79555000724B6 /* HiPart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HiPart.storyboard; sourceTree = "<group>"; };
 		60B2EEE122C795F3000724B6 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				6014C98A22C782C400ACB80E /* Assets.xcassets */,
+				60463E2122CD205A00DFFF91 /* ColorRes.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				602FB3A722CBC409003ED6DB /* HomeHiPartViewController.swift in Sources */,
 				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
+				60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */,
 				60B2EEEA22C8BB3B000724B6 /* PortfolioViewController.swift in Sources */,
 				602FB3AE22CBC65C003ED6DB /* NoticeViewController.swift in Sources */,
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,
