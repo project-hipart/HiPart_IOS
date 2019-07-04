@@ -45,6 +45,8 @@
 		60B2EEF922C8BCDB000724B6 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEF822C8BCDB000724B6 /* MyPageViewModel.swift */; };
 		60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEFA22C8C2B5000724B6 /* MasterViewModel.swift */; };
 		60B2EEFF22C8C978000724B6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEFE22C8C978000724B6 /* ViewExtension.swift */; };
+		60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6A4AD22CDD32F003B88EC /* RoundBtn.swift */; };
+		60B6A4B022CDDA5E003B88EC /* EllipseBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6A4AF22CDDA5E003B88EC /* EllipseBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		60B2EEF822C8BCDB000724B6 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		60B2EEFA22C8C2B5000724B6 /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 		60B2EEFE22C8C978000724B6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		60B6A4AD22CDD32F003B88EC /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		60B6A4AF22CDDA5E003B88EC /* EllipseBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipseBtn.swift; sourceTree = "<group>"; };
 		8456534407704897DD70736D /* Pods_HiPart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiPart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5F761D12D65D8A6ABA039 /* Pods-HiPart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPart.debug.xcconfig"; path = "Target Support Files/Pods-HiPart/Pods-HiPart.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1799A0901C119E4607245D /* Pods-HiPart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiPart.release.xcconfig"; path = "Target Support Files/Pods-HiPart/Pods-HiPart.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */,
 				601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */,
+				60B6A4AD22CDD32F003B88EC /* RoundBtn.swift */,
+				60B6A4AF22CDDA5E003B88EC /* EllipseBtn.swift */,
 			);
 			path = MyPageSetting;
 			sourceTree = "<group>";
@@ -448,7 +454,9 @@
 				60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */,
 				602FB3A522CBC3AE003ED6DB /* HomeCreaterViewController.swift in Sources */,
 				60B2EEFF22C8C978000724B6 /* ViewExtension.swift in Sources */,
+				60B6A4B022CDDA5E003B88EC /* EllipseBtn.swift in Sources */,
 				60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */,
+				60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */,
 				6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */,
 				60463E1A22CCCC3700DFFF91 /* MyPageListViewController.swift in Sources */,
 				60463E1822CCC5C500DFFF91 /* GreyBorderView.swift in Sources */,
