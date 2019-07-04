@@ -17,7 +17,7 @@ class MyPageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     private lazy var myPageListVC : MyPageListViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "MyPage", bundle: Bundle.main)

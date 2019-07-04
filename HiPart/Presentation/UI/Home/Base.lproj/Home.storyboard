@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sb5-iN-baz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpt-Ue-1cf">
-                                <rect key="frame" x="0.0" y="162" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="162" width="375" height="169"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="Bs5-IB-lrJ" kind="embed" id="Fyd-o5-46u"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-vK-SQY">
-                                <rect key="frame" x="0.0" y="392" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="392" width="350" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="Uvn-Wh-1uK" kind="embed" id="cBf-WA-GhF"/>
@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="하이팟들과 하이파이브 어때요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-wm-Wt4">
-                                <rect key="frame" x="25" y="119" width="257" height="24"/>
+                                <rect key="frame" x="25" y="119" width="300" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" name="DarkGrey"/>
@@ -71,19 +71,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="mainTbHomeOffIcon" id="krf-QZ-ayf"/>
+                    <navigationItem key="navigationItem" id="Fsp-s6-lKu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="hiPartView" destination="kWL-vK-SQY" id="De9-cI-NYo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.20000000000005" y="15.742128935532236"/>
+            <point key="canvasLocation" x="1754.4000000000001" y="15.742128935532236"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Creater View Controller-->
         <scene sceneID="8kM-mS-2eU">
             <objects>
-                <viewController id="Bs5-IB-lrJ" sceneMemberID="viewController">
+                <viewController id="Bs5-IB-lrJ" customClass="HomeCreaterViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psW-we-dAV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DXt-Qw-oRt">
@@ -114,34 +117,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgN-oU-TBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549.5999999999999" y="-57.121439280359823"/>
+            <point key="canvasLocation" x="2488.8000000000002" y="-57.121439280359823"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Hi Part View Controller-->
         <scene sceneID="iIO-Lq-Rzo">
             <objects>
-                <viewController id="Uvn-Wh-1uK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeHiPartViewController" id="Uvn-Wh-1uK" customClass="HomeHiPartViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="si6-Sc-1ZT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="53"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-zO-hH6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q9j-BB-g3R">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="93" height="51"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ewi-Ip-hAW">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHiPartCollectionCell" id="ewi-Ip-hAW" customClass="HomeHiPartCollectionCell" customModule="HiPart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="93" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4DT-61-G6N">
+                                                    <rect key="frame" x="25" y="0.0" width="40" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfl-yV-Wg9">
+                                                    <rect key="frame" x="26" y="35" width="41" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" name="middleGrey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="hiPartCollectionImg" destination="4DT-61-G6N" id="o1N-2N-hNf"/>
+                                            <outlet property="hiPartCollectionTitle" destination="Rfl-yV-Wg9" id="MmT-rZ-cRO"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -149,10 +169,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iaI-cC-zRZ"/>
                     </view>
+                    <connections>
+                        <outlet property="hiPartCollectionView" destination="nmC-zO-hH6" id="pLd-Tf-DGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7T1-qy-zX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549.5999999999999" y="113.79310344827587"/>
+            <point key="canvasLocation" x="2488" y="112.89355322338831"/>
         </scene>
         <!--Notice-->
         <scene sceneID="PrB-bq-HOg">
@@ -160,7 +183,25 @@
                 <viewControllerPlaceholder storyboardName="Notice" id="sBf-7R-Nu4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd5-sx-jng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1307" y="-246"/>
+            <point key="canvasLocation" x="2244.8000000000002" y="-246.47676161919043"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="8Rp-ra-na2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sb5-iN-baz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="mainTbHomeOffIcon" id="krf-QZ-ayf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zey-vq-FDQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HCO-0b-Xgd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6A-6W-hfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.20000000000005" y="15.742128935532236"/>
         </scene>
     </scenes>
     <resources>
@@ -169,6 +210,9 @@
         <image name="noticeIcon" width="24" height="24"/>
         <namedColor name="DarkGrey">
             <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="middleGrey">
+            <color red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <color key="tintColor" red="0.47450980392156861" green="0.27843137254901962" blue="1" alpha="1" colorSpace="calibratedRGB"/>

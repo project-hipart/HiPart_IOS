@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1532BEB796BF96EC4694C777 /* Pods_HiPart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456534407704897DD70736D /* Pods_HiPart.framework */; };
+		601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */; };
+		601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */; };
 		6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014C98322C782C300ACB80E /* AppDelegate.swift */; };
 		6014C98622C782C300ACB80E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014C98522C782C300ACB80E /* MasterViewController.swift */; };
 		6014C98922C782C300ACB80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6014C98722C782C300ACB80E /* Main.storyboard */; };
@@ -25,6 +27,10 @@
 		60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E1D22CCD43F00DFFF91 /* MyPageList.swift */; };
 		60463E2022CCF6BB00DFFF91 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E1F22CCF6BB00DFFF91 /* ViewControllerExtension.swift */; };
 		60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2122CD205A00DFFF91 /* ColorRes.swift */; };
+		60463E2522CD2FFD00DFFF91 /* HomeHiPartCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2422CD2FFD00DFFF91 /* HomeHiPartCollection.swift */; };
+		60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2622CD300A00DFFF91 /* HomeHiPartCollectionCell.swift */; };
+		60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2822CD513F00DFFF91 /* NoticeTableCell.swift */; };
+		60463E2B22CD514E00DFFF91 /* NoticeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60463E2A22CD514E00DFFF91 /* NoticeTable.swift */; };
 		60B2EEDD22C790F7000724B6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEDB22C790F7000724B6 /* Home.storyboard */; };
 		60B2EEE022C79555000724B6 /* HiPart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEDF22C79555000724B6 /* HiPart.storyboard */; };
 		60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEE122C795F3000724B6 /* Portfolio.storyboard */; };
@@ -42,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
+		601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		6014C98022C782C300ACB80E /* HiPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6014C98322C782C300ACB80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6014C98522C782C300ACB80E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,10 @@
 		60463E1D22CCD43F00DFFF91 /* MyPageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageList.swift; sourceTree = "<group>"; };
 		60463E1F22CCF6BB00DFFF91 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		60463E2122CD205A00DFFF91 /* ColorRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRes.swift; sourceTree = "<group>"; };
+		60463E2422CD2FFD00DFFF91 /* HomeHiPartCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHiPartCollection.swift; sourceTree = "<group>"; };
+		60463E2622CD300A00DFFF91 /* HomeHiPartCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHiPartCollectionCell.swift; sourceTree = "<group>"; };
+		60463E2822CD513F00DFFF91 /* NoticeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableCell.swift; sourceTree = "<group>"; };
+		60463E2A22CD514E00DFFF91 /* NoticeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTable.swift; sourceTree = "<group>"; };
 		60B2EEDC22C790F7000724B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		60B2EEDF22C79555000724B6 /* HiPart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HiPart.storyboard; sourceTree = "<group>"; };
 		60B2EEE122C795F3000724B6 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
@@ -92,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601472B622CDC960007F0211 /* MyPageSetting */ = {
+			isa = PBXGroup;
+			children = (
+				601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */,
+				601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */,
+			);
+			path = MyPageSetting;
+			sourceTree = "<group>";
+		};
 		6014C97722C782C300ACB80E = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +158,8 @@
 			children = (
 				602FB3AB22CBC5B2003ED6DB /* Notice.storyboard */,
 				602FB3AD22CBC65C003ED6DB /* NoticeViewController.swift */,
+				60463E2822CD513F00DFFF91 /* NoticeTableCell.swift */,
+				60463E2A22CD514E00DFFF91 /* NoticeTable.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -191,6 +214,7 @@
 				60B2EEEE22C8BB8E000724B6 /* HiPart */,
 				60B2EEED22C8BB85000724B6 /* Home */,
 				602FB3A822CBC51A003ED6DB /* Notice */,
+				601472B622CDC960007F0211 /* MyPageSetting */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -215,6 +239,8 @@
 				60B2EEE722C8B8AC000724B6 /* HomeViewController.swift */,
 				602FB3A422CBC3AE003ED6DB /* HomeCreaterViewController.swift */,
 				602FB3A622CBC409003ED6DB /* HomeHiPartViewController.swift */,
+				60463E2622CD300A00DFFF91 /* HomeHiPartCollectionCell.swift */,
+				60463E2422CD2FFD00DFFF91 /* HomeHiPartCollection.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B2EEE022C79555000724B6 /* HiPart.storyboard in Resources */,
+				601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
 				6014C98B22C782C400ACB80E /* Assets.xcassets in Resources */,
@@ -410,12 +437,15 @@
 				602FB3A722CBC409003ED6DB /* HomeHiPartViewController.swift in Sources */,
 				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
+				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
 				60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */,
 				60B2EEEA22C8BB3B000724B6 /* PortfolioViewController.swift in Sources */,
 				602FB3AE22CBC65C003ED6DB /* NoticeViewController.swift in Sources */,
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,
 				60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */,
 				60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */,
+				60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */,
+				60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */,
 				602FB3A522CBC3AE003ED6DB /* HomeCreaterViewController.swift in Sources */,
 				60B2EEFF22C8C978000724B6 /* ViewExtension.swift in Sources */,
 				60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */,
@@ -424,8 +454,10 @@
 				60463E1822CCC5C500DFFF91 /* GreyBorderView.swift in Sources */,
 				60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */,
 				60B2EEF922C8BCDB000724B6 /* MyPageViewModel.swift in Sources */,
+				60463E2522CD2FFD00DFFF91 /* HomeHiPartCollection.swift in Sources */,
 				60B2EEF322C8BBE0000724B6 /* HiPartViewController.swift in Sources */,
 				60463E2022CCF6BB00DFFF91 /* ViewControllerExtension.swift in Sources */,
+				60463E2B22CD514E00DFFF91 /* NoticeTable.swift in Sources */,
 				602FB3B222CBC6B4003ED6DB /* NoticeViewModel.swift in Sources */,
 				60463E1622CCB25300DFFF91 /* RoundImg.swift in Sources */,
 				60B2EEE822C8B8AC000724B6 /* HomeViewController.swift in Sources */,
