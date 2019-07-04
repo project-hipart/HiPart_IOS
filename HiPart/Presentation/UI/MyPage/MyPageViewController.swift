@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class MyPageViewController: UIViewController {
 
@@ -30,5 +31,10 @@ class MyPageViewController: UIViewController {
         
         return viewController
     }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        segue.destination.hero.isEnabled = true
+//        segue.destination.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .up), dismissing:  .uncover(direction: .down))
+    }
 
 }
