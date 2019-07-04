@@ -1,20 +1,24 @@
 PODS:
   - Hero (1.4.0)
+  - SnapKit (5.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Hero
+  - SnapKit
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Hero
+    - SnapKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4ae4fab2ae3f5befde134753323050e68cd63cdc
+PODFILE CHECKSUM: 5fa61b5f826759aca357fb167d3db8e52389460e
 
 COCOAPODS: 1.7.1

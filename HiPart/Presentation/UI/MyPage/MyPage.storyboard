@@ -93,7 +93,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9H0-8N-D7x"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="mainTbMypgOffIcon" id="ofW-4U-Rxz"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="mainTbMypgOffIcon" selectedImage="mainTbMypgOnIcon" id="ofW-4U-Rxz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myPageListView" destination="xcM-Q6-MDF" id="gfR-Ah-pIX"/>
@@ -200,6 +200,7 @@
         <image name="backGrImg" width="374.5" height="135.5"/>
         <image name="mainProfilePhotoImage" width="78.5" height="78.5"/>
         <image name="mainTbMypgOffIcon" width="24" height="24"/>
+        <image name="mainTbMypgOnIcon" width="20.5" height="22.5"/>
         <image name="mypageSetupBtn" width="22" height="22"/>
     </resources>
     <color key="tintColor" red="0.47450980390000003" green="0.2784313725" blue="1" alpha="1" colorSpace="calibratedRGB"/>

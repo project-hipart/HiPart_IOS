@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sb5-iN-baz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EMv-rd-6QJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,6 +45,9 @@
                                 <rect key="frame" x="327" y="34" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mainSearchIcon"/>
+                                <connections>
+                                    <segue destination="dkM-qU-IhH" kind="show" id="3UA-0A-Fb3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="하이팟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2d-nG-fEl">
                                 <rect key="frame" x="25" y="350" width="55" height="24"/>
@@ -79,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754.4000000000001" y="15.742128935532236"/>
+            <point key="canvasLocation" x="2693.5999999999999" y="15.742128935532236"/>
         </scene>
         <!--Home Creater View Controller-->
         <scene sceneID="8kM-mS-2eU">
@@ -117,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgN-oU-TBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488.8000000000002" y="-57.121439280359823"/>
+            <point key="canvasLocation" x="3428" y="-57.121439280359823"/>
         </scene>
         <!--Home Hi Part View Controller-->
         <scene sceneID="iIO-Lq-Rzo">
@@ -175,7 +178,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7T1-qy-zX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488" y="112.89355322338831"/>
+            <point key="canvasLocation" x="3427.1999999999998" y="112.89355322338831"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="3BN-e1-lc7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="dkM-qU-IhH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaH-5e-84E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3188" y="-281"/>
         </scene>
         <!--Notice-->
         <scene sceneID="PrB-bq-HOg">
@@ -183,30 +194,31 @@
                 <viewControllerPlaceholder storyboardName="Notice" id="sBf-7R-Nu4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd5-sx-jng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244.8000000000002" y="-246.47676161919043"/>
+            <point key="canvasLocation" x="3184" y="-246.47676161919043"/>
         </scene>
         <!--홈-->
-        <scene sceneID="8Rp-ra-na2">
+        <scene sceneID="Flv-zC-0bu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sb5-iN-baz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="mainTbHomeOffIcon" id="krf-QZ-ayf"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="EMv-rd-6QJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="mainTbHomeOffIcon" selectedImage="mainTbHomeOnIcon" id="a9d-3b-Cgn"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zey-vq-FDQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DGA-yv-Jo8">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HCO-0b-Xgd"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qq6-Jt-Guf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s6A-6W-hfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpJ-74-W8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.20000000000005" y="15.742128935532236"/>
+            <point key="canvasLocation" x="1889" y="16"/>
         </scene>
     </scenes>
     <resources>
         <image name="mainSearchIcon" width="22" height="22"/>
         <image name="mainTbHomeOffIcon" width="22" height="23"/>
+        <image name="mainTbHomeOnIcon" width="22" height="23"/>
         <image name="noticeIcon" width="24" height="24"/>
         <namedColor name="DarkGrey">
             <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

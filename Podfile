@@ -8,4 +8,5 @@ target 'HiPart' do
   # Pods for HiPart
   pod "SwiftyJSON"
   pod "Hero"
+  pod 'SnapKit'
 end
