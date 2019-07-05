@@ -24,6 +24,7 @@
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
 		2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */; };
+		2DAF383722D00E9500B91FE4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF383622D00E9500B91FE4 /* Font.swift */; };
 		2DDA058722CFDABD0057113F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA058622CFDABD0057113F /* Filter.swift */; };
 		2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */; };
 		2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */; };
@@ -103,6 +104,7 @@
 		2DAF383322D00E0900B91FE4 /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
 		2DAF383422D00E0900B91FE4 /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
 		2DAF383522D00E0900B91FE4 /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
+		2DAF383622D00E9500B91FE4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2DDA058622CFDABD0057113F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = HiPart/Presentation/UI/View/Filter.swift; sourceTree = SOURCE_ROOT; };
 		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../Upload/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
 		2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				2DAF383122D00DFF00B91FE4 /* Fonts */,
 				6014C98A22C782C400ACB80E /* Assets.xcassets */,
 				60463E2122CD205A00DFFF91 /* ColorRes.swift */,
+				2DAF383622D00E9500B91FE4 /* Font.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				602FB3B222CBC6B4003ED6DB /* NoticeViewModel.swift in Sources */,
 				60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */,
 				60463E1622CCB25300DFFF91 /* RoundImg.swift in Sources */,
+				2DAF383722D00E9500B91FE4 /* Font.swift in Sources */,
 				601BA29622CE4C550044231E /* FindPwViewController.swift in Sources */,
 				2D79367B22CF94200081E065 /* FilterChip.swift in Sources */,
 				60B2EEE822C8B8AC000724B6 /* HomeViewController.swift in Sources */,

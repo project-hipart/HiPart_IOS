@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareExtraBold.ttf">
+            <string>NanumSquareEB</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--포트폴리오-->
         <scene sceneID="vOR-0N-HqH">
@@ -364,16 +369,16 @@
                                 <rect key="frame" x="28" y="60" width="319" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방송 컨셉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyO-dK-9GK">
-                                        <rect key="frame" x="71" y="42" width="63.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="22" y="22" width="66.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="17"/>
+                                        <color key="textColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="top" secondItem="DKL-ZS-CTp" secondAttribute="top" constant="42" id="9yD-BZ-080"/>
-                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="leading" secondItem="DKL-ZS-CTp" secondAttribute="leading" constant="71" id="uFc-vR-IuJ"/>
+                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="top" secondItem="DKL-ZS-CTp" secondAttribute="top" constant="22" id="9yD-BZ-080"/>
+                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="leading" secondItem="DKL-ZS-CTp" secondAttribute="leading" constant="22" id="uFc-vR-IuJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
