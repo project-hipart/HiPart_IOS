@@ -66,12 +66,20 @@ extension PortfolioEditViewController{
 			let view = FilterChip()
 			view.translatesAutoresizingMaskIntoConstraints=false
 			view.chipSelected = filters[0] == filter
+			
 			view.setTitle(filter.rawValue, for: .normal)
+			view.setNeedsLayout()
 			
 			self.filterStackView.addArrangedSubview(view)
 		}
 		let addChip = FilterChip()
+		addChip.translatesAutoresizingMaskIntoConstraints=false
+		addChip.borderColor = UIColor.lightGrey
+		addChip.setTitleColor(UIColor.lightGrey, for: .normal)
 		addChip.setTitle("필터 수정하기",for : .normal)
+		addChip.setNeedsLayout()
+		
+		
 		
 		self.filterStackView.addArrangedSubview(addChip)
 		
