@@ -15,9 +15,9 @@ class TabLayout : UIView{
 	private lazy var tabLayout : UIStackView = {
 		let view = UIStackView()
 		view.axis = .horizontal
-		view.distribution = UIStackView.Distribution.fillEqually
-		view.spacing = 5
-		view.alignment = UIStackView.Alignment.leading
+		view.distribution = UIStackView.Distribution.fill
+		view.spacing = 20
+		view.alignment = UIStackView.Alignment.center
 		return view
 	}()
 	
@@ -56,6 +56,14 @@ class TabLayout : UIView{
 		commonInit()
 	}
 	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+//		moveTabIndicator(selected: 0)
+		let button = tabViews[0]
+		let originalFrame = self.tabStripIndicator.frame
+		self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.frame.width, height: originalFrame.height)
+	}
+	
 	private func commonInit(){
 		setupView()
 		setupLayout()
@@ -68,8 +76,14 @@ class TabLayout : UIView{
 			self.tabLayout.addArrangedSubview(button)
 		}
 		
+		let paddingView = UIView()
+		paddingView.translatesAutoresizingMaskIntoConstraints=false
+		paddingView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+		self.tabLayout.addArrangedSubview(paddingView)
+		
+		
 		changeTabColor(selected: 0)
-		moveTabIndicator(selected: 0)
+		
 	}
 	
 	private func setupView(){
@@ -96,6 +110,7 @@ class TabLayout : UIView{
 	
 	private func makeTabItem(title : String) -> UIButton{
 		let button = UIButton(type: .custom)
+		button.translatesAutoresizingMaskIntoConstraints=false
 		button.setTitle(title, for: .normal)
 		button.addTarget(self, action: #selector(selectTab(_:)), for: .touchUpInside)
 		unSelectButton(button: button)

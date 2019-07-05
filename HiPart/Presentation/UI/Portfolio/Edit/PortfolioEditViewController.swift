@@ -80,8 +80,13 @@ extension PortfolioEditViewController{
 		addChip.setNeedsLayout()
 		
 		
+		let paddingView = UIView()
+		paddingView.translatesAutoresizingMaskIntoConstraints=false
+		paddingView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+		
 		
 		self.filterStackView.addArrangedSubview(addChip)
+		self.filterStackView.addArrangedSubview(paddingView)
 		
 		
 	}
