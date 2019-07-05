@@ -1,16 +1,14 @@
-//
-//  TabLayout.swift
-//  MVVMRx
-//
-//  Created by 문명주 on 03/07/2019.
-//  Copyright © 2019 storm. All rights reserved.
-//
 
 import UIKit
 import SnapKit
 
+protocol TabLayoutDelegate : NSObjectProtocol{
+	func onSelectedTab(_ index : Int)
+}
+
 class TabLayout : UIView{
 	
+	weak var delegate : TabLayoutDelegate?
 	var primaryColor : UIColor =  UIColor.init(red : 121/255, green : 71/255, blue : 253/255, alpha :1.0)
 	var defaultColor : UIColor = UIColor.init(red: 72/255, green: 72/255, blue: 72/255, alpha: 1.0)
 	
@@ -31,6 +29,7 @@ class TabLayout : UIView{
 		didSet{
 			changeTabColor(selected: selectedTab)
 			moveTabIndicator(selected: selectedTab)
+			delegate?.onSelectedTab(selectedTab)
 		}
 	}
 	

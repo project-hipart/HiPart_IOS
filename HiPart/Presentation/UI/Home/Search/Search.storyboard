@@ -86,7 +86,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="RoG-10-VI3"/>
                                                         <constraint firstAttribute="width" constant="30" id="dUV-db-V3y"/>
                                                     </constraints>
-                                                    <state key="normal" image="mainSearchIcon"/>
+                                                    <state key="normal" image="searchXSmallIcon"/>
                                                     <connections>
                                                         <action selector="tapXButton:" destination="33j-wx-rI9" eventType="touchUpInside" id="BvV-J0-dGy"/>
                                                     </connections>
@@ -246,6 +246,41 @@
                                     <outlet property="delegate" destination="55L-k8-XU6" id="3IU-WV-1Ag"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Kh-am-Jgd">
+                                <rect key="frame" x="0.0" y="185.5" width="375" height="481.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainSearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-oE-bCm">
+                                        <rect key="frame" x="91" y="48" width="193" height="193"/>
+                                        <color key="backgroundColor" red="0.47450980390000003" green="0.2784313725" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="193" id="K4V-ww-DpF"/>
+                                            <constraint firstAttribute="width" secondItem="z0M-oE-bCm" secondAttribute="height" multiplier="1:1" id="T4l-rf-2ap"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색결과가 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-rK-RWE">
+                                        <rect key="frame" x="100.5" y="268" width="174.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="철자를 확인하거나 긴 문구는 띄어쓰기를 해보세요." textAlignment="center" lineBreakMode="headTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jws-gF-lZM">
+                                        <rect key="frame" x="110.5" y="303.5" width="154" height="26"/>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gFh-rK-RWE" firstAttribute="top" secondItem="z0M-oE-bCm" secondAttribute="bottom" constant="27" id="911-qA-Sfy"/>
+                                    <constraint firstItem="z0M-oE-bCm" firstAttribute="centerX" secondItem="9Kh-am-Jgd" secondAttribute="centerX" id="ByA-vv-pDX"/>
+                                    <constraint firstItem="jws-gF-lZM" firstAttribute="width" secondItem="z0M-oE-bCm" secondAttribute="width" multiplier="0.8" id="LXb-2c-kbx"/>
+                                    <constraint firstItem="z0M-oE-bCm" firstAttribute="centerY" secondItem="9Kh-am-Jgd" secondAttribute="centerY" multiplier="0.6" id="RWj-uB-qr0"/>
+                                    <constraint firstItem="jws-gF-lZM" firstAttribute="centerX" secondItem="gFh-rK-RWE" secondAttribute="centerX" id="bbc-YY-Mdd"/>
+                                    <constraint firstItem="jws-gF-lZM" firstAttribute="top" secondItem="gFh-rK-RWE" secondAttribute="bottom" constant="10" id="uY2-Y5-zYD"/>
+                                    <constraint firstItem="gFh-rK-RWE" firstAttribute="centerX" secondItem="z0M-oE-bCm" secondAttribute="centerX" id="wTl-fM-7WZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -253,12 +288,15 @@
                             <constraint firstItem="CGZ-eh-5es" firstAttribute="centerX" secondItem="6w4-oR-f1k" secondAttribute="centerX" id="4v2-12-IJG"/>
                             <constraint firstItem="S1G-Zl-jZg" firstAttribute="centerX" secondItem="wMZ-Nj-Bf1" secondAttribute="centerX" id="6OG-ph-3nh"/>
                             <constraint firstItem="uYI-9b-OLY" firstAttribute="leading" secondItem="MPt-ip-WU7" secondAttribute="leading" constant="16" id="CEx-wR-uj1"/>
+                            <constraint firstItem="9Kh-am-Jgd" firstAttribute="width" secondItem="S1G-Zl-jZg" secondAttribute="width" id="FHl-tM-ayX"/>
                             <constraint firstItem="S1G-Zl-jZg" firstAttribute="top" secondItem="JXP-zp-o8t" secondAttribute="bottom" constant="20" id="GoI-M7-J5L"/>
                             <constraint firstItem="FI3-eH-L9F" firstAttribute="centerX" secondItem="CGZ-eh-5es" secondAttribute="centerX" id="HTE-SF-lza"/>
                             <constraint firstItem="MPt-ip-WU7" firstAttribute="bottom" secondItem="S1G-Zl-jZg" secondAttribute="bottom" id="Ihu-Gh-dH3"/>
                             <constraint firstItem="FI3-eH-L9F" firstAttribute="top" secondItem="CGZ-eh-5es" secondAttribute="bottom" constant="12" id="KLM-E9-Vd8"/>
                             <constraint firstItem="6w4-oR-f1k" firstAttribute="top" secondItem="MPt-ip-WU7" secondAttribute="top" constant="13" id="PmY-Xq-CoV"/>
                             <constraint firstItem="6w4-oR-f1k" firstAttribute="centerX" secondItem="MPt-ip-WU7" secondAttribute="centerX" id="TzK-YG-nz5"/>
+                            <constraint firstItem="9Kh-am-Jgd" firstAttribute="centerY" secondItem="S1G-Zl-jZg" secondAttribute="centerY" id="Ycq-m3-FuD"/>
+                            <constraint firstItem="9Kh-am-Jgd" firstAttribute="height" secondItem="S1G-Zl-jZg" secondAttribute="height" id="cTS-Kw-PBS"/>
                             <constraint firstItem="S1G-Zl-jZg" firstAttribute="width" secondItem="CZX-LD-IY6" secondAttribute="width" id="dTT-il-S8Y"/>
                             <constraint firstItem="CGZ-eh-5es" firstAttribute="top" secondItem="6w4-oR-f1k" secondAttribute="bottom" constant="12" id="eCe-yn-php"/>
                             <constraint firstItem="FI3-eH-L9F" firstAttribute="width" secondItem="CGZ-eh-5es" secondAttribute="width" id="jfY-9X-CR5"/>
@@ -266,6 +304,7 @@
                             <constraint firstItem="JXP-zp-o8t" firstAttribute="width" secondItem="FI3-eH-L9F" secondAttribute="width" id="n5s-LV-nbp"/>
                             <constraint firstItem="JXP-zp-o8t" firstAttribute="centerX" secondItem="FI3-eH-L9F" secondAttribute="centerX" id="oBc-mT-4Yp"/>
                             <constraint firstItem="uYI-9b-OLY" firstAttribute="centerY" secondItem="6w4-oR-f1k" secondAttribute="centerY" id="q2z-4G-ohs"/>
+                            <constraint firstItem="9Kh-am-Jgd" firstAttribute="centerX" secondItem="S1G-Zl-jZg" secondAttribute="centerX" id="qst-Cr-rwM"/>
                             <constraint firstItem="JXP-zp-o8t" firstAttribute="top" secondItem="FI3-eH-L9F" secondAttribute="bottom" constant="12" id="sn9-IT-yZB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MPt-ip-WU7"/>
@@ -278,6 +317,11 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="S1G-Zl-jZg" id="gAg-Yc-3Uy"/>
+                        <outlet property="notFoundBigLabel" destination="gFh-rK-RWE" id="fI8-di-Lga"/>
+                        <outlet property="notFoundImageView" destination="z0M-oE-bCm" id="5eW-CL-7g3"/>
+                        <outlet property="notFoundSmallLabel" destination="jws-gF-lZM" id="h7S-c1-toM"/>
+                        <outlet property="notFoundView" destination="9Kh-am-Jgd" id="cGw-4l-A2p"/>
+                        <outlet property="tabLayout" destination="wMZ-Nj-Bf1" id="9IE-kD-tD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wl0-3h-UnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,5 +359,6 @@
     <resources>
         <image name="mainSearchIcon" width="22" height="22"/>
         <image name="searchBackIcon" width="9" height="20"/>
+        <image name="searchXSmallIcon" width="11" height="11"/>
     </resources>
 </document>

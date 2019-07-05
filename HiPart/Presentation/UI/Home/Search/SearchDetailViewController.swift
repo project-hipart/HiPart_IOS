@@ -3,14 +3,16 @@ import UIKit
 import Hero
 
 class SearchDetailViewController: UIViewController {
-
+	
 	@IBOutlet var collectionView: UICollectionView!
+	@IBOutlet var notFoundImageView: UIImageView!
+	@IBOutlet var notFoundBigLabel: UILabel!
+	@IBOutlet var notFoundSmallLabel: UILabel!
+	@IBOutlet var notFoundView: UIView!
+	@IBOutlet var tabLayout: TabLayout!
 	
-	private let sampleDatas = [
-		"123"
+	private var sampleDatas  : [String] = ["123"]
 	
-	]
-
 }
 
 //MARK: Lifecycle
@@ -18,7 +20,26 @@ extension SearchDetailViewController{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		
 		setupView()
+	}
+}
+extension UILabel {
+	func setLineHeight(lineHeight: CGFloat) {
+		let paragraphStyle = NSMutableParagraphStyle()
+		paragraphStyle.lineSpacing = 1.0
+		paragraphStyle.lineHeightMultiple = lineHeight
+		paragraphStyle.alignment = self.textAlignment
+		
+		let attrString = NSMutableAttributedString()
+		if (self.attributedText != nil) {
+			attrString.append( self.attributedText!)
+		} else {
+			attrString.append( NSMutableAttributedString(string: self.text!))
+			attrString.addAttribute(NSAttributedString.Key.font, value: self.font, range: NSMakeRange(0, attrString.length))
+		}
+		attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
+		self.attributedText = attrString
 	}
 }
 
@@ -38,11 +59,30 @@ extension SearchDetailViewController{
 		layout.minimumLineSpacing = 20
 		layout.minimumInteritemSpacing = 0
 		layout.itemSize = CGSize(width: 325.adjustedWidth , height : 171 )
-	
+		
 		collectionView.collectionViewLayout = layout
+		
+		self.notFoundSmallLabel.setLineHeight(lineHeight: 1.8)
+		self.tabLayout.delegate = self
 	}
 	
 }
+extension SearchDetailViewController : TabLayoutDelegate{
+	func onSelectedTab(_ index: Int) {
+		
+		if index == 1{
+			UIView.animate(withDuration: 0.3){[unowned self] in
+				self.notFoundView.isHidden = false
+			}
+		}else{
+			UIView.animate(withDuration: 0.3){[unowned self] in
+				self.notFoundView.isHidden = true
+			}
+		}
+	}
+}
+
+
 //MARK: CollectionView
 extension SearchDetailViewController : UICollectionViewDelegate{
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -51,10 +91,10 @@ extension SearchDetailViewController : UICollectionViewDelegate{
 		
 		
 		if offsetY < 0{
-//			adjustHeaderViewCollapsingProgress(progress: 0)
+			//			adjustHeaderViewCollapsingProgress(progress: 0)
 		}else{
 			if offsetY < 250{
-//				adjustHeaderViewCollapsingProgress(progress: min(1.0, offsetY/200))
+				//				adjustHeaderViewCollapsingProgress(progress: min(1.0, offsetY/200))
 			}
 		}
 		

@@ -9,6 +9,7 @@ class SearchViewModel{
 	init() {
 		
 	}
+	
 }
 
 protocol SearchViewModelDelegate : NSObjectProtocol{

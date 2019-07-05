@@ -15,12 +15,14 @@ extension SearchViewController{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+//		self.navigationController?.hero.navigationAnimationType = 
+		
 		addKeyboardNotifications()
 		setupView()
 		setupBinding()
 		
-		self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .up), dismissing: .uncover(direction: .down))
-		self.navigationController?.hero.navigationAnimationType = .fade
+		
 	}
 }
 

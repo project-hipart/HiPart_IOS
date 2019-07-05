@@ -6,8 +6,7 @@ class FilterChip: UIButton {
 
     var mainColor = UIColor.mainPurple
     var defaultColor = UIColor.lightGrey
-    var fillMode : Bool = false
-    
+	
     
     public var chipSelected : Bool = false{
         didSet{
@@ -41,12 +40,12 @@ class FilterChip: UIButton {
     }
 	
 	private func commonInit(){
-        print(self.frame)
-        
+		
         self.titleLabel?.font = UIFont.systemFont(ofSize: 10)
         
         self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        self.borderWidth = 1
+        self.borderWidth = 0.5
+		self.borderColor = mainColor
   
 		self.backgroundColor = UIColor.white
 		
@@ -54,24 +53,11 @@ class FilterChip: UIButton {
     
     private func select(_ selected : Bool){
         if selected{
-            if fillMode{
                 self.backgroundColor = mainColor
                 self.setTitleColor(UIColor.white, for: .normal)
-            }else{
-                self.borderColor = mainColor
-                self.setTitleColor(mainColor, for: .normal)
-            }
-            
-            
         }else{
-            if fillMode{
                 self.backgroundColor = UIColor.white
                 self.setTitleColor(mainColor, for: .normal)
-            }else{
-                self.borderColor = defaultColor
-                self.setTitleColor(defaultColor, for: .normal)
-            }
-            
         }
     
     }
