@@ -47,7 +47,7 @@
                                     <action selector="changeMyImg:" destination="q0N-Po-Rqp" eventType="touchUpInside" id="REb-FU-Mdg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-7D-s0f" customClass="EllipseBtn" customModule="HiPart" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-7D-s0f" customClass="EllipsePurpleLongBtn" customModule="HiPart" customModuleProvider="target">
                                 <rect key="frame" x="13" y="616" width="348" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="mainPurple"/>

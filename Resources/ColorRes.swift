@@ -13,6 +13,6 @@ extension UIColor{
     @nonobjc static var lightGrey = UIColor(named: "lightGrey")!
     @nonobjc static var mainGreen = UIColor(named: "mainGreen")!
     @nonobjc static var mainPurple = UIColor(named: "mainPurple")!
-    @nonobjc static var middlePurple = UIColor(named: "middlePurple")!
+    @nonobjc static var middleGrey = UIColor(named: "middleGrey")!
     @nonobjc static var white = UIColor(named: "white")!
 }
