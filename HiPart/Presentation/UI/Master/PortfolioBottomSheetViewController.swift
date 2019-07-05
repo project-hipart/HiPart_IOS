@@ -56,7 +56,9 @@ extension PortfolioBottomSheetViewController : UIGestureRecognizerDelegate{
 extension PortfolioBottomSheetViewController{
 	@IBAction func tapPortfolio(_ sender: Any) {
 		print(#function)
-		
+		if let vc = UIStoryboard(name: "Portfolio", bundle: nil).instantiateInitialViewController(){
+			self.present(vc, animated: true, completion: nil)
+		}
 	}
 	
 	
