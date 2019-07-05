@@ -1,11 +1,23 @@
 
 
 import UIKit
+import SnapKit
 
-class FilterChip: UIButton {
+class FilterChip: UIView {
 
     var mainColor = UIColor.mainPurple
     var defaultColor = UIColor.lightGrey
+	
+	private lazy var label : UILabel = {
+		let view = UILabel()
+		view.translatesAutoresizingMaskIntoConstraints=false
+		view.font = UIFont.nanumLight.withSize(11)
+		view.textAlignment = NSTextAlignment.center
+		view.backgroundColor=UIColor.clear
+		view.minimumScaleFactor = 0.7
+		view.adjustsFontSizeToFitWidth = true
+		return view
+	}()
 	
     
     public var chipSelected : Bool = false{
@@ -43,42 +55,35 @@ class FilterChip: UIButton {
 	
 	private func commonInit(){
 		
-		for family in UIFont.familyNames.sorted() {
-			let names = UIFont.fontNames(forFamilyName: family)
-			print("Family: \(family) Font names: \(names)")
-		}
-        self.titleLabel?.font = UIFont.nanumRegular.withSize(11)
-        
-//        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         self.borderWidth = 0.5
 		self.borderColor = mainColor
   
 		self.backgroundColor = UIColor.white
 		
-		
-		let rect = CGRect(x: -10, y: 0, width: self.frame.width + 20, height: self.frame.height)
-		
-		self.titleRect(forContentRect: rect)
-		
-		self.titleLabel?.minimumScaleFactor = 0.5
-		self.titleLabel?.adjustsFontSizeToFitWidth=false
-		
+		self.addSubview(self.label)
+		self.label.snp.makeConstraints{make in
+			make.left.equalTo(self).offset(10)
+			make.right.equalTo(self).offset(-10)
+			make.top.equalTo(self).offset(3)
+			make.bottom.equalTo(self).offset(-3)
+		}
 		
 	}
     
     private func select(_ selected : Bool){
         if selected{
                 self.backgroundColor = mainColor
-                self.setTitleColor(UIColor.white, for: .normal)
+			self.label.textColor = UIColor.white
         }else{
+			self.label.textColor = mainColor
                 self.backgroundColor = UIColor.white
-                self.setTitleColor(mainColor, for: .normal)
         }
     
     }
 	
 	func setChipTitle(_ title : String){
-		self.setTitle(title, for: .normal)
-		self.sizeToFit()
+		self.label.text = title
+//		self.sizeToFit()
+		self.setNeedsLayout()
 	}
 }

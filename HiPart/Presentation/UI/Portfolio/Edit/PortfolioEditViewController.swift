@@ -76,10 +76,9 @@ extension PortfolioEditViewController{
 		let addChip = FilterChip()
 		addChip.translatesAutoresizingMaskIntoConstraints=false
 		addChip.borderColor = UIColor.lightGrey
-		addChip.setTitleColor(UIColor.lightGrey, for: .normal)
 		addChip.setChipTitle("필터 수정하기")
 		addChip.setNeedsLayout()
-		addChip.addTarget(self, action: #selector(tapUpdateFilter), for: .touchUpInside)
+//		addChip.addTarget(self, action: #selector(tapUpdateFilter), for: .touchUpInside)
 		
 		
 		let paddingView = UIView()
