@@ -33,10 +33,10 @@
                                     <rect key="frame" x="25" y="25" width="24" height="24"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmMoreIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0uR-iW-nvE">
-                                    <rect key="frame" x="326" y="29" width="16" height="16"/>
+                                    <rect key="frame" x="334" y="29" width="8" height="16"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포트폴리오" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr0-ae-B8w">
-                                    <rect key="frame" x="76" y="27" width="74" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포트폴리오 수정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr0-ae-B8w">
+                                    <rect key="frame" x="76" y="27" width="136.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                     <rect key="frame" x="25" y="25" width="24" height="24"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmMoreIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-kq-s3q">
-                                    <rect key="frame" x="326" y="29" width="16" height="16"/>
+                                    <rect key="frame" x="334" y="29" width="8" height="16"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 작품 올리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwr-4Q-dcp">
                                     <rect key="frame" x="76" y="27" width="126" height="20.5"/>
@@ -134,7 +134,7 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="alarmMoreIcon" width="7.5" height="16"/>
+        <image name="alarmMoreIcon" width="8" height="16"/>
         <image name="mainTbPofolOffIcon" width="24" height="24"/>
     </resources>
 </document>
