@@ -54,6 +54,7 @@ extension PortfolioEditViewController{
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2
 		
+		
 	}
 	private func setFilters(_ filters : [Filter]){
 		//Remove all filterViews in StackView
@@ -67,7 +68,7 @@ extension PortfolioEditViewController{
 			view.translatesAutoresizingMaskIntoConstraints=false
 			view.chipSelected = filters[0] == filter
 			
-			view.setTitle(filter.rawValue, for: .normal)
+			view.setChipTitle(filter.rawValue)
 			view.setNeedsLayout()
 			
 			self.filterStackView.addArrangedSubview(view)
@@ -76,8 +77,9 @@ extension PortfolioEditViewController{
 		addChip.translatesAutoresizingMaskIntoConstraints=false
 		addChip.borderColor = UIColor.lightGrey
 		addChip.setTitleColor(UIColor.lightGrey, for: .normal)
-		addChip.setTitle("필터 수정하기",for : .normal)
+		addChip.setChipTitle("필터 수정하기")
 		addChip.setNeedsLayout()
+		addChip.addTarget(self, action: #selector(tapUpdateFilter), for: .touchUpInside)
 		
 		
 		let paddingView = UIView()
@@ -104,5 +106,9 @@ extension PortfolioEditViewController{
 	}
 	@IBAction func cancelButton(_ sender: Any) {
 		self.hero.dismissViewController()
+	}
+	
+	@objc private func tapUpdateFilter(){
+		
 	}
 }

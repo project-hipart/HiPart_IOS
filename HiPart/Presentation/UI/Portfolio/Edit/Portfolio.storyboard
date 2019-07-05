@@ -352,6 +352,50 @@
             </objects>
             <point key="canvasLocation" x="554" y="-251"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jMo-ov-q9G">
+            <objects>
+                <viewController id="ze2-a1-R13" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="auG-RW-frS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKL-ZS-CTp">
+                                <rect key="frame" x="28" y="60" width="319" height="567"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방송 컨셉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyO-dK-9GK">
+                                        <rect key="frame" x="71" y="42" width="63.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="top" secondItem="DKL-ZS-CTp" secondAttribute="top" constant="42" id="9yD-BZ-080"/>
+                                    <constraint firstItem="HyO-dK-9GK" firstAttribute="leading" secondItem="DKL-ZS-CTp" secondAttribute="leading" constant="71" id="uFc-vR-IuJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.13214362157534246" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DKL-ZS-CTp" firstAttribute="width" secondItem="auG-RW-frS" secondAttribute="width" multiplier="0.85" id="4FA-8b-qhi"/>
+                            <constraint firstItem="DKL-ZS-CTp" firstAttribute="centerY" secondItem="Hpf-Lk-2h2" secondAttribute="centerY" id="HiQ-L6-zMl"/>
+                            <constraint firstItem="DKL-ZS-CTp" firstAttribute="height" secondItem="auG-RW-frS" secondAttribute="height" multiplier="0.85" id="bad-Q9-yvQ"/>
+                            <constraint firstItem="DKL-ZS-CTp" firstAttribute="centerX" secondItem="Hpf-Lk-2h2" secondAttribute="centerX" id="vpZ-e5-wJB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hpf-Lk-2h2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-SF-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="-806"/>
+        </scene>
     </scenes>
     <resources>
         <image name="4351" width="132" height="25"/>

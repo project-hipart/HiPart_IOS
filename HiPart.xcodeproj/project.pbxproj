@@ -3,7 +3,6 @@
 	archiveVersion = 1;
 	classes = {
 	};
-
 	objectVersion = 51;
 	objects = {
 
@@ -100,6 +99,10 @@
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
 		2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		2DAF383222D00E0900B91FE4 /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
+		2DAF383322D00E0900B91FE4 /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
+		2DAF383422D00E0900B91FE4 /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
+		2DAF383522D00E0900B91FE4 /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
 		2DDA058622CFDABD0057113F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = HiPart/Presentation/UI/View/Filter.swift; sourceTree = SOURCE_ROOT; };
 		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../Upload/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
 		2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +202,17 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		2DAF383122D00DFF00B91FE4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2DAF383322D00E0900B91FE4 /* NanumSquareBold.ttf */,
+				2DAF383422D00E0900B91FE4 /* NanumSquareExtraBold.ttf */,
+				2DAF383522D00E0900B91FE4 /* NanumSquareLight.ttf */,
+				2DAF383222D00E0900B91FE4 /* NanumSquareRegular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2DFDA75722CFACEB0066E541 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,11 +287,8 @@
 				60B6A4AF22CDDA5E003B88EC /* EllipsePurpleLongBtn.swift */,
 				601BA26A22CE050A0044231E /* RoundBorderBtn.swift */,
 				60463E1722CCC5C500DFFF91 /* GreyBorderUIView.swift */,
-
-				601BA29E22CE5AA00044231E /* GreyBorderRoundText.swift */,
 				2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */,
 				2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */,
-
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 		60B2EED122C78468000724B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2DAF383122D00DFF00B91FE4 /* Fonts */,
 				6014C98A22C782C400ACB80E /* Assets.xcassets */,
 				60463E2122CD205A00DFFF91 /* ColorRes.swift */,
 			);

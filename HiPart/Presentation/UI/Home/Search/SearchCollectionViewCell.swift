@@ -44,14 +44,14 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		for filter in filters{
 			let filterView = FilterChip()
 			filterView.translatesAutoresizingMaskIntoConstraints = false
-			filterView.setTitle(filter, for: .normal)
+			filterView.setChipTitle(filter)
 			
 			self.filterViews.append(filterView)
 			self.filterStackView.addArrangedSubview(filterView)
             
 		}
 		
-		
+		self.filterStackView.addPaddingView()
         
         select(0)
 	}

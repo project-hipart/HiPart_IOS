@@ -36,18 +36,25 @@ class FilterChip: UIButton {
 	}
     override func layoutSubviews() {
         super.layoutSubviews()
-       self.cornerRadius = self.frame.height/2
+		
+		self.cornerRadius = self.frame.height/2
     }
 	
 	private func commonInit(){
 		
         self.titleLabel?.font = UIFont.systemFont(ofSize: 11)
         
-        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+//        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         self.borderWidth = 0.5
 		self.borderColor = mainColor
   
 		self.backgroundColor = UIColor.white
+		
+		self.titleRect(forContentRect: self.frame)
+		
+		self.titleLabel?.minimumScaleFactor = 0.5
+		self.titleLabel?.adjustsFontSizeToFitWidth=false
+		
 		
 	}
     
@@ -61,4 +68,9 @@ class FilterChip: UIButton {
         }
     
     }
+	
+	func setChipTitle(_ title : String){
+		self.setTitle(title, for: .normal)
+		self.sizeToFit()
+	}
 }
