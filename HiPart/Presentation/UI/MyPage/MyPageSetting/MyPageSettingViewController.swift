@@ -22,7 +22,7 @@ class MyPageSettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func bacnBtn(_ sender: UIButton) {
+    @IBAction func backBtn(_ sender: UIButton) {
         self.hero.dismissViewController()
     }
 }

@@ -14,7 +14,7 @@ class GreyBorderUIView: UIView {
         
         super.init(coder: aDecoder)
         layer.borderColor = UIColor.lightGrey.cgColor
-//        layer.cornerRadius = 6
+        layer.cornerRadius = 6
         layer.borderWidth = 1.0
         
     }

@@ -24,7 +24,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="searchBackIcon"/>
                                 <connections>
-                                    <action selector="bacnBtn:" destination="q0N-Po-Rqp" eventType="touchUpInside" id="IWN-Zp-WkS"/>
+                                    <action selector="backBtn:" destination="q0N-Po-Rqp" eventType="touchUpInside" id="6l9-2W-f70"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원 정보 수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iww-qC-We4">

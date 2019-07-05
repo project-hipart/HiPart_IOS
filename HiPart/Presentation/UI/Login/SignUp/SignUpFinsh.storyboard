@@ -28,13 +28,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bay-l7-EDf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LW2-V1-aK4"/>
                     <connections>
                         <outlet property="signUpFinishtBtn" destination="gdv-4M-ozP" id="S7C-8w-05p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Sf-gt-2W5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="54"/>
+            <point key="canvasLocation" x="1128.8" y="53.523238380809602"/>
         </scene>
     </scenes>
 </document>
