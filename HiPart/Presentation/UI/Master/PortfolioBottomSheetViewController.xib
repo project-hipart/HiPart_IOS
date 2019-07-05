@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PortfolioBottomSheetViewController" customModule="HiPart" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSheet" destination="9I0-Up-7Qh" id="kja-Tw-lSG"/>
+                <outlet property="portfolioTap" destination="xES-wS-t9Z" id="1vJ-Dk-lxI"/>
+                <outlet property="todayUploadTap" destination="Kng-OJ-fOk" id="iaZ-OI-gXN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="Root">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9I0-Up-7Qh">
+                    <rect key="frame" x="0.0" y="519" width="375" height="148"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68o-8G-AER" userLabel="Portfolio">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTbPofolOffIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zIz-wF-9LG">
+                                    <rect key="frame" x="25" y="26" width="17" height="22"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmMoreIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0uR-iW-nvE">
+                                    <rect key="frame" x="334.5" y="29" width="7.5" height="16"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포트폴리오" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr0-ae-B8w">
+                                    <rect key="frame" x="69" y="27" width="74" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf5-Pc-tdb">
+                                    <rect key="frame" x="0.0" y="73" width="375" height="1"/>
+                                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="G3O-DT-MYT"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Zf5-Pc-tdb" secondAttribute="bottom" id="3sT-j4-o6x"/>
+                                <constraint firstAttribute="trailing" secondItem="0uR-iW-nvE" secondAttribute="trailing" constant="33" id="4B9-mw-URE"/>
+                                <constraint firstItem="Zf5-Pc-tdb" firstAttribute="centerX" secondItem="68o-8G-AER" secondAttribute="centerX" id="8dL-e7-AZL"/>
+                                <constraint firstItem="zIz-wF-9LG" firstAttribute="centerY" secondItem="68o-8G-AER" secondAttribute="centerY" id="9qE-Wr-Idb"/>
+                                <constraint firstItem="Zf5-Pc-tdb" firstAttribute="width" secondItem="68o-8G-AER" secondAttribute="width" id="Mqd-7n-C57"/>
+                                <constraint firstItem="mr0-ae-B8w" firstAttribute="leading" secondItem="zIz-wF-9LG" secondAttribute="trailing" constant="27" id="TZz-qG-Kdu"/>
+                                <constraint firstItem="mr0-ae-B8w" firstAttribute="centerY" secondItem="zIz-wF-9LG" secondAttribute="centerY" id="dpR-PR-lrJ"/>
+                                <constraint firstItem="0uR-iW-nvE" firstAttribute="centerY" secondItem="68o-8G-AER" secondAttribute="centerY" id="ey9-JV-gfp"/>
+                                <constraint firstItem="zIz-wF-9LG" firstAttribute="leading" secondItem="68o-8G-AER" secondAttribute="leading" constant="25" id="l3C-Me-xbp"/>
+                                <constraint firstAttribute="height" constant="74" id="prV-PR-z18"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="xES-wS-t9Z" appends="YES" id="IW8-hL-VGU"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etY-3N-5JR" userLabel="TodayUpload">
+                            <rect key="frame" x="0.0" y="74" width="375" height="74"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTbPofolOffIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xOH-lw-pUI">
+                                    <rect key="frame" x="25" y="26" width="17" height="22"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmMoreIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-kq-s3q">
+                                    <rect key="frame" x="334.5" y="29" width="7.5" height="16"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 작품 올리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwr-4Q-dcp">
+                                    <rect key="frame" x="69" y="27" width="126" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7vb-kq-s3q" secondAttribute="trailing" constant="33" id="4KB-U3-7Vf"/>
+                                <constraint firstItem="iwr-4Q-dcp" firstAttribute="centerY" secondItem="xOH-lw-pUI" secondAttribute="centerY" id="DzQ-gr-wFP"/>
+                                <constraint firstItem="7vb-kq-s3q" firstAttribute="centerY" secondItem="etY-3N-5JR" secondAttribute="centerY" id="G4G-ML-F9h"/>
+                                <constraint firstAttribute="height" constant="74" id="Prk-21-155"/>
+                                <constraint firstItem="xOH-lw-pUI" firstAttribute="centerY" secondItem="etY-3N-5JR" secondAttribute="centerY" id="a3K-Bi-Dv7"/>
+                                <constraint firstItem="iwr-4Q-dcp" firstAttribute="leading" secondItem="xOH-lw-pUI" secondAttribute="trailing" constant="27" id="d5B-Wz-GE1"/>
+                                <constraint firstItem="xOH-lw-pUI" firstAttribute="leading" secondItem="etY-3N-5JR" secondAttribute="leading" constant="25" id="ylc-v8-Vey"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Kng-OJ-fOk" appends="YES" id="zu7-7a-VuE"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="68o-8G-AER" firstAttribute="centerX" secondItem="9I0-Up-7Qh" secondAttribute="centerX" id="CyX-q5-Vrh"/>
+                        <constraint firstItem="etY-3N-5JR" firstAttribute="centerX" secondItem="68o-8G-AER" secondAttribute="centerX" id="Mjn-Mg-q5a"/>
+                        <constraint firstItem="etY-3N-5JR" firstAttribute="width" secondItem="68o-8G-AER" secondAttribute="width" id="Or7-8P-1Q3"/>
+                        <constraint firstItem="68o-8G-AER" firstAttribute="width" secondItem="9I0-Up-7Qh" secondAttribute="width" id="SBB-Hv-52D"/>
+                        <constraint firstItem="etY-3N-5JR" firstAttribute="top" secondItem="68o-8G-AER" secondAttribute="bottom" id="XYp-WR-uJu"/>
+                        <constraint firstItem="68o-8G-AER" firstAttribute="top" secondItem="9I0-Up-7Qh" secondAttribute="top" id="bPm-gS-7hU"/>
+                        <constraint firstItem="etY-3N-5JR" firstAttribute="height" secondItem="68o-8G-AER" secondAttribute="height" id="kmd-cs-izR"/>
+                        <constraint firstAttribute="height" constant="148" id="tBJ-1G-Q59"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="9I0-Up-7Qh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OMS-qq-W4O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9I0-Up-7Qh" secondAttribute="bottom" id="VHi-Kc-eVC"/>
+                <constraint firstItem="9I0-Up-7Qh" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="bpp-lC-6pY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="146" y="4"/>
+        </view>
+        <tapGestureRecognizer id="xES-wS-t9Z">
+            <connections>
+                <action selector="tapPortfolio:" destination="-1" id="pzx-pp-Yt7"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="Kng-OJ-fOk">
+            <connections>
+                <action selector="tapTodayUpload:" destination="-1" id="tmy-jL-R0J"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="alarmMoreIcon" width="7.5" height="16"/>
+        <image name="mainTbPofolOffIcon" width="17" height="22"/>
+    </resources>
+</document>
