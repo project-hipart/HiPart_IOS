@@ -27,6 +27,7 @@ class FilterChip: UIButton {
 	override init(frame: CGRect) {
 		super.init(frame : frame)
 		
+		
 		 commonInit()
 	}
 	required init?(coder : NSCoder){
@@ -42,7 +43,11 @@ class FilterChip: UIButton {
 	
 	private func commonInit(){
 		
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 11)
+		for family in UIFont.familyNames.sorted() {
+			let names = UIFont.fontNames(forFamilyName: family)
+			print("Family: \(family) Font names: \(names)")
+		}
+        self.titleLabel?.font = UIFont.nanumRegular.withSize(11)
         
 //        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         self.borderWidth = 0.5
@@ -50,7 +55,10 @@ class FilterChip: UIButton {
   
 		self.backgroundColor = UIColor.white
 		
-		self.titleRect(forContentRect: self.frame)
+		
+		let rect = CGRect(x: -10, y: 0, width: self.frame.width + 20, height: self.frame.height)
+		
+		self.titleRect(forContentRect: rect)
 		
 		self.titleLabel?.minimumScaleFactor = 0.5
 		self.titleLabel?.adjustsFontSizeToFitWidth=false

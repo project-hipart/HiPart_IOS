@@ -25,6 +25,10 @@
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
 		2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */; };
 		2DAF383722D00E9500B91FE4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF383622D00E9500B91FE4 /* Font.swift */; };
+		2DAF383822D0129F00B91FE4 /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383222D00E0900B91FE4 /* NanumSquareRegular.ttf */; };
+		2DAF383922D012A100B91FE4 /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383522D00E0900B91FE4 /* NanumSquareLight.ttf */; };
+		2DAF383A22D012A300B91FE4 /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383422D00E0900B91FE4 /* NanumSquareExtraBold.ttf */; };
+		2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383322D00E0900B91FE4 /* NanumSquareBold.ttf */; };
 		2DDA058722CFDABD0057113F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA058622CFDABD0057113F /* Filter.swift */; };
 		2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */; };
 		2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */; };
@@ -556,20 +560,24 @@
 				601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */,
 				2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
+				2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
 				2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */,
 				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
 				6014C98B22C782C400ACB80E /* Assets.xcassets in Resources */,
 				2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */,
 				601BA29822CE4C6B0044231E /* FindPw.storyboard in Resources */,
+				2DAF383A22D012A300B91FE4 /* NanumSquareExtraBold.ttf in Resources */,
 				60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */,
 				601BA28F22CE4BF10044231E /* SignUp.storyboard in Resources */,
 				601BA28922CE31600044231E /* Login.storyboard in Resources */,
 				601BA29B22CE53550044231E /* SignUpFinsh.storyboard in Resources */,
 				60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */,
 				2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */,
+				2DAF383922D012A100B91FE4 /* NanumSquareLight.ttf in Resources */,
 				6014C98922C782C300ACB80E /* Main.storyboard in Resources */,
 				60B2EEDD22C790F7000724B6 /* Home.storyboard in Resources */,
+				2DAF383822D0129F00B91FE4 /* NanumSquareRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
