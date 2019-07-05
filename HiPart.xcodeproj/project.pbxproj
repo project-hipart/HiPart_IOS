@@ -20,9 +20,14 @@
 		2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */; };
 		2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */; };
 		2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368522CF943F0081E065 /* SearchViewModel.swift */; };
-		2DFDA75922CFAD070066E541 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75822CFAD070066E541 /* PortfolioUploadViewController.swift */; };
-		2DFDA75C22CFAD810066E541 /* PortfolioUploadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75A22CFAD810066E541 /* PortfolioUploadCollectionViewCell.swift */; };
-		2DFDA75D22CFAD810066E541 /* PortfolioUploadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA75B22CFAD810066E541 /* PortfolioUploadCollectionViewCell.xib */; };
+		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
+		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
+		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
+		2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */; };
+		2DDA058722CFDABD0057113F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA058622CFDABD0057113F /* Filter.swift */; };
+		2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */; };
+		2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */; };
+		2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */; };
 		601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */; };
 		601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */; };
 		6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014C98322C782C300ACB80E /* AppDelegate.swift */; };
@@ -61,7 +66,7 @@
 		60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEE322C7960C000724B6 /* MyPage.storyboard */; };
 		60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE522C8B868000724B6 /* HomeViewModel.swift */; };
 		60B2EEE822C8B8AC000724B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE722C8B8AC000724B6 /* HomeViewController.swift */; };
-		60B2EEEA22C8BB3B000724B6 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE922C8BB3B000724B6 /* PortfolioViewController.swift */; };
+		60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE922C8BB3B000724B6 /* PortfolioEditViewController.swift */; };
 		60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEEB22C8BB49000724B6 /* MyPageViewController.swift */; };
 		60B2EEF322C8BBE0000724B6 /* HiPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEF222C8BBE0000724B6 /* HiPartViewController.swift */; };
 		60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEF422C8BCB4000724B6 /* HiPartViewModel.swift */; };
@@ -90,9 +95,15 @@
 		2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D79368522CF943F0081E065 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = ../UI/Home/Search/SearchViewModel.swift; sourceTree = "<group>"; };
-		2DFDA75822CFAD070066E541 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUploadViewController.swift; sourceTree = "<group>"; };
-		2DFDA75A22CFAD810066E541 /* PortfolioUploadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUploadCollectionViewCell.swift; sourceTree = "<group>"; };
-		2DFDA75B22CFAD810066E541 /* PortfolioUploadCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioUploadCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
+		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
+		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
+		2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		2DDA058622CFDABD0057113F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = HiPart/Presentation/UI/View/Filter.swift; sourceTree = SOURCE_ROOT; };
+		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../Upload/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
+		2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioEditEmbedCollectionViewCell.xib; sourceTree = "<group>"; };
 		601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
 		601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		6014C98022C782C300ACB80E /* HiPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +144,7 @@
 		60B2EEE322C7960C000724B6 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		60B2EEE522C8B868000724B6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		60B2EEE722C8B8AC000724B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		60B2EEE922C8BB3B000724B6 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		60B2EEE922C8BB3B000724B6 /* PortfolioEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditViewController.swift; sourceTree = "<group>"; };
 		60B2EEEB22C8BB49000724B6 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		60B2EEF222C8BBE0000724B6 /* HiPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiPartViewController.swift; sourceTree = "<group>"; };
 		60B2EEF422C8BCB4000724B6 /* HiPartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiPartViewModel.swift; sourceTree = "<group>"; };
@@ -177,12 +188,24 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		2D9E093B22CFC058008DFA78 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				60B2EEE122C795F3000724B6 /* Portfolio.storyboard */,
+				60B2EEE922C8BB3B000724B6 /* PortfolioEditViewController.swift */,
+				2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */,
+				2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */,
+				2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		2DFDA75722CFACEB0066E541 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
-				2DFDA75822CFAD070066E541 /* PortfolioUploadViewController.swift */,
-				2DFDA75A22CFAD810066E541 /* PortfolioUploadCollectionViewCell.swift */,
-				2DFDA75B22CFAD810066E541 /* PortfolioUploadCollectionViewCell.xib */,
+				2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */,
+				2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */,
+				2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -252,6 +275,8 @@
 				601BA26A22CE050A0044231E /* RoundBorderBtn.swift */,
 				60463E1722CCC5C500DFFF91 /* GreyBorderUIView.swift */,
 				601BA29E22CE5AA00044231E /* GreyBorderRoundText.swift */,
+				2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */,
+				2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +355,7 @@
 		60B2EED622C787DE000724B6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2DDA058622CFDABD0057113F /* Filter.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -390,9 +416,8 @@
 		60B2EEF022C8BBA2000724B6 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				2D9E093B22CFC058008DFA78 /* Edit */,
 				2DFDA75722CFACEB0066E541 /* Upload */,
-				60B2EEE122C795F3000724B6 /* Portfolio.storyboard */,
-				60B2EEE922C8BB3B000724B6 /* PortfolioViewController.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -484,6 +509,7 @@
 				TargetAttributes = {
 					6014C97F22C782C300ACB80E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -515,9 +541,10 @@
 				2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
+				2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */,
 				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
 				6014C98B22C782C400ACB80E /* Assets.xcassets in Resources */,
-				2DFDA75D22CFAD810066E541 /* PortfolioUploadCollectionViewCell.xib in Resources */,
+				2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */,
 				601BA29822CE4C6B0044231E /* FindPw.storyboard in Resources */,
 				60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */,
 				601BA28F22CE4BF10044231E /* SignUp.storyboard in Resources */,
@@ -590,26 +617,30 @@
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
 				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
 				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
+				2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */,
 				60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */,
-				60B2EEEA22C8BB3B000724B6 /* PortfolioViewController.swift in Sources */,
+				60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */,
 				2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */,
-				2DFDA75922CFAD070066E541 /* PortfolioUploadViewController.swift in Sources */,
+				2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */,
 				2D79367A22CF94200081E065 /* SearchDetailViewController.swift in Sources */,
 				602FB3AE22CBC65C003ED6DB /* NoticeViewController.swift in Sources */,
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,
 				601BA29D22CE53740044231E /* SignUpFinshViewController.swift in Sources */,
 				60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */,
+				2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */,
 				60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */,
 				60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */,
 				60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */,
+				2DDA058722CFDABD0057113F /* Filter.swift in Sources */,
 				60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */,
 				602FB3A522CBC3AE003ED6DB /* HomeCreaterViewController.swift in Sources */,
+				2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */,
 				2D79367D22CF94200081E065 /* SearchTextField.swift in Sources */,
 				60B6A4B022CDDA5E003B88EC /* EllipsePurpleLongBtn.swift in Sources */,
 				60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */,
 				60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */,
 				2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */,
-				2DFDA75C22CFAD810066E541 /* PortfolioUploadCollectionViewCell.swift in Sources */,
+				2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */,
 				60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */,
 				6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */,
 				60463E1A22CCCC3700DFFF91 /* MyPageListViewController.swift in Sources */,
@@ -783,6 +814,7 @@
 			baseConfigurationReference = A7D5F761D12D65D8A6ABA039 /* Pods-HiPart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HiPart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -792,6 +824,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sopt.HiPart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -802,6 +835,7 @@
 			baseConfigurationReference = ED1799A0901C119E4607245D /* Pods-HiPart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HiPart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

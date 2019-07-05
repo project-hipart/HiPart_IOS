@@ -27,7 +27,6 @@ extension MasterViewController {
 extension MasterViewController{
 	private func setupView(){
 		Device.tabBarHeight = self.tabBar.frame.height
-		print("tabBarHeight \(Device.tabBarHeight)")
 		self.delegate = self
 	}
 }
@@ -44,15 +43,37 @@ extension MasterViewController {
 extension MasterViewController : UITabBarControllerDelegate{
 	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
 		
-		if viewController is PortfolioViewController{
+		if viewController is PortfolioEditViewController{
 			showPortfolioBottomViewController()
+
+			adjustTabBarItemImages(isPortfolioOpen: true)
+			
 			return false
 		}
+	
 		
 		return true
 	}
 	func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
 		print(#function)
+	}
+	
+	func adjustTabBarItemImages(isPortfolioOpen : Bool){
+		if !isPortfolioOpen{
+			self.tabBar.items?[2].image = UIImage(named : "mainTbPofolOffIcon")
+			self.tabBar.tintColor = UIColor.mainPurple
+			
+			self.tabBar.items?[0].selectedImage = UIImage(named : "mainTbHomeOnIcon")
+			self.tabBar.items?[1].selectedImage = UIImage(named : "mainTbHipotOnIcon")
+			self.tabBar.items?[3].selectedImage = UIImage(named : "mainTbMyPageOnIcon")
+		}else{
+			self.tabBar.tintColor = UIColor.init(red: 199/255, green: 199/255, blue: 199/255, alpha: 1.0)
+			self.tabBar.items?[2].image = UIImage(named : "mainTbPofolOnIcon")?.withRenderingMode(.alwaysOriginal)
+			
+			self.tabBar.items?[0].selectedImage = UIImage(named : "mainTbHomeOffIcon")?.withRenderingMode(.alwaysOriginal)
+			self.tabBar.items?[1].selectedImage = UIImage(named : "mainTbHipotOffIcon")?.withRenderingMode(.alwaysOriginal)
+			self.tabBar.items?[3].selectedImage = UIImage(named : "mainTbMyPageOffIcon")?.withRenderingMode(.alwaysOriginal)
+		}
 	}
 }
 //NAVIGATE
@@ -68,6 +89,7 @@ extension MasterViewController{
 	
 	@objc private func tapBackground(_ sender : UITapGestureRecognizer){
 		print(#function)
+		adjustTabBarItemImages(isPortfolioOpen: false)
 		if let vc = self.portfolioBottomSheetVC{
 			self.remove(asChildViewController: vc)
 			self.view.removeBlurView()
@@ -92,5 +114,21 @@ extension UIViewController {
 		
 		return instantiateFromNib()
 		
+	}
+}
+
+extension String {
+	func attributedStringWithColor(_ strings: [String], color: UIColor, characterSpacing: UInt? = nil) -> NSAttributedString {
+		let attributedString = NSMutableAttributedString(string: self)
+		for string in strings {
+			let range = (self as NSString).range(of: string)
+			attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+		}
+		
+		guard let characterSpacing = characterSpacing else {return attributedString}
+		
+		attributedString.addAttribute(NSAttributedString.Key.kern, value: characterSpacing, range: NSRange(location: 0, length: attributedString.length))
+		
+		return attributedString
 	}
 }

@@ -2,13 +2,13 @@
 //  PortfolioUploadViewController.swift
 //  HiPart
 //
-//  Created by 문명주 on 06/07/2019.
+//  Created by 최은희 on 06/07/2019.
 //  Copyright © 2019 HiPart. All rights reserved.
 //
 
 import UIKit
 
-class PortfolioUploadViewController: UIViewController {
+class PortfolioEditEmbedViewController: UIViewController {
 
 	@IBOutlet var collectionView: UICollectionView!
 	
@@ -21,9 +21,9 @@ class PortfolioUploadViewController: UIViewController {
 	
 
 }
-extension PortfolioUploadViewController{
+extension PortfolioEditEmbedViewController{
 	private func setupView(){
-		let identifier = String(describing: PortfolioUploadCollectionViewCell.self)
+		let identifier = String(describing: PortfolioEditEmbedCollectionViewCell.self)
 		let nib = UINib(nibName: identifier, bundle: nil)
 		self.collectionView.register(nib, forCellWithReuseIdentifier: identifier)
 		
@@ -39,17 +39,17 @@ extension PortfolioUploadViewController{
 		self.collectionView.dataSource=self
 	}
 }
-extension PortfolioUploadViewController : UICollectionViewDelegate{
+extension PortfolioEditEmbedViewController : UICollectionViewDelegate{
 
 }
-extension PortfolioUploadViewController : UICollectionViewDataSource{
+extension PortfolioEditEmbedViewController : UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return 40
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PortfolioUploadCollectionViewCell.self), for: indexPath) as? PortfolioUploadCollectionViewCell{
+		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PortfolioEditEmbedCollectionViewCell.self), for: indexPath) as? PortfolioEditEmbedCollectionViewCell{
 			print(cell)
 			return cell
 		}

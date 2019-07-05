@@ -1,10 +1,3 @@
-//
-//  SearchTextField.swift
-//  MVVMRx
-//
-//  Created by 문명주 on 03/07/2019.
-//  Copyright © 2019 storm. All rights reserved.
-//
 
 import UIKit
 

@@ -9,7 +9,7 @@
 import UIKit
 import Hero
 
-class PortfolioViewController: UIViewController {
+class PortfolioEditViewController: UIViewController {
 
 	@IBOutlet var typeLabel: UILabel!
 	@IBOutlet var uploadContainerView: UIView!
@@ -17,16 +17,17 @@ class PortfolioViewController: UIViewController {
 	@IBOutlet var imageView: UIImageView!
 	@IBOutlet var backButton: UIButton!
 	@IBOutlet var filterStackView: UIStackView!
+	private var filterViews : [FilterChip] = []
 	
 	
     let viewModel = PortfolioViewModel()
 	
-	private lazy var uploadViewController: PortfolioUploadViewController = {
+	private lazy var uploadViewController: PortfolioEditViewController = {
 		// Load Storyboard
 		let storyboard = UIStoryboard(name: "Portfolio", bundle: Bundle.main)
 		
 		// Instantiate View Controller
-		var viewController = storyboard.instantiateViewController(withIdentifier: "PortfolioUploadViewController") as! PortfolioUploadViewController
+		var viewController = storyboard.instantiateViewController(withIdentifier: "PortfolioUploadViewController") as! PortfolioEditViewController
 		
 		// Add View Controller as Child View Controller
 		self.add(asChildViewController: viewController, to: self.uploadContainerView)
@@ -37,31 +38,54 @@ class PortfolioViewController: UIViewController {
 	
 }
 
-extension PortfolioViewController {
+extension PortfolioEditViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		self.setupView()
         viewModel.delegate = self
+		self.setFilters([Filter.sample,Filter.sample])
     }
 
 }
-extension PortfolioViewController{
+extension PortfolioEditViewController{
 	private func setupView(){
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2
 		
 	}
+	private func setFilters(_ filters : [Filter]){
+		//Remove all filterViews in StackView
+		for v in filterViews{
+			self.filterStackView.removeArrangedSubview(v)
+			v.removeFromSuperview()
+		}
+		
+		for filter in filters{
+			let view = FilterChip()
+			view.translatesAutoresizingMaskIntoConstraints=false
+			view.chipSelected = filters[0] == filter
+			view.setTitle(filter.rawValue, for: .normal)
+			
+			self.filterStackView.addArrangedSubview(view)
+		}
+		let addChip = FilterChip()
+		addChip.setTitle("필터 수정하기",for : .normal)
+		
+		self.filterStackView.addArrangedSubview(addChip)
+		
+		
+	}
 }
 
 //MARK: ViewModelDelegate
-extension PortfolioViewController : PortfolioViewModelDelegate {
+extension PortfolioEditViewController : PortfolioViewModelDelegate {
     func onTextChanged(text: String) {
     }
 }
 //MARK: Actions
-extension PortfolioViewController{
+extension PortfolioEditViewController{
 	@IBAction func tapBackButton(_ sender: Any) {
 		self.hero.dismissViewController()
 	}

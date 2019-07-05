@@ -14,7 +14,7 @@
         <!--포트폴리오-->
         <scene sceneID="vOR-0N-HqH">
             <objects>
-                <viewController id="NzV-Wz-LBv" customClass="PortfolioViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NzV-Wz-LBv" customClass="PortfolioEditViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNQ-MD-WBO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,16 +123,17 @@
                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-wx-QB9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-wx-QB9" userLabel="dividerView">
                                 <rect key="frame" x="28" y="193.5" width="319" height="1"/>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6vf-Qx-qZQ"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1U-j0-xNT">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i1U-j0-xNT">
                                 <rect key="frame" x="28" y="214.5" width="319" height="18"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="Ra5-D4-vjj"/>
                                     <constraint firstAttribute="height" constant="18" id="zcA-xM-bDd"/>
                                 </constraints>
                             </stackView>
@@ -250,7 +251,6 @@
                             <constraint firstItem="QOn-KE-uAa" firstAttribute="centerY" secondItem="Cer-VJ-soV" secondAttribute="centerY" id="MdW-cj-CZ9"/>
                             <constraint firstItem="v5M-0u-PZI" firstAttribute="leading" secondItem="Iwc-MF-ZcS" secondAttribute="leading" id="NP8-iy-Tbu"/>
                             <constraint firstItem="uUN-NA-v4e" firstAttribute="bottom" secondItem="UdH-Vd-VYI" secondAttribute="bottom" constant="10" id="RQw-2h-TwZ"/>
-                            <constraint firstItem="i1U-j0-xNT" firstAttribute="centerX" secondItem="XAG-wx-QB9" secondAttribute="centerX" id="Ten-gy-VZJ"/>
                             <constraint firstItem="4Wa-NV-ffL" firstAttribute="centerY" secondItem="FQq-yL-tQG" secondAttribute="centerY" multiplier="2" id="WIk-XG-G6x"/>
                             <constraint firstItem="Cer-VJ-soV" firstAttribute="leading" secondItem="4Wa-NV-ffL" secondAttribute="trailing" constant="14.5" id="aEW-4y-igC"/>
                             <constraint firstItem="4Wa-NV-ffL" firstAttribute="leading" secondItem="uUN-NA-v4e" secondAttribute="leading" constant="25" id="aTn-0D-l3h"/>
@@ -260,7 +260,7 @@
                             <constraint firstItem="UCA-L9-RGf" firstAttribute="top" secondItem="Zq9-4Q-tWe" secondAttribute="bottom" constant="26" id="h2r-4h-kYG"/>
                             <constraint firstItem="UdH-Vd-VYI" firstAttribute="top" secondItem="jNR-Jp-tov" secondAttribute="bottom" constant="10" id="laO-hf-JqK"/>
                             <constraint firstItem="CAP-NF-7dl" firstAttribute="centerY" secondItem="Iwc-MF-ZcS" secondAttribute="centerY" id="nEg-kr-a2U"/>
-                            <constraint firstItem="i1U-j0-xNT" firstAttribute="width" secondItem="XAG-wx-QB9" secondAttribute="width" id="nJe-xU-Y2C"/>
+                            <constraint firstItem="i1U-j0-xNT" firstAttribute="leading" secondItem="ajm-x1-CQ1" secondAttribute="leading" id="oQo-qw-CNs"/>
                             <constraint firstItem="iGX-d2-lAY" firstAttribute="width" secondItem="HNQ-MD-WBO" secondAttribute="width" id="oig-QA-LTe"/>
                             <constraint firstItem="iGX-d2-lAY" firstAttribute="top" secondItem="HNQ-MD-WBO" secondAttribute="top" id="ovX-a3-FVE"/>
                             <constraint firstItem="v5M-0u-PZI" firstAttribute="top" secondItem="UCA-L9-RGf" secondAttribute="bottom" constant="20" id="p5N-1S-ztU"/>
@@ -272,7 +272,7 @@
                             <constraint firstItem="IfQ-Yk-sn4" firstAttribute="leading" secondItem="Cer-VJ-soV" secondAttribute="leading" id="v51-8R-MdS"/>
                             <constraint firstItem="jNR-Jp-tov" firstAttribute="width" secondItem="XAG-wx-QB9" secondAttribute="width" id="vF6-KR-jkp"/>
                             <constraint firstItem="Zq9-4Q-tWe" firstAttribute="leading" secondItem="ajm-x1-CQ1" secondAttribute="leading" id="xYm-4d-XCs"/>
-                            <constraint firstItem="ajm-x1-CQ1" firstAttribute="leading" secondItem="i1U-j0-xNT" secondAttribute="leading" id="xfe-6a-kn2"/>
+                            <constraint firstItem="ajm-x1-CQ1" firstAttribute="leading" secondItem="XAG-wx-QB9" secondAttribute="leading" id="xfe-6a-kn2"/>
                             <constraint firstItem="HuD-YH-TxW" firstAttribute="leading" secondItem="HNQ-MD-WBO" secondAttribute="leading" constant="8" id="zWv-vL-BOz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uUN-NA-v4e"/>
@@ -291,12 +291,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhg-Hv-mOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="-272"/>
+            <point key="canvasLocation" x="-215" y="-274"/>
         </scene>
-        <!--Portfolio Upload View Controller-->
+        <!--Portfolio Edit Embed View Controller-->
         <scene sceneID="7be-Hd-3ow">
             <objects>
-                <viewController id="BYh-Oa-Tra" customClass="PortfolioUploadViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYh-Oa-Tra" customClass="PortfolioEditEmbedViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cD0-Iw-COM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

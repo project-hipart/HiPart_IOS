@@ -41,7 +41,7 @@ class FilterChip: UIButton {
 	
 	private func commonInit(){
 		
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 11)
         
         self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         self.borderWidth = 0.5

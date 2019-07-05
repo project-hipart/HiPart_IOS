@@ -1,10 +1,3 @@
-//
-//  PortfolioBottomSheetViewController.swift
-//  HiPart
-//
-//  Created by 문명주 on 04/07/2019.
-//  Copyright © 2019 HiPart. All rights reserved.
-//
 
 import UIKit
 import Hero
@@ -55,7 +48,6 @@ extension PortfolioBottomSheetViewController : UIGestureRecognizerDelegate{
 //MARK: Actions
 extension PortfolioBottomSheetViewController{
 	@IBAction func tapPortfolio(_ sender: Any) {
-		print(#function)
 		if let vc = UIStoryboard(name: "Portfolio", bundle: nil).instantiateInitialViewController(){
 			self.present(vc, animated: true, completion: nil)
 		}
@@ -63,10 +55,22 @@ extension PortfolioBottomSheetViewController{
 	
 	
 	@IBAction func tapTodayUpload(_ sender: Any) {
-		print(#function)
+		
+		
+		
+		if false{
+			let vc = UIStoryboard(name: "PortfolioEdit", bundle: nil).instantiateViewController(withIdentifier: String(describing: PortfolioUploadViewController.self))
+				self.present(vc, animated: true, completion: nil)
+			
+		}else{
+			let vc = UIStoryboard(name: "PortfolioEdit", bundle: nil).instantiateViewController(withIdentifier: String(describing: PortfolioUploadTranslationViewController.self))
+				self.present(vc, animated: true, completion: nil)
+			
+		}
+		
+		
 	}
 	@IBAction func tapBackground(_ sender: Any) {
-			print(#function)
 			if let parent = self.parent{
 				parent.remove(asChildViewController: self)
 				parent.view.removeBlurView()

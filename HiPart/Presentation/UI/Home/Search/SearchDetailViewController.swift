@@ -25,6 +25,9 @@ extension SearchDetailViewController{
 	}
 }
 extension UILabel {
+	
+
+
 	func setLineHeight(lineHeight: CGFloat) {
 		let paragraphStyle = NSMutableParagraphStyle()
 		paragraphStyle.lineSpacing = 1.0
