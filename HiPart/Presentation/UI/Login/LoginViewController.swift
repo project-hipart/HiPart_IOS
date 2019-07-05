@@ -8,22 +8,38 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var idView: UIView!
+    @IBOutlet weak var pwView: UIView!
+    @IBOutlet weak var idImg: UIImageView!
+    @IBOutlet weak var pwImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    @IBAction func findPw(_ sender: UIButton) {
         
-    }
-    
-    @IBAction func signUp(_ sender: UIButton) {
-        
-    }
+        self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
 
+        idTextField.delegate = self
+        pwTextField.delegate = self
+     
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        if textField == idTextField {
+            idView.borderColor = UIColor.mainPurple
+            idImg.image = UIImage(named: "loginIdOnIcon")
+        } else if textField == pwTextField {
+            pwView.borderColor = UIColor.mainPurple
+            pwImg.image = UIImage(named: "loginPasswordOnIcon")
+        }
+        return true
+    }
 }
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HCB-Nc-QD8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iug-Pk-Lf2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,7 +36,6 @@
                                     <color key="titleColor" name="darkGrey"/>
                                 </state>
                                 <connections>
-                                    <action selector="findPw:" destination="HCB-Nc-QD8" eventType="touchUpInside" id="r7D-UI-xFm"/>
                                     <segue destination="hzG-H7-I0L" kind="show" id="mLn-lD-AYA"/>
                                 </connections>
                             </button>
@@ -48,7 +47,6 @@
                                     <color key="titleColor" name="darkGrey"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUp:" destination="HCB-Nc-QD8" eventType="touchUpInside" id="gOV-wO-nfE"/>
                                     <segue destination="JXh-Ar-CiQ" kind="show" id="O9T-dO-dqr"/>
                                 </connections>
                             </button>
@@ -57,17 +55,76 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="middleGrey"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-UY-BbH" customClass="GreyBorderUIView" customModule="HiPart" customModuleProvider="target">
+                                <rect key="frame" x="50" y="273" width="275" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginIdOffIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9z4-uA-Fpr">
+                                        <rect key="frame" x="15" y="12" width="19" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PPg-lu-x2F">
+                                        <rect key="frame" x="42" y="6" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="darkGrey"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9p-WU-Dmr">
+                                        <rect key="frame" x="47" y="6" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" name="darkGrey"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHZ-Pg-Q4D" customClass="GreyBorderUIView" customModule="HiPart" customModuleProvider="target">
+                                <rect key="frame" x="50" y="335" width="275" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginPasswordOffIcon" translatesAutoresizingMaskIntoConstraints="NO" id="A1o-OW-lB6">
+                                        <rect key="frame" x="15" y="12" width="19" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gZ1-yT-t7h">
+                                        <rect key="frame" x="42" y="13" width="200" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="darkGrey"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="패스워드" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-pY-QZS">
+                                        <rect key="frame" x="47" y="6" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" name="darkGrey"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="391-0U-7ZM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P7M-Up-64C"/>
                     <connections>
+                        <outlet property="idImg" destination="9z4-uA-Fpr" id="DXY-Pm-lfE"/>
+                        <outlet property="idTextField" destination="k9p-WU-Dmr" id="fBo-ri-StC"/>
+                        <outlet property="idView" destination="3Hz-UY-BbH" id="6Iu-R1-q7R"/>
                         <outlet property="loginBtn" destination="2TW-Ng-o7m" id="v2P-Kp-fjp"/>
+                        <outlet property="pwImg" destination="A1o-OW-lB6" id="3uz-bh-hiB"/>
+                        <outlet property="pwTextField" destination="Ud6-pY-QZS" id="Y5H-LM-qKk"/>
+                        <outlet property="pwView" destination="iHZ-Pg-Q4D" id="SU6-NW-SWu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEB-yR-XAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="88"/>
+            <point key="canvasLocation" x="976.79999999999995" y="87.706146926536732"/>
         </scene>
         <!--Main-->
         <scene sceneID="5xN-Lc-qQl">
@@ -75,7 +132,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="5xw-64-ShO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ap-6F-q5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="48"/>
+            <point key="canvasLocation" x="1564.8" y="47.676161919040482"/>
         </scene>
         <!--FindPw-->
         <scene sceneID="U75-PO-dtP">
@@ -83,7 +140,7 @@
                 <viewControllerPlaceholder storyboardName="FindPw" id="hzG-H7-I0L" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtT-z2-5ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="92"/>
+            <point key="canvasLocation" x="1576.8" y="91.754122938530742"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="fib-Br-tfI">
@@ -91,10 +148,29 @@
                 <viewControllerPlaceholder storyboardName="SignUp" id="JXh-Ar-CiQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKU-Xf-yxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="129"/>
+            <point key="canvasLocation" x="1580.8" y="128.63568215892056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xZQ-56-YYq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Iug-Pk-Lf2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aMu-Yg-mt5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HCB-Nc-QD8" kind="relationship" relationship="rootViewController" id="fiX-0h-vl9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGe-yd-K06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="87.706146926536732"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loginIdOffIcon" width="19" height="19"/>
+        <image name="loginPasswordOffIcon" width="19" height="19"/>
         <namedColor name="darkGrey">
             <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

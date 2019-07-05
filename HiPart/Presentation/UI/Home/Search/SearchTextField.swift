@@ -19,7 +19,7 @@ class SearchTextField : UITextField{
 	private func commonInit(){
 		let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.frame.height))
 		let rightIconImage = UIImage(named: "searchSearchIcon")
-		let rightIconView = UIButton(frame:CGRect(x: 0, y: 0, width: 25.1, height : 15.1))
+		let rightIconView = UIButton(frame:CGRect(x: 0, y: 0, width: 45.1, height : 15.1))
 		rightIconView.contentMode = .left
 		rightIconView.tintColor = UIColor.black
 		rightIconView.setImage(rightIconImage, for: .normal)
