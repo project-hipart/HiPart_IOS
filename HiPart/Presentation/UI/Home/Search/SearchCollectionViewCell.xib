@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewCell" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="HiPart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="171"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="171"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainProfilePhotoImage" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ma-TXT">
+                        <rect key="frame" x="28" y="22" width="74" height="74"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Adq-ma-TXT" secondAttribute="height" multiplier="1:1" id="Sp4-KN-AFn"/>
+                            <constraint firstAttribute="height" constant="74" id="los-WF-Z9R"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="08R-0R-wtP">
+                        <rect key="frame" x="112" y="22" width="80" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="FK2-oI-EJX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="크리에이터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nC8-Zg-vzc">
+                        <rect key="frame" x="112" y="56" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-En-V9F">
+                        <rect key="frame" x="112" y="78.5" width="203" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9d8-qY-jaK"/>
+                            <constraint firstAttribute="height" constant="18" id="c1E-pV-fIe"/>
+                        </constraints>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPickOnIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MDq-Dl-hV3">
+                        <rect key="frame" x="283" y="22" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="MDq-Dl-hV3" secondAttribute="height" multiplier="1:1" id="FkI-2G-v0g"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="srY-Lf-ezu">
+                        <rect key="frame" x="198" y="14" width="79" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="y6F-D8-SHa">
+                                <rect key="frame" x="0.0" y="12" width="26.5" height="16"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-Hu-vsS">
+                                <rect key="frame" x="26.5" y="12" width="26" height="16"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="mQb-QC-pvO">
+                                <rect key="frame" x="52.5" y="12" width="26.5" height="16"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Lyo-pL-Mcg"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요~ 먹고 싶은 모든 것들을 영상으로 올리고 있습니다. 많이 사랑해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVN-ay-dGX">
+                        <rect key="frame" x="28" y="116" width="257" height="37"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="srY-Lf-ezu" firstAttribute="leading" secondItem="08R-0R-wtP" secondAttribute="trailing" constant="6" id="0OP-Uj-fZy"/>
+                <constraint firstItem="Adq-ma-TXT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="22" id="4yD-KP-IyX"/>
+                <constraint firstItem="AyY-En-V9F" firstAttribute="leading" secondItem="08R-0R-wtP" secondAttribute="leading" id="CqB-XA-00i"/>
+                <constraint firstItem="srY-Lf-ezu" firstAttribute="trailing" secondItem="MDq-Dl-hV3" secondAttribute="leading" constant="-6" id="EE8-Zb-ezi"/>
+                <constraint firstItem="AyY-En-V9F" firstAttribute="top" secondItem="nC8-Zg-vzc" secondAttribute="bottom" constant="8" id="Foz-c1-67C"/>
+                <constraint firstItem="08R-0R-wtP" firstAttribute="leading" secondItem="Adq-ma-TXT" secondAttribute="trailing" constant="10" id="Ggp-w5-Eyz"/>
+                <constraint firstItem="Adq-ma-TXT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="KqN-cN-uqp"/>
+                <constraint firstItem="kVN-ay-dGX" firstAttribute="leading" secondItem="Adq-ma-TXT" secondAttribute="leading" id="Nol-PL-dCF"/>
+                <constraint firstAttribute="trailing" secondItem="MDq-Dl-hV3" secondAttribute="trailing" constant="26" id="Obb-B3-ncJ"/>
+                <constraint firstItem="MDq-Dl-hV3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="22" id="SKs-gv-dSe"/>
+                <constraint firstItem="kVN-ay-dGX" firstAttribute="top" secondItem="Adq-ma-TXT" secondAttribute="bottom" constant="20" id="V2g-1i-5ul"/>
+                <constraint firstItem="08R-0R-wtP" firstAttribute="top" secondItem="Adq-ma-TXT" secondAttribute="top" id="lfU-6U-tzO"/>
+                <constraint firstItem="nC8-Zg-vzc" firstAttribute="top" secondItem="08R-0R-wtP" secondAttribute="bottom" constant="10" id="mEm-Qs-m4j"/>
+                <constraint firstAttribute="trailing" secondItem="kVN-ay-dGX" secondAttribute="trailing" constant="40" id="naS-Gt-N2F"/>
+                <constraint firstAttribute="bottom" secondItem="kVN-ay-dGX" secondAttribute="bottom" constant="18" id="oBd-re-EAH"/>
+                <constraint firstItem="srY-Lf-ezu" firstAttribute="centerY" secondItem="08R-0R-wtP" secondAttribute="centerY" id="q1W-FC-ihH"/>
+                <constraint firstItem="nC8-Zg-vzc" firstAttribute="leading" secondItem="08R-0R-wtP" secondAttribute="leading" id="zzR-WY-g27"/>
+            </constraints>
+            <size key="customSize" width="342" height="197"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetExtension">
+                    <size key="value" width="0.5" height="0.5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.20000000000000001"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColorExtension">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bodyLabel" destination="kVN-ay-dGX" id="tgh-qP-J1q"/>
+                <outlet property="filterStackView" destination="AyY-En-V9F" id="giT-lX-sTF"/>
+                <outlet property="nicknameLabel" destination="08R-0R-wtP" id="aw3-lC-GVA"/>
+                <outlet property="platformStackView" destination="srY-Lf-ezu" id="TLn-jc-hz4"/>
+                <outlet property="thumbnailView" destination="Adq-ma-TXT" id="Q22-JF-OUw"/>
+                <outlet property="typeLabel" destination="nC8-Zg-vzc" id="7gm-4w-Vym"/>
+            </connections>
+            <point key="canvasLocation" x="-611" y="65"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mainPickOnIcon" width="24" height="24"/>
+        <image name="mainProfilePhotoImage" width="78.5" height="78.5"/>
+        <image name="youtubeGreyImg" width="22.5" height="16"/>
+    </resources>
+</document>
