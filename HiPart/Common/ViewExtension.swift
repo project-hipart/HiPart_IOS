@@ -15,3 +15,17 @@ extension UITabBarController{
         }
     }
 }
+extension UIStackView{
+	func addPaddingView(){
+		let paddingView = UIView()
+		paddingView.translatesAutoresizingMaskIntoConstraints=false
+		
+		if self.axis == .horizontal{
+			paddingView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+		}else{
+			paddingView.setContentHuggingPriority(.defaultLow, for: .vertical)
+		}
+		
+		self.addArrangedSubview(paddingView)
+	}
+}

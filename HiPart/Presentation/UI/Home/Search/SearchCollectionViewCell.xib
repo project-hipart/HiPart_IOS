@@ -41,30 +41,29 @@
                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-En-V9F">
-                        <rect key="frame" x="112" y="78.5" width="203" height="18"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-En-V9F">
+                        <rect key="frame" x="112" y="78.5" width="195" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9d8-qY-jaK"/>
                             <constraint firstAttribute="height" constant="18" id="c1E-pV-fIe"/>
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPickOnIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MDq-Dl-hV3">
-                        <rect key="frame" x="283" y="22" width="16" height="16"/>
+                        <rect key="frame" x="275" y="22" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="MDq-Dl-hV3" secondAttribute="height" multiplier="1:1" id="FkI-2G-v0g"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="srY-Lf-ezu">
-                        <rect key="frame" x="198" y="14" width="79" height="40"/>
+                        <rect key="frame" x="198" y="14" width="71" height="40"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="y6F-D8-SHa">
-                                <rect key="frame" x="0.0" y="12" width="26.5" height="16"/>
+                                <rect key="frame" x="0.0" y="12" width="23.5" height="16"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-Hu-vsS">
-                                <rect key="frame" x="26.5" y="12" width="26" height="16"/>
+                                <rect key="frame" x="23.5" y="12" width="24" height="16"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="mQb-QC-pvO">
-                                <rect key="frame" x="52.5" y="12" width="26.5" height="16"/>
+                                <rect key="frame" x="47.5" y="12" width="23.5" height="16"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -87,6 +86,7 @@
                 <constraint firstItem="srY-Lf-ezu" firstAttribute="trailing" secondItem="MDq-Dl-hV3" secondAttribute="leading" constant="-6" id="EE8-Zb-ezi"/>
                 <constraint firstItem="AyY-En-V9F" firstAttribute="top" secondItem="nC8-Zg-vzc" secondAttribute="bottom" constant="8" id="Foz-c1-67C"/>
                 <constraint firstItem="08R-0R-wtP" firstAttribute="leading" secondItem="Adq-ma-TXT" secondAttribute="trailing" constant="10" id="Ggp-w5-Eyz"/>
+                <constraint firstAttribute="trailing" secondItem="AyY-En-V9F" secondAttribute="trailing" constant="18" id="JjY-kd-0NX"/>
                 <constraint firstItem="Adq-ma-TXT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="KqN-cN-uqp"/>
                 <constraint firstItem="kVN-ay-dGX" firstAttribute="leading" secondItem="Adq-ma-TXT" secondAttribute="leading" id="Nol-PL-dCF"/>
                 <constraint firstAttribute="trailing" secondItem="MDq-Dl-hV3" secondAttribute="trailing" constant="26" id="Obb-B3-ncJ"/>
