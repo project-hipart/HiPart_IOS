@@ -56,7 +56,10 @@ extension PortfolioBottomSheetViewController : UIGestureRecognizerDelegate{
 extension PortfolioBottomSheetViewController{
 	@IBAction func tapPortfolio(_ sender: Any) {
 		print(#function)
+		
 	}
+	
+	
 	@IBAction func tapTodayUpload(_ sender: Any) {
 		print(#function)
 	}
