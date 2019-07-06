@@ -205,6 +205,13 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		2D813DE222D033C000E02DD5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +392,7 @@
 		60B2EED622C787DE000724B6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2D813DE222D033C000E02DD5 /* DTO */,
 				2DDA058622CFDABD0057113F /* Filter.swift */,
 			);
 			path = Domain;
