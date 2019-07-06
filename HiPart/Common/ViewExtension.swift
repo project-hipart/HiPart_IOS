@@ -28,4 +28,14 @@ extension UIStackView{
 		
 		self.addArrangedSubview(paddingView)
 	}
+	
+	@IBInspectable
+	var addPadding : Bool{
+		get{
+			return false
+		}
+		set{
+			self.addPaddingView()
+		}
+	}
 }
