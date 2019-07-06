@@ -79,7 +79,6 @@ extension MasterViewController : UITabBarControllerDelegate{
 //NAVIGATE
 extension MasterViewController{
 	private func showPortfolioBottomViewController(){
-		let blurView = self.view.addBlurArea(area: self.view.bounds, style: .dark)
 		portfolioBottomSheetVC = PortfolioBottomSheetViewController.loadFromNib()
 		self.add(asChildViewController: portfolioBottomSheetVC!, to: self.view)
 		

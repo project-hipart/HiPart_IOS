@@ -120,7 +120,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.2889287243150685" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="9I0-Up-7Qh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OMS-qq-W4O"/>

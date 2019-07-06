@@ -181,6 +181,7 @@
                             <constraint firstItem="o8v-be-1x5" firstAttribute="height" secondItem="eVo-ck-bY3" secondAttribute="height" id="CMs-wN-9wH"/>
                             <constraint firstItem="o8v-be-1x5" firstAttribute="centerX" secondItem="eVo-ck-bY3" secondAttribute="centerX" id="mrc-SI-Zka"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4hg-vA-eCy"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="o8v-be-1x5" id="BOf-pt-vvE"/>
@@ -217,6 +218,7 @@
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="centerX" secondItem="fS7-bt-Vkm" secondAttribute="centerX" id="ckP-1h-Uw4"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="width" secondItem="fS7-bt-Vkm" secondAttribute="width" id="skq-hD-OyP"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Or-pF-VU8"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="UHN-N0-pQR" id="Uau-FL-p1A"/>
@@ -324,7 +326,7 @@
                                     <constraint firstAttribute="width" constant="40" id="T0c-sl-mCQ"/>
                                     <constraint firstAttribute="height" constant="40" id="o9A-JO-oOa"/>
                                 </constraints>
-                                <state key="normal" image="searchBackIcon"/>
+                                <state key="normal" image="pofolBackWhiteIcon"/>
                                 <connections>
                                     <action selector="tapBackButton:" destination="lvg-Af-pNy" eventType="touchUpInside" id="A1g-Y3-GxR"/>
                                 </connections>
@@ -683,9 +685,9 @@
         <image name="mainTbHipotOffIcon" width="24" height="24"/>
         <image name="mainTbHipotOnIcon" width="18" height="21"/>
         <image name="pofolAfreecaWhiteOffImg" width="24" height="24"/>
+        <image name="pofolBackWhiteIcon" width="9.5" height="21"/>
         <image name="pofolTwitchWhiteOffImg" width="24" height="24"/>
         <image name="pofolYoutubeOffImg" width="24" height="24"/>
-        <image name="searchBackIcon" width="9" height="20"/>
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

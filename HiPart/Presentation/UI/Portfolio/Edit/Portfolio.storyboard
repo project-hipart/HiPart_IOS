@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="width" constant="40" id="18i-hb-i5j"/>
                                     <constraint firstAttribute="height" constant="40" id="1du-7M-F2l"/>
                                 </constraints>
-                                <state key="normal" image="searchBackIcon"/>
+                                <state key="normal" image="pofolBackWhiteIcon"/>
                                 <connections>
                                     <action selector="tapBackButton:" destination="NzV-Wz-LBv" eventType="touchUpInside" id="mAt-ZK-UJZ"/>
                                 </connections>
@@ -577,9 +577,9 @@
         <image name="mainTbPofolOffIcon" width="24" height="24"/>
         <image name="mainTbPofolOnIcon" width="18" height="23"/>
         <image name="pofolAfreecaWhiteOffImg" width="24" height="24"/>
+        <image name="pofolBackWhiteIcon" width="9.5" height="21"/>
         <image name="pofolTwitchWhiteOffImg" width="24" height="24"/>
         <image name="pofolYoutubeOffImg" width="24" height="24"/>
-        <image name="searchBackIcon" width="9" height="20"/>
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
