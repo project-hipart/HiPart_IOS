@@ -5,6 +5,8 @@ import SnapKit
 
 class FilterChip: UIView {
 
+	var filter : Filter!
+	
 	let mainColor = UIColor.mainPurple
 	let defaultColor = UIColor.lightGrey
 	

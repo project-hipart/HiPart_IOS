@@ -337,13 +337,6 @@
         <!--Portfolio Filter Edit View Controller-->
         <scene sceneID="jMo-ov-q9G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-SF-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wAR-Yt-XO4">
-                    <connections>
-                        <action selector="tapBackground:" destination="ze2-a1-R13" id="n42-pb-c0A"/>
-                        <outlet property="delegate" destination="ze2-a1-R13" id="ydp-n0-gkX"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <viewController storyboardIdentifier="PortfolioFilterEditViewController" id="ze2-a1-R13" customClass="PortfolioFilterEditViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="16v-9E-ecr"/>
@@ -386,60 +379,6 @@
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yVK-9O-fXN">
                                         <rect key="frame" x="22" y="59" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-Ff-Pz4" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="게임"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-Xe-QOv" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="48" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="ASMR"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-t4-fTX" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="108" y="0.0" width="0.0" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="Prank"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-wE-84a" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="113" y="0.0" width="160" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="스포츠"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="7gu-Gf-tf0"/>
                                         </constraints>
@@ -449,47 +388,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pss-zS-M3z">
                                         <rect key="frame" x="22" y="90" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-1P-xKf" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="쿡/먹방"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJ9-4c-Ygp" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="영화/음악"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Si4-v6-qyE" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="163" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="교육/정보"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="QRV-xK-3VJ"/>
                                         </constraints>
@@ -505,34 +403,6 @@
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-Ri-FJS">
                                         <rect key="frame" x="22" y="168" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoY-0m-SsZ" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="편집"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-QS-7CT" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="218" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="기획"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="en0-HF-HG9"/>
                                         </constraints>
@@ -548,47 +418,6 @@
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-iE-I5Y">
                                         <rect key="frame" x="22" y="251" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQO-5b-2FW" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="베트남어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DN-WG-42T" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="중국어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-Mx-dhR" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="163" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="독일어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="vr6-hk-YYI"/>
                                         </constraints>
@@ -598,47 +427,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9uD-od-zBX">
                                         <rect key="frame" x="22" y="282" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q9-AB-GuR" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="인도어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBy-SL-bqs" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="러시아어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-Fe-IbK" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="163" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="인도네시아어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="xB4-IP-L6L"/>
                                         </constraints>
@@ -648,47 +436,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hW1-Yn-DH0">
                                         <rect key="frame" x="22" y="313" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="my3-4c-gY9" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="베트남어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJu-so-KDP" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="이탈리아어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2f1-Kr-Kwu" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="163" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="프랑스어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="o9w-Qi-7sK"/>
                                         </constraints>
@@ -698,34 +445,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SWn-XL-WfT">
                                         <rect key="frame" x="22" y="344" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7o-Pv-ePx" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="218" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="스페인어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyl-Lp-hnV" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="223" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="일본어"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Qs6-jl-fcq"/>
                                         </constraints>
@@ -741,60 +460,6 @@
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bsj-Pc-5hK">
                                         <rect key="frame" x="22" y="427" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZ4-qf-K3T" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="208" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="소품"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wsc-3x-PVi" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="0.0" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="코디"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kiq-4b-dd8" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="218" y="0.0" width="0.0" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="조명"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-P3-yJJ" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="223" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="촬영"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="BKE-9X-doM"/>
                                         </constraints>
@@ -804,34 +469,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-rD-seR">
                                         <rect key="frame" x="22" y="458" width="273" height="24"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-gQ-M5T" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="218" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="매니저"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srv-oP-pI3" customClass="FilterChip" customModule="HiPart" customModuleProvider="target">
-                                                <rect key="frame" x="223" y="0.0" width="50" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="chipTitle" value="썸네일"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePaddingInspectable">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSizeInspector">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Bwf-4b-88i"/>
                                         </constraints>
@@ -909,9 +546,25 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="broadcastStackView1" destination="yVK-9O-fXN" id="vQh-E9-IAr"/>
+                        <outlet property="broadcastStackView2" destination="Pss-zS-M3z" id="sTi-YX-KIV"/>
+                        <outlet property="etcStackView1" destination="Bsj-Pc-5hK" id="C5y-Jh-ceK"/>
+                        <outlet property="etcStackView2" destination="Rhc-rD-seR" id="RUl-XM-KG8"/>
                         <outlet property="filterContainer" destination="DKL-ZS-CTp" id="Rdu-Cz-812"/>
+                        <outlet property="langaugeStackView3" destination="hW1-Yn-DH0" id="owf-wq-XTX"/>
+                        <outlet property="langaugeStackView4" destination="SWn-XL-WfT" id="Neu-ff-YiC"/>
+                        <outlet property="languageStackView1" destination="gI9-iE-I5Y" id="bwe-EE-j0f"/>
+                        <outlet property="languageStackView2" destination="9uD-od-zBX" id="NCM-bV-LAD"/>
+                        <outlet property="pdStackView1" destination="dlO-Ri-FJS" id="B8I-k4-aQO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-SF-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wAR-Yt-XO4">
+                    <connections>
+                        <action selector="tapBackground:" destination="ze2-a1-R13" id="n42-pb-c0A"/>
+                        <outlet property="delegate" destination="ze2-a1-R13" id="ydp-n0-gkX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="642" y="-806"/>
         </scene>
@@ -929,9 +582,6 @@
         <image name="searchBackIcon" width="9" height="20"/>
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="mainPurple">
-            <color red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="mainPurple">
             <color red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
