@@ -9,4 +9,5 @@ target 'HiPart' do
   pod "SwiftyJSON"
   pod "Hero"
   pod 'SnapKit'
+	pod 'Alamofire'
 end

@@ -198,6 +198,13 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		2D813DE122D02E2100E02DD5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,9 +272,9 @@
 			children = (
 				60FB32AC22CF908C00BA1859 /* Common */,
 				60B2EED222C7868C000724B6 /* Application */,
-				60B2EED622C787DE000724B6 /* Domain */,
 				60B2EED422C787BD000724B6 /* Presentation */,
 				60B2EED322C7878E000724B6 /* Data */,
+				60B2EED622C787DE000724B6 /* Domain */,
 				6014C98F22C782C400ACB80E /* Info.plist */,
 			);
 			path = HiPart;
@@ -361,6 +368,7 @@
 		60B2EED322C7878E000724B6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2D813DE122D02E2100E02DD5 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
