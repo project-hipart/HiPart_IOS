@@ -5,41 +5,79 @@ import SnapKit
 
 class FilterChip: UIView {
 
-    var mainColor = UIColor.mainPurple
-    var defaultColor = UIColor.lightGrey
+	let mainColor = UIColor.mainPurple
+	let defaultColor = UIColor.lightGrey
+	
+	
+	var sidePadding : CGFloat = 10
+	
+	@IBInspectable
+	var sidePaddingInspectable : CGFloat{
+		get{
+			return sidePadding
+		}set{
+			sidePadding = newValue
+			self.labelLeftConstraint.update(offset: newValue)
+			self.labelRightConstraint.update(offset: -newValue)
+		}
+	}
+	private var labelLeftConstraint : Constraint!
+	private var labelRightConstraint : Constraint!
+	
+	var textSize :CGFloat = 11
+	@IBInspectable
+	var textSizeInspector : CGFloat{
+		get{
+			return self.textSize
+		}set{
+			self.textSize = newValue
+			self.label.font = UIFont.nanumLight.withSize(newValue)
+		}
+	}
+	
+	@IBInspectable
+	var chipTitle : String{
+		get{
+			return label.text ?? ""
+		}set{
+			self.label.text = newValue
+			
+		}
+	}
+	
+	@IBInspectable
+	public var chipSelected : Bool = false{
+		didSet{
+			self.select(chipSelected)
+		}
+	}
+	
 	
 	private lazy var label : UILabel = {
-		let view = UILabel()
-		view.translatesAutoresizingMaskIntoConstraints=false
-		view.font = UIFont.nanumLight.withSize(11)
-		view.textAlignment = NSTextAlignment.center
-		view.backgroundColor=UIColor.clear
-		view.minimumScaleFactor = 0.7
-		view.adjustsFontSizeToFitWidth = true
-		return view
+		let labelView = UILabel()
+		labelView.translatesAutoresizingMaskIntoConstraints=false
+		print(#function,textSize)
+		labelView.font = UIFont.nanumLight.withSize(self.textSize)
+		labelView.textAlignment = NSTextAlignment.center
+		labelView.backgroundColor=UIColor.clear
+		labelView.minimumScaleFactor = 0.7
+		labelView.adjustsFontSizeToFitWidth = true
+		labelView.isUserInteractionEnabled=false
+		return labelView
 	}()
 	
-    
-    public var chipSelected : Bool = false{
-        didSet{
-            self.select(chipSelected)
-        }
-    }
-    
+	private var callBacks : [() -> Void] = []
 	
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+	private lazy var tapRecognizer : UITapGestureRecognizer = {
+		let tap = UITapGestureRecognizer()
+		tap.addTarget(self, action: #selector(tapButton))
+		self.isUserInteractionEnabled=true
+		return tap
+	}()
 	
 	
 	override init(frame: CGRect) {
 		super.init(frame : frame)
-		
-		
 		 commonInit()
 	}
 	required init?(coder : NSCoder){
@@ -61,12 +99,20 @@ class FilterChip: UIView {
 		self.backgroundColor = UIColor.white
 		
 		self.addSubview(self.label)
-		self.label.snp.makeConstraints{make in
-			make.left.equalTo(self).offset(10)
-			make.right.equalTo(self).offset(-10)
-			make.top.equalTo(self).offset(3)
-			make.bottom.equalTo(self).offset(-3)
+		self.label.snp.makeConstraints{[unowned self] make in
+			
+			self.labelLeftConstraint = make.left.equalTo(self).offset(sidePadding).constraint
+
+			self.labelRightConstraint = make.right.equalTo(self).offset(-sidePadding).constraint
+			
+			make.centerY.equalTo(self.snp.centerY)
+			
 		}
+		if self.chipTitle != ""{
+			self.setChipTitle(chipTitle)
+		}
+		self.select(chipSelected)
+		self.addGestureRecognizer(self.tapRecognizer)
 		
 	}
     
@@ -86,4 +132,15 @@ class FilterChip: UIView {
 //		self.sizeToFit()
 		self.setNeedsLayout()
 	}
+	
+	func addTarget(_ callback : @escaping () -> Void){
+		callBacks.append(callback)
+	}
+	@objc func tapButton(_ sender : UITapGestureRecognizer){
+		print(#function)
+		for s in callBacks{
+			s()
+		}
+	}
 }
+

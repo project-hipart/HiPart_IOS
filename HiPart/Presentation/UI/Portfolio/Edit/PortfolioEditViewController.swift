@@ -78,7 +78,10 @@ extension PortfolioEditViewController{
 		addChip.borderColor = UIColor.lightGrey
 		addChip.setChipTitle("필터 수정하기")
 		addChip.setNeedsLayout()
-//		addChip.addTarget(self, action: #selector(tapUpdateFilter), for: .touchUpInside)
+		addChip.addTarget{[unowned self] in
+			print(#function)
+			self.tapEditFilter()
+		}
 		
 		
 		let paddingView = UIView()
@@ -107,7 +110,9 @@ extension PortfolioEditViewController{
 		self.hero.dismissViewController()
 	}
 	
-	@objc private func tapUpdateFilter(){
-		
+	@objc private func tapEditFilter(){
+		if let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self)){
+			self.add(asChildViewController: vc, to: self.view)
+		}
 	}
 }

@@ -30,6 +30,7 @@
 		2DAF383A22D012A300B91FE4 /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383422D00E0900B91FE4 /* NanumSquareExtraBold.ttf */; };
 		2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF383322D00E0900B91FE4 /* NanumSquareBold.ttf */; };
 		2DDA058722CFDABD0057113F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA058622CFDABD0057113F /* Filter.swift */; };
+		2DF4C7EE22D0188400794FC1 /* PortfolioFilterEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */; };
 		2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */; };
 		2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */; };
 		2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */; };
@@ -110,6 +111,7 @@
 		2DAF383522D00E0900B91FE4 /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
 		2DAF383622D00E9500B91FE4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2DDA058622CFDABD0057113F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = HiPart/Presentation/UI/View/Filter.swift; sourceTree = SOURCE_ROOT; };
+		2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioFilterEditViewController.swift; sourceTree = "<group>"; };
 		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../Upload/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
 		2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioEditEmbedCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			children = (
 				2D9E093B22CFC058008DFA78 /* Edit */,
 				2DFDA75722CFACEB0066E541 /* Upload */,
+				2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */,
 				2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */,
 				2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */,
+				2DF4C7EE22D0188400794FC1 /* PortfolioFilterEditViewController.swift in Sources */,
 				2D79367A22CF94200081E065 /* SearchDetailViewController.swift in Sources */,
 				602FB3AE22CBC65C003ED6DB /* NoticeViewController.swift in Sources */,
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,

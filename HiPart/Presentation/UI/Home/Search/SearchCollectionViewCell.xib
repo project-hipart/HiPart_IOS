@@ -41,7 +41,7 @@
                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-En-V9F">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-En-V9F">
                         <rect key="frame" x="112" y="78.5" width="195" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="c1E-pV-fIe"/>
