@@ -5,13 +5,16 @@ enum AuthAPI: APIConfiguration {
 	case signIn(email:String, password:String)
 	case signUp
 	case duplicateCheck(flag : String, input : String)
+	case findId(input : String)
+	case findPassword(input : String)
+	case refresh
 	
 	// MARK: - HTTPMethod
 	var method: HTTPMethod {
 		switch self {
 		case .signIn,.signUp:
 			return .post
-		case .duplicateCheck:
+		case .duplicateCheck,.findId,.findPassword,.refresh:
 			return .get
 		}
 	}
@@ -25,6 +28,13 @@ enum AuthAPI: APIConfiguration {
 			return "/auth/signup"
 		case .duplicateCheck(let flag, let input) :
 			return "/auth/duplicated/\(flag)/\(input)"
+		case .findId(let input):
+			return "/auth/finder/id/\(input)"
+		case .findPassword(let input):
+			return "/auth/finder/pwd/\(input)"
+		case .refresh:
+			return "/auth/refresh"
+			
 		}
 	}
 	
@@ -33,8 +43,17 @@ enum AuthAPI: APIConfiguration {
 		switch self {
 		case .signIn(let email, let password):
 			return [K.APIParameterKey.email: email, K.APIParameterKey.password: password]
-		case .signUp, .duplicateCheck:
+		case .signUp, .duplicateCheck ,.findId,.findPassword,.refresh:
 			return nil
+		}
+	}
+	
+	var contentType: String{
+		switch self{
+		case .signIn,.duplicateCheck,.findId,.findPassword,.refresh:
+			return ContentType.json.rawValue
+		case .signUp:
+			return ContentType.multipart.rawValue
 		}
 	}
 	

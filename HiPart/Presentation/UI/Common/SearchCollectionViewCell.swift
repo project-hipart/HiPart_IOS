@@ -5,14 +5,16 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
 
-	@IBOutlet var platformStackView: UIStackView!
+//	@IBOutlet var platformStackView: UIStackView!
 	@IBOutlet var thumbnailView: UIImageView!
 	@IBOutlet var nicknameLabel: UILabel!
 	@IBOutlet var typeLabel: UILabel!
 	@IBOutlet var filterStackView: UIStackView!
 	@IBOutlet var bodyLabel: UILabel!
+	@IBOutlet var pickCountLabel: UILabel!
 	private var filterViews : [FilterChip] = []
 	
+	@IBOutlet var pickButton: UIButton!
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -67,6 +69,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
         
     }
 	
+	@IBAction func tapPickButton(_ sender: Any) {
+		self.pickButton.setImage(UIImage(named: "mainPickOnIcon"),for: .normal)
+		self.pickCountLabel.textColor = UIColor.mainPurple
+	}
 	
 
 }

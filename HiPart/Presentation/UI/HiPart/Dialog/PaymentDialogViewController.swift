@@ -11,7 +11,8 @@ import BEMCheckBox
 import Hero
 
 class PaymentDialogViewController: UIViewController {
-
+	@IBOutlet var blockView: UIView!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.hero.isEnabled = true
@@ -23,6 +24,17 @@ class PaymentDialogViewController: UIViewController {
 
 	
 }
+extension PaymentDialogViewController : UIGestureRecognizerDelegate{
+	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+		if touch.view == blockView{
+			return false
+		}
+		
+		
+		return true
+	}
+}
+
 extension PaymentDialogViewController : BEMCheckBoxDelegate{
 	
 	func didTap(_ checkBox: BEMCheckBox) {

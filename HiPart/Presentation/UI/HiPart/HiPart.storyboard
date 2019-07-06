@@ -658,11 +658,15 @@
                             <outletCollection property="gestureRecognizers" destination="aFc-vd-3sb" appends="YES" id="M2w-5v-qtc"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="blockView" destination="e1G-PW-DEJ" id="j2i-u3-EIG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcZ-Aw-SBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="aFc-vd-3sb">
                     <connections>
                         <action selector="tapBackground:" destination="Eys-OA-Kkb" id="PEF-pF-Bsw"/>
+                        <outlet property="delegate" destination="Eys-OA-Kkb" id="Ha2-6F-4lh"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
