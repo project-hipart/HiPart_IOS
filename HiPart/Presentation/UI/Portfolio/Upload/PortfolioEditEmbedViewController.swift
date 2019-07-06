@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import SnapKit
 
 class PortfolioEditEmbedViewController: UIViewController {
 
-	@IBOutlet var collectionView: UICollectionView!
+	
+	private lazy var collectionView : UICollectionView = {
+		
+		let layout = UICollectionViewFlowLayout()
+		layout.itemSize = CGSize(width: 175, height: 163)
+		layout.sectionInset = UIEdgeInsets(top: 10, left: 25, bottom: 0, right: 25)
+		layout.minimumInteritemSpacing = 15
+		layout.scrollDirection = .horizontal
+		let identifier = String(describing: PortfolioEditEmbedCollectionViewCell.self)
+		let nib : UINib = UINib(nibName: identifier, bundle: nil)
+		let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		view.register(nib, forCellWithReuseIdentifier: identifier)
+		view.delegate=self
+		view.dataSource=self
+		view.backgroundColor = UIColor.init(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
+		return view
+	}()
+	
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.setupView()
+		self.setupLayout()
 
         // Do any additional setup after loading the view.
     }
@@ -23,20 +42,18 @@ class PortfolioEditEmbedViewController: UIViewController {
 }
 extension PortfolioEditEmbedViewController{
 	private func setupView(){
-		let identifier = String(describing: PortfolioEditEmbedCollectionViewCell.self)
-		let nib = UINib(nibName: identifier, bundle: nil)
-		self.collectionView.register(nib, forCellWithReuseIdentifier: identifier)
 		
-		let layout = UICollectionViewFlowLayout()
-		layout.itemSize = CGSize(width: 175, height: 163)
-		layout.sectionInset = UIEdgeInsets(top: 10, left: 25, bottom: 0, right: 25)
-//		layout.
-		layout.minimumInteritemSpacing = 15
-		layout.scrollDirection = .horizontal
 		
-		self.collectionView.collectionViewLayout = layout
-		self.collectionView.delegate=self
-		self.collectionView.dataSource=self
+
+	
+		
+		self.view.addSubview(collectionView)
+	}
+	private func setupLayout(){
+		self.collectionView.snp.makeConstraints{[unowned self] make in
+			make.center.equalTo(self.view.snp.center)
+			make.width.height.equalTo(self.view)
+		}
 	}
 }
 extension PortfolioEditEmbedViewController : UICollectionViewDelegate{

@@ -9,8 +9,9 @@
 import UIKit
 import Hero
 
-class PortfolioEditViewController: UIViewController {
-
+class HipartDetailViewController: UIViewController {
+	
+	
 	
 	@IBOutlet var typeLabel: UILabel!
 	@IBOutlet var uploadContainerView: UIView!
@@ -20,21 +21,24 @@ class PortfolioEditViewController: UIViewController {
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
 	
+//
 	
 	
 }
 
-extension PortfolioEditViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+extension HipartDetailViewController {
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.hero.isEnabled=true
 		
 		self.setupView()
 		self.setFilters([Filter.ASMR])
-    }
-
+	}
+	
 }
-extension PortfolioEditViewController{
+extension HipartDetailViewController{
 	private func setupView(){
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2
@@ -59,35 +63,28 @@ extension PortfolioEditViewController{
 			self.filterStackView.addArrangedSubview(view)
 		}
 		
-		let addChip = FilterChip()
-		addChip.translatesAutoresizingMaskIntoConstraints=false
-		addChip.borderColor = UIColor.lightGrey
-		addChip.setChipTitle("필터 수정하기")
-		addChip.setNeedsLayout()
-		addChip.addTarget{[unowned self] in
-			self.tapEditFilter()
-		}
-		
-	
-		self.filterStackView.addArrangedSubview(addChip)
 		self.filterStackView.addPaddingView()
 		
 	}
 }
 
 //MARK: Actions
-extension PortfolioEditViewController{
+extension HipartDetailViewController{
 	@IBAction func tapBackButton(_ sender: Any) {
 		self.hero.dismissViewController()
 	}
-	@IBAction func cancelButton(_ sender: Any) {
-		self.hero.dismissViewController()
-	}
-	
 	@objc private func tapEditFilter(){
 		
 		if let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self)){
 			self.add(asChildViewController: vc, to: self.view)
 		}
+	}
+	@IBAction func tapContactButton(_ sender: Any) {
+		
+		let sb = UIStoryboard(name: "HiPart", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self))
+		
+		self.add(asChildViewController: vc, to: self.view)
+//		self.present(vc, animated: false, completion: nil)
 	}
 }
