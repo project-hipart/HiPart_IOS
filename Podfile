@@ -11,4 +11,7 @@ target 'HiPart' do
   pod 'SnapKit'
 	pod 'Alamofire'
 	pod 'BEMCheckBox'
+	pod 'RxSwift'
+	pod 'RxCocoa'
+#	pod 'Alamofire-SwiftyJSON'
 end

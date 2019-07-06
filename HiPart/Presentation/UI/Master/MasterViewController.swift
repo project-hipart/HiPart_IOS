@@ -20,6 +20,8 @@ extension MasterViewController {
 		
 		viewModel.delegate = self
 		self.setupView()
+		
+		self.testData()
 	}
 	
 }
@@ -28,6 +30,29 @@ extension MasterViewController{
 	private func setupView(){
 		Device.tabBarHeight = self.tabBar.frame.height
 		self.delegate = self
+	}
+	
+	private func testData(){
+//		AuthAPI.requestSignIn(email: "jig1@naver.com", password: "123")
+//			.subscribe(onSuccess: {
+//				debugE("success",$0)
+//				let token = $0["data"]["token"]
+//				debugE(token)
+//			}, onError: {
+//				debugE("error", $0)
+//				})
+		AuthAPI.requestDuplicateCheck(flag: .email, input: "jig1@naver.com")
+			.subscribe(onSuccess: {
+//				debugE($0)
+				if $0["data"].intValue == DuplicateCheckResult.duplicate.rawValue{
+					debugE("중복")
+				}else{
+					debugE("중복 X")
+				}
+			}, onError: {
+				
+				debugE($0)
+				})
 	}
 }
 
@@ -46,7 +71,6 @@ extension MasterViewController : UITabBarControllerDelegate{
 		if viewController is PortfolioEditViewController{
 			showPortfolioBottomViewController()
 
-			adjustTabBarItemImages(isPortfolioOpen: true)
 			
 			return false
 		}
@@ -58,23 +82,6 @@ extension MasterViewController : UITabBarControllerDelegate{
 		print(#function)
 	}
 	
-	func adjustTabBarItemImages(isPortfolioOpen : Bool){
-		if !isPortfolioOpen{
-			self.tabBar.items?[2].image = UIImage(named : "mainTbPofolOffIcon")
-			self.tabBar.tintColor = UIColor.mainPurple
-			
-			self.tabBar.items?[0].selectedImage = UIImage(named : "mainTbHomeOnIcon")
-			self.tabBar.items?[1].selectedImage = UIImage(named : "mainTbHipotOnIcon")
-			self.tabBar.items?[3].selectedImage = UIImage(named : "mainTbMyPageOnIcon")
-		}else{
-			self.tabBar.tintColor = UIColor.init(red: 199/255, green: 199/255, blue: 199/255, alpha: 1.0)
-			self.tabBar.items?[2].image = UIImage(named : "mainTbPofolOnIcon")?.withRenderingMode(.alwaysOriginal)
-			
-			self.tabBar.items?[0].selectedImage = UIImage(named : "mainTbHomeOffIcon")?.withRenderingMode(.alwaysOriginal)
-			self.tabBar.items?[1].selectedImage = UIImage(named : "mainTbHipotOffIcon")?.withRenderingMode(.alwaysOriginal)
-			self.tabBar.items?[3].selectedImage = UIImage(named : "mainTbMyPageOffIcon")?.withRenderingMode(.alwaysOriginal)
-		}
-	}
 }
 //NAVIGATE
 extension MasterViewController{
@@ -87,8 +94,6 @@ extension MasterViewController{
 	}
 	
 	@objc private func tapBackground(_ sender : UITapGestureRecognizer){
-		print(#function)
-		adjustTabBarItemImages(isPortfolioOpen: false)
 		if let vc = self.portfolioBottomSheetVC{
 			self.remove(asChildViewController: vc)
 			self.view.removeBlurView()

@@ -26,7 +26,7 @@ extension PortfolioBottomSheetViewController : UIGestureRecognizerDelegate{
 		bottomSheet.transform = CGAffineTransform(translationX: 0, y: Device.tabBarHeight)
 		
 		UIView.animate(withDuration: 0.3){[unowned self] in
-			self.bottomSheet.transform = CGAffineTransform(translationX: 0, y: -Device.tabBarHeight - Device.bottomSafeAreaPadding)
+			self.bottomSheet.transform = CGAffineTransform(translationX: 0, y: -Device.bottomSafeAreaPadding)
 		}
 	}
 	

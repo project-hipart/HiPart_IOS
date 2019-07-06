@@ -1,13 +1,14 @@
 import Foundation
 
-struct K {
-	struct ProductionServer {
-		static let baseURL = "pending..."
-	}
+struct APIConstants {
+	static let baseURL = "http://192.168.0.28:3000"
 	
-	struct APIParameterKey {
-		static let password = "password"
-		static let email = "email"
+	
+}
+
+extension String{
+	func attachBaseURL() -> String{
+		return APIConstants.baseURL + self
 	}
 }
 

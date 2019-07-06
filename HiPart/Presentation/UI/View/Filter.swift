@@ -40,6 +40,12 @@ enum Filter : String{
 	case MANAGE = "매니저"
 	case THUMBNAIL = "썸네일"
 	
+//	var intValue : Int{
+//		switch self{
+//		case GAME: return 10
+//		}
+//	}
+	
 	static func getAllFilters() -> [Filter]{
 		return [
 			GAME,ASMR,PRANK,SPORT,MUKBANG,MOVIE_MUSIC,EDU_INFO,
