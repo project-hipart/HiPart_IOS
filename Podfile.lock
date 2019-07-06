@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (4.8.2)
+  - BEMCheckBox (1.4.1)
   - Hero (1.4.0)
   - SnapKit (5.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - BEMCheckBox
   - Hero
   - SnapKit
   - SwiftyJSON
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BEMCheckBox
     - Hero
     - SnapKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 97f61dfc6011f1be52533603a2dfe2d3a035d78f
+PODFILE CHECKSUM: a731a8e14ab0ff970a2abe5bf0e1053bde963c2b
 
 COCOAPODS: 1.7.3

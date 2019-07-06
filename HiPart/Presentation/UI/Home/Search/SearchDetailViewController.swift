@@ -119,6 +119,13 @@ extension SearchDetailViewController : UICollectionViewDataSource{
 			fatalError()
 		}
 	}
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let sb = UIStoryboard(name: "HiPart", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self))
+		
+		vc.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+		self.present(vc, animated: true, completion: nil)
+	}
 }
 //MARK: Action
 extension SearchDetailViewController{

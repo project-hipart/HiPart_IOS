@@ -1,5 +1,6 @@
 
 import UIKit
+import Hero
 
 class HipartItemViewController: UIViewController {
 
@@ -41,9 +42,18 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 		fatalError()
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		navigateDetailViewController()
+	}
 	
 }
 extension HipartItemViewController{
-	
+	private func navigateDetailViewController(){
+		let sb = UIStoryboard(name: "HiPart", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self))
+		
+		vc.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+		self.present(vc, animated: true, completion: nil)
+	}
 }
 

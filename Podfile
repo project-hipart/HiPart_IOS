@@ -10,4 +10,5 @@ target 'HiPart' do
   pod "Hero"
   pod 'SnapKit'
 	pod 'Alamofire'
+	pod 'BEMCheckBox'
 end

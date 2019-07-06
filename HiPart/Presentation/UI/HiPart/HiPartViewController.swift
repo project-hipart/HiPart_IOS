@@ -12,25 +12,7 @@ class HiPartViewController: UIViewController {
 
 	@IBOutlet var adViewContainer: UIView!
 	@IBOutlet var itemViewController : UIView!
-	private lazy var adVC : HipartAdViewController = {
-		
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartAdViewController.self)) as! HipartAdViewController
-		
-		self.add(asChildViewController: vc, to: self.adViewContainer)
-		
-		return vc
-	}()
-	private lazy var itemVC : HipartItemViewController = {
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartItemViewController.self)) as! HipartItemViewController
-		
-		self.add(asChildViewController: vc, to: self.adViewContainer)
-		
-		return vc
-		
-	}()
-	
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +22,6 @@ class HiPartViewController: UIViewController {
 	
 	private func setupView(){
 	}
-
 	
 }
 
