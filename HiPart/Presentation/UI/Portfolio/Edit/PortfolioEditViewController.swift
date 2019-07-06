@@ -79,7 +79,6 @@ extension PortfolioEditViewController{
 		addChip.setChipTitle("필터 수정하기")
 		addChip.setNeedsLayout()
 		addChip.addTarget{[unowned self] in
-			print(#function)
 			self.tapEditFilter()
 		}
 		
@@ -111,6 +110,7 @@ extension PortfolioEditViewController{
 	}
 	
 	@objc private func tapEditFilter(){
+		
 		if let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self)){
 			self.add(asChildViewController: vc, to: self.view)
 		}

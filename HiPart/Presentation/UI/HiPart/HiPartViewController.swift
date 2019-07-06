@@ -39,7 +39,16 @@ class HiPartViewController: UIViewController {
     }
 	
 	private func setupView(){
-		let a = adVC
 	}
 
+	
+}
+
+extension HiPartViewController{
+	@IBAction func tapEditFilter(_ sender: Any) {
+		let sb = UIStoryboard(name: "Portfolio", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self))
+		
+		self.add(asChildViewController: vc, to: self.view)
+	}
 }

@@ -59,22 +59,27 @@
                                         <rect key="frame" x="21" y="0.0" width="20" height="40"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-ly-sRY">
-                                        <rect key="frame" x="48" y="6" width="30" height="28"/>
+                                        <rect key="frame" x="15" y="0.0" width="93" height="40"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
                                         <state key="normal" title="필터">
                                             <color key="titleColor" name="mainPurple"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapEditFilter:" destination="yFz-2l-2Eu" eventType="touchUpInside" id="gm4-D1-bTL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="m2x-ly-sRY" firstAttribute="centerX" secondItem="To7-MK-Bhk" secondAttribute="centerX" constant="15" id="4un-Q1-mvQ"/>
                                     <constraint firstItem="m2x-ly-sRY" firstAttribute="centerY" secondItem="To7-MK-Bhk" secondAttribute="centerY" id="8ue-MB-lcu"/>
+                                    <constraint firstItem="m2x-ly-sRY" firstAttribute="height" secondItem="To7-MK-Bhk" secondAttribute="height" id="Atz-ZW-Y9N"/>
                                     <constraint firstItem="943-cO-4ef" firstAttribute="leading" secondItem="To7-MK-Bhk" secondAttribute="leading" constant="21" id="QBA-B8-pON"/>
                                     <constraint firstAttribute="width" constant="93" id="g5O-VQ-bEQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="m2x-ly-sRY" secondAttribute="trailing" constant="15" id="hew-dg-ih0"/>
                                     <constraint firstAttribute="height" constant="40" id="mrM-6A-F1b"/>
                                     <constraint firstItem="943-cO-4ef" firstAttribute="centerY" secondItem="To7-MK-Bhk" secondAttribute="centerY" id="oNe-Ia-DMQ"/>
                                     <constraint firstItem="943-cO-4ef" firstAttribute="height" secondItem="To7-MK-Bhk" secondAttribute="height" id="zZZ-Hb-kix"/>
+                                    <constraint firstItem="m2x-ly-sRY" firstAttribute="width" secondItem="To7-MK-Bhk" secondAttribute="width" id="zkf-9g-By2"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

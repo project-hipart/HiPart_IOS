@@ -40,7 +40,34 @@ enum Filter : String{
 	case MANAGE = "매니저"
 	case THUMBNAIL = "썸네일"
 	
-	
+	static func getAllFilters() -> [Filter]{
+		return [
+			GAME,ASMR,PRANK,SPORT,MUKBANG,MOVIE_MUSIC,EDU_INFO,
+			EDIT,PLAN,
+			ENGLISH,JAPANESE,CHINESE,GERMAN,INDIAN,RUSSIAN,INDONESIAN,VIETNANESE,ITALIAN,FRENCH,SPANISH,
+			EQUIP,CODI,LIGHT,CAMERA,MANAGE,THUMBNAIL
+		]
+	}
+	static func getAllBroadcastFilters() -> [Filter]{
+		return getAllFilters().filter{ filter in
+			return filter.filterGroup == FilterGroup.Broadcast
+		}
+	}
+	static func getAllPdFilters() -> [Filter]{
+		return getAllFilters().filter{ filter in
+			return filter.filterGroup == FilterGroup.PD
+		}
+	}
+	static func getAllLanguageFilters() -> [Filter]{
+		return getAllFilters().filter{ filter in
+			return filter.filterGroup == FilterGroup.Language
+		}
+	}
+	static func getAllEtcFilters() -> [Filter]{
+		return getAllFilters().filter{ filter in
+			return filter.filterGroup == FilterGroup.Etc
+		}
+	}
 	
 	var filterGroup : FilterGroup{
 		switch self{

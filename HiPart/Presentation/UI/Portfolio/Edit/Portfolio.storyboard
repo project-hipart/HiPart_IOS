@@ -368,6 +368,13 @@
         <!--Portfolio Filter Edit View Controller-->
         <scene sceneID="jMo-ov-q9G">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-SF-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wAR-Yt-XO4">
+                    <connections>
+                        <action selector="tapBackground:" destination="ze2-a1-R13" id="n42-pb-c0A"/>
+                        <outlet property="delegate" destination="ze2-a1-R13" id="ydp-n0-gkX"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <viewController storyboardIdentifier="PortfolioFilterEditViewController" id="ze2-a1-R13" customClass="PortfolioFilterEditViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="16v-9E-ecr"/>
@@ -939,13 +946,6 @@
                         <outlet property="filterContainer" destination="DKL-ZS-CTp" id="Rdu-Cz-812"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-SF-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wAR-Yt-XO4">
-                    <connections>
-                        <action selector="tapBackground:" destination="ze2-a1-R13" id="n42-pb-c0A"/>
-                        <outlet property="delegate" destination="ze2-a1-R13" id="ydp-n0-gkX"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="642" y="-806"/>
         </scene>
@@ -963,6 +963,9 @@
         <image name="searchBackIcon" width="9" height="20"/>
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainPurple">
+            <color red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="mainPurple">
             <color red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
