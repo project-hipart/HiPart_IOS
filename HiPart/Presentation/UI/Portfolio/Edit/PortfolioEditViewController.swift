@@ -45,7 +45,7 @@ extension PortfolioEditViewController {
 		
 		self.setupView()
         viewModel.delegate = self
-		self.setFilters([Filter.sample,Filter.sample])
+		self.setFilters([Filter.ASMR])
     }
 
 }

@@ -20,6 +20,10 @@
 		2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */; };
 		2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */; };
 		2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368522CF943F0081E065 /* SearchViewModel.swift */; };
+		2D813DE522D0363400E02DD5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE422D0363400E02DD5 /* AuthRepository.swift */; };
+		2D813DE722D036AE00E02DD5 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE622D036AE00E02DD5 /* AuthAPI.swift */; };
+		2D813DE922D036D700E02DD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE822D036D700E02DD5 /* Constants.swift */; };
+		2D813DEB22D0371500E02DD5 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DEA22D0371500E02DD5 /* APIConfiguration.swift */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -100,6 +104,10 @@
 		2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D79368522CF943F0081E065 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = ../UI/Home/Search/SearchViewModel.swift; sourceTree = "<group>"; };
+		2D813DE422D0363400E02DD5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		2D813DE622D036AE00E02DD5 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		2D813DE822D036D700E02DD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D813DEA22D0371500E02DD5 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -201,8 +209,26 @@
 		2D813DE122D02E2100E02DD5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2D813DE422D0363400E02DD5 /* AuthRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		2D813DE222D033C000E02DD5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		2D813DE322D0362700E02DD5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2D813DE622D036AE00E02DD5 /* AuthAPI.swift */,
+				2D813DE822D036D700E02DD5 /* Constants.swift */,
+				2D813DEA22D0371500E02DD5 /* APIConfiguration.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
@@ -368,6 +394,7 @@
 		60B2EED322C7878E000724B6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2D813DE322D0362700E02DD5 /* API */,
 				2D813DE122D02E2100E02DD5 /* Repository */,
 			);
 			path = Data;
@@ -385,6 +412,7 @@
 		60B2EED622C787DE000724B6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2D813DE222D033C000E02DD5 /* DTO */,
 				2DDA058622CFDABD0057113F /* Filter.swift */,
 			);
 			path = Domain;
@@ -646,12 +674,15 @@
 				6014C98622C782C300ACB80E /* MasterViewController.swift in Sources */,
 				602FB3A722CBC409003ED6DB /* HomeHiPartViewController.swift in Sources */,
 				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
+				2D813DE922D036D700E02DD5 /* Constants.swift in Sources */,
 				60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */,
 				601BA29122CE4C110044231E /* SignUpViewController.swift in Sources */,
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
 				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
 				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
+				2D813DE722D036AE00E02DD5 /* AuthAPI.swift in Sources */,
 				2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */,
+				2D813DEB22D0371500E02DD5 /* APIConfiguration.swift in Sources */,
 				60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */,
 				60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */,
 				2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */,
@@ -666,6 +697,7 @@
 				60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */,
 				60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */,
 				60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */,
+				2D813DE522D0363400E02DD5 /* AuthRepository.swift in Sources */,
 				2DDA058722CFDABD0057113F /* Filter.swift in Sources */,
 				60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */,
 				602FB3A522CBC3AE003ED6DB /* HomeCreaterViewController.swift in Sources */,
