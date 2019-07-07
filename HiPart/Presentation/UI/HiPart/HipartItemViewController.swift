@@ -36,6 +36,7 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
+			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
 			return cell
 			
 		}
@@ -43,17 +44,22 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		navigateDetailViewController()
+		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
+			navigateDetailViewController(cell: cell)
+		}
 	}
 	
 }
 extension HipartItemViewController{
-	private func navigateDetailViewController(){
+	private func navigateDetailViewController(cell : SearchCollectionViewCell){
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self))
+		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
+			vc.imageViewHeroId = cell.thumbnailView.hero.id ?? ""
+			vc.hero.modalAnimationType = .fade
+			self.present(vc, animated: true, completion: nil)
+		}
 		
-		vc.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
-		self.present(vc, animated: true, completion: nil)
+		
 	}
 }
 

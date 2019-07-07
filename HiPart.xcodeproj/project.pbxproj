@@ -34,6 +34,7 @@
 		2D813E0222D0E80700E02DD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E0122D0E80700E02DD5 /* User.swift */; };
 		2D813E0522D1488800E02DD5 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E0422D1488800E02DD5 /* LogUtil.swift */; };
 		2D813E0722D1C82000E02DD5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E0622D1C82000E02DD5 /* APIClient.swift */; };
+		2D813E0B22D213D500E02DD5 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E0A22D213D500E02DD5 /* UserDefaults.swift */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -128,6 +129,7 @@
 		2D813E0122D0E80700E02DD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2D813E0422D1488800E02DD5 /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
 		2D813E0622D1C82000E02DD5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2D813E0A22D213D500E02DD5 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -292,6 +294,27 @@
 				2D813DFF22D0E64600E02DD5 /* MainAPI.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		2D813E0922D213CB00E02DD5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2D813E0422D1488800E02DD5 /* LogUtil.swift */,
+				2D813E0A22D213D500E02DD5 /* UserDefaults.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2D813E0C22D2146200E02DD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60FB32AD22CF909E00BA1859 /* ViewExtension.swift */,
+				60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */,
+				60FB32B122CF90C700BA1859 /* BlurExtension.swift */,
+				60FB32B322CF916600BA1859 /* DeviceExtension.swift */,
+				60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
@@ -577,12 +600,8 @@
 		60FB32AC22CF908C00BA1859 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				60FB32AD22CF909E00BA1859 /* ViewExtension.swift */,
-				60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */,
-				60FB32B122CF90C700BA1859 /* BlurExtension.swift */,
-				60FB32B322CF916600BA1859 /* DeviceExtension.swift */,
-				60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */,
-				2D813E0422D1488800E02DD5 /* LogUtil.swift */,
+				2D813E0C22D2146200E02DD5 /* Extensions */,
+				2D813E0922D213CB00E02DD5 /* Util */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -765,6 +784,7 @@
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,
 				601BA29D22CE53740044231E /* SignUpFinshViewController.swift in Sources */,
 				60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */,
+				2D813E0B22D213D500E02DD5 /* UserDefaults.swift in Sources */,
 				2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */,
 				60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */,
 				60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */,

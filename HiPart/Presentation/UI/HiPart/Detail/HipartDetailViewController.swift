@@ -17,6 +17,8 @@ class HipartDetailViewController: UIViewController {
 	@IBOutlet var uploadContainerView: UIView!
 	@IBOutlet var idLabel: UILabel!
 	@IBOutlet var imageView: UIImageView!
+	var imageViewHeroId = ""
+	
 	@IBOutlet var backButton: UIButton!
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
@@ -33,12 +35,16 @@ extension HipartDetailViewController {
 		
 		self.hero.isEnabled=true
 		
+		self.setupHero()
 		self.setupView()
 		self.setFilters([Filter.ASMR])
 	}
 	
 }
 extension HipartDetailViewController{
+	private func setupHero(){
+		self.imageView.hero.id = imageViewHeroId
+	}
 	private func setupView(){
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2

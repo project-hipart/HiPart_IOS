@@ -4,17 +4,21 @@ struct APIConstants {
 	static let baseURL = "http://52.78.120.232:3000"
 }
 struct APIKeys{
+	//Common
+	static let imageUrl = "imageUrl"
+	
+	//Auth
 	static let userEmail = "user_email"
 	static let userNickname = "user_nickname"
 	static let userImage = "user_img"
 	static let userPassword = "user_pw"
 	static let userNumber = "user_number"
 	static let userType = "user_type"
-	
-	static let imageUrl = "imageUrl"
-	
 	static let duplicateCheckFlag = "flag"
 	static let duplicateCheckInput = "input"
+	
+	//Main
+	static let mainKeyword = "keyword"
 }
 
 extension String{
