@@ -1,9 +1,20 @@
 import Foundation
 
 struct APIConstants {
-	static let baseURL = "http://192.168.0.28:3000"
+	static let baseURL = "http://52.78.120.232:3000"
+}
+struct APIKeys{
+	static let userEmail = "user_email"
+	static let userNickname = "user_nickname"
+	static let userImage = "user_img"
+	static let userPassword = "user_pw"
+	static let userNumber = "user_number"
+	static let userType = "user_type"
 	
+	static let imageUrl = "imageUrl"
 	
+	static let duplicateCheckFlag = "flag"
+	static let duplicateCheckInput = "input"
 }
 
 extension String{
@@ -22,4 +33,7 @@ enum HTTPHeaderField: String {
 enum ContentType: String {
 	case json = "application/json"
 	case multipart = "multipart/form-data"
+}
+enum MimeType: String{
+	case image = "image/jpeg"
 }

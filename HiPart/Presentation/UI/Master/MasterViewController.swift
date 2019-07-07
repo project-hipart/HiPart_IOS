@@ -21,7 +21,6 @@ extension MasterViewController {
 		viewModel.delegate = self
 		self.setupView()
 		
-		self.testData()
 	}
 	
 }
@@ -32,29 +31,35 @@ extension MasterViewController{
 		self.delegate = self
 	}
 	
-	private func testData(){
-//		AuthAPI.requestSignIn(email: "jig1@naver.com", password: "123")
-//			.subscribe(onSuccess: {
-//				debugE("success",$0)
-//				let token = $0["data"]["token"]
-//				debugE(token)
-//			}, onError: {
-//				debugE("error", $0)
-//				})
-		AuthAPI.requestDuplicateCheck(flag: .email, input: "jig1@naver.com")
-			.subscribe(onSuccess: {
-//				debugE($0)
-				if $0["data"].intValue == DuplicateCheckResult.duplicate.rawValue{
-					debugE("중복")
-				}else{
-					debugE("중복 X")
-				}
-			}, onError: {
-				
-				debugE($0)
-				})
-	}
+	
 }
+//extension MasterViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+//	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//		dismiss(animated: true, completion: nil)
+//	}
+//	func imagePickerController(_ picker: UIImagePickerController,
+//							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//
+////		info[.originalImage]
+//
+//
+//		guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {fatalError()}
+//		guard let data = selectedImage.jpegData(compressionQuality: 95) else {fatalError()}
+//		guard let url : NSURL = info[.imageURL] as? NSURL else {fatalError()}
+//		let fileName = url.absoluteString!
+//
+//		AuthAPI.requestSignUp(email: "이메일", nickname: "닉네임", img: data,imageUrl : fileName ,  password: "패스워드", number: "010", type: UserType.Creator.rawValue)
+//			.subscribe(onSuccess: {
+//				debugE($0)
+//			}, onError: {
+//				debugE($0)
+//			})
+//
+//
+//		dismiss(animated: true, completion: nil)
+//	}
+//
+//}
 
 //MARK: TabBar
 extension MasterViewController {

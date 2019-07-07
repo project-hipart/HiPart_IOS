@@ -17,10 +17,8 @@ enum DuplicateCheckResult : Int{
 
 enum AuthAPI : APIConfiguration{
 	
-	
-	
 	case signIn(email:String, password:String)
-	case signUp(email:String, nickname : String, img : Data,password : String, number : String, type : Int)
+	case signUp(email:String, nickname : String, img : Data,imageUrl : String,password : String, number : String, type : Int)
 	case duplicateCheck(flag : Int, input : String)
 	case findId(input : String)
 	case findPassword(input : String)
@@ -59,82 +57,40 @@ enum AuthAPI : APIConfiguration{
 	var parameters: Parameters? {
 		switch self {
 		case .signIn(let email, let password):
-			return ["user_email": email, "user_pw": password]
-		case .signUp, .duplicateCheck ,.findId,.findPassword,.refresh:
+			return [APIKeys.userEmail: email, APIKeys.userPassword: password]
+			
+		case .signUp(let email, let nickname, let img,let imageUrl, let password, let number, let type):
+			return [APIKeys.userEmail : email, APIKeys.userNickname : nickname, APIKeys.userImage : img, APIKeys.imageUrl : imageUrl,
+					APIKeys.userPassword : password, APIKeys.userNumber : number, APIKeys.userType : type]
+			
+		case .duplicateCheck(let flag, let input) :
+			return [APIKeys.duplicateCheckFlag : flag, APIKeys.duplicateCheckInput : input]
+			
+		default:
 			return nil
 		}
 	}
-
-	static func requestSignIn(email : String, password : String) -> Single<JSON>{
-		
-		let api = AuthAPI.signIn(email: email, password: password)
-		let url = api.path.attachBaseURL()
-		
-		return Single.create{single in
-			Alamofire.request(url, method: api.method, parameters: api.parameters, encoding: JSONEncoding(), headers: nil)
-				.validate(statusCode: 200..<300)
-				.responseJSON { response in
-					
-					switch response.result {
-					case .success:
-						guard let data = response.data else {
-							single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
-							return
-						}
-						
-						let json = try? JSON(data: data)
-						single(.success(json!))
-					case .failure(let error):
-						single(.error(error))
-					}
-					
-			}
-			
-			return Disposables.create()
+	
+	var contentType: ContentType{
+		switch self{
+		case .signUp:
+			return ContentType.multipart
+		default:
+			return ContentType.json
 		}
 	}
+
 	
-	static func requestSignUp(email : String, nickname : String, img : Data, password : String, number : String, type : Int) -> Single<JSON>{
-		let api = AuthAPI.signUp(email: email, nickname: nickname, img: img, password: password, number: number, type: type)
-		let url = api.path.attachBaseURL()
-		
-		return Single.create{single in
-			
-			Alamofire.upload(multipartFormData: { multipartFormData in
-				
-			}, to: url , encodingCompletion: <#T##((SessionManager.MultipartFormDataEncodingResult) -> Void)?##((SessionManager.MultipartFormDataEncodingResult) -> Void)?##(SessionManager.MultipartFormDataEncodingResult) -> Void#>)
-			
-			
-			return Disposables.create()
-		}
+	static func requestSignIn(email : String, password : String) -> Single<JSON>{
+		return APIClient.request(api: AuthAPI.signIn(email: email, password: password))
+	}
+	
+	static func requestSignUp(email : String, nickname : String, img : Data,imageUrl : String, password : String, number : String, type : Int) -> Single<JSON>{
+		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img,imageUrl : imageUrl, password: password, number: number, type: type))
 	}
 	
 	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String) -> Single<JSON>{
-		let api = AuthAPI.duplicateCheck(flag: flag.rawValue, input: input)
-		let url = api.path.attachBaseURL()
-		
-		return Single.create{single in
-			Alamofire.request(url, method: api.method, parameters: api.parameters, encoding: JSONEncoding(), headers: nil)
-				.validate(statusCode: 200..<300)
-				.responseJSON { response in
-					
-					switch response.result {
-					case .success:
-						guard let data = response.data else {
-							single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
-							return
-						}
-						
-						let json = try? JSON(data: data)
-						single(.success(json!))
-					case .failure(let error):
-						single(.error(error))
-					}
-					
-			}
-			
-			return Disposables.create()
-		}
+		return APIClient.request(api: AuthAPI.duplicateCheck(flag: flag.rawValue, input: input))
 	}
 	
 	

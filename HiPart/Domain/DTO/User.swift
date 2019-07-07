@@ -16,3 +16,10 @@ struct User : Codable{
 		case type = "user_type"
 	}
 }
+
+enum UserType : Int{
+	case Creator = 1
+	case PD = 2
+	case Translator = 3
+	case Etc = 4
+}
