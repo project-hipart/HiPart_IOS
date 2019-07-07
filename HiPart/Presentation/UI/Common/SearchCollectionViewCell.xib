@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="171"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainProfilePhotoImage" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ma-TXT">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ma-TXT">
                         <rect key="frame" x="28" y="22" width="74" height="74"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -35,9 +35,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="08R-0R-wtP">
-                        <rect key="frame" x="112" y="22" width="80" height="22.5"/>
+                        <rect key="frame" x="112" y="22" width="49" height="22.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="FK2-oI-EJX"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="88u-so-QYp"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                         <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,6 +74,13 @@
                             <action selector="tapPickButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="pu3-Z7-pbz"/>
                         </connections>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubeGreyImg" translatesAutoresizingMaskIntoConstraints="NO" id="ajw-QP-uv7" userLabel="Platform ImageView">
+                        <rect key="frame" x="167" y="18.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ajw-QP-uv7" secondAttribute="height" multiplier="1:1" id="GaM-Am-Yz9"/>
+                            <constraint firstAttribute="width" constant="30" id="cEt-nY-Cld"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,10 +97,12 @@
                 <constraint firstItem="kVN-ay-dGX" firstAttribute="top" secondItem="Adq-ma-TXT" secondAttribute="bottom" constant="20" id="V2g-1i-5ul"/>
                 <constraint firstItem="m6q-dS-jcZ" firstAttribute="top" secondItem="fPT-of-vjf" secondAttribute="bottom" constant="4" id="by2-ae-y2L"/>
                 <constraint firstItem="m6q-dS-jcZ" firstAttribute="centerX" secondItem="fPT-of-vjf" secondAttribute="centerX" id="emx-or-ydL"/>
+                <constraint firstItem="ajw-QP-uv7" firstAttribute="centerY" secondItem="08R-0R-wtP" secondAttribute="centerY" id="iq8-Pw-Yp3"/>
                 <constraint firstItem="08R-0R-wtP" firstAttribute="top" secondItem="Adq-ma-TXT" secondAttribute="top" id="lfU-6U-tzO"/>
                 <constraint firstItem="nC8-Zg-vzc" firstAttribute="top" secondItem="08R-0R-wtP" secondAttribute="bottom" constant="10" id="mEm-Qs-m4j"/>
                 <constraint firstAttribute="trailing" secondItem="kVN-ay-dGX" secondAttribute="trailing" constant="40" id="naS-Gt-N2F"/>
                 <constraint firstAttribute="bottom" secondItem="kVN-ay-dGX" secondAttribute="bottom" constant="18" id="oBd-re-EAH"/>
+                <constraint firstItem="ajw-QP-uv7" firstAttribute="leading" secondItem="08R-0R-wtP" secondAttribute="trailing" constant="6" id="wWD-iu-Edo"/>
                 <constraint firstItem="nC8-Zg-vzc" firstAttribute="leading" secondItem="08R-0R-wtP" secondAttribute="leading" id="zzR-WY-g27"/>
             </constraints>
             <size key="customSize" width="342" height="197"/>
@@ -123,6 +132,7 @@
                 <outlet property="nicknameLabel" destination="08R-0R-wtP" id="aw3-lC-GVA"/>
                 <outlet property="pickButton" destination="fPT-of-vjf" id="M6I-f5-13y"/>
                 <outlet property="pickCountLabel" destination="m6q-dS-jcZ" id="1XV-18-2P3"/>
+                <outlet property="platformImageView" destination="ajw-QP-uv7" id="vGr-8X-951"/>
                 <outlet property="thumbnailView" destination="Adq-ma-TXT" id="Q22-JF-OUw"/>
                 <outlet property="typeLabel" destination="nC8-Zg-vzc" id="7gm-4w-Vym"/>
             </connections>
@@ -131,6 +141,6 @@
     </objects>
     <resources>
         <image name="mainPickOffIcon" width="19" height="19"/>
-        <image name="mainProfilePhotoImage" width="78.5" height="78.5"/>
+        <image name="youtubeGreyImg" width="22.5" height="16"/>
     </resources>
 </document>

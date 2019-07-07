@@ -9,6 +9,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	
 	
 //	@IBOutlet var platformStackView: UIStackView!
+	@IBOutlet var platformImageView: UIImageView!
 	@IBOutlet var thumbnailView: UIImageView!
 	@IBOutlet var nicknameLabel: UILabel!
 	@IBOutlet var typeLabel: UILabel!
@@ -95,6 +96,16 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		bodyLabel.text = profile.oneLine
 		picked = profile.pickState.getPicked()
 		
+		switch profile.platform{
+		case .youtube:
+			platformImageView.image = UIImage(named: "youtubeGreyImg")
+		case .twitch:
+			platformImageView.image = UIImage(named: "pofolTwitchWhiteOffImg")
+		case .afreeca:
+			platformImageView.image = UIImage(named : "pofolAfreecaWhiteOffImg")
+			
+		}
+		
 		
 		var filterArray : [Filter] = []
 		if let filter = profile.broadcastConcept{
@@ -156,8 +167,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	
 	
 	@IBAction func tapPickButton(_ sender: Any) {
-		
-		
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
 		
