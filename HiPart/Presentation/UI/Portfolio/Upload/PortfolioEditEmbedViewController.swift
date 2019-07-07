@@ -22,6 +22,7 @@ class PortfolioEditEmbedViewController: UIViewController {
 		let identifier = String(describing: PortfolioEditEmbedCollectionViewCell.self)
 		let nib : UINib = UINib(nibName: identifier, bundle: nil)
 		let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		view.showsHorizontalScrollIndicator = false
 		view.register(nib, forCellWithReuseIdentifier: identifier)
 		view.delegate=self
 		view.dataSource=self

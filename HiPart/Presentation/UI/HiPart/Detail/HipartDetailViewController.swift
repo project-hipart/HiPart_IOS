@@ -11,6 +11,7 @@ import Hero
 
 class HipartDetailViewController: UIViewController {
 	
+	@IBOutlet var scrollView: UIScrollView!
 	
 	
 	@IBOutlet var typeLabel: UILabel!
@@ -46,6 +47,8 @@ extension HipartDetailViewController{
 		self.imageView.hero.id = imageViewHeroId
 	}
 	private func setupView(){
+//		self.scrollView.contentInset = UIEdgeInsets.zero
+//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2
 		

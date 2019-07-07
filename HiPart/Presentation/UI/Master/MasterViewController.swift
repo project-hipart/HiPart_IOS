@@ -29,6 +29,18 @@ extension MasterViewController{
 	private func setupView(){
 		Device.tabBarHeight = self.tabBar.frame.height
 		self.delegate = self
+		
+		
+		let keyword = String(utf8String: "에디터".cString(using: .utf8)!)!
+		MainAPI.requestSearch(keyword: keyword)
+			.subscribe(onSuccess: {
+				debugE($0)
+			}, onError: {
+				debugE($0)
+			})
+		
+		AuthAPI.requestSignIn(email: "이메일", password: "패스워드")
+			.subscribe(onSuccess: {debugE($0)}, onError: {debugE($0)})
 	}
 	
 	
