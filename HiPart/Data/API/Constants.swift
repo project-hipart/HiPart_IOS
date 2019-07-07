@@ -19,6 +19,9 @@ struct APIKeys{
 	
 	//Main
 	static let mainKeyword = "keyword"
+	
+	//Profile
+	static let profileFlag = "flag"
 }
 
 extension String{
