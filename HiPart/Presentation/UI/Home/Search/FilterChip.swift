@@ -58,7 +58,6 @@ class FilterChip: UIView {
 	private lazy var label : UILabel = {
 		let labelView = UILabel()
 		labelView.translatesAutoresizingMaskIntoConstraints=false
-		print(#function,textSize)
 		labelView.font = UIFont.nanumLight.withSize(self.textSize)
 		labelView.textAlignment = NSTextAlignment.center
 		labelView.backgroundColor=UIColor.clear
@@ -139,7 +138,6 @@ class FilterChip: UIView {
 		callBacks.append(callback)
 	}
 	@objc func tapButton(_ sender : UITapGestureRecognizer){
-		print(#function)
 		for s in callBacks{
 			s()
 		}

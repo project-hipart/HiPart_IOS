@@ -60,8 +60,8 @@ extension SearchViewController{
 											   selector: #selector(keyboardWillHide(notification:)),
 											   name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
+	
 	@objc func keyboardWillShow(notification: NSNotification) {
-		print(#function)
 		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
 			let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
 			
@@ -71,8 +71,8 @@ extension SearchViewController{
 			}
 		}
 	}
+	
 	@objc func keyboardWillHide(notification: NSNotification) {
-		print(#function)
 		let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
 		UIView.animate(withDuration: duration) {
 			self.collectionViewBottomConstraint.constant = -(20)

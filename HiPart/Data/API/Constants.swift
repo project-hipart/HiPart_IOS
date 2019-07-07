@@ -22,6 +22,15 @@ struct APIKeys{
 	
 	//Profile
 	static let profileFlag = "flag"
+	static let userIndex = "user_idx"
+	static let pickState = "pickState"
+	static let pick = "pick"
+	static let detailFlatform = "detail_platform"
+	static let detailOneLine = "detail_oneline"
+	static let concept = "concept"
+	static let lang = "lang"
+	static let pd = "pd"
+	static let etc = "etc"
 }
 
 extension String{

@@ -2,7 +2,7 @@
 import Foundation
 
 enum FilterGroup{
-	case Broadcast
+	case BroadcastConcept
 	case PD
 	case Language
 	case Etc
@@ -40,11 +40,53 @@ enum Filter : String{
 	case MANAGE = "매니저"
 	case THUMBNAIL = "썸네일"
 	
-//	var intValue : Int{
-//		switch self{
-//		case GAME: return 10
-//		}
-//	}
+	var intValue : Int{
+		switch self{
+			
+		case .GAME: return 1
+		case .ASMR: return 2
+		case .PRANK: return 3
+		case .SPORT: return 4
+		case .MUKBANG: return 5
+		case .MOVIE_MUSIC: return 6
+		case .EDU_INFO: return 7
+	
+		case .EDIT: return 1
+		case .PLAN: return 2
+			
+		case .ENGLISH: return 1
+		case .JAPANESE: return 2
+		case .CHINESE: return 3
+		case .GERMAN: return 4
+		case .INDIAN: return 5
+		case .RUSSIAN: return 6
+		case .INDONESIAN: return 7
+		case .VIETNANESE: return 8
+		case .ITALIAN: return 9
+		case .FRENCH: return 10
+		case .SPANISH: return 11
+			
+		case .EQUIP: return 1
+		case .CODI: return 2
+		case .LIGHT: return 3
+		case .CAMERA: return 4
+		case .MANAGE: return 5
+		case .THUMBNAIL: return 6
+			
+		}
+	}
+	static func getFilterWithGroupAndIndex(_ group : FilterGroup, _ index : Int) -> Filter?{
+		switch group{
+		case .BroadcastConcept:
+			return getAllBroadcastFilters().first(where: {return $0.intValue == index})
+		case .PD:
+			return getAllPdFilters().first(where: {return $0.intValue == index})
+		case .Language:
+			return getAllLanguageFilters().first(where: {return $0.intValue == index})
+		case .Etc:
+			return getAllEtcFilters().first(where: {return $0.intValue == index})
+		}
+	}
 	
 	static func getAllFilters() -> [Filter]{
 		return [
@@ -56,7 +98,7 @@ enum Filter : String{
 	}
 	static func getAllBroadcastFilters() -> [Filter]{
 		return getAllFilters().filter{ filter in
-			return filter.filterGroup == FilterGroup.Broadcast
+			return filter.filterGroup == FilterGroup.BroadcastConcept
 		}
 	}
 	static func getAllPdFilters() -> [Filter]{
@@ -78,7 +120,7 @@ enum Filter : String{
 	var filterGroup : FilterGroup{
 		switch self{
 		case .GAME,.ASMR,.PRANK,.SPORT,.MUKBANG,.MOVIE_MUSIC,.EDU_INFO:
-			return FilterGroup.Broadcast
+			return FilterGroup.BroadcastConcept
 		
 		case .EDIT,.PLAN:
 			return FilterGroup.PD

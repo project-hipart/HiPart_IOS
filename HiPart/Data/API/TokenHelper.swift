@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 typealias Token = String
 class TokenHelper{
@@ -15,5 +16,11 @@ class TokenHelper{
 	}
 	static func loadAccessToken() -> Token?{
 		return UDUtil.string(forKey: .accessToken)
+	}
+	static func getCommonHeader() -> HTTPHeaders?{
+		let token = loadAccessToken()
+		if token == nil{return nil}
+		
+		return ["token" : token!]
 	}
 }

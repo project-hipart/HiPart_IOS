@@ -12,6 +12,8 @@ class HiPartViewController: UIViewController {
 
 	@IBOutlet var adViewContainer: UIView!
 	@IBOutlet var itemViewController : UIView!
+	
+	
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +23,11 @@ class HiPartViewController: UIViewController {
     }
 	
 	private func setupView(){
+		
 	}
 	
 }
+
 
 extension HiPartViewController{
 	@IBAction func tapEditFilter(_ sender: Any) {

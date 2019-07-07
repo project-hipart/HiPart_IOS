@@ -136,7 +136,6 @@ extension SearchDetailViewController{
 		let x = sender.translation(in: self.view).x
 		let screenWidth = UIScreen.main.bounds.width
 		
-		print(1)
 		switch sender.state{
 		case .began:
 			self.hero.dismissViewController()

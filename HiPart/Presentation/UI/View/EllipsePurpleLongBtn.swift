@@ -16,7 +16,6 @@ class EllipsePurpleLongBtn: UIButton {
         layer.cornerRadius = 6
         layer.backgroundColor = UIColor.mainPurple.cgColor
 
-        print(frame)
         
     }
 //    override func layoutSubviews() {

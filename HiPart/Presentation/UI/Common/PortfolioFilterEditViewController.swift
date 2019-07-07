@@ -117,7 +117,7 @@ extension PortfolioFilterEditViewController {
 			self.tapChip(filter: filter)
 		}
 		switch filter.filterGroup{
-		case FilterGroup.Broadcast:
+		case FilterGroup.BroadcastConcept:
 			broadcastChips.append(chip)
 		case FilterGroup.PD:
 			pdChips.append(chip)
@@ -129,10 +129,9 @@ extension PortfolioFilterEditViewController {
 		return chip
 	}
 	private func tapChip(filter : Filter){
-		print(#function, filter)
 		
 		switch filter.filterGroup{
-		case FilterGroup.Broadcast:
+		case FilterGroup.BroadcastConcept:
 			broadcastChips.forEach{chip in
 				chip.chipSelected = false
 			}

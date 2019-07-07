@@ -7,6 +7,31 @@
 //
 
 import UIKit
+import Alamofire
+
+extension UIImageView{
+	func setImage(withUrl : String?){
+		Alamofire.request
+		
+		debugE(withUrl)
+		guard let path = withUrl else {return}
+		
+		DispatchQueue.global(qos: .userInitiated).async {
+			do{
+				let url = URL(fileURLWithPath: path)
+				debugE(url.absoluteString)
+				let imageData: Data = try Data(contentsOf: url)
+				
+				DispatchQueue.main.async {
+					let image = UIImage(data: imageData)
+					self.image = image
+				}
+			}catch{
+				print("Unable to load data: \(error)")
+			}
+		}
+	}
+}
 
 extension UITabBarController{
     func setSelectedItem(index : Int){
@@ -27,6 +52,7 @@ extension UIStackView{
 		}
 		
 		self.addArrangedSubview(paddingView)
+		
 	}
 	
 	@IBInspectable

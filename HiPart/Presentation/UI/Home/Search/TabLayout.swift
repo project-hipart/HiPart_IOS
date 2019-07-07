@@ -137,7 +137,6 @@ extension TabLayout{
 	
 	private func changeTabColor(selected : Int){
 		
-		print(#function)
 		
 		for i in 0..<tabViews.count{
 			let button = tabViews[i]

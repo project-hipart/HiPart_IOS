@@ -6,6 +6,8 @@ import SnapKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
 
+	
+	
 //	@IBOutlet var platformStackView: UIStackView!
 	@IBOutlet var thumbnailView: UIImageView!
 	@IBOutlet var nicknameLabel: UILabel!
@@ -16,6 +18,12 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	private var filterViews : [FilterChip] = []
 	
 	@IBOutlet var pickButton: UIButton!
+	private var picked : Bool = false{
+		didSet{
+			setPickButtonState(picked: picked)
+		}
+	}
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,21 +41,28 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		bodyLabel.minimumScaleFactor = 0.8
 		self.filterStackView.spacing = 5
 		
-		setupFilters(filters: ["먹방","먹방","+더보기asdasd"])
 	}
 	
-	private func setupFilters(filters : [String]){
+	private func setupFilters(filters : [Filter], firstSelect : Bool){
 		
 		//REMOVE ALL CHIPS
 		for button in filterViews{
 			button.removeFromSuperview()
 			self.filterStackView.removeArrangedSubview(button)
 		}
+		filterViews.removeAll()
+		
+		if let paddingView = self.filterStackView.arrangedSubviews.first as? UIView{
+			paddingView.removeFromSuperview()
+			self.filterStackView.removeArrangedSubview(paddingView)
+		}
 	
 		for filter in filters{
+			
 			let filterView = FilterChip()
+			
 			filterView.translatesAutoresizingMaskIntoConstraints = false
-			filterView.setChipTitle(filter)
+			filterView.setChipTitle(filter.rawValue)
 			
 			self.filterViews.append(filterView)
 			self.filterStackView.addArrangedSubview(filterView)
@@ -55,8 +70,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}
 		
 		self.filterStackView.addPaddingView()
-        
-        select(0)
+		
+		if firstSelect{
+        	select(0)
+		}
 	}
     
     private func select(_ index : Int){
@@ -70,8 +87,78 @@ class SearchCollectionViewCell: UICollectionViewCell {
         
     }
 	
+	func setProfile(profile : ProfileDTO){
+		thumbnailView.setImage(withUrl: profile.image)
+		nicknameLabel.text = profile.nickname
+		typeLabel.text = profile.type.name
+		pickCountLabel.text = String(profile.pickCount)
+		bodyLabel.text = profile.oneLine
+		picked = profile.pickState.getPicked()
+		
+		
+		var filterArray : [Filter] = []
+		if let filter = profile.broadcastConcept{
+			filterArray.append(filter)
+		}
+		if let filter = profile.pd{
+			filterArray.append(filter)
+		}
+		if let filter = profile.language{
+			filterArray.append(filter)
+		}
+		if let filter = profile.etc{
+			filterArray.append(filter)
+		}
+		
+		switch profile.type{
+		case .Creator:
+			filterArray = filterArray.filter{ filter in
+				return filter.filterGroup != .BroadcastConcept
+			}
+			if let filter = profile.broadcastConcept{
+				filterArray.insert(filter, at: 0)
+				setupFilters(filters: filterArray,firstSelect: true)
+			}else{
+				setupFilters(filters: filterArray,firstSelect: false)
+			}
+		case .PD:
+			filterArray = filterArray.filter{ filter in
+				return filter.filterGroup != .PD
+			}
+			if let filter = profile.pd{
+				filterArray.insert(filter, at: 0)
+				setupFilters(filters: filterArray,firstSelect: true)
+			}else{
+				setupFilters(filters: filterArray,firstSelect: false)
+			}
+		case .Translator:
+			filterArray = filterArray.filter{ filter in
+				return filter.filterGroup != .Language
+			}
+			if let filter = profile.language{
+				filterArray.insert(filter, at: 0)
+				setupFilters(filters: filterArray,firstSelect: true)
+			}else{
+				setupFilters(filters: filterArray,firstSelect: false)
+			}
+		case .Etc:
+			filterArray = filterArray.filter{ filter in
+				return filter.filterGroup != .Etc
+			}
+			if let filter = profile.etc{
+				filterArray.insert(filter, at: 0)
+				setupFilters(filters: filterArray,firstSelect: true)
+			}else{
+				setupFilters(filters: filterArray,firstSelect: false)
+			}
+		}
+	}
+	
+	
 	@IBAction func tapPickButton(_ sender: Any) {
-		self.pickButton.setImage(UIImage(named: "mainPickOnIcon"),for: .normal)
+		
+		
+		
 		self.pickCountLabel.textColor = UIColor.mainPurple
 		
 		let pickedView = PickDialogView()
@@ -90,7 +177,21 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}, completion: {[unowned pickedView] animated in
 			pickedView.removeFromSuperview()
 		})
+		
+		picked = !picked
+		
+	}
+	
+	private func setPickButtonState(picked : Bool){
+		if picked{
+			self.pickButton.setImage(UIImage(named: "mainPickOnIcon"),for: .normal)
+			self.pickCountLabel.textColor = UIColor.mainPurple
+		}else{
+			self.pickButton.setImage(UIImage(named: "mainPickOffIcon"),for: .normal)
+			self.pickCountLabel.textColor = UIColor.lightGray
+		}
 	}
 	
 
+	
 }

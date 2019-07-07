@@ -29,49 +29,9 @@ extension MasterViewController{
 	private func setupView(){
 		Device.tabBarHeight = self.tabBar.frame.height
 		self.delegate = self
-		
-		
-		let keyword = String(utf8String: "에디터".cString(using: .utf8)!)!
-		MainAPI.requestSearch(keyword: keyword)
-			.subscribe(onSuccess: {
-				debugE($0)
-			}, onError: {
-				debugE($0)
-			})
-		
-		AuthAPI.requestSignIn(email: "이메일", password: "패스워드")
-			.subscribe(onSuccess: {debugE($0)}, onError: {debugE($0)})
 	}
 	
-	
 }
-//extension MasterViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-//	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//		dismiss(animated: true, completion: nil)
-//	}
-//	func imagePickerController(_ picker: UIImagePickerController,
-//							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//
-////		info[.originalImage]
-//
-//
-//		guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {fatalError()}
-//		guard let data = selectedImage.jpegData(compressionQuality: 95) else {fatalError()}
-//		guard let url : NSURL = info[.imageURL] as? NSURL else {fatalError()}
-//		let fileName = url.absoluteString!
-//
-//		AuthAPI.requestSignUp(email: "이메일", nickname: "닉네임", img: data,imageUrl : fileName ,  password: "패스워드", number: "010", type: UserType.Creator.rawValue)
-//			.subscribe(onSuccess: {
-//				debugE($0)
-//			}, onError: {
-//				debugE($0)
-//			})
-//
-//
-//		dismiss(animated: true, completion: nil)
-//	}
-//
-//}
 
 //MARK: TabBar
 extension MasterViewController {

@@ -10,8 +10,10 @@ target 'HiPart' do
   pod "Hero"
   pod 'SnapKit'
 	pod 'Alamofire'
+	pod 'AlamofireImage', '~> 3.5'
 	pod 'BEMCheckBox'
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	
 #	pod 'Alamofire-SwiftyJSON'
 end
