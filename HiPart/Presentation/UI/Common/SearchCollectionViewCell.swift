@@ -174,22 +174,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
 		
-		let pickedView = PickDialogView()
+
+		PickDialogView.showPickDialog()
 		
-		let window = UIApplication.shared.keyWindow
-		window?.addSubview(pickedView)
-		
-		pickedView.snp.makeConstraints{[weak window] make in
-			make.center.equalTo(window!.snp.center)
-			make.width.equalTo(110)
-			make.height.equalTo(110+15+28)
-		}
-		
-		UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-			pickedView.alpha = 0
-		}, completion: {[unowned pickedView] animated in
-			pickedView.removeFromSuperview()
-		})
 		
 		picked = !picked
 		
