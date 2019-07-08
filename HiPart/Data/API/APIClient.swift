@@ -81,7 +81,6 @@ class APIClient{
 					switch encodingResult {
 					case .success(let upload, _, _):
 						
-						debugE("인코딩 성공")
 						
 						upload.responseJSON { response in
 							switch response.result {
@@ -90,7 +89,6 @@ class APIClient{
 									single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
 									return
 								}
-								debugE(response.debugDescription)
 								
 								
 								let json = try? JSON(data: data)
@@ -101,7 +99,7 @@ class APIClient{
 							}
 						}
 					case .failure(let encodingError):
-						debugE("인코딩 에러 ",encodingError)
+						debugE(encodingError)
 					}
 				})
 				

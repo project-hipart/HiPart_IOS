@@ -10,13 +10,20 @@ import UIKit
 import Hero
 
 class HipartDetailViewController: UIViewController {
+	let viewModel = HiPartDetailViewModel()
+	
 	
 	@IBOutlet var scrollView: UIScrollView!
 	
+	var profile : ProfileDTO!
+	var profileImage : UIImage?
+	
+	@IBOutlet var subscriberLabel: UILabel!
+	@IBOutlet var hifiveLabel: UILabel!
 	
 	@IBOutlet var typeLabel: UILabel!
 	@IBOutlet var uploadContainerView: UIView!
-	@IBOutlet var idLabel: UILabel!
+	@IBOutlet var nicknameLabel: UILabel!
 	@IBOutlet var imageView: UIImageView!
 	var imageViewHeroId = ""
 	
@@ -34,19 +41,26 @@ extension HipartDetailViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.hero.isEnabled=true
-		
 		self.setupHero()
 		self.setupView()
 		self.setFilters([Filter.ASMR])
+		self.setupBinding()
+		
+		viewModel.loadData(profile: profile)
 	}
 	
 }
 extension HipartDetailViewController{
 	private func setupHero(){
+		self.hero.isEnabled=true
 		self.imageView.hero.id = imageViewHeroId
+		self.imageView.hero.modifiers = [.translate(),.scale(x: 2, y: 2, z: 1)]
 	}
 	private func setupView(){
+		self.imageView.image = profileImage
+		self.nicknameLabel.text = profile.nickname
+		self.typeLabel.text = profile.type.name
+		
 //		self.scrollView.contentInset = UIEdgeInsets.zero
 //		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
 		self.backButton.tintColor = UIColor.white
@@ -73,6 +87,24 @@ extension HipartDetailViewController{
 		}
 		
 		self.filterStackView.addPaddingView()
+		
+	}
+	private func setupBinding(){
+		viewModel.delegate = self
+	
+	}
+}
+
+extension HipartDetailViewController : HiPartDetailViewModelDelegate{
+	func onChangeProfileDetail(profileDetail: ProfileDetailDTO?) {
+		
+		if let detail = profileDetail{
+			subscriberLabel.text = detail.detailSubscriber
+			hifiveLabel.text = "\(detail.hifive)"
+		}
+	}
+	
+	func onChangeRefreshState(isRefreshing: Bool) {
 		
 	}
 }

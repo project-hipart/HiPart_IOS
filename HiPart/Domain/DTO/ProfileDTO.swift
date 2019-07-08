@@ -26,9 +26,6 @@ struct ProfileDTO{
 		image = info[APIKeys.userImage].stringValue
 		nickname = info[APIKeys.userNickname].stringValue
 		
-//		debugE(info[APIKeys.userType])
-		debugE(info[APIKeys.detailFlatform])
-		
 		type = UserType(rawValue: info[APIKeys.userType].intValue)!
 		pickCount = info[APIKeys.pick].intValue
 		platform = Platform(rawValue:info[APIKeys.detailFlatform].intValue)!

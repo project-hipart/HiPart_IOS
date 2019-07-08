@@ -59,9 +59,9 @@ class TabLayout : UIView{
 	override func layoutSubviews() {
 		super.layoutSubviews()
 //		moveTabIndicator(selected: 0)
-		let button = tabViews[0]
-		let originalFrame = self.tabStripIndicator.frame
-		self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.frame.width, height: originalFrame.height)
+//		let button = tabViews[0]
+//		let originalFrame = self.tabStripIndicator.frame
+//		self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.frame.width, height: originalFrame.height)
 	}
 	
 	private func commonInit(){
@@ -102,9 +102,9 @@ class TabLayout : UIView{
 			make.height.equalTo(2)
 		}
 		self.tabStripIndicator.snp.makeConstraints{[unowned self] make in
-			make.left.right.bottom.equalTo(self)
+			make.left.bottom.equalTo(self)
 			make.height.equalTo(2)
-			make.width.equalTo(self).multipliedBy(0.2)
+			make.width.equalTo(30)
 		}
 	}
 	
@@ -151,22 +151,21 @@ extension TabLayout{
 	}
 	private func moveTabIndicator(selected : Int){
 		let button = tabViews[selected]
-		
 		let originalFrame = self.tabStripIndicator.frame
 		
-		UIView.animate(withDuration: 0.25){  [unowned self] in
+		UIView.animate(withDuration: 0.25, delay: 0, options: [], animations: {  [unowned self] in
 			self.tabStripIndicator.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5, 1.0, 1.0)
-		}
+			}, completion: nil)
 		UIView.animate(withDuration: 0.25, delay: 0.25, options: [], animations: { [unowned self] in
 			self.tabStripIndicator.layer.transform = CATransform3DIdentity
 		}, completion: nil)
 		
 		
+		debugE(button.bounds.width)
+		UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {  [unowned self] in
+			self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.bounds.width, height: originalFrame.height)
+			}, completion: nil)
 		
-		UIView.animate(withDuration: 0.5){
-			self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.frame.width, height: originalFrame.height)
-			
-		}
 	}
 	
 }

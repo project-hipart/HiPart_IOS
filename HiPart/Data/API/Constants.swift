@@ -27,10 +27,19 @@ struct APIKeys{
 	static let pick = "pick"
 	static let detailFlatform = "detail_platform"
 	static let detailOneLine = "detail_oneline"
+	static let detailSubscriber = "detail_subscriber"
+	static let detailAppeal = "detail_appeal"
+	static let detailWant = "detail_want"
+	static let thumbnail = "thumbnail"
+	static let url = "url"
+	static let title = "title"
+	static let content = "content"
 	static let concept = "concept"
 	static let lang = "lang"
 	static let pd = "pd"
 	static let etc = "etc"
+	static let hifiveState = "hifiveState"
+	static let hifive = "hifive"
 }
 
 extension String{

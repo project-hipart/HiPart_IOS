@@ -97,12 +97,14 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		picked = profile.pickState.getPicked()
 		
 		switch profile.platform{
+		case .none:
+			break
 		case .youtube:
 			platformImageView.image = UIImage(named: "youtubeGreyImg")
 		case .twitch:
-			platformImageView.image = UIImage(named: "pofolTwitchWhiteOffImg")
+			platformImageView.image = UIImage(named: "pofolTwitchGreyImg")
 		case .afreeca:
-			platformImageView.image = UIImage(named : "pofolAfreecaWhiteOffImg")
+			platformImageView.image = UIImage(named : "pofolAfreecaGreyImg")
 			
 		}
 		
@@ -162,6 +164,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			}else{
 				setupFilters(filters: filterArray,firstSelect: false)
 			}
+		default:
+			break
 		}
 	}
 	

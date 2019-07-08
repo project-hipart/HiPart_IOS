@@ -10,8 +10,10 @@ import UIKit
 
 class HiPartViewController: UIViewController {
 
+	private var itemViewController : HipartItemViewController!
+	
 	@IBOutlet var adViewContainer: UIView!
-	@IBOutlet var itemViewController : UIView!
+	@IBOutlet var tabLayout: TabLayout!
 	
 	
 
@@ -23,11 +25,24 @@ class HiPartViewController: UIViewController {
     }
 	
 	private func setupView(){
-		
+		self.tabLayout.delegate = self
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		debugE(segue.destination)
+		
+		if segue.destination is HipartItemViewController{
+			itemViewController = segue.destination as! HipartItemViewController
+		}
+	}
 }
 
+extension HiPartViewController : TabLayoutDelegate{
+	func onSelectedTab(_ index: Int) {
+		
+		itemViewController.viewModel.loadDatas(ProfileFlag(rawValue: index) ?? ProfileFlag.All)
+	}
+}
 
 extension HiPartViewController{
 	@IBAction func tapEditFilter(_ sender: Any) {

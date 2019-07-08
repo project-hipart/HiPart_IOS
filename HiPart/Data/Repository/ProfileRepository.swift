@@ -10,7 +10,6 @@ class ProfileRepository{
 	func list(flag : ProfileFlag) -> Single<Array<ProfileDTO>>{
 		return ProfileAPI.requestList(flag: flag).map{json in
 			
-			debugE(json)
 
 			var result : [ProfileDTO] = []
 			let datas = json["data"].arrayValue
@@ -21,6 +20,15 @@ class ProfileRepository{
 			}
 			
 			return result
+		}
+	}
+	
+	func detail(nickname : String) -> Single<ProfileDetailDTO>{
+		return ProfileAPI.requestDetail(nickname: nickname).map{json in
+			
+			let profileDetail = ProfileDetailDTO.init(fromJSON: json)
+			
+			return profileDetail
 		}
 	}
 }

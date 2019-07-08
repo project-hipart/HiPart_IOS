@@ -3,8 +3,16 @@ import UIKit
 import Hero
 
 class HipartItemViewController: UIViewController {
-	private let viewModel = HiPartViewModel()
+	let viewModel = HiPartViewModel()
+	
 	@IBOutlet var collectionView: UICollectionView!
+	
+	private lazy var refreshControl : UIRefreshControl = {
+		let control = UIRefreshControl()
+		control.addTarget(self, action: #selector(refresh), for: .valueChanged)
+		
+		return control
+	}()
 }
 
 extension HipartItemViewController{
@@ -14,10 +22,24 @@ extension HipartItemViewController{
 		setupBinding()
 		// Do any additional setup after loading the view.
 	}
+	
+	
 }
 extension HipartItemViewController : HiPartViewModelDelegate{
+	
+	@objc private func refresh(){
+		viewModel.loadDatas(viewModel.currentTab)
+	}
+	
 	func onChangeProfiles(profiles: [ProfileDTO]) {
 		self.collectionView.reloadData()
+	}
+	func onChangeRefreshState(isRefreshing: Bool) {
+		if isRefreshing{
+			self.refreshControl.beginRefreshing()
+		}else{
+			self.refreshControl.endRefreshing()
+		}
 	}
 }
 extension HipartItemViewController{
@@ -33,6 +55,9 @@ extension HipartItemViewController{
 		self.collectionView.collectionViewLayout = layout
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
+		
+		
+		self.collectionView.refreshControl = refreshControl
 	}
 	private func setupBinding(){
 		self.viewModel.delegate = self
@@ -57,17 +82,19 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
-			
-			navigateDetailViewController(cell: cell)
+			let item = viewModel.profiles[indexPath.row]
+			navigateDetailViewController(cell: cell,profile: item)
 		}
 	}
 }
 extension HipartItemViewController{
-	private func navigateDetailViewController(cell : SearchCollectionViewCell){
+	private func navigateDetailViewController(cell : SearchCollectionViewCell,profile : ProfileDTO){
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
 		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
 			vc.imageViewHeroId = cell.thumbnailView.hero.id ?? ""
 			vc.hero.modalAnimationType = .fade
+			vc.profile = profile
+			vc.profileImage = cell.thumbnailView.image
 			self.present(vc, animated: true, completion: nil)
 		}
 		

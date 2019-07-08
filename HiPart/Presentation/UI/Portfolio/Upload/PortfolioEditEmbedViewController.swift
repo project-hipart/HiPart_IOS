@@ -11,9 +11,7 @@ import SnapKit
 
 class PortfolioEditEmbedViewController: UIViewController {
 
-	
 	private lazy var collectionView : UICollectionView = {
-		
 		let layout = UICollectionViewFlowLayout()
 		layout.itemSize = CGSize(width: 175, height: 163)
 		layout.sectionInset = UIEdgeInsets(top: 10, left: 25, bottom: 0, right: 25)

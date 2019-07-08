@@ -57,6 +57,7 @@ extension MasterViewController : UITabBarControllerDelegate{
 	}
 	func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
 		print(#function)
+		
 	}
 	
 }

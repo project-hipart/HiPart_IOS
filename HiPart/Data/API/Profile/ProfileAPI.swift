@@ -9,14 +9,16 @@ enum ProfileFlag : Int{
 	case PD = 2
 	case Translator = 3
 	case ETC = 4
+	
 }
 
 enum ProfileAPI : APIConfiguration{
 	case list(flag : ProfileFlag)
+	case detail(nickname : String)
 	
 	var method: HTTPMethod{
 		switch self{
-		case .list:
+		case .list,.detail:
 			return .get
 		}
 	}
@@ -25,6 +27,8 @@ enum ProfileAPI : APIConfiguration{
 		switch self{
 		case .list(let flag):
 			return "/profile/list/\(flag.rawValue)"
+		case .detail(let nickname):
+			return "/profile/detail/\(nickname)"
 		}
 	}
 	
@@ -32,17 +36,22 @@ enum ProfileAPI : APIConfiguration{
 		switch self{
 		case .list(let flag):
 			return [APIKeys.profileFlag : flag.rawValue]
+		case .detail(let nickname):
+			return nil
 		}
 	}
 	
 	var contentType: ContentType{
 		switch self{
-		case .list:
+		case .list,.detail:
 			return ContentType.json
 		}
 	}
 	
 	static func requestList(flag : ProfileFlag) -> Single<JSON>{
 		return APIClient.request(api: ProfileAPI.list(flag: flag))
+	}
+	static func requestDetail(nickname : String) -> Single<JSON>{
+		return APIClient.request(api: ProfileAPI.detail(nickname: nickname))
 	}
 }

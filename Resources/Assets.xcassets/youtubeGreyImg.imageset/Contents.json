@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
+      "scale" : "1x",
       "filename" : "youtubeGreyImg.png"
     },
     {
@@ -11,9 +11,9 @@
       "filename" : "youtubeGreyImg@2x.png"
     },
     {
+      "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "youtubeGreyImg@3x.png",
-      "idiom" : "universal"
+      "filename" : "youtubeGreyImg@3x.png"
     }
   ],
   "info" : {
