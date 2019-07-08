@@ -14,6 +14,12 @@ class PortfolioEditEmbedCollectionViewCell: UICollectionViewCell {
 	@IBOutlet var titleLabel: UILabel!
 	@IBOutlet var bodyLabel: UILabel!
 	
+	var uploadVideo : UploadVideo?{
+		didSet{
+			self.imageView.setImage(withUrl: uploadVideo?.thumbnail)
+			self.titleLabel.text =
+		}
+	}
 	
 	override func awakeFromNib() {
         super.awakeFromNib()

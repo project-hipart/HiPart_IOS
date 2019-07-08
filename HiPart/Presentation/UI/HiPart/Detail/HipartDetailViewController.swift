@@ -155,6 +155,7 @@ extension HipartDetailViewController : HiPartDetailViewModelDelegate{
 	func onChangeProfileDetail(profileDetail: ProfileDetailDTO?) {
 		
 		if let detail = profileDetail{
+			
 			subscriberLabel.text = detail.detailSubscriber
 			hifiveLabel.text = "\(detail.hifive)"
 			oneLineLabel.text = detail.detailOneline
@@ -162,7 +163,6 @@ extension HipartDetailViewController : HiPartDetailViewModelDelegate{
 			appealLabel.text = detail.detailAppeal
 			
 			embededViewController.datas = UploadVideo.getArrayWithDatas(thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
-			
 		}
 	}
 	

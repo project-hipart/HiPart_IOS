@@ -28,8 +28,8 @@ class PortfolioEditEmbedViewController: UIViewController {
 		return view
 	}()
 	
-	
 	override func viewDidLoad() {
+		
         super.viewDidLoad()
 		self.setupView()
 		self.setupLayout()
@@ -46,11 +46,6 @@ class PortfolioEditEmbedViewController: UIViewController {
 }
 extension PortfolioEditEmbedViewController{
 	private func setupView(){
-		
-		
-
-	
-		
 		self.view.addSubview(collectionView)
 	}
 	private func setupLayout(){
