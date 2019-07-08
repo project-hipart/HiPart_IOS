@@ -37,6 +37,11 @@ class PortfolioEditEmbedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 	
+	var datas : [UploadVideo] = []{
+		didSet{
+			self.collectionView.reloadData()
+		}
+	}
 
 }
 extension PortfolioEditEmbedViewController{
@@ -60,12 +65,13 @@ extension PortfolioEditEmbedViewController : UICollectionViewDelegate{
 }
 extension PortfolioEditEmbedViewController : UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 40
+		return datas.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PortfolioEditEmbedCollectionViewCell.self), for: indexPath) as? PortfolioEditEmbedCollectionViewCell{
+			
 			return cell
 		}
 		fatalError()

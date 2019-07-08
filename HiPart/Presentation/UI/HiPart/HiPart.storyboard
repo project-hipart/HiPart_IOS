@@ -385,7 +385,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="696"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-cq-cNo" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="696"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="486"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-74-0mk">
                                                         <rect key="frame" x="25" y="8" width="325" height="18"/>
@@ -429,21 +429,20 @@
                                                         <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k10-7v-hYM">
-                                                        <rect key="frame" x="25" y="361.5" width="325" height="217.5"/>
-                                                        <string key="text">안녕하세요 전 먹는게 세상에서 제일 좋아요! 저랑 먹방 찍으러 다닐 편집자 구해요! ㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴㅁㅇㅁㄴㅇ
-
-sdada
-
-
-
-
-
-
-
-
-
-asdsad</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 전 먹는게 세상에서 제일 좋아요! 저랑 먹방 찍으러 다닐 편집자 구해요! " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k10-7v-hYM">
+                                                        <rect key="frame" x="25" y="361.5" width="325" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                        <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="학력/자격증/수상/경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0G-cz-uyi">
+                                                        <rect key="frame" x="25" y="413" width="107.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                        <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 전 먹는게 세상에서 제일 좋아요! 저랑 먹방 찍으러 다닐 편집자 구해요! " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAl-Q8-eyj">
+                                                        <rect key="frame" x="25" y="438.5" width="325" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -452,18 +451,24 @@ asdsad</string>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="k0l-HS-Luv" firstAttribute="top" secondItem="CB1-74-0mk" secondAttribute="bottom" constant="20" id="2qP-zs-cMl"/>
+                                                    <constraint firstItem="k0G-cz-uyi" firstAttribute="top" secondItem="k10-7v-hYM" secondAttribute="bottom" constant="20" id="4Jn-bl-U9n"/>
                                                     <constraint firstItem="w7g-a5-S25" firstAttribute="leading" secondItem="k0l-HS-Luv" secondAttribute="leading" id="60i-y3-Yrq"/>
                                                     <constraint firstItem="w7g-a5-S25" firstAttribute="top" secondItem="k0l-HS-Luv" secondAttribute="bottom" constant="11" id="6Tz-lJ-6Qx"/>
                                                     <constraint firstItem="k0l-HS-Luv" firstAttribute="leading" secondItem="5WL-cq-cNo" secondAttribute="leading" constant="25" id="CXT-XG-rj8"/>
                                                     <constraint firstItem="k10-7v-hYM" firstAttribute="width" secondItem="w7g-a5-S25" secondAttribute="width" id="D3I-Ni-GZS"/>
                                                     <constraint firstItem="Hg0-Vq-gdL" firstAttribute="top" secondItem="w7g-a5-S25" secondAttribute="bottom" constant="26" id="H3z-WG-ekX"/>
+                                                    <constraint firstItem="yAl-Q8-eyj" firstAttribute="trailing" secondItem="k10-7v-hYM" secondAttribute="trailing" id="HnH-gF-YkK"/>
+                                                    <constraint firstItem="yAl-Q8-eyj" firstAttribute="top" secondItem="k0G-cz-uyi" secondAttribute="bottom" constant="11" id="HnN-a3-BOQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="w7g-a5-S25" secondAttribute="trailing" constant="25" id="INs-3T-vGQ"/>
                                                     <constraint firstItem="sWJ-G5-qIo" firstAttribute="leading" secondItem="Hpc-i0-ooO" secondAttribute="leading" id="J0U-4V-K3p"/>
+                                                    <constraint firstItem="k0G-cz-uyi" firstAttribute="leading" secondItem="sWJ-G5-qIo" secondAttribute="leading" id="MtD-OX-q8J"/>
                                                     <constraint firstItem="k10-7v-hYM" firstAttribute="top" secondItem="sWJ-G5-qIo" secondAttribute="bottom" constant="11" id="SMc-R8-Y6F"/>
                                                     <constraint firstItem="5kh-7e-Idy" firstAttribute="centerY" secondItem="Hpc-i0-ooO" secondAttribute="centerY" id="SdZ-uw-4QW"/>
                                                     <constraint firstItem="Hg0-Vq-gdL" firstAttribute="width" secondItem="5WL-cq-cNo" secondAttribute="width" id="VoF-WB-1Qh"/>
                                                     <constraint firstItem="CB1-74-0mk" firstAttribute="top" secondItem="5WL-cq-cNo" secondAttribute="top" constant="8" id="XNq-3a-dta"/>
                                                     <constraint firstItem="k10-7v-hYM" firstAttribute="centerX" secondItem="w7g-a5-S25" secondAttribute="centerX" id="efo-zV-m8z"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yAl-Q8-eyj" secondAttribute="bottom" constant="16" id="fRH-Um-jFB"/>
+                                                    <constraint firstItem="yAl-Q8-eyj" firstAttribute="leading" secondItem="k0G-cz-uyi" secondAttribute="leading" id="i4l-GL-Y4d"/>
                                                     <constraint firstItem="sWJ-G5-qIo" firstAttribute="top" secondItem="Hg0-Vq-gdL" secondAttribute="bottom" constant="20" id="l90-fz-Ry9"/>
                                                     <constraint firstItem="CB1-74-0mk" firstAttribute="centerX" secondItem="5WL-cq-cNo" secondAttribute="centerX" id="lsH-7Y-Yic"/>
                                                     <constraint firstItem="Hpc-i0-ooO" firstAttribute="leading" secondItem="k0l-HS-Luv" secondAttribute="leading" id="o97-Qc-KQ1"/>
@@ -489,7 +494,6 @@ asdsad</string>
                                     <constraint firstItem="mgj-8x-ciL" firstAttribute="width" secondItem="7Aw-GH-dcK" secondAttribute="width" id="ZMq-gY-pCh"/>
                                     <constraint firstItem="mgj-8x-ciL" firstAttribute="height" secondItem="7Aw-GH-dcK" secondAttribute="height" id="a0h-K7-EuK"/>
                                     <constraint firstItem="mgj-8x-ciL" firstAttribute="centerY" secondItem="7Aw-GH-dcK" secondAttribute="centerY" id="eH9-1z-2JT"/>
-                                    <constraint firstItem="5WL-cq-cNo" firstAttribute="height" secondItem="7Aw-GH-dcK" secondAttribute="height" priority="250" id="vhS-vN-Dg9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXq-R8-u01" userLabel="BottomButton">
@@ -569,15 +573,22 @@ asdsad</string>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="afreecaLogo" destination="5fE-mx-hug" id="xvz-hU-tal"/>
+                        <outlet property="appealLabel" destination="yAl-Q8-eyj" id="lyI-ri-UNW"/>
                         <outlet property="backButton" destination="jUH-ht-0GL" id="VeC-nt-WsT"/>
                         <outlet property="filterStackView" destination="CB1-74-0mk" id="KsU-Ts-AZo"/>
                         <outlet property="hifiveLabel" destination="WeF-Ka-8vx" id="6WI-1U-SWt"/>
                         <outlet property="imageView" destination="Cae-ci-COm" id="bex-Gp-Rx1"/>
                         <outlet property="nicknameLabel" destination="Qyv-Zx-HHa" id="EQD-wm-Gia"/>
+                        <outlet property="oneLineLabel" destination="w7g-a5-S25" id="Hk2-rw-fQm"/>
+                        <outlet property="platformSelectImage" destination="iKf-pk-iYi" id="uab-RX-MEw"/>
                         <outlet property="scrollView" destination="mgj-8x-ciL" id="YJw-nK-jl9"/>
                         <outlet property="subscriberLabel" destination="zfL-xE-qGX" id="IC1-jh-QR5"/>
+                        <outlet property="twitchLogo" destination="Dif-7i-nzJ" id="OxZ-qi-iza"/>
                         <outlet property="typeLabel" destination="P49-Ts-mGc" id="0Pw-jR-cvC"/>
                         <outlet property="uploadContainerView" destination="Hg0-Vq-gdL" id="n1f-Gj-Et4"/>
+                        <outlet property="wantLabel" destination="k10-7v-hYM" id="8D4-By-6IP"/>
+                        <outlet property="youtubeLogo" destination="1n7-Wx-HDt" id="VO3-Xt-IbO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0e-Eh-IjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,7 +683,7 @@ asdsad</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
                                 <rect key="frame" x="111.5" y="240" width="152" height="40"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -699,7 +710,7 @@ asdsad</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
                                 <rect key="frame" x="104" y="332" width="167" height="14.5"/>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
                                 <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -718,6 +729,7 @@ asdsad</string>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="centerX" secondItem="DK5-xH-ePd" secondAttribute="centerX" id="boL-jo-zQi"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="width" secondItem="u22-Sr-fEN" secondAttribute="width" multiplier="0.7" id="pJW-4O-2lO"/>
                             <constraint firstItem="ppL-zF-ote" firstAttribute="centerX" secondItem="e1G-PW-DEJ" secondAttribute="centerX" id="q7c-XA-7iZ"/>
+                            <constraint firstItem="DK5-xH-ePd" firstAttribute="bottom" secondItem="89b-AZ-Uxr" secondAttribute="bottom" constant="219" id="t5a-NK-XyS"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="height" secondItem="u22-Sr-fEN" secondAttribute="height" multiplier="0.4" id="x2p-BX-2dY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DK5-xH-ePd"/>
