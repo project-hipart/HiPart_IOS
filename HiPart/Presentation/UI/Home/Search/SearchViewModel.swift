@@ -1,5 +1,6 @@
-
+import RxSwift
 import Foundation
+
 
 class SearchViewModel{
 	
@@ -13,4 +14,5 @@ class SearchViewModel{
 }
 
 protocol SearchViewModelDelegate : NSObjectProtocol{
+	
 }

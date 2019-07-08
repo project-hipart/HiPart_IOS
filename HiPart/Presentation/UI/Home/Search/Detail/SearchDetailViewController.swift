@@ -3,6 +3,8 @@ import UIKit
 import Hero
 
 class SearchDetailViewController: UIViewController {
+	var keyword : String = ""
+	private var viewModel = SearchDetailViewModel()
 	
 	@IBOutlet var collectionView: UICollectionView!
 	@IBOutlet var notFoundImageView: UIImageView!
@@ -20,34 +22,27 @@ extension SearchDetailViewController{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
+		debugE(#function)
 		setupView()
+		setupBinding()
+		
+		viewModel.loadDatas(keyword: keyword)
 	}
 }
-extension UILabel {
-	
 
-
-	func setLineHeight(lineHeight: CGFloat) {
-		let paragraphStyle = NSMutableParagraphStyle()
-		paragraphStyle.lineSpacing = 1.0
-		paragraphStyle.lineHeightMultiple = lineHeight
-		paragraphStyle.alignment = self.textAlignment
-		
-		let attrString = NSMutableAttributedString()
-		if (self.attributedText != nil) {
-			attrString.append( self.attributedText!)
-		} else {
-			attrString.append( NSMutableAttributedString(string: self.text!))
-			attrString.addAttribute(NSAttributedString.Key.font, value: self.font, range: NSMakeRange(0, attrString.length))
-		}
-		attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
-		self.attributedText = attrString
+//MARK: ViewModel Delegate
+extension SearchDetailViewController : SearchDetailViewModelDelegate{
+	func onChangeProfiles(profiles: [ProfileDTO]) {
+		self.collectionView.reloadData()
 	}
 }
 
 //MARK: Setup
 extension SearchDetailViewController{
+	
+	private func setupBinding(){
+		self.viewModel.delegate = self
+	}
 	
 	private func setupView(){
 		
@@ -106,13 +101,15 @@ extension SearchDetailViewController : UICollectionViewDelegate{
 //MARK: DataSource
 extension SearchDetailViewController : UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 20
+		return viewModel.profiles.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
+		let profile = viewModel.profiles[indexPath.row]
+		
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SearchCollectionViewCell.self) , for: indexPath) as? SearchCollectionViewCell{
-			
+			cell.setProfile(profile: profile)
 			
 			return cell
 		}else{

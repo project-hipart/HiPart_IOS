@@ -2,12 +2,12 @@ import UIKit
 import Hero
 
 class SearchViewController: UIViewController {
+	private var viewModel = SearchViewModel()
+	
 	@IBOutlet var backButton: UIButton!
 	@IBOutlet var searchTextField: SearchTextField!
 	@IBOutlet var recentlyCollectionView: UICollectionView!
 	@IBOutlet var collectionViewBottomConstraint: NSLayoutConstraint!
-	
-	
 }
 
 //MARK: Lifecycle
@@ -129,7 +129,9 @@ extension SearchViewController{
 extension SearchViewController{
 	private func navigateDetailViewController(){
 		
-		if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchDetailViewController"){
+		let id = String(describing: SearchDetailViewController.self)
+		if let vc = self.storyboard?.instantiateViewController(withIdentifier: id) as? SearchDetailViewController{
+			vc.keyword = self.searchTextField.text ?? ""
 			self.navigationController?.pushViewController(vc, animated: true)
 		}
 	}
