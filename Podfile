@@ -6,8 +6,8 @@ target 'HiPart' do
   use_frameworks!
 
   # Pods for HiPart
-  pod "SwiftyJSON"
-  pod "Hero"
+  pod 'SwiftyJSON'
+  pod 'Hero'
   pod 'SnapKit'
 	pod 'Alamofire'
 	pod 'AlamofireImage', '~> 3.5'
