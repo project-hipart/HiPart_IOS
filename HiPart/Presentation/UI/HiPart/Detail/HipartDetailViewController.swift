@@ -12,6 +12,16 @@ import Hero
 class HipartDetailViewController: UIViewController {
 	let viewModel = HiPartDetailViewModel()
 	
+	var isPortfolioView = false
+	
+	@IBOutlet var youtubeLogo: UIImageView!
+	@IBOutlet var afreecaLogo: UIImageView!
+	@IBOutlet var twitchLogo: UIImageView!
+	@IBOutlet var platformSelectImage: UIImageView!
+	
+	@IBOutlet var oneLineLabel: UILabel!
+	@IBOutlet var wantLabel: UILabel!
+	@IBOutlet var appealLabel: UILabel!
 	
 	@IBOutlet var scrollView: UIScrollView!
 	
@@ -31,9 +41,7 @@ class HipartDetailViewController: UIViewController {
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
 	
-//
-	
-	
+	private var embededViewController : PortfolioEditEmbedViewController!
 }
 
 extension HipartDetailViewController {
@@ -43,10 +51,15 @@ extension HipartDetailViewController {
 		
 		self.setupHero()
 		self.setupView()
-		self.setFilters([Filter.ASMR])
 		self.setupBinding()
 		
 		viewModel.loadData(profile: profile)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.destination is PortfolioEditEmbedViewController{
+			embededViewController = segue.destination as! PortfolioEditEmbedViewController
+		}
 	}
 	
 }
@@ -57,19 +70,60 @@ extension HipartDetailViewController{
 		self.imageView.hero.modifiers = [.translate(),.scale(x: 2, y: 2, z: 1)]
 	}
 	private func setupView(){
+		if !isPortfolioView{
+			platformSelectImage.isHidden = true
+			afreecaLogo.isHidden = true
+			twitchLogo.isHidden = true
+			
+		}
+		
+		setPlatformImage()
+		
+		
+		var filters : [Filter] = []
+		
+		if let filter = profile.broadcastConcept{
+			filters.append(filter)
+		}
+		if let filter = profile.pd{
+			filters.append(filter)
+		}
+		if let filter = profile.language{
+			filters.append(filter)
+		}
+		if let filter = profile.etc{
+			filters.append(filter)
+		}
+		Filter.sortWithUserType(&filters, type: profile.type)
+		setFilters(filters,true)
+		
 		self.imageView.image = profileImage
 		self.nicknameLabel.text = profile.nickname
 		self.typeLabel.text = profile.type.name
 		
-//		self.scrollView.contentInset = UIEdgeInsets.zero
-//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
+		//		self.scrollView.contentInset = UIEdgeInsets.zero
+		//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
 		self.backButton.tintColor = UIColor.white
 		self.imageView.cornerRadius = 75/2
 		
 		
 	}
-	private func setFilters(_ filters : [Filter]){
+	private func setPlatformImage(){
+		switch profile.platform{
+		case .youtube:
+			youtubeLogo.image = UIImage(named: "pofolYoutubeWhiteImg")
+		case .afreeca:
+			youtubeLogo.image = UIImage(named: "pofolAfreecaWhiteImg")
+		case .twitch:
+			youtubeLogo.image = UIImage(named: "pofolTwitchWhiteImg")
+		default:
+			break
+		}
+	}
+	
+	private func setFilters(_ filters : [Filter],_ needFirstSelect : Bool){
 		//Remove all filterViews in StackView
+		
 		for v in filterViews{
 			self.filterStackView.removeArrangedSubview(v)
 			v.removeFromSuperview()
@@ -86,13 +140,14 @@ extension HipartDetailViewController{
 			self.filterStackView.addArrangedSubview(view)
 		}
 		
-		
-		self.filterStackView.addPaddingView()
+		if needFirstSelect{
+			self.filterStackView.addPaddingView()
+		}
 		
 	}
 	private func setupBinding(){
 		viewModel.delegate = self
-	
+		
 	}
 }
 
@@ -102,12 +157,20 @@ extension HipartDetailViewController : HiPartDetailViewModelDelegate{
 		if let detail = profileDetail{
 			subscriberLabel.text = detail.detailSubscriber
 			hifiveLabel.text = "\(detail.hifive)"
+			oneLineLabel.text = detail.detailOneline
+			wantLabel.text = detail.detailWant
+			appealLabel.text = detail.detailAppeal
+			
+			embededViewController.datas = UploadVideo.getArrayWithDatas(thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
+			
 		}
 	}
 	
 	func onChangeRefreshState(isRefreshing: Bool) {
 		
 	}
+	
+	
 }
 
 //MARK: Actions
@@ -127,6 +190,6 @@ extension HipartDetailViewController{
 		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self))
 		
 		self.add(asChildViewController: vc, to: self.view)
-//		self.present(vc, animated: false, completion: nil)
+		//		self.present(vc, animated: false, completion: nil)
 	}
 }

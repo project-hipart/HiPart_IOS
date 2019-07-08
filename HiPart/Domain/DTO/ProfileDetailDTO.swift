@@ -23,9 +23,9 @@ struct ProfileDetailDTO {
 	
 	
 	init(fromJSON : JSON){
-		hifiveState = fromJSON[APIKeys.hifiveState].intValue
+		hifiveState = fromJSON["data"][APIKeys.hifiveState].intValue
 		
-		let data = fromJSON["resCreData"]
+		let data = fromJSON["data"]["resEdiData"]
 		
 		userNickname = data[APIKeys.userNickname].stringValue
 		userImg = data[APIKeys.userImage].stringValue

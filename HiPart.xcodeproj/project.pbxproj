@@ -18,6 +18,7 @@
 		2D06750522D31B92006D9FB8 /* FindPw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0674FB22D31B92006D9FB8 /* FindPw.storyboard */; };
 		2D06750622D31B92006D9FB8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0674FC22D31B92006D9FB8 /* Login.storyboard */; };
 		2D06750722D31B92006D9FB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */; };
+		2D06750922D34D00006D9FB8 /* UploadVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06750822D34D00006D9FB8 /* UploadVideo.swift */; };
 		2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */; };
 		2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */; };
 		2D79367A22CF94200081E065 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79367622CF941F0081E065 /* SearchDetailViewController.swift */; };
@@ -124,6 +125,7 @@
 		2D0674FB22D31B92006D9FB8 /* FindPw.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FindPw.storyboard; sourceTree = "<group>"; };
 		2D0674FC22D31B92006D9FB8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2D06750822D34D00006D9FB8 /* UploadVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideo.swift; sourceTree = "<group>"; };
 		2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioBottomSheetViewController.xib; sourceTree = "<group>"; };
 		2D79367622CF941F0081E065 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				2D813E0122D0E80700E02DD5 /* User.swift */,
 				2D813E1322D232CF00E02DD5 /* ProfileDTO.swift */,
 				2D813E2022D272D700E02DD5 /* ProfileDetailDTO.swift */,
+				2D06750822D34D00006D9FB8 /* UploadVideo.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				60B2EEF722C8BCC5000724B6 /* PortfolioViewModel.swift in Sources */,
 				2D813E2322D277B300E02DD5 /* HiPartDetailViewModel.swift in Sources */,
 				60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */,
+				2D06750922D34D00006D9FB8 /* UploadVideo.swift in Sources */,
 				2D813E0B22D213D500E02DD5 /* UserDefaults.swift in Sources */,
 				2D9E094622CFD568008DFA78 /* UIPlaceHolderTextView.m in Sources */,
 				60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */,

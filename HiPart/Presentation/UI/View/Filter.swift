@@ -117,6 +117,41 @@ enum Filter : String{
 		}
 	}
 	
+	static func sortWithUserType( _ filters : inout [Filter], type : UserType){
+		switch type{
+		case .Creator:
+			if let filter = filters.first(where: {filter in
+				return filter.filterGroup == .BroadcastConcept
+			}){
+				let index = filters.firstIndex(of: filter)!
+				filters.swapAt(0, index)
+			}
+		case .PD:
+			if let filter = filters.first(where: {filter in
+				return filter.filterGroup == .PD
+			}){
+				let index = filters.firstIndex(of: filter)!
+				filters.swapAt(0, index)
+			}
+		case .Translator:
+			if let filter = filters.first(where: {filter in
+				return filter.filterGroup == .Language
+			}){
+				let index = filters.firstIndex(of: filter)!
+				filters.swapAt(0, index)
+			}
+		case .Etc:
+			if let filter = filters.first(where: {filter in
+				return filter.filterGroup == .Etc
+			}){
+				let index = filters.firstIndex(of: filter)!
+				filters.swapAt(0, index)
+			}
+		default:
+			break
+		}
+	}
+	
 	var filterGroup : FilterGroup{
 		switch self{
 		case .GAME,.ASMR,.PRANK,.SPORT,.MUKBANG,.MOVIE_MUSIC,.EDU_INFO:
