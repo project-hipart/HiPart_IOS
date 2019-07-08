@@ -30,30 +30,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      
     }
     
+}
 
-    
+extension LoginViewController {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        
         if textField == idTextField {
-//            if string.count == 0 {
-//                idView.borderColor = UIColor.middleGrey
-//                idImg.image = UIImage(named: "loginIdOffIcon")
-//            } else {
-//                idView.borderColor = UIColor.mainPurple
-//                idImg.image = UIImage(named: "loginIdOnIcon")
-//            }
-            if string.count > 0 {
+            if newString.length == 0 {
+                idView.borderColor = UIColor.lightGrey
+                idImg.image = UIImage(named: "loginIdOffIcon")
+            } else {
                 idView.borderColor = UIColor.mainPurple
                 idImg.image = UIImage(named: "loginIdOnIcon")
-            } else {
-                idView.borderColor = UIColor.middleGrey
-                idImg.image = UIImage(named: "loginIdOffIcon")
             }
-        } else if textField == pwTextField {
-            pwView.borderColor = UIColor.mainPurple
-            pwImg.image = UIImage(named: "loginPasswordOnIcon")
         }
+            
+        else if textField == pwTextField {
+            if newString.length == 0 {
+                pwView.borderColor = UIColor.lightGrey
+                pwImg.image = UIImage(named: "loginPasswordOffIcon")
+            } else {
+                pwView.borderColor = UIColor.mainPurple
+                pwImg.image = UIImage(named: "loginPasswordOnIcon")
+            }
+        }
+        
+        
         return true
     }
 }
-

@@ -262,8 +262,8 @@
 		2D0674F122D31B92006D9FB8 /* SignUpFinish */ = {
 			isa = PBXGroup;
 			children = (
-				2D0674F222D31B92006D9FB8 /* SignUpFinshViewController.swift */,
 				2D0674F322D31B92006D9FB8 /* SignUpFinsh.storyboard */,
+				2D0674F222D31B92006D9FB8 /* SignUpFinshViewController.swift */,
 				2D0674F422D31B92006D9FB8 /* SignUpFinishCell.swift */,
 				2D0674F522D31B92006D9FB8 /* SignUpFinishData.swift */,
 			);
@@ -273,8 +273,8 @@
 		2D0674F622D31B92006D9FB8 /* SignUpFirst */ = {
 			isa = PBXGroup;
 			children = (
-				2D0674F722D31B92006D9FB8 /* SignUpViewController.swift */,
 				2D0674F822D31B92006D9FB8 /* SignUp.storyboard */,
+				2D0674F722D31B92006D9FB8 /* SignUpViewController.swift */,
 			);
 			path = SignUpFirst;
 			sourceTree = "<group>";

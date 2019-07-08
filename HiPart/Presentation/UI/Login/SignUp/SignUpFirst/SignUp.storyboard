@@ -192,7 +192,22 @@
                     <navigationItem key="navigationItem" id="ROx-Qe-iSl"/>
                     <connections>
                         <outlet property="myImg" destination="swY-Xh-W04" id="9uP-gF-3GG"/>
+                        <outlet property="signUpContactImg" destination="tly-U9-EaV" id="QRn-cx-4kT"/>
+                        <outlet property="signUpContactTextfield" destination="X3q-rs-nfn" id="TaW-yq-JUS"/>
+                        <outlet property="signUpContactView" destination="GvG-fR-6Dm" id="9Re-rW-kxC"/>
+                        <outlet property="signUpEmailImg" destination="MXa-9K-4Gt" id="fIu-zr-YB9"/>
+                        <outlet property="signUpEmailTextfield" destination="cMz-7W-WsM" id="cuQ-vR-jtq"/>
+                        <outlet property="signUpEmailView" destination="nBd-xG-ztV" id="QA1-aw-7jx"/>
                         <outlet property="signUpNextBtn" destination="ec1-Sb-EB2" id="CUV-b7-VtB"/>
+                        <outlet property="signUpNickImg" destination="6B0-Bh-Fr9" id="iXt-iZ-iUn"/>
+                        <outlet property="signUpNickTextfield" destination="RkM-nk-DYl" id="gcT-9R-S9b"/>
+                        <outlet property="signUpNickView" destination="1nP-EH-ZQd" id="bCS-Up-BBH"/>
+                        <outlet property="signUpPwCheckImg" destination="EjA-yg-Ufb" id="vHK-R2-Wc7"/>
+                        <outlet property="signUpPwCheckTextfield" destination="sO9-ot-iQC" id="zao-Bn-Cmt"/>
+                        <outlet property="signUpPwCheckView" destination="Dnw-Wu-Id8" id="hpG-eC-LZW"/>
+                        <outlet property="signUpPwImg" destination="y8f-9S-vyz" id="tGh-cK-Bwd"/>
+                        <outlet property="signUpPwTextfield" destination="9Lp-x2-gHN" id="TJD-HU-px1"/>
+                        <outlet property="signUpPwView" destination="BQy-MT-PWt" id="mNX-SF-2Ng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNs-G5-cIE" userLabel="First Responder" sceneMemberID="firstResponder"/>

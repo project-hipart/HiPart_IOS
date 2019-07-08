@@ -51,7 +51,7 @@ extension HomeHiPartViewController: UICollectionViewDelegateFlowLayout {
     // Collection View Cell 의 windth, height 를 지정할 수 있습니다.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-     let width: CGFloat = (view.frame.width ) / 4
+     let width: CGFloat = (view.frame.width ) / 5
      let height: CGFloat = view.frame.width
 
      return CGSize(width: width, height: height)
