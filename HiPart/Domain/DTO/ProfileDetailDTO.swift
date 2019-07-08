@@ -14,18 +14,36 @@ struct ProfileDetailDTO {
 	let userImg: String
 	let userType : UserType
 	let detailPlatform: Platform
+	
 	let detailSubscriber, detailOneline, detailAppeal, detailWant: String
 	let hifive : Int
+	
+	let workIndex : [Int]
 	let thumbnail: [String]
 	let url, title, content: [String]
+	let before,after : [String]
+	
 	let pick: Int
 	let etc, concept, lang, pd: Filter?
 	
 	
-	init(fromJSON : JSON){
-		hifiveState = fromJSON["data"][APIKeys.hifiveState].intValue
+	init(fromJSON : JSON, type : UserType){
+		hifiveState = fromJSON[APIKeys.hifiveState].intValue
 		
-		let data = fromJSON["data"]["resEdiData"]
+		let data : JSON
+		
+		switch type{
+		case .Creator:
+			data = fromJSON["resCreData"]
+		case .PD:
+			data = fromJSON["resEdiData"]
+		case .Translator:
+			data = fromJSON["resTransData"]
+		case .Etc:
+			data = fromJSON["resEtcData"]
+		default:
+			fatalError()
+		}
 		
 		userNickname = data[APIKeys.userNickname].stringValue
 		userImg = data[APIKeys.userImage].stringValue
@@ -37,6 +55,9 @@ struct ProfileDetailDTO {
 		detailWant = data[APIKeys.detailWant].stringValue
 		
 		
+		workIndex = data[APIKeys.workIndex].arrayObject as? [Int] ?? []
+		before = data[APIKeys.before].arrayObject as? [String] ?? []
+		after = data[APIKeys.after].arrayObject as? [String] ?? []
 		thumbnail = data[APIKeys.thumbnail].arrayObject as? [String] ?? []
 		url = data[APIKeys.url].arrayObject as? [String] ?? []
 		title = data[APIKeys.title].arrayObject as? [String] ?? []

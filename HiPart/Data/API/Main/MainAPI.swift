@@ -5,10 +5,11 @@ import SwiftyJSON
 
 enum MainAPI : APIConfiguration{
 	case search(keyword : String)
+	case notification
 	
 	var method: HTTPMethod{
 		switch self{
-		case .search:
+		case .search,.notification:
 			return .get
 		}
 	}
@@ -17,6 +18,8 @@ enum MainAPI : APIConfiguration{
 		switch self{
 		case .search(let keyword):
 			return "/main/search/\(keyword)"
+		case .notification:
+			return "/main/notification"
 		}
 	}
 	
@@ -24,17 +27,23 @@ enum MainAPI : APIConfiguration{
 		switch self{
 		case .search(let keyword):
 			return [APIKeys.mainKeyword : keyword]
+		case .notification:
+			return nil
 		}
 	}
 	
 	var contentType: ContentType{
 		switch self{
-		case .search:
+		case .search,.notification:
 			return ContentType.json
+			
 		}
 	}
 	
 	static func requestSearch(keyword : String) -> Single<JSON>{
 		return APIClient.request(api: MainAPI.search(keyword: keyword))
+	}
+	static func requestNotification() -> Single<JSON>{
+		return APIClient.request(api: MainAPI.notification)
 	}
 }

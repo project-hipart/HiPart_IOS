@@ -17,7 +17,8 @@ class PortfolioEditEmbedCollectionViewCell: UICollectionViewCell {
 	var uploadVideo : UploadVideo?{
 		didSet{
 			self.imageView.setImage(withUrl: uploadVideo?.thumbnail)
-			self.titleLabel.text =
+			self.titleLabel.text = uploadVideo?.title
+			self.bodyLabel.text = uploadVideo?.content
 		}
 	}
 	

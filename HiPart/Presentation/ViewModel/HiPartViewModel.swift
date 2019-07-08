@@ -42,12 +42,6 @@ class HiPartViewModel {
 		isRefreshing = true
 
 
-		MainAPI.requestSearch(keyword: "최은희")
-			.subscribe(onSuccess: {
-				debugE($0)
-			}, onError: {
-				debugE($0)
-			})
 		
 		ProfileRepository.shared.list(flag: flag)
 			.do(onDispose: {self.isRefreshing = false})

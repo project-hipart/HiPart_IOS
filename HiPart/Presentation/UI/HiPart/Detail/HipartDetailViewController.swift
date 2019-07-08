@@ -14,6 +14,7 @@ class HipartDetailViewController: UIViewController {
 	
 	var isPortfolioView = false
 	
+	@IBOutlet var uploadIcon: UIImageView!
 	@IBOutlet var youtubeLogo: UIImageView!
 	@IBOutlet var afreecaLogo: UIImageView!
 	@IBOutlet var twitchLogo: UIImageView!
@@ -25,23 +26,24 @@ class HipartDetailViewController: UIViewController {
 	
 	@IBOutlet var scrollView: UIScrollView!
 	
-	var profile : ProfileDTO!
+	var profile : ProfileDTO?
 	var profileImage : UIImage?
 	
 	@IBOutlet var subscriberLabel: UILabel!
 	@IBOutlet var hifiveLabel: UILabel!
 	
 	@IBOutlet var typeLabel: UILabel!
-	@IBOutlet var uploadContainerView: UIView!
 	@IBOutlet var nicknameLabel: UILabel!
 	@IBOutlet var imageView: UIImageView!
 	var imageViewHeroId = ""
+	@IBOutlet var uploadContainer: UIView!
 	
 	@IBOutlet var backButton: UIButton!
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
 	
-	private var embededViewController : PortfolioEditEmbedViewController!
+	private var uploadVideoViewController : PortfolioEditEmbedViewController?
+	private var uploadTransViewController : PortfolioEditEmbedTransViewController?
 }
 
 extension HipartDetailViewController {
@@ -53,15 +55,44 @@ extension HipartDetailViewController {
 		self.setupView()
 		self.setupBinding()
 		
-		viewModel.loadData(profile: profile)
-	}
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.destination is PortfolioEditEmbedViewController{
-			embededViewController = segue.destination as! PortfolioEditEmbedViewController
+		if let profile = profile{
+			setupUploadViewController(type : profile.type)
+			viewModel.loadData(profile: profile)
 		}
+		
+		
 	}
 	
+	private func setupUploadViewController(type : UserType){
+		
+		debugE(#function, type)
+		
+		switch type{
+		case .Translator:
+			
+			// Load Storyboard
+			let storyboard = UIStoryboard(name: "HiPart", bundle: Bundle.main)
+			
+			// Instantiate View Controller
+			let id = String(describing: PortfolioEditEmbedTransViewController.self)
+			uploadTransViewController = storyboard.instantiateViewController(withIdentifier: id) as! PortfolioEditEmbedTransViewController
+			
+			// Add View Controller as Child View Controller
+			self.add(asChildViewController: uploadTransViewController!, to: uploadContainer)
+		default:
+			
+			// Load Storyboard
+			let storyboard = UIStoryboard(name: "HiPart", bundle: Bundle.main)
+			
+			// Instantiate View Controller
+			let id = String(describing: PortfolioEditEmbedViewController.self)
+			uploadVideoViewController = storyboard.instantiateViewController(withIdentifier: id) as! PortfolioEditEmbedViewController
+			
+			// Add View Controller as Child View Controller
+			self.add(asChildViewController: uploadVideoViewController!, to: uploadContainer)
+		}
+		
+	}
 }
 extension HipartDetailViewController{
 	private func setupHero(){
@@ -82,42 +113,52 @@ extension HipartDetailViewController{
 		
 		var filters : [Filter] = []
 		
-		if let filter = profile.broadcastConcept{
-			filters.append(filter)
+		if let profile = self.profile{
+			
+			if let filter = profile.broadcastConcept{
+				filters.append(filter)
+			}
+			if let filter = profile.pd{
+				filters.append(filter)
+			}
+			if let filter = profile.language{
+				filters.append(filter)
+			}
+			if let filter = profile.etc{
+				filters.append(filter)
+			}
+			Filter.sortWithUserType(&filters, type: profile.type)
+			setFilters(filters,true)
+			
+			self.imageView.image = profileImage
+			self.nicknameLabel.text = profile.nickname
+			self.typeLabel.text = profile.type.name
+			
+			//		self.scrollView.contentInset = UIEdgeInsets.zero
+			//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
+			self.backButton.tintColor = UIColor.white
+			self.imageView.cornerRadius = 75/2
+			
+			switch profile.type{
+			case .Translator:
+				uploadIcon.image = UIImage(named : "hipatTpatWorkAdotImg")
+			default:
+				break
+			}
 		}
-		if let filter = profile.pd{
-			filters.append(filter)
-		}
-		if let filter = profile.language{
-			filters.append(filter)
-		}
-		if let filter = profile.etc{
-			filters.append(filter)
-		}
-		Filter.sortWithUserType(&filters, type: profile.type)
-		setFilters(filters,true)
-		
-		self.imageView.image = profileImage
-		self.nicknameLabel.text = profile.nickname
-		self.typeLabel.text = profile.type.name
-		
-		//		self.scrollView.contentInset = UIEdgeInsets.zero
-		//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
-		self.backButton.tintColor = UIColor.white
-		self.imageView.cornerRadius = 75/2
-		
-		
 	}
 	private func setPlatformImage(){
-		switch profile.platform{
-		case .youtube:
-			youtubeLogo.image = UIImage(named: "pofolYoutubeWhiteImg")
-		case .afreeca:
-			youtubeLogo.image = UIImage(named: "pofolAfreecaWhiteImg")
-		case .twitch:
-			youtubeLogo.image = UIImage(named: "pofolTwitchWhiteImg")
-		default:
-			break
+		if let profile = self.profile{
+			switch profile.platform{
+			case .youtube:
+				youtubeLogo.image = UIImage(named: "pofolYoutubeWhiteImg")
+			case .afreeca:
+				youtubeLogo.image = UIImage(named: "pofolAfreecaWhiteImg")
+			case .twitch:
+				youtubeLogo.image = UIImage(named: "pofolTwitchWhiteImg")
+			default:
+				break
+			}
 		}
 	}
 	
@@ -156,13 +197,26 @@ extension HipartDetailViewController : HiPartDetailViewModelDelegate{
 		
 		if let detail = profileDetail{
 			
+			
 			subscriberLabel.text = detail.detailSubscriber
 			hifiveLabel.text = "\(detail.hifive)"
 			oneLineLabel.text = detail.detailOneline
 			wantLabel.text = detail.detailWant
 			appealLabel.text = detail.detailAppeal
 			
-			embededViewController.datas = UploadVideo.getArrayWithDatas(thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
+			
+			if let profile = self.profile{
+				
+				switch profile.type{
+				case .Translator:
+					self.uploadTransViewController!.datas = UploadTrans.getArrayWithDatas(workIndexes: detail.workIndex, befores: detail.before, afters: detail.after)
+				default:
+					let datas = UploadVideo.getArrayWithDatas(workIndexes : detail.workIndex,thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
+					self.uploadVideoViewController!.datas = datas
+				}
+				
+			}
+			
 		}
 	}
 	

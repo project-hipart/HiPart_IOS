@@ -37,7 +37,7 @@ class HiPartDetailViewModel {
 	
 	
 	func loadData(profile : ProfileDTO){
-		ProfileRepository.shared.detail(nickname: profile.nickname)
+		ProfileRepository.shared.detail(nickname: profile.nickname,type: profile.type)
 			.subscribe(onSuccess: {profileDetail in
 				self.profileDetail = profileDetail
 			}, onError: {err in

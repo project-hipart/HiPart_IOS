@@ -45,7 +45,7 @@ extension MasterViewController {
 extension MasterViewController : UITabBarControllerDelegate{
 	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
 		
-		if viewController is PortfolioEditViewController{
+		if viewController is PortfolioViewController{
 			showPortfolioBottomViewController()
 
 			
@@ -55,6 +55,7 @@ extension MasterViewController : UITabBarControllerDelegate{
 		
 		return true
 	}
+	
 	func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
 		print(#function)
 		

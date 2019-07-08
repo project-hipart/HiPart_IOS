@@ -24,7 +24,9 @@ class PortfolioEditEmbedViewController: UIViewController {
 		view.register(nib, forCellWithReuseIdentifier: identifier)
 		view.delegate=self
 		view.dataSource=self
-		view.backgroundColor = UIColor.init(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
+		
+		view.backgroundColor = UIColor.init(red: 241/255, green: 241/255, blue: 241/255, alpha: 1.0)
+		
 		return view
 	}()
 	
@@ -33,7 +35,6 @@ class PortfolioEditEmbedViewController: UIViewController {
         super.viewDidLoad()
 		self.setupView()
 		self.setupLayout()
-
         // Do any additional setup after loading the view.
     }
 	
@@ -47,6 +48,7 @@ class PortfolioEditEmbedViewController: UIViewController {
 extension PortfolioEditEmbedViewController{
 	private func setupView(){
 		self.view.addSubview(collectionView)
+		
 	}
 	private func setupLayout(){
 		self.collectionView.snp.makeConstraints{[unowned self] make in
@@ -56,7 +58,7 @@ extension PortfolioEditEmbedViewController{
 	}
 }
 extension PortfolioEditEmbedViewController : UICollectionViewDelegate{
-
+	
 }
 extension PortfolioEditEmbedViewController : UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,12 +67,12 @@ extension PortfolioEditEmbedViewController : UICollectionViewDataSource{
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
+		let item = datas[indexPath.row]
+		
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PortfolioEditEmbedCollectionViewCell.self), for: indexPath) as? PortfolioEditEmbedCollectionViewCell{
-			
+			cell.uploadVideo = item
 			return cell
 		}
 		fatalError()
 	}
-	
-	
 }

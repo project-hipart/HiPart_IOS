@@ -37,7 +37,6 @@ extension HipartAdViewController{
 		self.collectionView.showsHorizontalScrollIndicator=false
 		self.collectionView.showsVerticalScrollIndicator=false
 		
-		self.view.backgroundColor = UIColor.black
 	}
 }
 extension HipartAdViewController : UICollectionViewDataSource,UICollectionViewDelegate{

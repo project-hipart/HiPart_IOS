@@ -410,9 +410,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="187" id="Z8k-Bw-B1S"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <segue destination="pam-6T-tb6" kind="embed" id="bAe-Kd-FNd"/>
-                                                        </connections>
                                                     </containerView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpc-i0-ooO">
                                                         <rect key="frame" x="25" y="123" width="22.5" height="16"/>
@@ -586,7 +583,8 @@
                         <outlet property="subscriberLabel" destination="zfL-xE-qGX" id="IC1-jh-QR5"/>
                         <outlet property="twitchLogo" destination="Dif-7i-nzJ" id="OxZ-qi-iza"/>
                         <outlet property="typeLabel" destination="P49-Ts-mGc" id="0Pw-jR-cvC"/>
-                        <outlet property="uploadContainerView" destination="Hg0-Vq-gdL" id="n1f-Gj-Et4"/>
+                        <outlet property="uploadContainer" destination="Hg0-Vq-gdL" id="DsW-6S-6HZ"/>
+                        <outlet property="uploadIcon" destination="5kh-7e-Idy" id="pT9-dP-0GQ"/>
                         <outlet property="wantLabel" destination="k10-7v-hYM" id="8D4-By-6IP"/>
                         <outlet property="youtubeLogo" destination="1n7-Wx-HDt" id="VO3-Xt-IbO"/>
                     </connections>
@@ -598,17 +596,31 @@
         <!--Portfolio Edit Embed View Controller-->
         <scene sceneID="PpW-gG-etn">
             <objects>
-                <viewController id="pam-6T-tb6" customClass="PortfolioEditEmbedViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PortfolioEditEmbedViewController" id="pam-6T-tb6" customClass="PortfolioEditEmbedViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SsL-Pg-Glm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uwc-i5-Jcg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8L-ar-HyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537" y="-918"/>
+            <point key="canvasLocation" x="2535" y="-1232"/>
+        </scene>
+        <!--Portfolio Edit Embed Trans View Controller-->
+        <scene sceneID="fg3-9h-CZa">
+            <objects>
+                <viewController storyboardIdentifier="PortfolioEditEmbedTransViewController" id="Qm1-Tp-f0Y" customClass="PortfolioEditEmbedTransViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ops-QT-vx7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zrq-hq-y2w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWg-Rr-Qpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3227" y="-1251"/>
         </scene>
         <!--Payment Dialog View Controller-->
         <scene sceneID="n3N-bF-NA9">
@@ -683,7 +695,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
                                 <rect key="frame" x="111.5" y="240" width="152" height="40"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -710,7 +722,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
                                 <rect key="frame" x="104" y="332" width="167" height="14.5"/>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
                                 <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
