@@ -86,6 +86,7 @@ extension HipartDetailViewController{
 			self.filterStackView.addArrangedSubview(view)
 		}
 		
+		
 		self.filterStackView.addPaddingView()
 		
 	}
