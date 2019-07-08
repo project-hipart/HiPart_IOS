@@ -102,11 +102,7 @@ class APIClient{
 						debugE(encodingError)
 					}
 				})
-				
 			}
-			
-			
-			
 			return Disposables.create()
 		}
 	}
