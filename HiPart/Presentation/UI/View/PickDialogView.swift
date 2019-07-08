@@ -2,7 +2,31 @@ import SnapKit
 import UIKit
 
 class PickDialogView: UIView {
-
+	
+	public static func showPickDialog(){
+		if let window = UIApplication.shared.keyWindow{
+			let pickedView  = PickDialogView()
+			pickedView.alpha = 0
+			window.addSubview(pickedView)
+			
+			pickedView.snp.makeConstraints{[weak window] make in
+				make.center.equalTo(window!.snp.center)
+				make.width.equalTo(110)
+				make.height.equalTo(110+15+28)
+			}
+			
+			UIView.animate(withDuration: 0.5){
+				pickedView.alpha = 1
+			}
+			
+			UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+				pickedView.alpha = 0
+			}, completion: {[unowned pickedView] animated in
+				pickedView.removeFromSuperview()
+			})
+		}
+	}
+	
 	private lazy var imageView : UIImageView = {
 		let view = UIImageView()
 		view.image = UIImage(named: "pickPopupImg")
@@ -29,7 +53,7 @@ class PickDialogView: UIView {
 		commonInit()
 	}
 	
-
+	
 	private func commonInit(){
 		self.addSubview(imageView)
 		self.addSubview(bottomView)

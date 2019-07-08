@@ -43,6 +43,9 @@ struct APIKeys{
 	static let etc = "etc"
 	static let hifiveState = "hifiveState"
 	static let hifive = "hifive"
+	
+	//Pick
+	static let nickname = "nickname"
 }
 
 extension String{

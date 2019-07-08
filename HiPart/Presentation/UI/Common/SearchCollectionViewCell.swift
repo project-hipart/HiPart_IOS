@@ -1,12 +1,13 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 //import MaterialComponents.MaterialChips
 
 class SearchCollectionViewCell: UICollectionViewCell {
 
-	
+	private let disposeBag = DisposeBag()
 	
 //	@IBOutlet var platformStackView: UIStackView!
 	@IBOutlet var platformImageView: UIImageView!
@@ -173,30 +174,42 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	@IBAction func tapPickButton(_ sender: Any) {
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
-		
-		let pickedView = PickDialogView()
-		
-		let window = UIApplication.shared.keyWindow
-		window?.addSubview(pickedView)
-		
-		pickedView.snp.makeConstraints{[weak window] make in
-			make.center.equalTo(window!.snp.center)
-			make.width.equalTo(110)
-			make.height.equalTo(110+15+28)
+	
+		if picked{
+			PickRepository.shared.pickDelete(nickname: self.nicknameLabel.text ?? "")
+				.subscribe(onSuccess: {[unowned self] success in
+					
+					if success{
+						self.picked = !self.picked
+						self.pickCountLabel.text = String((Int(self.pickCountLabel.text!) ?? 0) - 1)
+					}
+					
+				}, onError: { err in
+					debugE(err)
+				}).disposed(by: disposeBag)
+		}else{
+			PickRepository.shared.pickAdd(nickname: self.nicknameLabel.text ?? "")
+				.subscribe(onSuccess: {[unowned self] success in
+					
+					//픽 애드 성공
+					if success{
+						self.picked = !self.picked
+						
+						self.pickCountLabel.text = String((Int(self.pickCountLabel.text!) ?? 0) + 1)
+						PickDialogView.showPickDialog()
+					}
+					
+					}, onError: { err in
+						debugE(err)
+				}).disposed(by: disposeBag)
 		}
 		
-		UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-			pickedView.alpha = 0
-		}, completion: {[unowned pickedView] animated in
-			pickedView.removeFromSuperview()
-		})
-		
-		picked = !picked
 		
 	}
 	
 	private func setPickButtonState(picked : Bool){
 		if picked{
+			
 			self.pickButton.setImage(UIImage(named: "mainPickOnIcon"),for: .normal)
 			self.pickCountLabel.textColor = UIColor.mainPurple
 		}else{
