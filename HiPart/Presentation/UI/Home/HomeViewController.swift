@@ -14,20 +14,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		print("hi")
+		print("hihi")
         // Do any additional setup after loading the view.
     }
- 
-//    private lazy var hiCollectionVC : HomeHiPartViewController = {
-//        // Load Storyboard
-//        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-//
-//        // Instantiate View Controller
-//        var viewController = storyboard.instantiateViewController(withIdentifier: "HomeHiPartViewController") as! HomeHiPartViewController
-//
-//        // Add View Controller as Child View Controller
-//        self.add(asChildViewController: viewController, to: hiPartView)
-//
-//        return viewController
-//    }()
+	
 
 }
