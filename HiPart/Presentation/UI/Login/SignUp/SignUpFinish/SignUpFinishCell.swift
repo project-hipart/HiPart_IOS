@@ -16,4 +16,13 @@ class SignUpFinishCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        layer.borderColor = UIColor.lightGrey.cgColor
+        layer.cornerRadius = 6
+        layer.borderWidth = 1.0
+        
+    }
 }

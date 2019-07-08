@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+//import Hero
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -23,11 +25,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         loginBtn.setTitleColor(UIColor.white, for: .normal)
         
-        self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+        //self.navigationController?.hero.isEnabled = true
+        //self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
 
         idTextField.delegate = self
         pwTextField.delegate = self
      
+        loginBtn.backgroundColor = UIColor.lightGrey
+        loginBtn.isEnabled = false
+    }
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        AuthAPI.requestSignIn(email: idTextField.text ?? "", password : pwTextField.text ?? "")
+            .subscribe(onSuccess: {(json : JSON) in
+                
+                if json["success"].boolValue {
+                    let token = json["data"]["tokens"]["token"].stringValue
+                    TokenHelper.saveAccessToken(token: token)
+                    self.performSegue(withIdentifier: "toLoginSuccess", sender: self)
+                    //성공
+                } else {
+                    let alert = UIAlertController(title: "로그인 실패", message: "다시 시도해주세요.", preferredStyle: .alert)
+                    let confirm = UIAlertAction(title: "확인", style: .cancel) {
+                        (cancel) in
+                    }
+                    alert.addAction(confirm)
+                    self.present(alert, animated: true, completion: nil)
+
+                    debugE("로그인 실패")
+                }
+            }, onError: { err in
+                //  에러남
+                
+            })
     }
     
 }
@@ -43,12 +73,13 @@ extension LoginViewController {
             if newString.length == 0 {
                 idView.borderColor = UIColor.lightGrey
                 idImg.image = UIImage(named: "loginIdOffIcon")
+                
             } else {
                 idView.borderColor = UIColor.mainPurple
                 idImg.image = UIImage(named: "loginIdOnIcon")
             }
         }
-            
+        
         else if textField == pwTextField {
             if newString.length == 0 {
                 pwView.borderColor = UIColor.lightGrey
@@ -58,6 +89,16 @@ extension LoginViewController {
                 pwImg.image = UIImage(named: "loginPasswordOnIcon")
             }
         }
+        
+        
+        if pwView.borderColor == UIColor.mainPurple && idView.borderColor == UIColor.mainPurple {
+            self.loginBtn.backgroundColor = UIColor.mainPurple
+            self.loginBtn.isEnabled = true
+        } else {
+            self.loginBtn.backgroundColor = UIColor.lightGrey
+            self.loginBtn.isEnabled = false
+        }
+
         
         
         return true

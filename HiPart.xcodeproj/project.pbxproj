@@ -253,8 +253,8 @@
 		2D0674F022D31B92006D9FB8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				2D0674F122D31B92006D9FB8 /* SignUpFinish */,
 				2D0674F622D31B92006D9FB8 /* SignUpFirst */,
+				2D0674F122D31B92006D9FB8 /* SignUpFinish */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";

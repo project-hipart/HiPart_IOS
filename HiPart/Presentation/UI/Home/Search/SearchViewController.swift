@@ -16,7 +16,6 @@ extension SearchViewController{
 		super.viewDidLoad()
 		
 		self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
-//		self.navigationController?.hero.navigationAnimationType = 
 		
 		addKeyboardNotifications()
 		setupView()

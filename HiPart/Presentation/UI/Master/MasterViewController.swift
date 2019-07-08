@@ -1,5 +1,6 @@
 
 import UIKit
+import Hero
 
 class MasterViewController: UITabBarController {
 	
@@ -18,6 +19,9 @@ extension MasterViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+        self.hero.isEnabled = true
+        self.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+        
 		viewModel.delegate = self
 		self.setupView()
 		

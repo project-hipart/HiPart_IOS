@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Hero
 
 class HomeViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
     }
 
 }

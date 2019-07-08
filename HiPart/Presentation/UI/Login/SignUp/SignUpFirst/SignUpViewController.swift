@@ -44,6 +44,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         signUpPwCheckTextfield.delegate = self
         signUpNickTextfield.delegate = self
         signUpContactTextfield.delegate = self
+        
+        signUpNextBtn.backgroundColor = UIColor.lightGrey
+        signUpNextBtn.isEnabled = false
     }
 
 }
@@ -126,6 +129,16 @@ extension SignUpViewController {
                 signUpContactView.borderColor = UIColor.mainPurple
                 signUpContactImg.image = UIImage(named: "loginPhoneOnIcon")
             }
+        }
+        
+        if (signUpEmailView.borderColor == UIColor.mainPurple) && (signUpPwView.borderColor == UIColor.mainPurple)
+           && (signUpPwCheckView.borderColor == UIColor.mainPurple) && (signUpNickView.borderColor == UIColor.mainPurple)
+           && (signUpContactView.borderColor == UIColor.mainPurple) {
+            self.signUpNextBtn.backgroundColor = UIColor.mainPurple
+            self.signUpNextBtn.isEnabled = true
+        } else {
+            self.signUpNextBtn.backgroundColor = UIColor.lightGrey
+            self.signUpNextBtn.isEnabled = false
         }
         
         return true

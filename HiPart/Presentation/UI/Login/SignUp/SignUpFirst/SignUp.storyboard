@@ -75,7 +75,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" name="darkGrey"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,7 +101,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" name="darkGrey"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,7 +158,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swY-Xh-W04" customClass="RoundImg" customModule="HiPart" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginCameraImg" translatesAutoresizingMaskIntoConstraints="NO" id="swY-Xh-W04" customClass="RoundImg" customModule="HiPart" customModuleProvider="target">
                                 <rect key="frame" x="147" y="148" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="mainPurple"/>
@@ -166,7 +166,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-Sq-fDj" customClass="RoundBtn" customModule="HiPart" customModuleProvider="target">
                                 <rect key="frame" x="201" y="202" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="mypageCameraIcon"/>
+                                <state key="normal" title="Button" image="loginCameraBtn"/>
                                 <connections>
                                     <action selector="selecMytImg:" destination="KaI-3N-Opb" eventType="touchUpInside" id="NIW-21-gn2"/>
                                 </connections>
@@ -224,11 +224,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="loginCameraBtn" width="28" height="28"/>
+        <image name="loginCameraImg" width="82" height="82"/>
         <image name="loginIdOffIcon" width="19" height="19"/>
         <image name="loginNicknameOffIcon" width="19" height="19"/>
         <image name="loginPasswordOffIcon" width="19" height="19"/>
         <image name="loginPhoneOffIcon" width="19" height="19"/>
-        <image name="mypageCameraIcon" width="24" height="24"/>
         <namedColor name="darkGrey">
             <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
