@@ -30,11 +30,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      
     }
     
+
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         if textField == idTextField {
-            idView.borderColor = UIColor.mainPurple
-            idImg.image = UIImage(named: "loginIdOnIcon")
+//            if string.count == 0 {
+//                idView.borderColor = UIColor.middleGrey
+//                idImg.image = UIImage(named: "loginIdOffIcon")
+//            } else {
+//                idView.borderColor = UIColor.mainPurple
+//                idImg.image = UIImage(named: "loginIdOnIcon")
+//            }
+            if string.count > 0 {
+                idView.borderColor = UIColor.mainPurple
+                idImg.image = UIImage(named: "loginIdOnIcon")
+            } else {
+                idView.borderColor = UIColor.middleGrey
+                idImg.image = UIImage(named: "loginIdOffIcon")
+            }
         } else if textField == pwTextField {
             pwView.borderColor = UIColor.mainPurple
             pwImg.image = UIImage(named: "loginPasswordOnIcon")
