@@ -1,4 +1,3 @@
-
 import Foundation
 import RxSwift
 import Alamofire
@@ -8,6 +7,7 @@ class APIClient{
 	
 	static func request(api : APIConfiguration) -> Single<JSON>{
 		switch api.contentType{
+			
 		case ContentType.json:
 			return requestJSON(api: api)
 		case ContentType.multipart:
@@ -15,10 +15,12 @@ class APIClient{
 		default:
 			fatalError()
 		}
+		
 	}
 	
 	private static func requestJSON(api : APIConfiguration) -> Single<JSON>{
 		let url = api.path.attachBaseURL()
+		
 		return Single.create{single in
 			
 			let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -62,13 +64,11 @@ class APIClient{
 			}else{
 				Alamofire.upload(multipartFormData: { multipartFormData in
 					
-					
 					for (key, value) in params{
 						if value is String || value is Int {
 							multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
 						}
 						if value is Data{
-							
 							let fileName = params[APIKeys.imageUrl] as! String
 							
 							multipartFormData.append(value as! Data, withName: key, fileName: fileName, mimeType: "image/jpeg")
