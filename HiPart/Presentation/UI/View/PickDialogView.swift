@@ -16,7 +16,7 @@ class PickDialogView: UIView {
 				make.height.equalTo(110+15+28)
 			}
 			
-			
+	
 			
 			UIView.animate(withDuration: 0.25, delay: 0.0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations :{
 				pickedView.layer.transform = CATransform3DIdentity

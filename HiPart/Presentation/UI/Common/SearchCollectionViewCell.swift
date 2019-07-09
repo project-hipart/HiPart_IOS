@@ -217,7 +217,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 				}).disposed(by: disposeBag)
 		}
 		
-		
 	}
 	
 	private func setPickButtonState(picked : Bool){
