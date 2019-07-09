@@ -25,12 +25,12 @@ class PortfolioUploadViewController: UIViewController {
 	var isTitleUploaded = false
 	var isContentUploaded = false
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
 		setupView()
-    }
-    
+	}
+	
 	
 	
 	
@@ -96,6 +96,8 @@ extension PortfolioUploadViewController{
 			
 		}
 		
+		LoadingView.showLoadingView()
+		
 		let thumbnail = (self.imageInfo![.originalImage] as! UIImage).jpegData(compressionQuality: 0.95)
 		let thumbnailUrl = self.imageInfo![.imageURL] as! NSURL
 		let url = self.urlTextField.text ?? ""
@@ -104,15 +106,22 @@ extension PortfolioUploadViewController{
 		PortfolioRepository.shared.creatorUpload(thumbnail: thumbnail!, thumbnailUrl: thumbnailUrl.absoluteString!, url: url, title: title, content: content)
 			.subscribe(onSuccess: {json in
 				debugE(json)
+				
+				if json["success"].boolValue{
+					UploadSuccessView.showUploadSuccess()
+				}
+				LoadingView.hideLoadingView()
 			}
-			, onError: {err in
-				debugE(err)
+				, onError: {err in
+					debugE(err)
+					
+					LoadingView.hideLoadingView()
 			}).disposed(by: disposeBag)
 	}
 }
 
 extension PortfolioUploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-
+	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		
 		

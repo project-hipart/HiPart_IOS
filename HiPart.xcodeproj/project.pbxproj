@@ -71,6 +71,8 @@
 		2D8B4D9A22D48BCF004F48C7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */; };
 		2D8B4D9D22D49485004F48C7 /* PortfolioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */; };
 		2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */; };
+		2D8B4DA122D49B0B004F48C7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */; };
+		2D8B4DA322D49D03004F48C7 /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -193,6 +195,8 @@
 		2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAPI.swift; sourceTree = "<group>"; };
 		2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRepository.swift; sourceTree = "<group>"; };
+		2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadSuccessView.swift; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -571,6 +575,8 @@
 				2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */,
 				2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */,
 				2D813DFD22D0A50700E02DD5 /* PickDialogView.swift */,
+				2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */,
+				2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				2D79368722CF943F0081E065 /* RecentlyCollectionViewCell.swift in Sources */,
 				2D813E1D22D23F5E00E02DD5 /* ProfileRepository.swift in Sources */,
 				2D8B4D9322D3BADC004F48C7 /* PickRepository.swift in Sources */,
+				2D8B4DA122D49B0B004F48C7 /* LoadingView.swift in Sources */,
 				6014C98622C782C300ACB80E /* MasterViewController.swift in Sources */,
 				602FB3A722CBC409003ED6DB /* HomeHiPartViewController.swift in Sources */,
 				2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */,
@@ -985,6 +992,7 @@
 				2D813DED22D0718C00E02DD5 /* HipartAdViewController.swift in Sources */,
 				2D813DEF22D0736600E02DD5 /* HipartAdCollectionViewCell.swift in Sources */,
 				60463E1622CCB25300DFFF91 /* RoundImg.swift in Sources */,
+				2D8B4DA322D49D03004F48C7 /* UploadSuccessView.swift in Sources */,
 				2D813DFC22D08F9700E02DD5 /* PaymentDialogViewController.swift in Sources */,
 				2D813E1B22D234DA00E02DD5 /* PickState.swift in Sources */,
 				2D8B4D9D22D49485004F48C7 /* PortfolioAPI.swift in Sources */,
