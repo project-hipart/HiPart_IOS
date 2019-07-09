@@ -128,13 +128,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1d-qu-P0L">
+                                <rect key="frame" x="9.5" y="618" width="356" height="42"/>
+                                <color key="backgroundColor" name="mainPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="J8i-3J-3Oj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="작품 올리기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapUploadButton:" destination="mzV-md-OVx" eventType="touchUpInside" id="eG9-0e-eUd"/>
+                                    <action selector="tapUploadView:" destination="W5T-dq-dXc" eventType="touchUpInside" id="2QC-n5-z76"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="z1d-qu-P0L" firstAttribute="centerX" secondItem="XmM-AF-Uxf" secondAttribute="centerX" id="2Kv-FB-BI9"/>
+                            <constraint firstItem="XmM-AF-Uxf" firstAttribute="bottom" secondItem="z1d-qu-P0L" secondAttribute="bottom" constant="7" id="HYJ-3H-JTU"/>
                             <constraint firstItem="wxt-Ha-VSD" firstAttribute="top" secondItem="iK8-cJ-YrZ" secondAttribute="bottom" constant="39" id="Nxz-qh-Dgj"/>
                             <constraint firstItem="iK8-cJ-YrZ" firstAttribute="top" secondItem="CeH-9V-L0W" secondAttribute="bottom" constant="40" id="TaF-AB-0KL"/>
                             <constraint firstItem="CeH-9V-L0W" firstAttribute="leading" secondItem="iK8-cJ-YrZ" secondAttribute="leading" id="abl-B5-U1O"/>
                             <constraint firstItem="gJQ-BD-ZqE" firstAttribute="leading" secondItem="XmM-AF-Uxf" secondAttribute="leading" constant="8" id="c1t-O0-3nR"/>
+                            <constraint firstItem="z1d-qu-P0L" firstAttribute="width" secondItem="2lO-w3-Hxg" secondAttribute="width" multiplier="0.95" id="fBl-7M-0zt"/>
                             <constraint firstItem="gJQ-BD-ZqE" firstAttribute="top" secondItem="XmM-AF-Uxf" secondAttribute="top" constant="8" id="iCp-DX-gKj"/>
                             <constraint firstItem="wxt-Ha-VSD" firstAttribute="width" secondItem="iK8-cJ-YrZ" secondAttribute="width" id="kfi-bs-WuC"/>
                             <constraint firstItem="iK8-cJ-YrZ" firstAttribute="centerX" secondItem="XmM-AF-Uxf" secondAttribute="centerX" id="pd9-sN-hue"/>
