@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         loginBtn.setTitleColor(UIColor.white, for: .normal)
         
-        self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
+        self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .fade, dismissing: .uncover(direction: .right))
 
         idTextField.delegate = self
         pwTextField.delegate = self

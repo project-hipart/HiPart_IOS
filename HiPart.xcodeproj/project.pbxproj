@@ -73,6 +73,13 @@
 		2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */; };
 		2D8B4DA122D49B0B004F48C7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */; };
 		2D8B4DA322D49D03004F48C7 /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */; };
+		2D8B4DA722D4C35B004F48C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */; };
+		2D8B4DA922D4C482004F48C7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA822D4C482004F48C7 /* data.json */; };
+		2D8B4DBA22D4C8CC004F48C7 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DAE22D4C8CA004F48C7 /* img_1.png */; };
+		2D8B4DBB22D4C8CC004F48C7 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DAF22D4C8CA004F48C7 /* img_0.png */; };
+		2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB022D4C8CA004F48C7 /* img_2.png */; };
+		2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB122D4C8CA004F48C7 /* img_3.png */; };
+		2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB222D4C8CA004F48C7 /* img_4.png */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -197,6 +204,13 @@
 		2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRepository.swift; sourceTree = "<group>"; };
 		2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadSuccessView.swift; sourceTree = "<group>"; };
+		2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2D8B4DA822D4C482004F48C7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2D8B4DAE22D4C8CA004F48C7 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		2D8B4DAF22D4C8CA004F48C7 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		2D8B4DB022D4C8CA004F48C7 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
+		2D8B4DB122D4C8CA004F48C7 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		2D8B4DB222D4C8CA004F48C7 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -280,6 +294,9 @@
 				2D0674F922D31B92006D9FB8 /* FindPw */,
 				2D0674FC22D31B92006D9FB8 /* Login.storyboard */,
 				2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */,
+				2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */,
+				2D8B4DAD22D4C8CA004F48C7 /* images */,
+				2D8B4DA822D4C482004F48C7 /* data.json */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -487,6 +504,18 @@
 				2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */,
 			);
 			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		2D8B4DAD22D4C8CA004F48C7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4DAE22D4C8CA004F48C7 /* img_1.png */,
+				2D8B4DAF22D4C8CA004F48C7 /* img_0.png */,
+				2D8B4DB022D4C8CA004F48C7 /* img_2.png */,
+				2D8B4DB122D4C8CA004F48C7 /* img_3.png */,
+				2D8B4DB222D4C8CA004F48C7 /* img_4.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
@@ -830,18 +859,24 @@
 				60B2EEE022C79555000724B6 /* HiPart.storyboard in Resources */,
 				601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */,
 				2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */,
+				2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
 				2D0674FF22D31B92006D9FB8 /* SignUpFinsh.storyboard in Resources */,
 				2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
 				2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */,
+				2D8B4DA922D4C482004F48C7 /* data.json in Resources */,
 				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
+				2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */,
 				2D8B4D8522D3A023004F48C7 /* Common.storyboard in Resources */,
 				6014C98B22C782C400ACB80E /* Assets.xcassets in Resources */,
 				2D06750622D31B92006D9FB8 /* Login.storyboard in Resources */,
 				2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */,
 				2DAF383A22D012A300B91FE4 /* NanumSquareExtraBold.ttf in Resources */,
+				2D8B4DBA22D4C8CC004F48C7 /* img_1.png in Resources */,
 				60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */,
+				2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */,
+				2D8B4DBB22D4C8CC004F48C7 /* img_0.png in Resources */,
 				60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */,
 				2D06750D22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib in Resources */,
 				2D06750322D31B92006D9FB8 /* SignUp.storyboard in Resources */,
@@ -922,6 +957,7 @@
 				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
 				2D06750422D31B92006D9FB8 /* FindPwViewController.swift in Sources */,
 				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
+				2D8B4DA722D4C35B004F48C7 /* SplashViewController.swift in Sources */,
 				2D8B4D8722D3A15A004F48C7 /* PortfolioViewController.swift in Sources */,
 				2D813DE722D036AE00E02DD5 /* AuthAPI.swift in Sources */,
 				2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */,
@@ -1084,7 +1120,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1139,7 +1175,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
