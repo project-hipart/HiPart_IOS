@@ -56,8 +56,6 @@ extension PortfolioBottomSheetViewController{
 	
 	@IBAction func tapTodayUpload(_ sender: Any) {
 		
-		
-		
 		if false{
 			let vc = UIStoryboard(name: "PortfolioEdit", bundle: nil).instantiateViewController(withIdentifier: String(describing: PortfolioUploadViewController.self))
 				self.present(vc, animated: true, completion: nil)
@@ -67,9 +65,8 @@ extension PortfolioBottomSheetViewController{
 				self.present(vc, animated: true, completion: nil)
 			
 		}
-		
-		
 	}
+	
 	@IBAction func tapBackground(_ sender: Any) {
 			if let parent = self.parent{
 				parent.remove(asChildViewController: self)
