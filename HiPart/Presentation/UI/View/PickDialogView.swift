@@ -3,6 +3,7 @@ import UIKit
 
 class PickDialogView: UIView {
 	
+<<<<<<< HEAD
 	public static func showPickDialog(){
 		if let window = UIApplication.shared.keyWindow{
 			let pickedView  = PickDialogView()
@@ -10,12 +11,24 @@ class PickDialogView: UIView {
 			window.addSubview(pickedView)
 			
 			pickedView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.4, 1.4, 1.0)
+=======
+	static func showPickDialog(){
+		let pickedView = PickDialogView()
+		pickedView.alpha = 0
+		let window = UIApplication.shared.keyWindow
+		
+		if let window = window{
+			
+			window.addSubview(pickedView)
+			
+>>>>>>> domain
 			pickedView.snp.makeConstraints{[weak window] make in
 				make.center.equalTo(window!.snp.center)
 				make.width.equalTo(110)
 				make.height.equalTo(110+15+28)
 			}
 			
+<<<<<<< HEAD
 			
 			
 			UIView.animate(withDuration: 0.25, delay: 0.0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations :{
@@ -24,6 +37,15 @@ class PickDialogView: UIView {
 			}, completion: nil)
 			
 			UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+=======
+			UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations:{
+				pickedView.alpha = 1
+			}, completion: {[unowned pickedView] animated in
+				
+			})
+			
+			UIView.animate(withDuration: 1.0, delay: 1.5, options: [], animations: {
+>>>>>>> domain
 				pickedView.alpha = 0
 			}, completion: {[unowned pickedView] animated in
 				pickedView.removeFromSuperview()
@@ -31,6 +53,10 @@ class PickDialogView: UIView {
 		}
 	}
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> domain
 	private lazy var imageView : UIImageView = {
 		let view = UIImageView()
 		view.image = UIImage(named: "pickPopupImg")

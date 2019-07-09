@@ -182,6 +182,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	@IBAction func tapPickButton(_ sender: Any) {
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
+<<<<<<< HEAD
 	
 		if picked{
 			PickRepository.shared.pickDelete(nickname: self.profile.nickname)
@@ -214,6 +215,14 @@ class SearchCollectionViewCell: UICollectionViewCell {
 				}).disposed(by: disposeBag)
 		}
 		
+=======
+		
+
+		PickDialogView.showPickDialog()
+		
+		
+		picked = !picked
+>>>>>>> domain
 		
 	}
 	
