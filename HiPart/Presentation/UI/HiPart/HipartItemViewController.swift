@@ -70,7 +70,7 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
-			cell.startAnim()
+			
 			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
 			cell.setProfile(profile: viewModel.profiles[indexPath.row])
 			cell.delegate = self

@@ -97,6 +97,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
 	
 	func setProfile(profile : ProfileDTO){
+		self.startAnim()
+		
+		
 		self.profile = profile
 		thumbnailView.setImage(withUrl: profile.image)
 		nicknameLabel.text = profile.nickname

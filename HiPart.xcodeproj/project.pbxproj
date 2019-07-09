@@ -337,12 +337,12 @@
 			isa = PBXGroup;
 			children = (
 				2D813DE422D0363400E02DD5 /* AuthRepository.swift */,
-				2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */,
 				2D8B4D8822D3A4E0004F48C7 /* MainRepository.swift */,
+				2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */,
 				2D8B4D9222D3BADC004F48C7 /* PickRepository.swift */,
+				2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */,
 				2D8B4D9522D3D56F004F48C7 /* RecentlySearchRepository.swift */,
 				2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */,
-				2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";

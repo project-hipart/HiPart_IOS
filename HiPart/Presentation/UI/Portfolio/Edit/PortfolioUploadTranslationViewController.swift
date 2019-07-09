@@ -8,6 +8,8 @@
 
 import UIKit
 import Hero
+import RxSwift
+import SwiftyJSON
 
 class PortfolioUploadTranslationViewController: UIViewController {
 	@IBOutlet var foreginView: UIView!
@@ -25,9 +27,10 @@ class PortfolioUploadTranslationViewController: UIViewController {
 		koreanTextView.delegate = self
     }
     
-
+	
 
 }
+
 
 extension PortfolioUploadTranslationViewController{
 	private func setupView(){
@@ -75,4 +78,24 @@ extension PortfolioUploadTranslationViewController{
 	@IBAction func tapBackButton(_ sender: Any) {
 		self.hero.dismissViewController()
 	}
+	@IBAction func tapUploadView(_ sender: Any) {
+		let before = self.foreignTextView.text ?? ""
+		let after  = self.koreanTextView.text ?? ""
+		
+		LoadingView.showLoadingView()
+		
+		PortfolioRepository.shared.translatorUpload(before: before, after: after)
+			.subscribe(onSuccess: {json in
+				debugE(json)
+				
+				UploadSuccessView.showUploadSuccess()
+				
+				LoadingView.hideLoadingView()
+			}, onError: {err in
+				debugE(err)
+				
+				LoadingView.hideLoadingView()
+				})
+	}
+	
 }
