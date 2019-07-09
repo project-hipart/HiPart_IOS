@@ -18,7 +18,7 @@ enum DuplicateCheckResult : Int{
 enum AuthAPI : APIConfiguration{
 	
 	case signIn(email:String, password:String)
-	case signUp(email:String, nickname : String, img : Data,imageUrl : String,password : String, number : String, type : Int)
+	case signUp(email:String, nickname : String, img : Data, imageUrl : String, password : String, number : String, type : Int)
 	case duplicateCheck(flag : Int, input : String)
 	case findId(input : String)
 	case findPassword(input : String)

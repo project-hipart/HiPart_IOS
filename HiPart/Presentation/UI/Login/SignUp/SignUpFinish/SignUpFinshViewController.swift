@@ -64,6 +64,7 @@ extension SignUpFinshViewController: UICollectionViewDataSource {
     }
 }
 
+
 extension SignUpFinshViewController: UICollectionViewDelegateFlowLayout {
 
     // minimumLineSpacingForSectionAt 은 수직 방향에서의 Spacing 을 의미합니다.

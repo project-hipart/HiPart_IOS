@@ -12,6 +12,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signUpNextBtn: EllipsePurpleLongBtn!
     @IBOutlet weak var myImg: RoundImg!
+    @IBOutlet weak var emailTypeCheckLabel: UILabel!
+    @IBOutlet weak var pwCheckLabel: UILabel!
+    @IBOutlet weak var nickCheck: UILabel!
     
     @IBOutlet weak var signUpEmailView: UIView!
     @IBOutlet weak var signUpEmailImg: UIImageView!
@@ -33,7 +36,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpContactImg: UIImageView!
     @IBOutlet weak var signUpContactTextfield: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,8 +49,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         signUpNextBtn.backgroundColor = UIColor.lightGrey
         signUpNextBtn.isEnabled = false
+        
+        emailTypeCheckLabel.isHidden = true
+        pwCheckLabel.isHidden = true
+        nickCheck.isHidden = true
+        
+//        print(isValidEmail(emailStr: "eun95828@naver.com"))
+//        print(isValidEmail(emailStr: "eun95828"))
     }
-
 }
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -142,5 +150,65 @@ extension SignUpViewController {
         }
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == signUpEmailTextfield {
+            if isValidEmail(emailStr: signUpEmailTextfield.text ?? "") == false {
+                emailTypeCheckLabel.text = "잘못된 형식"
+                emailTypeCheckLabel.textColor = UIColor.red
+                emailTypeCheckLabel.isHidden = false
+            } else {
+                emailTypeCheckLabel.isHidden = true
+            }
+            AuthAPI.requestDuplicateCheck(flag: .email, input: signUpEmailTextfield.text!)
+                .subscribe(onSuccess: {json in
+                    print(json["data"].intValue)
+                    if json["data"].intValue == 0 {
+                        self.emailTypeCheckLabel.isHidden = true
+                    } else if json["data"].intValue == 1 {
+                        self.emailTypeCheckLabel.isHidden = false
+                        self.emailTypeCheckLabel.text = "중복"
+                        self.emailTypeCheckLabel.textColor = UIColor.red
+                    }
+                }, onError: {err in
+                    
+                })
+        }
+        
+        else if textField == signUpPwCheckTextfield {
+            if signUpPwTextfield.text != signUpPwCheckTextfield.text {
+                pwCheckLabel.text = "불일치"
+                pwCheckLabel.textColor = UIColor.red
+                pwCheckLabel.isHidden = false
+            } else {
+                pwCheckLabel.isHidden = true
+            }
+        }
+        
+        else if textField == signUpNickTextfield {
+            AuthAPI.requestDuplicateCheck(flag: .nickname, input: signUpNickTextfield.text!)
+                .subscribe(onSuccess: {json in
+                    print(json["data"].intValue)
+                    if json["data"].intValue == 0 {
+                        self.nickCheck.isHidden = true
+                    } else if json["data"].intValue == 1 {
+                        self.nickCheck.isHidden = false
+                        self.nickCheck.text = "중복"
+                        self.nickCheck.textColor = UIColor.red
+                    }
+                }, onError: {err in
+
+                })
+        }
+    }
+}
+
+extension SignUpViewController {
+    func isValidEmail(emailStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: emailStr)
     }
 }
