@@ -1,6 +1,7 @@
 
 import UIKit
 import Hero
+import RxSwift
 
 class HipartItemViewController: UIViewController {
 	let viewModel = HiPartViewModel()
@@ -86,7 +87,7 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
 			
 			let item = viewModel.profiles[indexPath.row]
-			navigateDetailViewController(cell: cell,profile: item)
+			self.navigateDetailViewController(myProfile: false, type: item.type, nickname: item.nickname, imageViewHeroId: cell.thumbnailView.hero.id ?? "",profileImage: cell.thumbnailView.image)
 		}
 	}
 }
@@ -105,16 +106,4 @@ extension HipartItemViewController : SearchCollectionViewCellDelegate{
 	}
 }
 
-extension HipartItemViewController{
-	private func navigateDetailViewController(cell : SearchCollectionViewCell,profile : ProfileDTO){
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
-			vc.imageViewHeroId = cell.thumbnailView.hero.id ?? ""
-			vc.hero.modalAnimationType = .fade
-			vc.profile = profile
-			vc.profileImage = cell.thumbnailView.image
-			self.present(vc, animated: true, completion: nil)
-		}
-	}
-}
 

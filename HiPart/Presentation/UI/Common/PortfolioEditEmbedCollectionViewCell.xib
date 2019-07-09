@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="264" height="239"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mukbangImg" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-X0-uD8">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-X0-uD8">
                         <rect key="frame" x="0.0" y="0.0" width="264" height="98"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="98" id="TJw-WY-VxP"/>
@@ -72,7 +72,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="mukbangImg" width="175" height="98"/>
         <namedColor name="mainPurple">
             <color red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

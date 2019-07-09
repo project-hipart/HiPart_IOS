@@ -4,6 +4,14 @@ import Alamofire
 import SwiftyJSON
 
 class APIClient{
+	fileprivate static let ALAMOFIREMANAGER: SessionManager = {
+		let configuration = URLSessionConfiguration.default
+		configuration.timeoutIntervalForRequest = 5
+		configuration.timeoutIntervalForResource = 5
+		let alamoFireManager = Alamofire.SessionManager(configuration: configuration)
+		return alamoFireManager
+		
+	}()
 	
 	static func request(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
 		switch api.contentType{
@@ -28,13 +36,13 @@ class APIClient{
 			if urlEncoded == nil{
 				single(.error(AFError.invalidURL(url: url)))
 			}else{
-				Alamofire.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: encoding, headers: TokenHelper.getCommonHeader())
+				ALAMOFIREMANAGER.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: encoding, headers: TokenHelper.getCommonHeader())
 					.validate(statusCode: 200..<300)
 					.validate(contentType: [ContentType.json.rawValue])
 					.responseJSON { response in
-						
 						switch response.result {
 						case .success:
+							
 							guard let data = response.data else {
 								single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
 								return
@@ -62,7 +70,7 @@ class APIClient{
 			if urlEncoded == nil{
 				single(.error(AFError.invalidURL(url: url)))
 			}else{
-				Alamofire.upload(multipartFormData: { multipartFormData in
+				ALAMOFIREMANAGER.upload(multipartFormData: { multipartFormData in
 					
 					
 					for (key, value) in params{

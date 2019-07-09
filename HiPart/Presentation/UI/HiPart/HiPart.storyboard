@@ -620,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWg-Rr-Qpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3227" y="-1251"/>
+            <point key="canvasLocation" x="3209" y="-1233"/>
         </scene>
         <!--Payment Dialog View Controller-->
         <scene sceneID="n3N-bF-NA9">

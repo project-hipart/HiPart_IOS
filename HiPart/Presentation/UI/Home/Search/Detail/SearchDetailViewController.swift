@@ -111,6 +111,7 @@ extension SearchDetailViewController : UICollectionViewDataSource{
 		
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SearchCollectionViewCell.self) , for: indexPath) as? SearchCollectionViewCell{
 			cell.setProfile(profile: profile)
+			cell.thumbnailView.hero.id = "HEROHERO\(indexPath.row)"
 			
 			return cell
 		}else{
@@ -118,11 +119,14 @@ extension SearchDetailViewController : UICollectionViewDataSource{
 		}
 	}
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self))
+		let item = viewModel.profiles[indexPath.row]
 		
-		vc.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
-		self.present(vc, animated: true, completion: nil)
+		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
+			self.navigateDetailViewController(myProfile: false, type: item.type, nickname: item.nickname, imageViewHeroId: cell.thumbnailView.hero.id ?? "", profileImage: cell.thumbnailView.image)
+		}
+		
+		
+		
 	}
 }
 //MARK: Action

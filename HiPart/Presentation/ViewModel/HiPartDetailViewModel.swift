@@ -16,7 +16,6 @@ class HiPartDetailViewModel {
 	
 	weak var delegate : HiPartDetailViewModelDelegate? = nil{
 		didSet{
-			self.delegate?.onChangeProfileDetail(profileDetail: profileDetail)
 			self.delegate?.onChangeRefreshState(isRefreshing: isRefreshing)
 		}
 	}
@@ -29,25 +28,8 @@ class HiPartDetailViewModel {
 	
 	
 	
-	var profileDetail : ProfileDetailDTO? = nil{
-		didSet{
-			delegate?.onChangeProfileDetail(profileDetail: self.profileDetail!)
-		}
-	}
-	
-	
-	func loadData(profile : ProfileDTO){
-		ProfileRepository.shared.detail(nickname: profile.nickname,type: profile.type)
-			.subscribe(onSuccess: {profileDetail in
-				self.profileDetail = profileDetail
-			}, onError: {err in
-				debugE(err)
-			}).disposed(by: disposeBag)
-	}
-	
 	
 }
 protocol HiPartDetailViewModelDelegate : NSObjectProtocol{
-	func onChangeProfileDetail(profileDetail : ProfileDetailDTO?)
 	func onChangeRefreshState(isRefreshing : Bool)
 }

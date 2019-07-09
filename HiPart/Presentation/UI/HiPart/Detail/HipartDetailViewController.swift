@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+import RxSwift
 
 class HipartDetailViewController: UIViewController {
 	let viewModel = HiPartDetailViewModel()
@@ -26,7 +27,8 @@ class HipartDetailViewController: UIViewController {
 	
 	@IBOutlet var scrollView: UIScrollView!
 	
-	var profile : ProfileDTO?
+	var profile : ProfileDetailDTO!
+	//	var profile : ProfileDTO?
 	var profileImage : UIImage?
 	
 	@IBOutlet var subscriberLabel: UILabel!
@@ -55,17 +57,13 @@ extension HipartDetailViewController {
 		self.setupView()
 		self.setupBinding()
 		
-		if let profile = profile{
-			setupUploadViewController(type : profile.type)
-			viewModel.loadData(profile: profile)
-		}
+		
 		
 		
 	}
 	
 	private func setupUploadViewController(type : UserType){
 		
-		debugE(#function, type)
 		
 		switch type{
 		case .Translator:
@@ -100,56 +98,57 @@ extension HipartDetailViewController{
 		self.imageView.hero.id = imageViewHeroId
 		self.imageView.hero.modifiers = [.translate(),.scale(x: 2, y: 2, z: 1)]
 	}
+	
+	func setProfileDetail(profile : ProfileDetailDTO){
+		self.profile = profile
+	}
+	
+	
 	private func setupView(){
+		setupUploadViewController(type : profile.userType)
 		if !isPortfolioView{
 			platformSelectImage.isHidden = true
 			afreecaLogo.isHidden = true
 			twitchLogo.isHidden = true
-			
 		}
-		
+		if self.profileImage != nil{
+			self.imageView.image = self.profileImage!
+		}else{
+			self.imageView.setImage(withUrl: profile.userImg)
+		}
 		setPlatformImage()
-		
-		
-		var filters : [Filter] = []
-		
-		if let profile = self.profile{
-			
-			if let filter = profile.broadcastConcept{
-				filters.append(filter)
-			}
-			if let filter = profile.pd{
-				filters.append(filter)
-			}
-			if let filter = profile.language{
-				filters.append(filter)
-			}
-			if let filter = profile.etc{
-				filters.append(filter)
-			}
-			Filter.sortWithUserType(&filters, type: profile.type)
-			setFilters(filters,true)
-			
-			self.imageView.image = profileImage
-			self.nicknameLabel.text = profile.nickname
-			self.typeLabel.text = profile.type.name
-			
-			//		self.scrollView.contentInset = UIEdgeInsets.zero
-			//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
-			self.backButton.tintColor = UIColor.white
-			self.imageView.cornerRadius = 75/2
-			
-			switch profile.type{
-			case .Translator:
-				uploadIcon.image = UIImage(named : "hipatTpatWorkAdotImg")
-			default:
-				break
-			}
+		setFilters()
+		self.nicknameLabel.text = profile.userNickname
+		self.typeLabel.text = profile.userType.name
+		switch profile.userType{
+		case .Translator:
+			uploadIcon.image = UIImage(named : "hipatTpatWorkAdotImg")
+		default:
+			break
 		}
+		
+		self.imageView.cornerRadius = 75/2
+		
+		subscriberLabel.text = profile.detailSubscriber
+		hifiveLabel.text = "\(profile.hifive)"
+		oneLineLabel.text = profile.detailOneline
+		wantLabel.text = profile.detailWant
+		appealLabel.text = profile.detailAppeal
+		
+		
+		
+		switch profile.userType{
+		case .Translator:
+			self.uploadTransViewController!.datas = UploadTrans.getArrayWithDatas(workIndexes: profile.workIndex, befores: profile.before, afters: profile.after)
+		default:
+			let datas = UploadVideo.getArrayWithDatas(workIndexes : profile.workIndex,thumbnails: profile.thumbnail, urls: profile.url, titles: profile.title, contents: profile.content)
+			self.uploadVideoViewController!.datas = datas
+		}
+		
 	}
 	private func setPlatformImage(){
 		if let profile = self.profile{
-			switch profile.platform{
+			switch profile.detailPlatform{
 			case .youtube:
 				youtubeLogo.image = UIImage(named: "pofolYoutubeWhiteImg")
 			case .afreeca:
@@ -160,6 +159,25 @@ extension HipartDetailViewController{
 				break
 			}
 		}
+	}
+	private func setFilters(){
+		var filters : [Filter] = []
+		
+		
+		if let filter = profile.concept{
+			filters.append(filter)
+		}
+		if let filter = profile.pd{
+			filters.append(filter)
+		}
+		if let filter = profile.lang{
+			filters.append(filter)
+		}
+		if let filter = profile.etc{
+			filters.append(filter)
+		}
+		Filter.sortWithUserType(&filters, type: profile.userType)
+		setFilters(filters,true)
 	}
 	
 	private func setFilters(_ filters : [Filter],_ needFirstSelect : Bool){
@@ -193,32 +211,6 @@ extension HipartDetailViewController{
 }
 
 extension HipartDetailViewController : HiPartDetailViewModelDelegate{
-	func onChangeProfileDetail(profileDetail: ProfileDetailDTO?) {
-		
-		if let detail = profileDetail{
-			
-			
-			subscriberLabel.text = detail.detailSubscriber
-			hifiveLabel.text = "\(detail.hifive)"
-			oneLineLabel.text = detail.detailOneline
-			wantLabel.text = detail.detailWant
-			appealLabel.text = detail.detailAppeal
-			
-			
-			if let profile = self.profile{
-				
-				switch profile.type{
-				case .Translator:
-					self.uploadTransViewController!.datas = UploadTrans.getArrayWithDatas(workIndexes: detail.workIndex, befores: detail.before, afters: detail.after)
-				default:
-					let datas = UploadVideo.getArrayWithDatas(workIndexes : detail.workIndex,thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
-					self.uploadVideoViewController!.datas = datas
-				}
-				
-			}
-			
-		}
-	}
 	
 	func onChangeRefreshState(isRefreshing: Bool) {
 		
@@ -247,3 +239,72 @@ extension HipartDetailViewController{
 		//		self.present(vc, animated: false, completion: nil)
 	}
 }
+
+extension UIViewController{
+	
+	func navigateDetailViewController(myProfile : Bool,type : UserType, nickname : String?,imageViewHeroId : String = "", profileImage : UIImage? = nil ){
+		//		LoadingView.showLoadingView()
+		
+		let profileSingle : Single<ProfileDetailDTO>
+		
+		//Portfolio
+		if myProfile{
+			switch type{
+			case .Creator:
+				profileSingle = PortfolioRepository.shared.creatorDetail()
+			case .PD:
+				profileSingle = PortfolioRepository.shared.editorDetail()
+			case .Translator:
+				profileSingle = PortfolioRepository.shared.translatorDetail()
+			case .Etc:
+				profileSingle = PortfolioRepository.shared.etcDetail()
+			default:
+				fatalError()
+			}
+			
+			profileSingle.subscribe(onSuccess: {[unowned self] profileDetail in
+				
+				self.navigateDetailViewController(profileDetail: profileDetail)
+				LoadingView.hideLoadingView()
+				
+				}, onError: {err in
+					debugE(err)
+					LoadingView.hideLoadingView()
+					
+			})
+			
+		}
+			//HipartDetail or HomeSearch
+		else{
+			
+			ProfileRepository.shared.detail(nickname: nickname!, type: type)
+				.subscribe(onSuccess: {[unowned self]  profileDetail in
+					
+					self.navigateDetailViewController(profileDetail: profileDetail, imageViewHeroId: imageViewHeroId, profileImage: profileImage)
+					LoadingView.hideLoadingView()
+					
+					}, onError: {err in
+						debugE(err)
+						LoadingView.hideLoadingView()
+				})
+		}
+	}
+	
+	fileprivate func navigateDetailViewController(profileDetail : ProfileDetailDTO, imageViewHeroId : String = "", profileImage : UIImage? = nil){
+		let sb = UIStoryboard(name: "HiPart", bundle: nil)
+		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
+			vc.imageViewHeroId = imageViewHeroId
+			vc.hero.modalAnimationType = .fade
+			
+			if let image = profileImage{
+				vc.profileImage = image
+			}
+			
+			vc.setProfileDetail(profile: profileDetail)
+			self.present(vc, animated: true, completion: nil)
+			
+		}
+	}
+	
+}
+

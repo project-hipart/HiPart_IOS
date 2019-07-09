@@ -96,6 +96,16 @@ extension SearchViewController : UITextFieldDelegate{
 		return true
 	}
 }
+
+//MARK: CollectionViewCell Delegate
+extension SearchViewController : RecentlyCollectionViewCellDelegate{
+	func onTapXButton(title: String, idx : Int) {
+		debugE(title)
+		self.recentlySearchKeywords.remove(at: idx)
+		RecentlySearchRepository.shared.saveRecentlySearchKeyword(keywords: self.recentlySearchKeywords)
+		self.recentlyCollectionView.reloadData()
+	}
+}
 //MARK: CollectionView
 extension SearchViewController : UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -106,16 +116,6 @@ extension SearchViewController : UICollectionViewDelegate{
 		}
 	}
 }
-//MARK: CollectionViewCell Delegate
-extension SearchViewController : RecentlyCollectionViewCellDelegate{
-	func onTapXButton(title: String, idx : Int) {
-		debugE(title)
-		self.recentlySearchKeywords.remove(at: idx)
-		RecentlySearchRepository.shared.saveRecentlySearchKeyword(keywords: self.recentlySearchKeywords)
-		self.recentlyCollectionView.reloadData()
-	}
-}
-
 //MARK: CollectionView Data Source
 extension SearchViewController : UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
