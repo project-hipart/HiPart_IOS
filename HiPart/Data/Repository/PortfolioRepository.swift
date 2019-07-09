@@ -8,22 +8,23 @@ class PortfolioRepository{
 
 	func creatorDetail() -> Single<ProfileDetailDTO>{
 		return PortfolioAPI.requestCreatorDetail().map{json in
-			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Creator)
+			debugE(json)
+			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Creator,fromProfile: false)
 		}
 	}
 	func editorDetail() -> Single<ProfileDetailDTO>{
 		return PortfolioAPI.requestEditorDetail().map{json in
-			return ProfileDetailDTO.init(fromJSON: json["data"], type: .PD)
+			return ProfileDetailDTO.init(fromJSON: json["data"], type: .PD,fromProfile: false)
 		}
 	}
 	func translatorDetail() -> Single<ProfileDetailDTO>{
 		return PortfolioAPI.requestTranslatorDetail().map{json in
-			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Translator)
+			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Translator,fromProfile: false)
 		}
 	}
 	func etcDetail() -> Single<ProfileDetailDTO>{
 		return PortfolioAPI.requestEtcDetail().map{json in
-			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Etc)
+			return ProfileDetailDTO.init(fromJSON: json["data"], type: .Etc,fromProfile: false)
 		}
 	}
 	

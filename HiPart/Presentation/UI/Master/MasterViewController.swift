@@ -17,6 +17,7 @@ extension MasterViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		TokenHelper.saveAccessToken(token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImN1dGV5YW5nIiwiaWR4IjozLCJ0eXBlIjoxLCJpYXQiOjE1NjI1NjcyNTgsImV4cCI6MTU2Mzc3Njg1OCwiaXNzIjoiaWcifQ.WHzr5l6RfzF3Uw88qUeuJe9rpLD4RHlsCB9pto-4MbM")
 		
 		viewModel.delegate = self
 		self.setupView()

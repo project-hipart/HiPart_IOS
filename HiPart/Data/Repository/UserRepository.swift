@@ -6,5 +6,5 @@ class UserRepository{
 	static let shared = UserRepository()
 	private init() {}
 	
-	var myType : UserType! = .Translator
+	var myType : UserType! = .Creator
 }

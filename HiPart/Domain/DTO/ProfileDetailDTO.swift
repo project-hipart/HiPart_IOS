@@ -27,23 +27,30 @@ struct ProfileDetailDTO {
 	let etc, concept, lang, pd: Filter?
 	
 	
-	init(fromJSON : JSON, type : UserType){
+	init(fromJSON : JSON, type : UserType, fromProfile : Bool){
 		hifiveState = fromJSON[APIKeys.hifiveState].intValue
 		
-		let data : JSON
+		var data : JSON = fromJSON
 		
-		switch type{
-		case .Creator:
-			data = fromJSON["resCreData"]
-		case .PD:
-			data = fromJSON["resEdiData"]
-		case .Translator:
-			data = fromJSON["resTransData"]
-		case .Etc:
-			data = fromJSON["resEtcData"]
-		default:
-			fatalError()
+		if fromProfile{
+			switch type{
+			case .Creator:
+				data = fromJSON["resCreData"]
+			case .PD:
+				data = fromJSON["resEdiData"]
+			case .Translator:
+				data = fromJSON["resTransData"]
+			case .Etc:
+				data = fromJSON["resEtcData"]
+			default:
+				fatalError()
+			}
+		}else{
+			
 		}
+		
+		
+		
 		
 		userNickname = data[APIKeys.userNickname].stringValue
 		userImg = data[APIKeys.userImage].stringValue

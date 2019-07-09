@@ -69,15 +69,9 @@ extension SearchDetailViewController{
 extension SearchDetailViewController : TabLayoutDelegate{
 	func onSelectedTab(_ index: Int) {
 		
-		if index == 1{
-			UIView.animate(withDuration: 0.3){[unowned self] in
-				self.notFoundView.isHidden = false
-			}
-		}else{
-			UIView.animate(withDuration: 0.3){[unowned self] in
-				self.notFoundView.isHidden = true
-			}
-		}
+	
+
+		viewModel.changeTypeFilter(UserType(rawValue: index)!)
 	}
 }
 

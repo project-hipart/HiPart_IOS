@@ -27,7 +27,7 @@ class ProfileRepository{
 	
 	func detail(nickname : String ,type : UserType) -> Single<ProfileDetailDTO>{
 		return ProfileAPI.requestDetail(nickname: nickname).map{json in
-			let profileDetail = ProfileDetailDTO.init(fromJSON: json["data"],type: type)
+			let profileDetail = ProfileDetailDTO.init(fromJSON: json["data"],type: type,fromProfile: true)
 			
 			return profileDetail
 		}

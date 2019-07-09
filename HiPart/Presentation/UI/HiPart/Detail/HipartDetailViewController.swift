@@ -53,7 +53,7 @@ extension HipartDetailViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.setupHero()
+//		self.setupHero()
 		self.setupView()
 		self.setupBinding()
 		
@@ -96,7 +96,7 @@ extension HipartDetailViewController{
 	private func setupHero(){
 		self.hero.isEnabled=true
 		self.imageView.hero.id = imageViewHeroId
-		self.imageView.hero.modifiers = [.translate(),.scale(x: 2, y: 2, z: 1)]
+		self.imageView.hero.modifiers = [.translate()]
 	}
 	
 	func setProfileDetail(profile : ProfileDetailDTO){
@@ -112,6 +112,7 @@ extension HipartDetailViewController{
 			twitchLogo.isHidden = true
 		}
 		if self.profileImage != nil{
+			setupHero()
 			self.imageView.image = self.profileImage!
 		}else{
 			self.imageView.setImage(withUrl: profile.userImg)
@@ -243,7 +244,6 @@ extension HipartDetailViewController{
 extension UIViewController{
 	
 	func navigateDetailViewController(myProfile : Bool,type : UserType, nickname : String?,imageViewHeroId : String = "", profileImage : UIImage? = nil ){
-		//		LoadingView.showLoadingView()
 		
 		let profileSingle : Single<ProfileDetailDTO>
 		
@@ -263,7 +263,7 @@ extension UIViewController{
 			}
 			
 			profileSingle.subscribe(onSuccess: {[unowned self] profileDetail in
-				
+				debugE(profileDetail)
 				self.navigateDetailViewController(profileDetail: profileDetail)
 				LoadingView.hideLoadingView()
 				
