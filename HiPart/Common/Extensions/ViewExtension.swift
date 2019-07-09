@@ -75,3 +75,11 @@ extension UILabel {
 		self.attributedText = attrString
 	}
 }
+
+extension UITextField{
+	func addLeftPadding(_ padding : CGFloat){
+		let view = UIView(frame:CGRect(x: 0, y: 0, width: padding, height: self.frame.height))
+		self.leftView = view
+		self.leftViewMode = .always
+	}
+}

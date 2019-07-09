@@ -64,6 +64,7 @@ class APIClient{
 			}else{
 				Alamofire.upload(multipartFormData: { multipartFormData in
 					
+					
 					for (key, value) in params{
 						if value is String || value is Int {
 							multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
@@ -77,7 +78,7 @@ class APIClient{
 					
 					
 					
-				}, to: urlEncoded! , encodingCompletion:{ encodingResult in
+				}, to: urlEncoded!,headers: TokenHelper.getCommonHeader() , encodingCompletion:{ encodingResult in
 					switch encodingResult {
 					case .success(let upload, _, _):
 						
