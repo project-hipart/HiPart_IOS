@@ -56,7 +56,7 @@ extension PortfolioBottomSheetViewController{
 	
 	@IBAction func tapTodayUpload(_ sender: Any) {
 		
-		if false{
+		if UserRepository.shared.myType != UserType.Translator {
 			let vc = UIStoryboard(name: "PortfolioEdit", bundle: nil).instantiateViewController(withIdentifier: String(describing: PortfolioUploadViewController.self))
 				self.present(vc, animated: true, completion: nil)
 			
