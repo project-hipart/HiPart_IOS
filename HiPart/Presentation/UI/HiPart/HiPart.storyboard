@@ -580,6 +580,7 @@
                         <outlet property="oneLineLabel" destination="w7g-a5-S25" id="Hk2-rw-fQm"/>
                         <outlet property="platformSelectImage" destination="iKf-pk-iYi" id="uab-RX-MEw"/>
                         <outlet property="scrollView" destination="mgj-8x-ciL" id="YJw-nK-jl9"/>
+                        <outlet property="subscriberHeadLabel" destination="gIY-jp-k7b" id="6fh-Qe-0Lo"/>
                         <outlet property="subscriberLabel" destination="zfL-xE-qGX" id="IC1-jh-QR5"/>
                         <outlet property="twitchLogo" destination="Dif-7i-nzJ" id="OxZ-qi-iza"/>
                         <outlet property="typeLabel" destination="P49-Ts-mGc" id="0Pw-jR-cvC"/>
@@ -664,9 +665,9 @@
                                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-AZ-Uxr">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-AZ-Uxr">
                                         <rect key="frame" x="26" y="206" width="210" height="42"/>
-                                        <color key="backgroundColor" name="mainPurple"/>
+                                        <color key="backgroundColor" name="lightGrey"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="gMN-h1-pr6"/>
                                         </constraints>
@@ -679,6 +680,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapOkButton:" destination="Eys-OA-Kkb" eventType="touchUpInside" id="9Nk-5p-gYm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -722,7 +726,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
                                 <rect key="frame" x="104" y="332" width="167" height="14.5"/>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
                                 <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -751,6 +755,8 @@
                     </view>
                     <connections>
                         <outlet property="blockView" destination="e1G-PW-DEJ" id="j2i-u3-EIG"/>
+                        <outlet property="checkBox" destination="Orw-aU-ry6" id="SvL-cn-4JZ"/>
+                        <outlet property="okButton" destination="89b-AZ-Uxr" id="P1A-CH-Ea5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcZ-Aw-SBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -776,6 +782,9 @@
         <image name="pofolBackWhiteIcon" width="9.5" height="21"/>
         <image name="pofolTwitchWhiteOffImg" width="24" height="24"/>
         <image name="pofolYoutubeOffImg" width="24" height="24"/>
+        <namedColor name="lightGrey">
+            <color red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

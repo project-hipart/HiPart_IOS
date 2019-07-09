@@ -26,6 +26,7 @@ class HipartDetailViewController: UIViewController {
 	@IBOutlet var appealLabel: UILabel!
 	
 	@IBOutlet var scrollView: UIScrollView!
+	@IBOutlet var subscriberHeadLabel: UILabel!
 	
 	var profile : ProfileDetailDTO!
 	//	var profile : ProfileDTO?
@@ -146,6 +147,12 @@ extension HipartDetailViewController{
 			self.uploadVideoViewController!.datas = datas
 		}
 		
+		if profile.userType != .Creator{
+			self.subscriberLabel.isHidden = true
+			self.subscriberHeadLabel.isHidden = true
+			
+		}
+		
 	}
 	private func setPlatformImage(){
 		if let profile = self.profile{
@@ -234,7 +241,8 @@ extension HipartDetailViewController{
 	@IBAction func tapContactButton(_ sender: Any) {
 		
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self))
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self)) as! PaymentDialogViewController
+		vc.profile = self.profile
 		
 		self.add(asChildViewController: vc, to: self.view)
 		//		self.present(vc, animated: false, completion: nil)
@@ -263,8 +271,7 @@ extension UIViewController{
 			}
 			
 			profileSingle.subscribe(onSuccess: {[unowned self] profileDetail in
-				debugE(profileDetail)
-				self.navigateDetailViewController(profileDetail: profileDetail)
+				self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
 				LoadingView.hideLoadingView()
 				
 				}, onError: {err in
@@ -290,11 +297,12 @@ extension UIViewController{
 		}
 	}
 	
-	fileprivate func navigateDetailViewController(profileDetail : ProfileDetailDTO, imageViewHeroId : String = "", profileImage : UIImage? = nil){
+	fileprivate func navigateDetailViewController(profileDetail : ProfileDetailDTO, imageViewHeroId : String = "", profileImage : UIImage? = nil, isPortfolioView : Bool = false){
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
 		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
 			vc.imageViewHeroId = imageViewHeroId
 			vc.hero.modalAnimationType = .fade
+			vc.isPortfolioView = isPortfolioView
 			
 			if let image = profileImage{
 				vc.profileImage = image

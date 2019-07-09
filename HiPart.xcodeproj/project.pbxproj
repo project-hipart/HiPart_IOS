@@ -80,6 +80,8 @@
 		2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB022D4C8CA004F48C7 /* img_2.png */; };
 		2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB122D4C8CA004F48C7 /* img_3.png */; };
 		2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB222D4C8CA004F48C7 /* img_4.png */; };
+		2D8B4DC522D4D0AC004F48C7 /* HifiveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */; };
+		2D8B4DC722D4D1B4004F48C7 /* HifiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -211,6 +213,8 @@
 		2D8B4DB022D4C8CA004F48C7 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
 		2D8B4DB122D4C8CA004F48C7 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
 		2D8B4DB222D4C8CA004F48C7 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
+		2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HifiveAPI.swift; sourceTree = "<group>"; };
+		2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HifiveRepository.swift; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -360,6 +364,7 @@
 				2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */,
 				2D8B4D9522D3D56F004F48C7 /* RecentlySearchRepository.swift */,
 				2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */,
+				2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				2D813E0F22D2153600E02DD5 /* Profile */,
 				2D8B4D8F22D3B875004F48C7 /* Pick */,
 				2D8B4D9B22D49465004F48C7 /* Portfolio */,
+				2D8B4DC322D4D090004F48C7 /* Hifive */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -516,6 +522,14 @@
 				2D8B4DB222D4C8CA004F48C7 /* img_4.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		2D8B4DC322D4D090004F48C7 /* Hifive */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */,
+			);
+			path = Hifive;
 			sourceTree = "<group>";
 		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
@@ -954,6 +968,7 @@
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
 				2D813E1922D233D800E02DD5 /* UserType.swift in Sources */,
 				2D06751122D3779B006D9FB8 /* UploadTrans.swift in Sources */,
+				2D8B4DC722D4D1B4004F48C7 /* HifiveRepository.swift in Sources */,
 				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
 				2D06750422D31B92006D9FB8 /* FindPwViewController.swift in Sources */,
 				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
@@ -1010,6 +1025,7 @@
 				60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */,
 				60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */,
 				2D06750222D31B92006D9FB8 /* SignUpViewController.swift in Sources */,
+				2D8B4DC522D4D0AC004F48C7 /* HifiveAPI.swift in Sources */,
 				60B2EEF922C8BCDB000724B6 /* MyPageViewModel.swift in Sources */,
 				2D8B4D8D22D3B1F2004F48C7 /* SearchDetailViewModel.swift in Sources */,
 				2D79367C22CF94200081E065 /* TabLayout.swift in Sources */,
