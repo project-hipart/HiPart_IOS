@@ -70,8 +70,10 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
+			cell.startAnim()
 			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
 			cell.setProfile(profile: viewModel.profiles[indexPath.row])
+			cell.delegate = self
 			return cell
 			
 		}
@@ -82,11 +84,27 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
+			
 			let item = viewModel.profiles[indexPath.row]
 			navigateDetailViewController(cell: cell,profile: item)
 		}
 	}
 }
+extension HipartItemViewController : SearchCollectionViewCellDelegate{
+	func onChangePickState(profile : ProfileDTO,picked: Bool) {
+		
+		if let idx = self.viewModel.profiles.firstIndex(where : {p in p.nickname == profile.nickname}){
+			let profile = self.viewModel.profiles[idx]
+			profile.pickState = PickState.getPickedStateWithBool(picked)
+			if picked{
+				profile.pickCount += 1
+			}else{
+				profile.pickCount -= 1
+			}
+		}
+	}
+}
+
 extension HipartItemViewController{
 	private func navigateDetailViewController(cell : SearchCollectionViewCell,profile : ProfileDTO){
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
@@ -97,8 +115,6 @@ extension HipartItemViewController{
 			vc.profileImage = cell.thumbnailView.image
 			self.present(vc, animated: true, completion: nil)
 		}
-		
-		
 	}
 }
 

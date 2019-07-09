@@ -49,7 +49,7 @@ enum PickAPI : APIConfiguration{
 		return APIClient.request(api: PickAPI.pickAdd(nickname: nickname))
 	}
 	static func requestPickDelete(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: PickAPI.pickDelete(nickname: nickname))
+		return APIClient.request(api: PickAPI.pickDelete(nickname: nickname),encoding: URLEncoding.httpBody)
 	}
 	static func requestPickGet() -> Single<JSON>{
 		return APIClient.request(api: PickAPI.pickGet)

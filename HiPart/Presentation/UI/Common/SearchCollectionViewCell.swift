@@ -5,8 +5,13 @@ import RxSwift
 
 //import MaterialComponents.MaterialChips
 
+protocol SearchCollectionViewCellDelegate : NSObjectProtocol{
+	func onChangePickState(profile : ProfileDTO,picked : Bool)
+}
+
 class SearchCollectionViewCell: UICollectionViewCell {
 
+	weak var delegate : SearchCollectionViewCellDelegate? = nil
 	private let disposeBag = DisposeBag()
 	
 //	@IBOutlet var platformStackView: UIStackView!
@@ -25,6 +30,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			setPickButtonState(picked: picked)
 		}
 	}
+	
+	private var profile : ProfileDTO!
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -90,6 +97,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
 	
 	func setProfile(profile : ProfileDTO){
+		self.profile = profile
 		thumbnailView.setImage(withUrl: profile.image)
 		nicknameLabel.text = profile.nickname
 		typeLabel.text = profile.type.name
@@ -176,19 +184,20 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		self.pickCountLabel.textColor = UIColor.mainPurple
 	
 		if picked{
-			PickRepository.shared.pickDelete(nickname: self.nicknameLabel.text ?? "")
+			PickRepository.shared.pickDelete(nickname: self.profile.nickname)
 				.subscribe(onSuccess: {[unowned self] success in
 					
 					if success{
 						self.picked = !self.picked
 						self.pickCountLabel.text = String((Int(self.pickCountLabel.text!) ?? 0) - 1)
+						self.delegate?.onChangePickState(profile : self.profile,picked: self.picked)
 					}
 					
 				}, onError: { err in
 					debugE(err)
 				}).disposed(by: disposeBag)
 		}else{
-			PickRepository.shared.pickAdd(nickname: self.nicknameLabel.text ?? "")
+			PickRepository.shared.pickAdd(nickname: self.profile.nickname)
 				.subscribe(onSuccess: {[unowned self] success in
 					
 					//픽 애드 성공
@@ -197,6 +206,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 						
 						self.pickCountLabel.text = String((Int(self.pickCountLabel.text!) ?? 0) + 1)
 						PickDialogView.showPickDialog()
+						self.delegate?.onChangePickState(profile : self.profile,picked: self.picked)
 					}
 					
 					}, onError: { err in

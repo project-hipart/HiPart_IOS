@@ -13,7 +13,9 @@ import SwiftyJSON
 
 class PickRepository{
 	static let shared = PickRepository()
-	private init(){}
+	private init(){
+		
+	}
 
 	func pickAdd(nickname : String) -> Single<Bool>{
 		return PickAPI.requestPickAdd(nickname: nickname).map{json in

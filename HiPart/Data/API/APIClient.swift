@@ -5,20 +5,20 @@ import SwiftyJSON
 
 class APIClient{
 	
-	static func request(api : APIConfiguration) -> Single<JSON>{
+	static func request(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
 		switch api.contentType{
 			
 		case ContentType.json:
-			return requestJSON(api: api)
+			return requestJSON(api: api,encoding: encoding)
 		case ContentType.multipart:
-			return requestMultipartForm(api: api)
+			return requestMultipartForm(api: api,encoding: encoding)
 		default:
 			fatalError()
 		}
 		
 	}
 	
-	private static func requestJSON(api : APIConfiguration) -> Single<JSON>{
+	private static func requestJSON(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
 		let url = api.path.attachBaseURL()
 		
 		return Single.create{single in
@@ -28,7 +28,7 @@ class APIClient{
 			if urlEncoded == nil{
 				single(.error(AFError.invalidURL(url: url)))
 			}else{
-				Alamofire.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: URLEncoding.default, headers: TokenHelper.getCommonHeader())
+				Alamofire.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: encoding, headers: TokenHelper.getCommonHeader())
 					.validate(statusCode: 200..<300)
 					.validate(contentType: [ContentType.json.rawValue])
 					.responseJSON { response in
@@ -51,7 +51,7 @@ class APIClient{
 		}
 	}
 	
-	private static func requestMultipartForm(api : APIConfiguration) -> Single<JSON>{
+	private static func requestMultipartForm(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
 		let url = api.path.attachBaseURL()
 		let params : [String:Any] = api.parameters ?? [:]
 		

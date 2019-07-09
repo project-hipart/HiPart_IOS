@@ -321,6 +321,7 @@
                         <outlet property="notFoundImageView" destination="z0M-oE-bCm" id="5eW-CL-7g3"/>
                         <outlet property="notFoundSmallLabel" destination="jws-gF-lZM" id="h7S-c1-toM"/>
                         <outlet property="notFoundView" destination="9Kh-am-Jgd" id="cGw-4l-A2p"/>
+                        <outlet property="searchTextField" destination="CGZ-eh-5es" id="Vsg-cZ-eWL"/>
                         <outlet property="tabLayout" destination="wMZ-Nj-Bf1" id="9IE-kD-tD2"/>
                     </connections>
                 </viewController>

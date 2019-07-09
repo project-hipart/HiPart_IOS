@@ -10,4 +10,11 @@ enum PickState : Int{
 			return false
 		}
 	}
+	static func getPickedStateWithBool(_ picked : Bool) -> PickState{
+		if picked{
+			return .pick
+		}else{
+			return .unPick
+		}
+	}
 }

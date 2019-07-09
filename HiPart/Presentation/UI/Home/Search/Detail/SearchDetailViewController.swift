@@ -12,8 +12,7 @@ class SearchDetailViewController: UIViewController {
 	@IBOutlet var notFoundSmallLabel: UILabel!
 	@IBOutlet var notFoundView: UIView!
 	@IBOutlet var tabLayout: TabLayout!
-	
-	private var sampleDatas  : [String] = ["123"]
+	@IBOutlet var searchTextField: SearchTextField!
 	
 }
 
@@ -62,6 +61,8 @@ extension SearchDetailViewController{
 		
 		self.notFoundSmallLabel.setLineHeight(lineHeight: 1.8)
 		self.tabLayout.delegate = self
+		self.searchTextField.text = keyword
+		
 	}
 	
 }

@@ -2,14 +2,14 @@ import Foundation
 import SwiftyJSON
 
 
-struct ProfileDTO{
-	let pickState : PickState
+class ProfileDTO{
+	var pickState : PickState
 	
 	let index : Int
 	let nickname : String
 	let image : String
 	let type : UserType
-	let pickCount : Int
+	var pickCount : Int
 	let platform : Platform
 	let oneLine : String
 	

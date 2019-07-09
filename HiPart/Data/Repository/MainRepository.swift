@@ -16,7 +16,6 @@ class MainRepository{
 	
 	func search(keyword : String) -> Single<Array<ProfileDTO>>{
 		return MainAPI.requestSearch(keyword: keyword).map{json in
-			
 			var result : [ProfileDTO] = []
 			let datas = json["data"].arrayValue
 			

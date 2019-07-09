@@ -6,18 +6,22 @@ class PickDialogView: UIView {
 	public static func showPickDialog(){
 		if let window = UIApplication.shared.keyWindow{
 			let pickedView  = PickDialogView()
-			pickedView.alpha = 0
+			
 			window.addSubview(pickedView)
 			
+			pickedView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.4, 1.4, 1.0)
 			pickedView.snp.makeConstraints{[weak window] make in
 				make.center.equalTo(window!.snp.center)
 				make.width.equalTo(110)
 				make.height.equalTo(110+15+28)
 			}
 			
-			UIView.animate(withDuration: 0.5){
+			
+			
+			UIView.animate(withDuration: 0.25, delay: 0.0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations :{
+				pickedView.layer.transform = CATransform3DIdentity
 				pickedView.alpha = 1
-			}
+			}, completion: nil)
 			
 			UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
 				pickedView.alpha = 0
