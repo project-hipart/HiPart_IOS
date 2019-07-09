@@ -154,26 +154,26 @@ extension SignUpViewController {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == signUpEmailTextfield {
+            print(isValidEmail(emailStr: signUpEmailTextfield.text ?? ""))
             if isValidEmail(emailStr: signUpEmailTextfield.text ?? "") == false {
                 emailTypeCheckLabel.text = "잘못된 형식"
                 emailTypeCheckLabel.textColor = UIColor.red
                 emailTypeCheckLabel.isHidden = false
             } else {
-                emailTypeCheckLabel.isHidden = true
+                AuthAPI.requestDuplicateCheck(flag: .email, input: signUpEmailTextfield.text!)
+                    .subscribe(onSuccess: {json in
+                        print(json["data"].intValue)
+                        if json["data"].intValue == 0 {
+                            self.emailTypeCheckLabel.isHidden = true
+                        } else if json["data"].intValue == 1 {
+                            self.emailTypeCheckLabel.isHidden = false
+                            self.emailTypeCheckLabel.text = "중복"
+                            self.emailTypeCheckLabel.textColor = UIColor.red
+                        }
+                    }, onError: {err in
+                        
+                    })
             }
-            AuthAPI.requestDuplicateCheck(flag: .email, input: signUpEmailTextfield.text!)
-                .subscribe(onSuccess: {json in
-                    print(json["data"].intValue)
-                    if json["data"].intValue == 0 {
-                        self.emailTypeCheckLabel.isHidden = true
-                    } else if json["data"].intValue == 1 {
-                        self.emailTypeCheckLabel.isHidden = false
-                        self.emailTypeCheckLabel.text = "중복"
-                        self.emailTypeCheckLabel.textColor = UIColor.red
-                    }
-                }, onError: {err in
-                    
-                })
         }
         
         else if textField == signUpPwCheckTextfield {
