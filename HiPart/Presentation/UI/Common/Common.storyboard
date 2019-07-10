@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,14 +28,14 @@
                         <viewControllerLayoutGuide type="bottom" id="XhZ-tc-Lrb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I60-CA-rjd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-Ek-xlM">
-                                <rect key="frame" x="31" y="67" width="352" height="762"/>
+                                <rect key="frame" x="28" y="50" width="319" height="567"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-eU-I9Q">
-                                        <rect key="frame" x="17.5" y="708" width="317" height="42"/>
+                                        <rect key="frame" x="16" y="513" width="287" height="42"/>
                                         <color key="backgroundColor" name="mainPurple"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="S5L-sL-D6G"/>
@@ -57,13 +57,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*각 분야 별 1개 씩 선택 가능" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frc-31-apz">
-                                        <rect key="frame" x="213" y="29.5" width="117" height="11.5"/>
+                                        <rect key="frame" x="180" y="29.5" width="117" height="11.5"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="10"/>
                                         <color key="textColor" name="mainPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-do-Zwb">
-                                        <rect key="frame" x="22" y="59" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="59" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="5rf-Na-ght"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-Al-hDr">
-                                        <rect key="frame" x="22" y="90" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="90" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="7Fo-3m-rbB"/>
                                         </constraints>
@@ -87,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-N0-sGj">
-                                        <rect key="frame" x="22" y="168" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="168" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="s5f-UI-RyT"/>
                                         </constraints>
@@ -102,7 +102,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Rd-Oc-c1q">
-                                        <rect key="frame" x="22" y="251" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="251" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="l25-j4-G6z"/>
                                         </constraints>
@@ -111,7 +111,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V04-kX-jIi">
-                                        <rect key="frame" x="22" y="282" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="282" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="NI2-3i-MAl"/>
                                         </constraints>
@@ -120,7 +120,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V7T-6S-ex5">
-                                        <rect key="frame" x="22" y="313" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="313" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="bCC-Gt-GTQ"/>
                                         </constraints>
@@ -129,7 +129,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x79-Ve-a60">
-                                        <rect key="frame" x="22" y="344" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="344" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="upI-dM-PSB"/>
                                         </constraints>
@@ -144,7 +144,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JvC-Mm-5gS">
-                                        <rect key="frame" x="22" y="427" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="427" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="7Qk-N8-za7"/>
                                         </constraints>
@@ -153,7 +153,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-OD-4gF">
-                                        <rect key="frame" x="22" y="458" width="306" height="24"/>
+                                        <rect key="frame" x="22" y="458" width="273" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="LDJ-q3-uxU"/>
                                         </constraints>

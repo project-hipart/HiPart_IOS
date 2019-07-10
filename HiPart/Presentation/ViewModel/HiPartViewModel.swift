@@ -28,12 +28,33 @@ class HiPartViewModel {
 			delegate?.onChangeRefreshState(isRefreshing: self.isRefreshing)
 		}
 	}
-	var allProfiles : [ProfileDTO] = []
 	var profiles : [ProfileDTO] = []{
 		didSet{
-			delegate?.onChangeProfiles(profiles: profiles)
+			delegate?.onChangeProfiles(profiles: profiles.filter{profile in
+				
+				if currentFilter == nil{
+					return true
+				}else{
+					switch profile.type{
+					case .Creator:
+						return currentFilter == profile.broadcastConcept
+					case .PD:
+						return currentFilter == profile.pd
+					case .Translator:
+						return currentFilter == profile.language
+					case .Etc:
+						return currentFilter == profile.etc
+					default:
+						return true
+					}
+				}
+				
+			})
 		}
 	}
+	
+	///이라면 필터 미적용(모두 검색)
+	var currentFilter : Filter? = nil
 	
 	init() {loadDatas(.All)}
 	
@@ -44,7 +65,6 @@ class HiPartViewModel {
 		ProfileRepository.shared.list(flag: flag)
 			.do(onDispose: {self.isRefreshing = false})
 			.subscribe(onSuccess: { profiles in
-				allProfiles = profiles
 				self.profiles = profiles
 				self.isRefreshing = false
 			}, onError: {
