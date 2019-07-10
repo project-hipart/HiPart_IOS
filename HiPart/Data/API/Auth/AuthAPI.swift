@@ -79,7 +79,6 @@ enum AuthAPI : APIConfiguration{
 			return ContentType.json
 		}
 	}
-
 	
 	static func requestSignIn(email : String, password : String, completion : @escaping (JSON?) -> Void) {
 		return APIClient.request(api: AuthAPI.signIn(email: email, password: password),completion : completion)
