@@ -210,12 +210,20 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-0a-wme">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8UW-0a-wme" firstAttribute="width" secondItem="fS7-bt-Vkm" secondAttribute="width" id="1Ez-Ia-Kja"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="centerY" secondItem="fS7-bt-Vkm" secondAttribute="centerY" id="8F9-38-KVU"/>
+                            <constraint firstItem="8UW-0a-wme" firstAttribute="centerX" secondItem="ffD-dk-Hf7" secondAttribute="centerX" id="GaS-Ea-RY2"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="height" secondItem="fS7-bt-Vkm" secondAttribute="height" id="HlB-n7-O0w"/>
+                            <constraint firstItem="8UW-0a-wme" firstAttribute="height" secondItem="fS7-bt-Vkm" secondAttribute="height" id="Z7s-06-t91"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="centerX" secondItem="ffD-dk-Hf7" secondAttribute="centerX" id="ckP-1h-Uw4"/>
+                            <constraint firstItem="8UW-0a-wme" firstAttribute="centerY" secondItem="ffD-dk-Hf7" secondAttribute="centerY" id="q1C-LM-ssI"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="width" secondItem="fS7-bt-Vkm" secondAttribute="width" id="skq-hD-OyP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ffD-dk-Hf7"/>

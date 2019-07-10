@@ -46,6 +46,7 @@ class APIClient{
 								single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
 								return
 							}
+							
 							let json = try? JSON(data: data)
 							single(.success(json!))
 						case .failure(let error):
