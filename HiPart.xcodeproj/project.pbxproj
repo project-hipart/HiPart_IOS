@@ -107,6 +107,9 @@
 		60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEFA22C8C2B5000724B6 /* MasterViewModel.swift */; };
 		60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6A4AD22CDD32F003B88EC /* RoundBtn.swift */; };
 		60B6A4B022CDDA5E003B88EC /* EllipsePurpleLongBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6A4AF22CDDA5E003B88EC /* EllipsePurpleLongBtn.swift */; };
+		60C7821F22D6567D005619E5 /* PatModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7821E22D6567D005619E5 /* PatModifyViewController.swift */; };
+		60C7822322D6748F005619E5 /* PatModifyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7822222D6748F005619E5 /* PatModifyCollectionCell.swift */; };
+		60C7822522D6749E005619E5 /* PatModifySetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7822422D6749E005619E5 /* PatModifySetData.swift */; };
 		60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AD22CF909E00BA1859 /* ViewExtension.swift */; };
 		60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */; };
 		60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B122CF90C700BA1859 /* BlurExtension.swift */; };
@@ -217,6 +220,9 @@
 		60B2EEFA22C8C2B5000724B6 /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 		60B6A4AD22CDD32F003B88EC /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		60B6A4AF22CDDA5E003B88EC /* EllipsePurpleLongBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsePurpleLongBtn.swift; sourceTree = "<group>"; };
+		60C7821E22D6567D005619E5 /* PatModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifyViewController.swift; sourceTree = "<group>"; };
+		60C7822222D6748F005619E5 /* PatModifyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifyCollectionCell.swift; sourceTree = "<group>"; };
+		60C7822422D6749E005619E5 /* PatModifySetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifySetData.swift; sourceTree = "<group>"; };
 		60FB32AD22CF909E00BA1859 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		60FB32B122CF90C700BA1859 /* BlurExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurExtension.swift; sourceTree = "<group>"; };
@@ -452,6 +458,9 @@
 			children = (
 				601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */,
 				601472B922CDCB70007F0211 /* MyPageSettingViewController.swift */,
+				60C7821E22D6567D005619E5 /* PatModifyViewController.swift */,
+				60C7822222D6748F005619E5 /* PatModifyCollectionCell.swift */,
+				60C7822422D6749E005619E5 /* PatModifySetData.swift */,
 			);
 			path = MyPageSetting;
 			sourceTree = "<group>";
@@ -835,6 +844,7 @@
 				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
 				2D813DE922D036D700E02DD5 /* Constants.swift in Sources */,
 				2D813DFE22D0A50700E02DD5 /* PickDialogView.swift in Sources */,
+				60C7822322D6748F005619E5 /* PatModifyCollectionCell.swift in Sources */,
 				60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */,
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
 				2D813E1922D233D800E02DD5 /* UserType.swift in Sources */,
@@ -872,6 +882,7 @@
 				60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */,
 				60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */,
 				2D813E2122D272D700E02DD5 /* ProfileDetailDTO.swift in Sources */,
+				60C7822522D6749E005619E5 /* PatModifySetData.swift in Sources */,
 				2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */,
 				2D813DF922D0883800E02DD5 /* HipartDetailViewController.swift in Sources */,
 				2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */,
@@ -884,6 +895,7 @@
 				60463E1A22CCCC3700DFFF91 /* MyPageListViewController.swift in Sources */,
 				2D0674FE22D31B92006D9FB8 /* SignUpFinshViewController.swift in Sources */,
 				60463E1822CCC5C500DFFF91 /* GreyBorderUIView.swift in Sources */,
+				60C7821F22D6567D005619E5 /* PatModifyViewController.swift in Sources */,
 				60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */,
 				60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */,
 				2D06750222D31B92006D9FB8 /* SignUpViewController.swift in Sources */,

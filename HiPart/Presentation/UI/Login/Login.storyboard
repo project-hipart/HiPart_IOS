@@ -47,7 +47,7 @@
                                     <color key="titleColor" name="darkGrey"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JXh-Ar-CiQ" kind="show" id="O9T-dO-dqr"/>
+                                    <segue destination="JXh-Ar-CiQ" kind="presentation" id="O9T-dO-dqr"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDj-xG-5cf">
@@ -141,7 +141,7 @@
                 <viewControllerPlaceholder storyboardName="FindPw" id="hzG-H7-I0L" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtT-z2-5ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="91.754122938530742"/>
+            <point key="canvasLocation" x="1753" y="87"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="fib-Br-tfI">
@@ -149,7 +149,7 @@
                 <viewControllerPlaceholder storyboardName="SignUp" id="JXh-Ar-CiQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKU-Xf-yxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580.8" y="128.63568215892056"/>
+            <point key="canvasLocation" x="1786" y="156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xZQ-56-YYq">

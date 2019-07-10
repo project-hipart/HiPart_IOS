@@ -7,16 +7,14 @@
 //
 
 import UIKit
-//import Hero
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var hiPartView: UIView!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
     }
-
 }

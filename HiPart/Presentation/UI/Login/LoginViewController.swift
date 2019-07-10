@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-//import Hero
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -24,9 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         loginBtn.setTitleColor(UIColor.white, for: .normal)
-        
-        //self.navigationController?.hero.isEnabled = true
-        //self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
 
         idTextField.delegate = self
         pwTextField.delegate = self

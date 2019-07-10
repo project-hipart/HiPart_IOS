@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SignUpFinshViewController: UIViewController {
 
     @IBOutlet weak var signUpFinishtBtn: EllipsePurpleLongBtn!
     @IBOutlet weak var signUpCollection: UICollectionView!
+    
+    var loginText: Array<String> = []
+    var loginImgData : Data!
+    var loginImageUrl : NSURL!
+    var loginPat: Int!
+    var loginData: Data!
+    var imageUrl : String!
     
     var signUpCollecitonList: [SignUpFinishData] = []
     
@@ -23,16 +31,38 @@ class SignUpFinshViewController: UIViewController {
         
         signUpCollection.delegate = self
         signUpCollection.dataSource = self
-        
+    
     }
-
+    
+    @IBAction func upLoadSignUpData(_ sender: Any) {
+        let email = loginText[0]
+        let pw = loginText[1]
+        let nick = loginText[2]
+        let contact = loginText[3]
+        
+        AuthAPI.requestSignUp(email: email, nickname: nick, img: loginData, imageUrl: imageUrl, password: pw, number: contact, type: loginPat)
+            .subscribe(onSuccess: { (json : JSON) -> Void in
+                
+                if json["success"].boolValue {
+                    self.performSegue(withIdentifier: "toSignUpSuccess", sender: self)
+                    debugE("로그인성공")
+                    //성공
+                } else {
+                    debugE("로그인 실패")
+                }      
+            }, onError: { (error : Error) -> Void in
+            
+        })
+    }
+    
 }
+
 
 extension SignUpFinshViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let cell = collectionView.cellForItem(at: indexPath)
-
+        
         if cell?.borderColor == UIColor.mainPurple{
             cell?.borderColor = UIColor.lightGrey
         } else {
@@ -40,9 +70,12 @@ extension SignUpFinshViewController: UICollectionViewDelegate {
                 cell.borderColor = UIColor.lightGrey
             }
              cell?.borderColor = UIColor.mainPurple
+             loginPat = indexPath.row + 1
+             print(loginPat!)
         }
     }
 }
+
 
 extension SignUpFinshViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -79,6 +112,7 @@ extension SignUpFinshViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+
 extension SignUpFinshViewController {
     func setSignUpCollectionData() {
         let cpat = SignUpFinishData(title: "C-PAT", smallTitle: "(크리에이터)", coverName: "mainCpotIcon")
@@ -89,3 +123,4 @@ extension SignUpFinshViewController {
         signUpCollecitonList = [cpat, epat, tpat, etc]
     }
 }
+

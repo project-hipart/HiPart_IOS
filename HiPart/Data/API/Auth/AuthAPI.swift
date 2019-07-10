@@ -59,7 +59,7 @@ enum AuthAPI : APIConfiguration{
 		case .signIn(let email, let password):
 			return [APIKeys.userEmail: email, APIKeys.userPassword: password]
 			
-		case .signUp(let email, let nickname, let img,let imageUrl, let password, let number, let type):
+		case .signUp(let email, let nickname, let img, let imageUrl, let password, let number, let type):
 			return [APIKeys.userEmail : email, APIKeys.userNickname : nickname, APIKeys.userImage : img, APIKeys.imageUrl : imageUrl,
 					APIKeys.userPassword : password, APIKeys.userNumber : number, APIKeys.userType : type]
 			
@@ -85,8 +85,8 @@ enum AuthAPI : APIConfiguration{
 		return APIClient.request(api: AuthAPI.signIn(email: email, password: password))
 	}
 	
-	static func requestSignUp(email : String, nickname : String, img : Data,imageUrl : String, password : String, number : String, type : Int) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img,imageUrl : imageUrl, password: password, number: number, type: type))
+	static func requestSignUp(email : String, nickname : String, img : Data, imageUrl : String, password : String, number : String, type : Int) -> Single<JSON>{
+		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img, imageUrl : imageUrl, password: password, number: number, type: type))
 	}
 	
 	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String) -> Single<JSON>{

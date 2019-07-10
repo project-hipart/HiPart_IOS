@@ -36,16 +36,18 @@ extension MyPageSettingViewController: UIImagePickerControllerDelegate, UINaviga
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let possibleImage = info[.editedImage] as? RoundImg {
-            self.myPageImg = possibleImage
-        } else if let possibleImage = info[.originalImage] as? RoundImg {
-            self.myPageImg = possibleImage
+        if let possibleImage = info[.editedImage] as? UIImage {
+            self.myPageImg.image = possibleImage
+        } else if let possibleImage = info[.originalImage] as? UIImage {
+            self.myPageImg.image = possibleImage
         } else {
             return
         }
+        picker.dismiss(animated: true)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true)
     }
+    
 }

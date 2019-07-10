@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Hero
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
+    
+    private var url : NSURL!
     
     @IBOutlet weak var signUpNextBtn: EllipsePurpleLongBtn!
     @IBOutlet weak var myImg: RoundImg!
     @IBOutlet weak var emailTypeCheckLabel: UILabel!
     @IBOutlet weak var pwCheckLabel: UILabel!
     @IBOutlet weak var nickCheck: UILabel!
+    @IBOutlet weak var pwLengthCheck: UILabel!
     
     @IBOutlet weak var signUpEmailView: UIView!
     @IBOutlet weak var signUpEmailImg: UIImageView!
@@ -53,11 +57,37 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailTypeCheckLabel.isHidden = true
         pwCheckLabel.isHidden = true
         nickCheck.isHidden = true
+        pwLengthCheck.isHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let dstVC = segue.destination as! SignUpFinshViewController
         
-//        print(isValidEmail(emailStr: "eun95828@naver.com"))
-//        print(isValidEmail(emailStr: "eun95828"))
+        guard let email = signUpEmailTextfield.text else { return }
+        dstVC.loginText.append(email)
+        
+        guard let pw = signUpPwCheckTextfield.text else { return }
+        dstVC.loginText.append(pw)
+        
+        guard let nick = signUpNickTextfield.text else { return }
+        dstVC.loginText.append(nick)
+        
+        guard let contact = signUpContactTextfield.text else { return }
+        dstVC.loginText.append(contact)
+        
+        guard let image = myImg.image else { return }
+        
+        guard let data = image.jpegData(compressionQuality: 0.95) else { return }
+        dstVC.loginData = data
+    
+        guard let url = self.url else { return }
+        guard let imageUrl = url.absoluteString else { return }
+        dstVC.imageUrl = imageUrl
+        
+        
     }
 }
+
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     @IBAction func selecMytImg(_ sender: RoundBtn) {
@@ -68,19 +98,24 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let possibleImage = info[.editedImage] as? RoundImg {
-            self.myImg = possibleImage
-        } else if let possibleImage = info[.originalImage] as? RoundImg {
-            self.myImg = possibleImage
+        if let possibleImage = info[.editedImage] as? UIImage {
+            self.myImg.image = possibleImage
+            self.url = info[.imageURL] as? NSURL
+        } else if let possibleImage = info[.originalImage] as? UIImage {
+            self.myImg.image = possibleImage
+            self.url = info[.imageURL] as? NSURL
         } else {
             return
         }
+         picker.dismiss(animated: true)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true)
     }
 }
+
+
 
 extension SignUpViewController {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -106,6 +141,16 @@ extension SignUpViewController {
             } else {
                 signUpPwView.borderColor = UIColor.mainPurple
                 signUpPwImg.image = UIImage(named: "loginPasswordOnIcon")
+            }
+            if newString.length < 8 {
+                pwLengthCheck.text = "8자 이상"
+                pwLengthCheck.textColor = UIColor.red
+                pwLengthCheck.isHidden = false
+             
+                
+            } else {
+                pwLengthCheck.isHidden = true
+         
             }
         }
         
@@ -139,36 +184,57 @@ extension SignUpViewController {
             }
         }
         
-        if (signUpEmailView.borderColor == UIColor.mainPurple) && (signUpPwView.borderColor == UIColor.mainPurple)
-           && (signUpPwCheckView.borderColor == UIColor.mainPurple) && (signUpNickView.borderColor == UIColor.mainPurple)
-           && (signUpContactView.borderColor == UIColor.mainPurple) {
+        checkAndEnableButton()
+        
+        return true
+    }
+    private func checkAndEnableButton(){
+        
+        if (signUpEmailView.borderColor == UIColor.mainPurple)
+            && (signUpPwView.borderColor == UIColor.mainPurple)
+            && (signUpPwCheckView.borderColor == UIColor.mainPurple)
+            && (signUpNickView.borderColor == UIColor.mainPurple)
+            && (signUpContactView.borderColor == UIColor.mainPurple)
+            && (emailTypeCheckLabel.isHidden == true)
+            && (pwCheckLabel.isHidden == true)
+            && (nickCheck.isHidden == true)
+            && (pwLengthCheck.isHidden == true) {
+            
             self.signUpNextBtn.backgroundColor = UIColor.mainPurple
             self.signUpNextBtn.isEnabled = true
+            
         } else {
             self.signUpNextBtn.backgroundColor = UIColor.lightGrey
             self.signUpNextBtn.isEnabled = false
         }
-        
-        return true
     }
-    
+}
+
+extension SignUpViewController {
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         if textField == signUpEmailTextfield {
-            print(isValidEmail(emailStr: signUpEmailTextfield.text ?? ""))
+//            print(isValidEmail(emailStr: signUpEmailTextfield.text ?? ""))
             if isValidEmail(emailStr: signUpEmailTextfield.text ?? "") == false {
                 emailTypeCheckLabel.text = "잘못된 형식"
                 emailTypeCheckLabel.textColor = UIColor.red
                 emailTypeCheckLabel.isHidden = false
+                
+                
             } else {
                 AuthAPI.requestDuplicateCheck(flag: .email, input: signUpEmailTextfield.text!)
                     .subscribe(onSuccess: {json in
                         print(json["data"].intValue)
+                        
                         if json["data"].intValue == 0 {
+                            
                             self.emailTypeCheckLabel.isHidden = true
+               
                         } else if json["data"].intValue == 1 {
                             self.emailTypeCheckLabel.isHidden = false
-                            self.emailTypeCheckLabel.text = "중복"
+                            self.emailTypeCheckLabel.text = "중복된 메일"
                             self.emailTypeCheckLabel.textColor = UIColor.red
+                       
                         }
                     }, onError: {err in
                         
@@ -176,29 +242,35 @@ extension SignUpViewController {
             }
         }
         
-        else if textField == signUpPwCheckTextfield {
-            if signUpPwTextfield.text != signUpPwCheckTextfield.text {
+        if textField == signUpPwCheckTextfield {
+            if signUpPwCheckTextfield.text != signUpPwTextfield.text {
                 pwCheckLabel.text = "불일치"
                 pwCheckLabel.textColor = UIColor.red
                 pwCheckLabel.isHidden = false
-            } else {
+             
+                
+            } else if signUpPwCheckTextfield.text == signUpPwTextfield.text {
                 pwCheckLabel.isHidden = true
+
             }
         }
         
-        else if textField == signUpNickTextfield {
+        if textField == signUpNickTextfield {
             AuthAPI.requestDuplicateCheck(flag: .nickname, input: signUpNickTextfield.text!)
                 .subscribe(onSuccess: {json in
                     print(json["data"].intValue)
                     if json["data"].intValue == 0 {
+                        
                         self.nickCheck.isHidden = true
+                        
                     } else if json["data"].intValue == 1 {
                         self.nickCheck.isHidden = false
-                        self.nickCheck.text = "중복"
+                        self.nickCheck.text = "중복된 닉네임"
                         self.nickCheck.textColor = UIColor.red
+                        
                     }
                 }, onError: {err in
-
+                    
                 })
         }
     }
@@ -212,3 +284,4 @@ extension SignUpViewController {
         return emailPred.evaluate(with: emailStr)
     }
 }
+
