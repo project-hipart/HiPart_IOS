@@ -128,13 +128,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+<<<<<<< HEAD
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1d-qu-P0L">
+                                <rect key="frame" x="9.5" y="618" width="356" height="42"/>
+                                <color key="backgroundColor" name="mainPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="J8i-3J-3Oj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="작품 올리기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapUploadButton:" destination="mzV-md-OVx" eventType="touchUpInside" id="eG9-0e-eUd"/>
+                                    <action selector="tapUploadView:" destination="W5T-dq-dXc" eventType="touchUpInside" id="2QC-n5-z76"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z1d-qu-P0L" firstAttribute="centerX" secondItem="XmM-AF-Uxf" secondAttribute="centerX" id="2Kv-FB-BI9"/>
+                            <constraint firstItem="XmM-AF-Uxf" firstAttribute="bottom" secondItem="z1d-qu-P0L" secondAttribute="bottom" constant="7" id="HYJ-3H-JTU"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             <constraint firstItem="wxt-Ha-VSD" firstAttribute="top" secondItem="iK8-cJ-YrZ" secondAttribute="bottom" constant="39" id="Nxz-qh-Dgj"/>
                             <constraint firstItem="iK8-cJ-YrZ" firstAttribute="top" secondItem="CeH-9V-L0W" secondAttribute="bottom" constant="40" id="TaF-AB-0KL"/>
                             <constraint firstItem="CeH-9V-L0W" firstAttribute="leading" secondItem="iK8-cJ-YrZ" secondAttribute="leading" id="abl-B5-U1O"/>
                             <constraint firstItem="gJQ-BD-ZqE" firstAttribute="leading" secondItem="XmM-AF-Uxf" secondAttribute="leading" constant="8" id="c1t-O0-3nR"/>
+<<<<<<< HEAD
+=======
+                            <constraint firstItem="z1d-qu-P0L" firstAttribute="width" secondItem="2lO-w3-Hxg" secondAttribute="width" multiplier="0.95" id="fBl-7M-0zt"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             <constraint firstItem="gJQ-BD-ZqE" firstAttribute="top" secondItem="XmM-AF-Uxf" secondAttribute="top" constant="8" id="iCp-DX-gKj"/>
                             <constraint firstItem="wxt-Ha-VSD" firstAttribute="width" secondItem="iK8-cJ-YrZ" secondAttribute="width" id="kfi-bs-WuC"/>
                             <constraint firstItem="iK8-cJ-YrZ" firstAttribute="centerX" secondItem="XmM-AF-Uxf" secondAttribute="centerX" id="pd9-sN-hue"/>
@@ -173,7 +205,11 @@
                                     <action selector="tapBackButton:" destination="mzV-md-OVx" eventType="touchUpInside" id="Dka-rj-OKf"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY6-gI-mhJ">
+=======
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY6-gI-mhJ">
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <rect key="frame" x="25" y="171" width="325" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작품 커버 이미지 업로드하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaN-gZ-rCY">
@@ -204,6 +240,10 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<<<<<<< HEAD
+=======
+                                <gestureRecognizers/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <constraints>
                                     <constraint firstItem="wGB-vy-qAa" firstAttribute="height" secondItem="mY6-gI-mhJ" secondAttribute="height" id="0OC-n0-7wr"/>
                                     <constraint firstAttribute="height" constant="171" id="AIw-De-Pt3"/>
@@ -221,7 +261,11 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+<<<<<<< HEAD
                                         <real key="value" value="6"/>
+=======
+                                        <real key="value" value="8"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
@@ -230,6 +274,12 @@
                                         <color key="value" name="lightGrey"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yTp-Aj-aAE" appends="YES" id="2ef-pF-MPl"/>
+                                </connections>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojv-eZ-zpK">
                                 <rect key="frame" x="25" y="83" width="175.5" height="48"/>
@@ -239,19 +289,41 @@
                                 <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목을 기입해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHY-sU-vno">
+=======
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목을 기입해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHY-sU-vno">
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <rect key="frame" x="25" y="362" width="160.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+<<<<<<< HEAD
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88l-Ys-fzj">
                                 <rect key="frame" x="25" y="398" width="168" height="26"/>
+=======
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b8X-bg-XSF" appends="YES" id="tlc-EY-Yel"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88l-Ys-fzj">
+                                <rect key="frame" x="25" y="398" width="325" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="zmT-9M-tDJ"/>
+                                </constraints>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <string key="text">작품을 빛내줄 한줄을 적어주세요
 (최대 40자 이내)</string>
                                 <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="13"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="a4X-63-meF" appends="YES" id="rnr-vN-xno"/>
+                                </connections>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL 첨부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnR-SU-7qE">
                                 <rect key="frame" x="25" y="444" width="78" height="24"/>
@@ -294,6 +366,12 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="tapUploadButton:" destination="mzV-md-OVx" eventType="touchUpInside" id="yt8-wp-N4d"/>
+                                </connections>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -314,18 +392,47 @@
                             <constraint firstItem="ojv-eZ-zpK" firstAttribute="top" secondItem="02c-51-bna" secondAttribute="bottom" constant="15" id="imF-Ij-flo"/>
                             <constraint firstItem="88l-Ys-fzj" firstAttribute="leading" secondItem="PHY-sU-vno" secondAttribute="leading" id="jkn-O1-jVi"/>
                             <constraint firstItem="YnR-SU-7qE" firstAttribute="leading" secondItem="PHY-sU-vno" secondAttribute="leading" id="jmZ-6g-8Q4"/>
+<<<<<<< HEAD
+=======
+                            <constraint firstItem="88l-Ys-fzj" firstAttribute="trailing" secondItem="wGB-vy-qAa" secondAttribute="trailing" id="n5F-Yy-bUZ"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             <constraint firstItem="wGB-vy-qAa" firstAttribute="top" secondItem="ojv-eZ-zpK" secondAttribute="bottom" constant="40" id="wmm-jX-Sfz"/>
                             <constraint firstItem="PHY-sU-vno" firstAttribute="top" secondItem="mY6-gI-mhJ" secondAttribute="bottom" constant="20" id="yUB-Yg-qAO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4nK-4Q-Hzw"/>
                     </view>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="titleLabel" destination="88l-Ys-fzj" id="oyJ-w2-WM1"/>
                         <outlet property="titlleHeaderLabel" destination="PHY-sU-vno" id="LqP-Fn-t2P"/>
+=======
+                        <outlet property="contentLabel" destination="88l-Ys-fzj" id="Sn5-Q4-KRP"/>
+                        <outlet property="imageUploadContainerView" destination="mY6-gI-mhJ" id="Tze-zu-bGc"/>
+                        <outlet property="imageView" destination="wGB-vy-qAa" id="sEe-If-icM"/>
+                        <outlet property="titleLabel" destination="PHY-sU-vno" id="h2e-rn-Kfw"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                         <outlet property="urlTextField" destination="gLg-wu-Iah" id="R6M-WR-a47"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZY-S8-iPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+<<<<<<< HEAD
+=======
+                <tapGestureRecognizer id="yTp-Aj-aAE" userLabel="ImageTap">
+                    <connections>
+                        <action selector="tapImageUploadView:" destination="mzV-md-OVx" id="3Mi-Pp-wYI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="a4X-63-meF" userLabel="ContentTap">
+                    <connections>
+                        <action selector="tapContentLabel:" destination="mzV-md-OVx" id="Nrb-wW-49H"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="b8X-bg-XSF" userLabel="TitleTap">
+                    <connections>
+                        <action selector="tapTitleLabel:" destination="mzV-md-OVx" id="rQV-8H-uJg"/>
+                    </connections>
+                </tapGestureRecognizer>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
             </objects>
             <point key="canvasLocation" x="172" y="-320"/>
         </scene>

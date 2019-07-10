@@ -7,6 +7,7 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import Hero
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
@@ -19,6 +20,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pwCheckLabel: UILabel!
     @IBOutlet weak var nickCheck: UILabel!
     @IBOutlet weak var pwLengthCheck: UILabel!
+=======
+
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var signUpNextBtn: EllipsePurpleLongBtn!
+    @IBOutlet weak var myImg: RoundImg!
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     
     @IBOutlet weak var signUpEmailView: UIView!
     @IBOutlet weak var signUpEmailImg: UIImageView!
@@ -40,6 +48,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpContactImg: UIImageView!
     @IBOutlet weak var signUpContactTextfield: UITextField!
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +62,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         signUpPwCheckTextfield.delegate = self
         signUpNickTextfield.delegate = self
         signUpContactTextfield.delegate = self
+<<<<<<< HEAD
         
         signUpNextBtn.backgroundColor = UIColor.lightGrey
         signUpNextBtn.isEnabled = false
@@ -88,6 +101,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+=======
+    }
+
+}
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     @IBAction func selecMytImg(_ sender: RoundBtn) {
@@ -98,6 +116,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+<<<<<<< HEAD
         if let possibleImage = info[.editedImage] as? UIImage {
             self.myImg.image = possibleImage
             self.url = info[.imageURL] as? NSURL
@@ -108,6 +127,15 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
             return
         }
          picker.dismiss(animated: true)
+=======
+        if let possibleImage = info[.editedImage] as? RoundImg {
+            self.myImg = possibleImage
+        } else if let possibleImage = info[.originalImage] as? RoundImg {
+            self.myImg = possibleImage
+        } else {
+            return
+        }
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -115,8 +143,11 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 extension SignUpViewController {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -142,6 +173,7 @@ extension SignUpViewController {
                 signUpPwView.borderColor = UIColor.mainPurple
                 signUpPwImg.image = UIImage(named: "loginPasswordOnIcon")
             }
+<<<<<<< HEAD
             if newString.length < 8 {
                 pwLengthCheck.text = "8자 이상"
                 pwLengthCheck.textColor = UIColor.red
@@ -152,6 +184,8 @@ extension SignUpViewController {
                 pwLengthCheck.isHidden = true
          
             }
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         }
         
         else if textField == signUpPwCheckTextfield {
@@ -184,6 +218,7 @@ extension SignUpViewController {
             }
         }
         
+<<<<<<< HEAD
         checkAndEnableButton()
         
         return true
@@ -285,3 +320,8 @@ extension SignUpViewController {
     }
 }
 
+=======
+        return true
+    }
+}
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

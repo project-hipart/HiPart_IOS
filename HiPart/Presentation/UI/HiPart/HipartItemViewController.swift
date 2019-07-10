@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 
 import UIKit
 import Hero
 
+=======
+import UIKit
+import Hero
+
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 class HipartItemViewController: UIViewController {
 	let viewModel = HiPartViewModel()
 	
@@ -22,6 +29,7 @@ extension HipartItemViewController{
 		setupBinding()
 		// Do any additional setup after loading the view.
 	}
+<<<<<<< HEAD
 	
 	
 }
@@ -32,6 +40,16 @@ extension HipartItemViewController : HiPartViewModelDelegate{
 	}
 	
 	func onChangeProfiles(profiles: [ProfileDTO]) {
+=======
+}
+
+extension HipartItemViewController : HiPartViewModelDelegate{
+	@objc private func refresh(){
+		viewModel.loadDatas(viewModel.currentTab)
+	}
+	func onChangeProfiles(profiles: [ProfileDTO]) {
+		debugE(profiles)
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		self.collectionView.reloadData()
 	}
 	func onChangeRefreshState(isRefreshing: Bool) {
@@ -65,13 +83,24 @@ extension HipartItemViewController{
 }
 extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+<<<<<<< HEAD
 		return viewModel.profiles.count
+=======
+		return viewModel.filteredProfiles.count
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
+<<<<<<< HEAD
 			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
 			cell.setProfile(profile: viewModel.profiles[indexPath.row])
+=======
+			
+			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
+			cell.setProfile(profile: viewModel.filteredProfiles[indexPath.row])
+			cell.delegate = self
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			return cell
 			
 		}
@@ -82,6 +111,7 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
+<<<<<<< HEAD
 			let item = viewModel.profiles[indexPath.row]
 			navigateDetailViewController(cell: cell,profile: item)
 		}
@@ -102,3 +132,35 @@ extension HipartItemViewController{
 	}
 }
 
+=======
+			
+			let item = viewModel.profiles[indexPath.row]
+			
+			self.navigateDetailViewController(myProfile: false, type: item.type, nickname: item.nickname, imageViewHeroId: cell.thumbnailView.hero.id ?? "",profileImage: cell.thumbnailView.image)
+			
+		}
+	}
+}
+extension HipartItemViewController : SearchCollectionViewCellDelegate{
+	func onChangePickState(profile : ProfileDTO,picked: Bool) {
+		
+		if let idx = self.viewModel.profiles.firstIndex(where : {p in p.nickname == profile.nickname}){
+			let profile = self.viewModel.profiles[idx]
+			profile.pickState = PickState.getPickedStateWithBool(picked)
+			if picked{
+				profile.pickCount += 1
+			}else{
+				profile.pickCount -= 1
+			}
+		}
+	}
+}
+
+extension HipartItemViewController{
+	func setFilter(filter : Filter?){
+		self.viewModel.currentFilter = filter
+	}
+}
+
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

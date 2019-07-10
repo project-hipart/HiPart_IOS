@@ -161,7 +161,10 @@ extension TabLayout{
 		}, completion: nil)
 		
 		
+<<<<<<< HEAD
 		debugE(button.bounds.width)
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {  [unowned self] in
 			self.tabStripIndicator.frame = CGRect(x: button.frame.origin.x, y: originalFrame.origin.y, width: button.bounds.width, height: originalFrame.height)
 			}, completion: nil)

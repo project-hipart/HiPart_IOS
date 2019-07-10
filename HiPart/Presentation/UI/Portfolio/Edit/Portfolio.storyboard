@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+<<<<<<< HEAD
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +18,19 @@
             <string>NanumSquareR</string>
         </array>
     </customFonts>
+=======
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     <scenes>
         <!--포트폴리오-->
         <scene sceneID="vOR-0N-HqH">
             <objects>
+<<<<<<< HEAD
                 <viewController id="NzV-Wz-LBv" customClass="PortfolioEditViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController id="NzV-Wz-LBv" customClass="PortfolioViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WKT-Jv-Py7"/>
                         <viewControllerLayoutGuide type="bottom" id="bq9-wi-2qR"/>
@@ -29,6 +38,7 @@
                     <view key="view" contentMode="scaleToFill" id="HNQ-MD-WBO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGX-d2-lAY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
@@ -299,10 +309,14 @@
                             <constraint firstItem="ajm-x1-CQ1" firstAttribute="leading" secondItem="XAG-wx-QB9" secondAttribute="leading" id="xfe-6a-kn2"/>
                             <constraint firstItem="HuD-YH-TxW" firstAttribute="leading" secondItem="HNQ-MD-WBO" secondAttribute="leading" constant="8" id="zWv-vL-BOz"/>
                         </constraints>
+=======
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     </view>
                     <tabBarItem key="tabBarItem" title="포트폴리오" image="mainTbPofolOffIcon" selectedImage="mainTbPofolOnIcon" id="KGQ-42-xis"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
+<<<<<<< HEAD
                     <connections>
                         <outlet property="backButton" destination="HuD-YH-TxW" id="QrQ-Vh-LEl"/>
                         <outlet property="filterStackView" destination="i1U-j0-xNT" id="NG0-MP-da2"/>
@@ -311,11 +325,14 @@
                         <outlet property="typeLabel" destination="VdK-x0-sEM" id="tRW-Rc-G3Z"/>
                         <outlet property="uploadContainerView" destination="UCA-L9-RGf" id="I9E-Z9-4Es"/>
                     </connections>
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhg-Hv-mOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-273" y="-206"/>
         </scene>
+<<<<<<< HEAD
         <!--Portfolio Edit Embed View Controller-->
         <scene sceneID="7be-Hd-3ow">
             <objects>
@@ -589,5 +606,11 @@
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+=======
+    </scenes>
+    <resources>
+        <image name="mainTbPofolOffIcon" width="24" height="24"/>
+        <image name="mainTbPofolOnIcon" width="18" height="23"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     </resources>
 </document>

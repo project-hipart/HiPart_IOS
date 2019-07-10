@@ -1,7 +1,14 @@
 import Foundation
 
 struct APIConstants {
+<<<<<<< HEAD
 	static let baseURL = "http://52.78.120.232:3000"
+=======
+	//EC2
+	static let baseURL = "http://52.78.120.232:3000"
+	//LOCAL
+//	static let baseURL = "http://172.30.1.7:3000"
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 struct APIKeys{
 	//Common
@@ -30,7 +37,14 @@ struct APIKeys{
 	static let detailSubscriber = "detail_subscriber"
 	static let detailAppeal = "detail_appeal"
 	static let detailWant = "detail_want"
+<<<<<<< HEAD
 	static let thumbnail = "thumbnail"
+=======
+	static let workIndex = "work_idx"
+	static let thumbnail = "thumbnail"
+	static let before = "before"
+	static let after = "after"
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	static let url = "url"
 	static let title = "title"
 	static let content = "content"
@@ -40,6 +54,12 @@ struct APIKeys{
 	static let etc = "etc"
 	static let hifiveState = "hifiveState"
 	static let hifive = "hifive"
+<<<<<<< HEAD
+=======
+	
+	//Pick
+	static let nickname = "nickname"
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 
 extension String{

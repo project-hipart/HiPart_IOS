@@ -1,6 +1,9 @@
 
 import UIKit
+<<<<<<< HEAD
 import Hero
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 
 class MasterViewController: UITabBarController {
 	
@@ -18,10 +21,15 @@ extension MasterViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+<<<<<<< HEAD
 		
 //        self.hero.isEnabled = true
 //        self.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left), dismissing: .uncover(direction: .right))
         
+=======
+		TokenHelper.saveAccessToken(token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImN1dGV5YW5nIiwiaWR4IjozLCJ0eXBlIjoxLCJpYXQiOjE1NjI1NjcyNTgsImV4cCI6MTU2Mzc3Njg1OCwiaXNzIjoiaWcifQ.WHzr5l6RfzF3Uw88qUeuJe9rpLD4RHlsCB9pto-4MbM")
+		
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		viewModel.delegate = self
 		self.setupView()
 		
@@ -49,7 +57,11 @@ extension MasterViewController {
 extension MasterViewController : UITabBarControllerDelegate{
 	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
 		
+<<<<<<< HEAD
 		if viewController is PortfolioEditViewController{
+=======
+		if viewController is PortfolioViewController{
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			showPortfolioBottomViewController()
 
 			
@@ -59,6 +71,10 @@ extension MasterViewController : UITabBarControllerDelegate{
 		
 		return true
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
 		print(#function)
 		
@@ -78,7 +94,10 @@ extension MasterViewController{
 	@objc private func tapBackground(_ sender : UITapGestureRecognizer){
 		if let vc = self.portfolioBottomSheetVC{
 			self.remove(asChildViewController: vc)
+<<<<<<< HEAD
 			self.view.removeBlurView()
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			self.view.removeGestureRecognizer(tapGestureRecognizer)
 		}
 	}

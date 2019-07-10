@@ -7,16 +7,26 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 import RxSwift
+=======
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 import Alamofire
 import SwiftyJSON
 
 class HiPartDetailViewModel {
+<<<<<<< HEAD
 	private let disposeBag = DisposeBag()
 	
 	weak var delegate : HiPartDetailViewModelDelegate? = nil{
 		didSet{
 			self.delegate?.onChangeProfileDetail(profileDetail: profileDetail)
+=======
+	
+	weak var delegate : HiPartDetailViewModelDelegate? = nil{
+		didSet{
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			self.delegate?.onChangeRefreshState(isRefreshing: isRefreshing)
 		}
 	}
@@ -29,6 +39,7 @@ class HiPartDetailViewModel {
 	
 	
 	
+<<<<<<< HEAD
 	var profileDetail : ProfileDetailDTO? = nil{
 		didSet{
 			delegate?.onChangeProfileDetail(profileDetail: self.profileDetail!)
@@ -49,5 +60,10 @@ class HiPartDetailViewModel {
 }
 protocol HiPartDetailViewModelDelegate : NSObjectProtocol{
 	func onChangeProfileDetail(profileDetail : ProfileDetailDTO?)
+=======
+	
+}
+protocol HiPartDetailViewModelDelegate : NSObjectProtocol{
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	func onChangeRefreshState(isRefreshing : Bool)
 }

@@ -19,6 +19,10 @@
 		2D06750622D31B92006D9FB8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0674FC22D31B92006D9FB8 /* Login.storyboard */; };
 		2D06750722D31B92006D9FB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */; };
 		2D06750922D34D00006D9FB8 /* UploadVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06750822D34D00006D9FB8 /* UploadVideo.swift */; };
+		2D06750C22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06750A22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift */; };
+		2D06750D22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */; };
+		2D06750F22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */; };
+		2D06751122D3779B006D9FB8 /* UploadTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06751022D3779B006D9FB8 /* UploadTrans.swift */; };
 		2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */; };
 		2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */; };
 		2D79367A22CF94200081E065 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79367622CF941F0081E065 /* SearchDetailViewController.swift */; };
@@ -55,6 +59,29 @@
 		2D813E1D22D23F5E00E02DD5 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */; };
 		2D813E2122D272D700E02DD5 /* ProfileDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E2022D272D700E02DD5 /* ProfileDetailDTO.swift */; };
 		2D813E2322D277B300E02DD5 /* HiPartDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813E2222D277B300E02DD5 /* HiPartDetailViewModel.swift */; };
+		2D8B4D8522D3A023004F48C7 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4D8422D3A023004F48C7 /* Common.storyboard */; };
+		2D8B4D8722D3A15A004F48C7 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D8622D3A15A004F48C7 /* PortfolioViewController.swift */; };
+		2D8B4D8922D3A4E0004F48C7 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D8822D3A4E0004F48C7 /* MainRepository.swift */; };
+		2D8B4D8B22D3A573004F48C7 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D8A22D3A573004F48C7 /* Notification.swift */; };
+		2D8B4D8D22D3B1F2004F48C7 /* SearchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D8C22D3B1F2004F48C7 /* SearchDetailViewModel.swift */; };
+		2D8B4D9122D3B887004F48C7 /* PickAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9022D3B887004F48C7 /* PickAPI.swift */; };
+		2D8B4D9322D3BADC004F48C7 /* PickRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9222D3BADC004F48C7 /* PickRepository.swift */; };
+		2D8B4D9622D3D56F004F48C7 /* RecentlySearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9522D3D56F004F48C7 /* RecentlySearchRepository.swift */; };
+		2D8B4D9822D48A65004F48C7 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9722D48A65004F48C7 /* Animations.swift */; };
+		2D8B4D9A22D48BCF004F48C7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */; };
+		2D8B4D9D22D49485004F48C7 /* PortfolioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */; };
+		2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */; };
+		2D8B4DA122D49B0B004F48C7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */; };
+		2D8B4DA322D49D03004F48C7 /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */; };
+		2D8B4DA722D4C35B004F48C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */; };
+		2D8B4DA922D4C482004F48C7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DA822D4C482004F48C7 /* data.json */; };
+		2D8B4DBA22D4C8CC004F48C7 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DAE22D4C8CA004F48C7 /* img_1.png */; };
+		2D8B4DBB22D4C8CC004F48C7 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DAF22D4C8CA004F48C7 /* img_0.png */; };
+		2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB022D4C8CA004F48C7 /* img_2.png */; };
+		2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB122D4C8CA004F48C7 /* img_3.png */; };
+		2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B4DB222D4C8CA004F48C7 /* img_4.png */; };
+		2D8B4DC522D4D0AC004F48C7 /* HifiveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */; };
+		2D8B4DC722D4D1B4004F48C7 /* HifiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */; };
 		2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */; };
 		2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */; };
 		2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */; };
@@ -98,7 +125,6 @@
 		60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2EEE322C7960C000724B6 /* MyPage.storyboard */; };
 		60B2EEE622C8B868000724B6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE522C8B868000724B6 /* HomeViewModel.swift */; };
 		60B2EEE822C8B8AC000724B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE722C8B8AC000724B6 /* HomeViewController.swift */; };
-		60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEE922C8BB3B000724B6 /* PortfolioEditViewController.swift */; };
 		60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEEB22C8BB49000724B6 /* MyPageViewController.swift */; };
 		60B2EEF322C8BBE0000724B6 /* HiPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEF222C8BBE0000724B6 /* HiPartViewController.swift */; };
 		60B2EEF522C8BCB4000724B6 /* HiPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2EEF422C8BCB4000724B6 /* HiPartViewModel.swift */; };
@@ -113,6 +139,8 @@
 		60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AD22CF909E00BA1859 /* ViewExtension.swift */; };
 		60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */; };
 		60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B122CF90C700BA1859 /* BlurExtension.swift */; };
+		60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AD22CF909E00BA1859 /* ViewExtension.swift */; };
+		60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */; };
 		60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B322CF916600BA1859 /* DeviceExtension.swift */; };
 		60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */; };
 /* End PBXBuildFile section */
@@ -129,6 +157,10 @@
 		2D0674FC22D31B92006D9FB8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D06750822D34D00006D9FB8 /* UploadVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideo.swift; sourceTree = "<group>"; };
+		2D06750A22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedTransCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioEditEmbedTransCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedTransViewController.swift; sourceTree = "<group>"; };
+		2D06751022D3779B006D9FB8 /* UploadTrans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadTrans.swift; sourceTree = "<group>"; };
 		2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioBottomSheetViewController.xib; sourceTree = "<group>"; };
 		2D79367622CF941F0081E065 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +197,29 @@
 		2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		2D813E2022D272D700E02DD5 /* ProfileDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailDTO.swift; sourceTree = "<group>"; };
 		2D813E2222D277B300E02DD5 /* HiPartDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiPartDetailViewModel.swift; sourceTree = "<group>"; };
+		2D8B4D8422D3A023004F48C7 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		2D8B4D8622D3A15A004F48C7 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		2D8B4D8822D3A4E0004F48C7 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		2D8B4D8A22D3A573004F48C7 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		2D8B4D8C22D3B1F2004F48C7 /* SearchDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchDetailViewModel.swift; path = HiPart/Presentation/UI/Home/Search/SearchDetailViewModel.swift; sourceTree = SOURCE_ROOT; };
+		2D8B4D9022D3B887004F48C7 /* PickAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAPI.swift; sourceTree = "<group>"; };
+		2D8B4D9222D3BADC004F48C7 /* PickRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRepository.swift; sourceTree = "<group>"; };
+		2D8B4D9522D3D56F004F48C7 /* RecentlySearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchRepository.swift; sourceTree = "<group>"; };
+		2D8B4D9722D48A65004F48C7 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAPI.swift; sourceTree = "<group>"; };
+		2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRepository.swift; sourceTree = "<group>"; };
+		2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadSuccessView.swift; sourceTree = "<group>"; };
+		2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2D8B4DA822D4C482004F48C7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2D8B4DAE22D4C8CA004F48C7 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		2D8B4DAF22D4C8CA004F48C7 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		2D8B4DB022D4C8CA004F48C7 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
+		2D8B4DB122D4C8CA004F48C7 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		2D8B4DB222D4C8CA004F48C7 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
+		2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HifiveAPI.swift; sourceTree = "<group>"; };
+		2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HifiveRepository.swift; sourceTree = "<group>"; };
 		2D9E093C22CFC26E008DFA78 /* PortfolioUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioUploadViewController.swift; path = ../Edit/PortfolioUploadViewController.swift; sourceTree = "<group>"; };
 		2D9E094022CFC443008DFA78 /* PortfolioEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PortfolioEdit.storyboard; sourceTree = "<group>"; };
 		2D9E094222CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioUploadTranslationViewController.swift; path = HiPart/Presentation/UI/Portfolio/Edit/PortfolioUploadTranslationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -178,6 +233,7 @@
 		2DDA058622CFDABD0057113F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = HiPart/Presentation/UI/View/Filter.swift; sourceTree = SOURCE_ROOT; };
 		2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioFilterEditViewController.swift; sourceTree = "<group>"; };
 		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../Upload/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
+		2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
 		2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioEditEmbedCollectionViewCell.xib; sourceTree = "<group>"; };
 		601472B722CDC9A3007F0211 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
@@ -226,6 +282,8 @@
 		60FB32AD22CF909E00BA1859 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		60FB32B122CF90C700BA1859 /* BlurExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurExtension.swift; sourceTree = "<group>"; };
+		60FB32AD22CF909E00BA1859 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		60FB32B322CF916600BA1859 /* DeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
 		60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerExtension.swift; sourceTree = "<group>"; };
 		8456534407704897DD70736D /* Pods_HiPart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiPart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +310,9 @@
 				2D0674F922D31B92006D9FB8 /* FindPw */,
 				2D0674FC22D31B92006D9FB8 /* Login.storyboard */,
 				2D0674FD22D31B92006D9FB8 /* LoginViewController.swift */,
+				2D8B4DA622D4C35B004F48C7 /* SplashViewController.swift */,
+				2D8B4DAD22D4C8CA004F48C7 /* images */,
+				2D8B4DA822D4C482004F48C7 /* data.json */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -261,6 +322,8 @@
 			children = (
 				2D0674F622D31B92006D9FB8 /* SignUpFirst */,
 				2D0674F122D31B92006D9FB8 /* SignUpFinish */,
+				2D0674F122D31B92006D9FB8 /* SignUpFinish */,
+				2D0674F622D31B92006D9FB8 /* SignUpFirst */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -301,6 +364,10 @@
 				2D79367E22CF943E0081E065 /* Search.storyboard */,
 				2D79368122CF943E0081E065 /* SearchViewController.swift */,
 				2D79367622CF941F0081E065 /* SearchDetailViewController.swift */,
+				2D8B4D8E22D3B23B004F48C7 /* Detail */,
+				2D79367F22CF943E0081E065 /* RecentlyCollectionViewCell.swift */,
+				2D79367E22CF943E0081E065 /* Search.storyboard */,
+				2D79368122CF943E0081E065 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -310,6 +377,13 @@
 			children = (
 				2D813DE422D0363400E02DD5 /* AuthRepository.swift */,
 				2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */,
+				2D8B4D8822D3A4E0004F48C7 /* MainRepository.swift */,
+				2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */,
+				2D8B4D9222D3BADC004F48C7 /* PickRepository.swift */,
+				2D8B4D9E22D49561004F48C7 /* PortfolioRepository.swift */,
+				2D8B4D9522D3D56F004F48C7 /* RecentlySearchRepository.swift */,
+				2D8B4D9922D48BCF004F48C7 /* UserRepository.swift */,
+				2D8B4DC622D4D1B4004F48C7 /* HifiveRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -321,6 +395,8 @@
 				2D813E1322D232CF00E02DD5 /* ProfileDTO.swift */,
 				2D813E2022D272D700E02DD5 /* ProfileDetailDTO.swift */,
 				2D06750822D34D00006D9FB8 /* UploadVideo.swift */,
+				2D06751022D3779B006D9FB8 /* UploadTrans.swift */,
+				2D8B4D8A22D3A573004F48C7 /* Notification.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -335,6 +411,9 @@
 				2D813E0322D0EC3C00E02DD5 /* Auth */,
 				2D813E0822D209E100E02DD5 /* Main */,
 				2D813E0F22D2153600E02DD5 /* Profile */,
+				2D8B4D8F22D3B875004F48C7 /* Pick */,
+				2D8B4D9B22D49465004F48C7 /* Portfolio */,
+				2D8B4DC322D4D090004F48C7 /* Hifive */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -345,6 +424,16 @@
 				2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */,
 				2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */,
 				2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */,
+				2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */,
+				2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */,
+				2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */,
+				2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */,
+				2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */,
+				2D06750A22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift */,
+				2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */,
+				2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */,
+				2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */,
+				2D8B4D8422D3A023004F48C7 /* Common.storyboard */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -398,6 +487,9 @@
 				60FB32B122CF90C700BA1859 /* BlurExtension.swift */,
 				60FB32B322CF916600BA1859 /* DeviceExtension.swift */,
 				60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */,
+				60FB32B322CF916600BA1859 /* DeviceExtension.swift */,
+				60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */,
+				2D8B4D9722D48A65004F48C7 /* Animations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +512,50 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		2D8B4D8E22D3B23B004F48C7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2D79367622CF941F0081E065 /* SearchDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2D8B4D8F22D3B875004F48C7 /* Pick */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4D9022D3B887004F48C7 /* PickAPI.swift */,
+			);
+			path = Pick;
+			sourceTree = "<group>";
+		};
+		2D8B4D9B22D49465004F48C7 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4D9C22D49485004F48C7 /* PortfolioAPI.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		2D8B4DAD22D4C8CA004F48C7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4DAE22D4C8CA004F48C7 /* img_1.png */,
+				2D8B4DAF22D4C8CA004F48C7 /* img_0.png */,
+				2D8B4DB022D4C8CA004F48C7 /* img_2.png */,
+				2D8B4DB122D4C8CA004F48C7 /* img_3.png */,
+				2D8B4DB222D4C8CA004F48C7 /* img_4.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		2D8B4DC322D4D090004F48C7 /* Hifive */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B4DC422D4D0AC004F48C7 /* HifiveAPI.swift */,
+			);
+			path = Hifive;
+			sourceTree = "<group>";
+		};
 		2D9E093B22CFC058008DFA78 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +564,7 @@
 				2DFDA75822CFAD070066E541 /* PortfolioEditEmbedViewController.swift */,
 				2DFDA75A22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift */,
 				2DFDA75B22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib */,
+				2D8B4D8622D3A15A004F48C7 /* PortfolioViewController.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -512,6 +649,8 @@
 				2D9E094422CFD53A008DFA78 /* UIPlaceHolderTextView.h */,
 				2D9E094522CFD568008DFA78 /* UIPlaceHolderTextView.m */,
 				2D813DFD22D0A50700E02DD5 /* PickDialogView.swift */,
+				2D8B4DA222D49D03004F48C7 /* UploadSuccessView.swift */,
+				2D8B4DA022D49B0B004F48C7 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -603,10 +742,13 @@
 				2D79368522CF943F0081E065 /* SearchViewModel.swift */,
 				60B2EEE522C8B868000724B6 /* HomeViewModel.swift */,
 				60B2EEF422C8BCB4000724B6 /* HiPartViewModel.swift */,
+				2D8B4D8C22D3B1F2004F48C7 /* SearchDetailViewModel.swift */,
+				60B2EEE522C8B868000724B6 /* HomeViewModel.swift */,
 				60B2EEF622C8BCC5000724B6 /* PortfolioViewModel.swift */,
 				60B2EEF822C8BCDB000724B6 /* MyPageViewModel.swift */,
 				602FB3B122CBC6B4003ED6DB /* NoticeViewModel.swift */,
 				60B2EEFA22C8C2B5000724B6 /* MasterViewModel.swift */,
+				60B2EEF422C8BCB4000724B6 /* HiPartViewModel.swift */,
 				2D813E2222D277B300E02DD5 /* HiPartDetailViewModel.swift */,
 			);
 			path = ViewModel;
@@ -764,18 +906,29 @@
 				60B2EEE022C79555000724B6 /* HiPart.storyboard in Resources */,
 				601472B822CDC9A3007F0211 /* MyPageSetting.storyboard in Resources */,
 				2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */,
+				2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
 				2D0674FF22D31B92006D9FB8 /* SignUpFinsh.storyboard in Resources */,
 				2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
 				2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */,
 				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
+				2D8B4DA922D4C482004F48C7 /* data.json in Resources */,
+				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
+				2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */,
+				2D8B4D8522D3A023004F48C7 /* Common.storyboard in Resources */,
 				6014C98B22C782C400ACB80E /* Assets.xcassets in Resources */,
 				2D06750622D31B92006D9FB8 /* Login.storyboard in Resources */,
 				2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */,
 				2DAF383A22D012A300B91FE4 /* NanumSquareExtraBold.ttf in Resources */,
 				60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */,
 				60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */,
+				2D8B4DBA22D4C8CC004F48C7 /* img_1.png in Resources */,
+				60B2EEE222C795F3000724B6 /* Portfolio.storyboard in Resources */,
+				2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */,
+				2D8B4DBB22D4C8CC004F48C7 /* img_0.png in Resources */,
+				60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */,
+				2D06750D22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib in Resources */,
 				2D06750322D31B92006D9FB8 /* SignUp.storyboard in Resources */,
 				2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */,
 				2DAF383922D012A100B91FE4 /* NanumSquareLight.ttf in Resources */,
@@ -851,11 +1004,30 @@
 				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
 				2D06750422D31B92006D9FB8 /* FindPwViewController.swift in Sources */,
 				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
+				2D8B4D9322D3BADC004F48C7 /* PickRepository.swift in Sources */,
+				2D8B4DA122D49B0B004F48C7 /* LoadingView.swift in Sources */,
+				6014C98622C782C300ACB80E /* MasterViewController.swift in Sources */,
+				602FB3A722CBC409003ED6DB /* HomeHiPartViewController.swift in Sources */,
+				2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */,
+				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
+				2D813DE922D036D700E02DD5 /* Constants.swift in Sources */,
+				2D813DFE22D0A50700E02DD5 /* PickDialogView.swift in Sources */,
+				60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */,
+				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
+				2D813E1922D233D800E02DD5 /* UserType.swift in Sources */,
+				2D06751122D3779B006D9FB8 /* UploadTrans.swift in Sources */,
+				2D8B4DC722D4D1B4004F48C7 /* HifiveRepository.swift in Sources */,
+				2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */,
+				2D06750422D31B92006D9FB8 /* FindPwViewController.swift in Sources */,
+				601472BA22CDCB70007F0211 /* MyPageSettingViewController.swift in Sources */,
+				2D8B4DA722D4C35B004F48C7 /* SplashViewController.swift in Sources */,
+				2D8B4D8722D3A15A004F48C7 /* PortfolioViewController.swift in Sources */,
 				2D813DE722D036AE00E02DD5 /* AuthAPI.swift in Sources */,
 				2D9E093D22CFC26E008DFA78 /* PortfolioUploadViewController.swift in Sources */,
 				2D813DEB22D0371500E02DD5 /* APIConfiguration.swift in Sources */,
 				60463E2222CD205A00DFFF91 /* ColorRes.swift in Sources */,
 				60B2EEEA22C8BB3B000724B6 /* PortfolioEditViewController.swift in Sources */,
+				2D8B4D9822D48A65004F48C7 /* Animations.swift in Sources */,
 				2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */,
 				2DFDA75922CFAD070066E541 /* PortfolioEditEmbedViewController.swift in Sources */,
 				2DF4C7EE22D0188400794FC1 /* PortfolioFilterEditViewController.swift in Sources */,
@@ -878,6 +1050,11 @@
 				2D9E094322CFC5DE008DFA78 /* PortfolioUploadTranslationViewController.swift in Sources */,
 				2D79367D22CF94200081E065 /* SearchTextField.swift in Sources */,
 				2D813E1422D232CF00E02DD5 /* ProfileDTO.swift in Sources */,
+				2D06750C22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift in Sources */,
+				2D79367D22CF94200081E065 /* SearchTextField.swift in Sources */,
+				2D06750F22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift in Sources */,
+				2D813E1422D232CF00E02DD5 /* ProfileDTO.swift in Sources */,
+				2D8B4D9A22D48BCF004F48C7 /* UserRepository.swift in Sources */,
 				60B6A4B022CDDA5E003B88EC /* EllipsePurpleLongBtn.swift in Sources */,
 				60463E1C22CCD1DC00DFFF91 /* MyPageListCell.swift in Sources */,
 				60B6A4AE22CDD32F003B88EC /* RoundBtn.swift in Sources */,
@@ -887,6 +1064,10 @@
 				2D813DF922D0883800E02DD5 /* HipartDetailViewController.swift in Sources */,
 				2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */,
 				60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */,
+				2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */,
+				2D8B4D8B22D3A573004F48C7 /* Notification.swift in Sources */,
+				2D813DF922D0883800E02DD5 /* HipartDetailViewController.swift in Sources */,
+				2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */,
 				2D813E0722D1C82000E02DD5 /* APIClient.swift in Sources */,
 				2D06750122D31B92006D9FB8 /* SignUpFinishData.swift in Sources */,
 				6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */,
@@ -905,6 +1086,23 @@
 				601BA26B22CE050A0044231E /* RoundBorderBtn.swift in Sources */,
 				2D79368922CF943F0081E065 /* SearchViewController.swift in Sources */,
 				60B2EEF322C8BBE0000724B6 /* HiPartViewController.swift in Sources */,
+				2D8B4D8922D3A4E0004F48C7 /* MainRepository.swift in Sources */,
+				60463E1A22CCCC3700DFFF91 /* MyPageListViewController.swift in Sources */,
+				2D0674FE22D31B92006D9FB8 /* SignUpFinshViewController.swift in Sources */,
+				60463E1822CCC5C500DFFF91 /* GreyBorderUIView.swift in Sources */,
+				60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */,
+				60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */,
+				2D06750222D31B92006D9FB8 /* SignUpViewController.swift in Sources */,
+				2D8B4DC522D4D0AC004F48C7 /* HifiveAPI.swift in Sources */,
+				60B2EEF922C8BCDB000724B6 /* MyPageViewModel.swift in Sources */,
+				2D8B4D8D22D3B1F2004F48C7 /* SearchDetailViewModel.swift in Sources */,
+				2D79367C22CF94200081E065 /* TabLayout.swift in Sources */,
+				60463E2522CD2FFD00DFFF91 /* HomeHiPartCollection.swift in Sources */,
+				2D8B4D9122D3B887004F48C7 /* PickAPI.swift in Sources */,
+				601BA26B22CE050A0044231E /* RoundBorderBtn.swift in Sources */,
+				2D79368922CF943F0081E065 /* SearchViewController.swift in Sources */,
+				60B2EEF322C8BBE0000724B6 /* HiPartViewController.swift in Sources */,
+				2D8B4D9622D3D56F004F48C7 /* RecentlySearchRepository.swift in Sources */,
 				2D813E0522D1488800E02DD5 /* LogUtil.swift in Sources */,
 				60463E2B22CD514E00DFFF91 /* NoticeTable.swift in Sources */,
 				602FB3B222CBC6B4003ED6DB /* NoticeViewModel.swift in Sources */,
@@ -916,6 +1114,10 @@
 				60463E1622CCB25300DFFF91 /* RoundImg.swift in Sources */,
 				2D813DFC22D08F9700E02DD5 /* PaymentDialogViewController.swift in Sources */,
 				2D813E1B22D234DA00E02DD5 /* PickState.swift in Sources */,
+				2D8B4DA322D49D03004F48C7 /* UploadSuccessView.swift in Sources */,
+				2D813DFC22D08F9700E02DD5 /* PaymentDialogViewController.swift in Sources */,
+				2D813E1B22D234DA00E02DD5 /* PickState.swift in Sources */,
+				2D8B4D9D22D49485004F48C7 /* PortfolioAPI.swift in Sources */,
 				2DAF383722D00E9500B91FE4 /* Font.swift in Sources */,
 				2D813E0E22D214C400E02DD5 /* TokenHelper.swift in Sources */,
 				2D79367B22CF94200081E065 /* FilterChip.swift in Sources */,
@@ -1005,6 +1207,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1060,6 +1263,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

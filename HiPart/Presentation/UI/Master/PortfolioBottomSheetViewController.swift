@@ -2,6 +2,10 @@
 import UIKit
 import Hero
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 class PortfolioBottomSheetViewController: UIViewController {
 	
 	@IBOutlet var bottomSheet: UIView!
@@ -48,17 +52,25 @@ extension PortfolioBottomSheetViewController : UIGestureRecognizerDelegate{
 //MARK: Actions
 extension PortfolioBottomSheetViewController{
 	@IBAction func tapPortfolio(_ sender: Any) {
+<<<<<<< HEAD
 		if let vc = UIStoryboard(name: "Portfolio", bundle: nil).instantiateInitialViewController(){
 			self.present(vc, animated: true, completion: nil)
 		}
+=======
+		self.navigateDetailViewController(myProfile: true, type: UserRepository.shared.myType, nickname: nil, imageViewHeroId: "")
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	
 	@IBAction func tapTodayUpload(_ sender: Any) {
 		
+<<<<<<< HEAD
 		
 		
 		if false{
+=======
+		if UserRepository.shared.myType != UserType.Translator {
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			let vc = UIStoryboard(name: "PortfolioEdit", bundle: nil).instantiateViewController(withIdentifier: String(describing: PortfolioUploadViewController.self))
 				self.present(vc, animated: true, completion: nil)
 			
@@ -67,6 +79,7 @@ extension PortfolioBottomSheetViewController{
 				self.present(vc, animated: true, completion: nil)
 			
 		}
+<<<<<<< HEAD
 		
 		
 	}
@@ -74,6 +87,13 @@ extension PortfolioBottomSheetViewController{
 			if let parent = self.parent{
 				parent.remove(asChildViewController: self)
 				parent.view.removeBlurView()
+=======
+	}
+	
+	@IBAction func tapBackground(_ sender: Any) {
+			if let parent = self.parent{
+				parent.remove(asChildViewController: self)
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			}
 	}
 	

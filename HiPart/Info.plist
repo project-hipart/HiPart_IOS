@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<<<<<<< HEAD
+=======
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>이미지를 불러오기위해 사진첩 사용을 허용하시겠습니까?</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumSquareBold.ttf</string>

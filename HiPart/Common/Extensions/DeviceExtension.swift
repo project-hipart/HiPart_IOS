@@ -28,6 +28,7 @@ class Device {
     static var screenHeight: CGFloat{
         return UIScreen.main.bounds.height
     }
+<<<<<<< HEAD
     static var renderViewHeight: CGFloat{
         return screenWidth * 4 / 3
     }
@@ -45,6 +46,8 @@ class Device {
         
         return screenWidth == 320 && screenHeight == 568
     }
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     static var topSafeAreaPadding : CGFloat{
         if #available(iOS 11.0, *) {
             return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0

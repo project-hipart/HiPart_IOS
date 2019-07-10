@@ -10,7 +10,11 @@ import UIKit
 import Hero
 
 protocol FilterChangeDelegate : NSObjectProtocol{
+<<<<<<< HEAD
 	func filterChanged(filters : [Filter])
+=======
+	func filterChanged(filter : Filter?)
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 
 class PortfolioFilterEditViewController: UIViewController {
@@ -30,7 +34,11 @@ class PortfolioFilterEditViewController: UIViewController {
 	private var etcChips : [FilterChip] = []
 	
 	
+<<<<<<< HEAD
 	
+=======
+	var selectedFilter : Filter? = nil
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 	@IBOutlet var filterContainer: UIView!
 	
@@ -43,11 +51,24 @@ class PortfolioFilterEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+<<<<<<< HEAD
 
 	@IBAction func tapBackground(_ sender: Any) {
 		dismiss()
 	}
 	
+=======
+	@IBAction func tapBackButton(_ sender: Any) {
+		self.hero.dismissViewController()
+	}
+	@IBAction func tapApplyButton(_ sender: Any) {
+		debugE(#function,self.selectedFilter)
+		self.delegate?.filterChanged(filter: self.selectedFilter)
+		self.hero.dismissViewController()
+	}
+	
+	
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 extension PortfolioFilterEditViewController {
 	private func setupView(){
@@ -106,10 +127,24 @@ extension PortfolioFilterEditViewController {
 		etcStackView1.addPaddingView()
 		etcStackView2.addPaddingView()
 		
+<<<<<<< HEAD
 	}
 	
 	private func makeFilterChip(filter : Filter) -> FilterChip{
 		let chip = FilterChip()
+=======
+		
+		///Filter Set
+		if let filter = self.selectedFilter{
+			self.tapChip(filter: filter)
+		}
+		
+	}
+	
+	private func makeFilterChip(filter : Filter) -> FilterChip{
+		let chip = FilterChip(frame: .zero, fillMode: false)
+		chip.chipSelected = false
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		chip.textSizeInspector = 12
 		chip.setChipTitle(filter.rawValue)
 		chip.filter = filter
@@ -130,6 +165,7 @@ extension PortfolioFilterEditViewController {
 	}
 	private func tapChip(filter : Filter){
 		
+<<<<<<< HEAD
 		switch filter.filterGroup{
 		case FilterGroup.BroadcastConcept:
 			broadcastChips.forEach{chip in
@@ -183,3 +219,64 @@ extension PortfolioFilterEditViewController{
 		self.parent?.remove(asChildViewController: self)
 	}
 }
+=======
+		self.selectedFilter = nil
+		
+		broadcastChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		pdChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		languageChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		etcChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		if let chip = languageChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		if let chip = broadcastChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		if let chip = etcChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		if let chip = pdChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		
+	}
+
+	
+}
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

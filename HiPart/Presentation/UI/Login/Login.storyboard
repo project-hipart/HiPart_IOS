@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iug-Pk-Lf2">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fmc-Hz-2ze">
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +29,11 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="로그인"/>
                                 <connections>
+<<<<<<< HEAD
                                     <action selector="loginPressed:" destination="HCB-Nc-QD8" eventType="touchUpInside" id="sUa-gu-bjd"/>
+=======
+                                    <segue destination="5xw-64-ShO" kind="show" id="aSG-ao-UFc"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-aR-p1Q">
@@ -47,7 +55,11 @@
                                     <color key="titleColor" name="darkGrey"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="JXh-Ar-CiQ" kind="presentation" id="O9T-dO-dqr"/>
+=======
+                                    <segue destination="JXh-Ar-CiQ" kind="show" id="O9T-dO-dqr"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDj-xG-5cf">
@@ -102,7 +114,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" name="darkGrey"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+<<<<<<< HEAD
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+=======
+                                        <textInputTraits key="textInputTraits"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,12 +136,19 @@
                         <outlet property="pwImg" destination="A1o-OW-lB6" id="3uz-bh-hiB"/>
                         <outlet property="pwTextField" destination="Ud6-pY-QZS" id="Y5H-LM-qKk"/>
                         <outlet property="pwView" destination="iHZ-Pg-Q4D" id="SU6-NW-SWu"/>
+<<<<<<< HEAD
                         <segue destination="5xw-64-ShO" kind="presentation" identifier="toLoginSuccess" id="6cW-7o-Fn7"/>
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEB-yR-XAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1105" y="61"/>
+=======
+            <point key="canvasLocation" x="976.79999999999995" y="87.706146926536732"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--Main-->
         <scene sceneID="5xN-Lc-qQl">
@@ -133,7 +156,11 @@
                 <viewControllerPlaceholder storyboardName="Main" id="5xw-64-ShO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ap-6F-q5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1742" y="2"/>
+=======
+            <point key="canvasLocation" x="1564.8" y="47.676161919040482"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--FindPw-->
         <scene sceneID="U75-PO-dtP">
@@ -141,7 +168,11 @@
                 <viewControllerPlaceholder storyboardName="FindPw" id="hzG-H7-I0L" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtT-z2-5ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1753" y="87"/>
+=======
+            <point key="canvasLocation" x="1576.8" y="91.754122938530742"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--SignUp-->
         <scene sceneID="fib-Br-tfI">
@@ -149,17 +180,31 @@
                 <viewControllerPlaceholder storyboardName="SignUp" id="JXh-Ar-CiQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKU-Xf-yxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1786" y="156"/>
+=======
+            <point key="canvasLocation" x="1580.8" y="128.63568215892056"/>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xZQ-56-YYq">
             <objects>
+<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Iug-Pk-Lf2" sceneMemberID="viewController">
+=======
+                <navigationController storyboardIdentifier="LoginNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Iug-Pk-Lf2" sceneMemberID="viewController">
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aMu-Yg-mt5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+<<<<<<< HEAD
+=======
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     <connections>
                         <segue destination="HCB-Nc-QD8" kind="relationship" relationship="rootViewController" id="fiX-0h-vl9"/>
                     </connections>
@@ -168,6 +213,41 @@
             </objects>
             <point key="canvasLocation" x="234" y="88"/>
         </scene>
+<<<<<<< HEAD
+=======
+        <!--Splash View Controller-->
+        <scene sceneID="UGP-xT-TFQ">
+            <objects>
+                <viewController id="fmc-Hz-2ze" customClass="SplashViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRE-o4-xld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR5-p3-g4U" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="HHk-1D-ITR"/>
+                                    <constraint firstAttribute="height" constant="667" id="jvR-dg-GUW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="white"/>
+                        <constraints>
+                            <constraint firstItem="xR5-p3-g4U" firstAttribute="centerY" secondItem="Rk0-WF-F9d" secondAttribute="centerY" id="UlB-0f-pu4"/>
+                            <constraint firstItem="xR5-p3-g4U" firstAttribute="centerX" secondItem="Rk0-WF-F9d" secondAttribute="centerX" id="cxc-KJ-qjy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rk0-WF-F9d"/>
+                    </view>
+                    <connections>
+                        <outlet property="lottieView" destination="xR5-p3-g4U" id="nBP-p4-sAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMy-oA-dqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="88"/>
+        </scene>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     </scenes>
     <resources>
         <image name="loginIdOffIcon" width="19" height="19"/>
@@ -178,5 +258,11 @@
         <namedColor name="middleGrey">
             <color red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+<<<<<<< HEAD
+=======
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     </resources>
 </document>

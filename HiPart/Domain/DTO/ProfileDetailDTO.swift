@@ -9,6 +9,7 @@ import SwiftyJSON
 
 // MARK: - ResCreData
 struct ProfileDetailDTO {
+<<<<<<< HEAD
 	let hifiveState: Int
 	let userNickname: String
 	let userImg: String
@@ -26,6 +27,50 @@ struct ProfileDetailDTO {
 		hifiveState = fromJSON["data"][APIKeys.hifiveState].intValue
 		
 		let data = fromJSON["data"]["resEdiData"]
+=======
+	var hifiveState: Int
+	var userNickname: String
+	var userImg: String
+	var userType : UserType
+	var detailPlatform: Platform
+	
+	var detailSubscriber, detailOneline, detailAppeal, detailWant: String
+	var hifive : Int
+	
+	var workIndex : [Int]
+	var thumbnail: [String]
+	var url, title, content: [String]
+	var before,after : [String]
+	
+	var pick: Int
+	var etc, concept, lang, pd: Filter?
+	
+	
+	init(fromJSON : JSON, type : UserType, fromProfile : Bool){
+		hifiveState = fromJSON[APIKeys.hifiveState].intValue
+		
+		var data : JSON = fromJSON
+		
+		if fromProfile{
+			switch type{
+			case .Creator:
+				data = fromJSON["resCreData"]
+			case .PD:
+				data = fromJSON["resEdiData"]
+			case .Translator:
+				data = fromJSON["resTransData"]
+			case .Etc:
+				data = fromJSON["resEtcData"]
+			default:
+				fatalError()
+			}
+		}else{
+			
+		}
+		
+		
+		
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		
 		userNickname = data[APIKeys.userNickname].stringValue
 		userImg = data[APIKeys.userImage].stringValue
@@ -37,6 +82,12 @@ struct ProfileDetailDTO {
 		detailWant = data[APIKeys.detailWant].stringValue
 		
 		
+<<<<<<< HEAD
+=======
+		workIndex = data[APIKeys.workIndex].arrayObject as? [Int] ?? []
+		before = data[APIKeys.before].arrayObject as? [String] ?? []
+		after = data[APIKeys.after].arrayObject as? [String] ?? []
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		thumbnail = data[APIKeys.thumbnail].arrayObject as? [String] ?? []
 		url = data[APIKeys.url].arrayObject as? [String] ?? []
 		title = data[APIKeys.title].arrayObject as? [String] ?? []

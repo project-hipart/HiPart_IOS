@@ -11,10 +11,18 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var hiPartView: UIView!
+<<<<<<< HEAD
     @IBOutlet weak var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+=======
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }

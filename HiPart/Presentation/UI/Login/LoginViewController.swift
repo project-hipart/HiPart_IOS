@@ -7,7 +7,10 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import SwiftyJSON
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -23,10 +26,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         loginBtn.setTitleColor(UIColor.white, for: .normal)
+<<<<<<< HEAD
+=======
+        
+        self.navigationController?.hero.modalAnimationType = .selectBy(presenting: .fade, dismissing: .uncover(direction: .right))
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 
         idTextField.delegate = self
         pwTextField.delegate = self
      
+<<<<<<< HEAD
         loginBtn.backgroundColor = UIColor.lightGrey
         loginBtn.isEnabled = false
     }
@@ -54,6 +63,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 //  에러남
                 
             })
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     }
     
 }
@@ -69,13 +80,20 @@ extension LoginViewController {
             if newString.length == 0 {
                 idView.borderColor = UIColor.lightGrey
                 idImg.image = UIImage(named: "loginIdOffIcon")
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
             } else {
                 idView.borderColor = UIColor.mainPurple
                 idImg.image = UIImage(named: "loginIdOnIcon")
             }
         }
+<<<<<<< HEAD
         
+=======
+            
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         else if textField == pwTextField {
             if newString.length == 0 {
                 pwView.borderColor = UIColor.lightGrey
@@ -87,6 +105,7 @@ extension LoginViewController {
         }
         
         
+<<<<<<< HEAD
         if pwView.borderColor == UIColor.mainPurple && idView.borderColor == UIColor.mainPurple {
             self.loginBtn.backgroundColor = UIColor.mainPurple
             self.loginBtn.isEnabled = true
@@ -97,6 +116,8 @@ extension LoginViewController {
 
         
         
+=======
+>>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         return true
     }
 }
