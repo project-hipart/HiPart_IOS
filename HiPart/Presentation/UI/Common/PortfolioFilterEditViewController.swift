@@ -10,7 +10,7 @@ import UIKit
 import Hero
 
 protocol FilterChangeDelegate : NSObjectProtocol{
-	func filterChanged(filters : [Filter])
+	func filterChanged(filter : Filter?)
 }
 
 class PortfolioFilterEditViewController: UIViewController {
@@ -30,7 +30,7 @@ class PortfolioFilterEditViewController: UIViewController {
 	private var etcChips : [FilterChip] = []
 	
 	
-	
+	var selectedFilter : Filter? = nil
 	
 	@IBOutlet var filterContainer: UIView!
 	
@@ -43,7 +43,15 @@ class PortfolioFilterEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+	@IBAction func tapBackButton(_ sender: Any) {
+		self.hero.dismissViewController()
+	}
+	@IBAction func tapApplyButton(_ sender: Any) {
+		debugE(#function,self.selectedFilter)
+		self.delegate?.filterChanged(filter: self.selectedFilter)
+		self.hero.dismissViewController()
+	}
+	
 	
 }
 extension PortfolioFilterEditViewController {
@@ -103,10 +111,17 @@ extension PortfolioFilterEditViewController {
 		etcStackView1.addPaddingView()
 		etcStackView2.addPaddingView()
 		
+		
+		///Filter Set
+		if let filter = self.selectedFilter{
+			self.tapChip(filter: filter)
+		}
+		
 	}
 	
 	private func makeFilterChip(filter : Filter) -> FilterChip{
-		let chip = FilterChip()
+		let chip = FilterChip(frame: .zero, fillMode: false)
+		chip.chipSelected = false
 		chip.textSizeInspector = 12
 		chip.setChipTitle(filter.rawValue)
 		chip.filter = filter
@@ -127,37 +142,62 @@ extension PortfolioFilterEditViewController {
 	}
 	private func tapChip(filter : Filter){
 		
-		switch filter.filterGroup{
-		case FilterGroup.BroadcastConcept:
-			broadcastChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			broadcastChips.first{chip in
-				return chip.filter == filter
-			}?.chipSelected = true
-		case FilterGroup.PD:
-			pdChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			pdChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
-		case FilterGroup.Language:
-			languageChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			languageChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
-		case FilterGroup.Etc:
-			etcChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			etcChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
+		self.selectedFilter = nil
+		
+		broadcastChips.forEach{chip in
+			chip.chipSelected = false
 		}
+		pdChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		languageChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		etcChips.forEach{chip in
+			chip.chipSelected = false
+		}
+		if let chip = languageChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		if let chip = broadcastChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		if let chip = etcChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		if let chip = pdChips.first(where: {chip in
+			return chip.filter == filter
+		}){
+			chip.chipSelected = !chip.chipSelected
+			
+			if chip.chipSelected{
+				self.selectedFilter = filter
+			}
+		}
+		
+		
 	}
+
 	
 }
 

@@ -30,31 +30,44 @@ class HiPartViewModel {
 	}
 	var profiles : [ProfileDTO] = []{
 		didSet{
-			delegate?.onChangeProfiles(profiles: profiles.filter{profile in
-				
-				if currentFilter == nil{
-					return true
-				}else{
-					switch profile.type{
-					case .Creator:
-						return currentFilter == profile.broadcastConcept
-					case .PD:
-						return currentFilter == profile.pd
-					case .Translator:
-						return currentFilter == profile.language
-					case .Etc:
-						return currentFilter == profile.etc
-					default:
-						return true
-					}
-				}
-				
-			})
+			changeProfiles(profiles: self.profiles)
 		}
+	}
+	var filteredProfiles : [ProfileDTO] = []
+	
+	private func changeProfiles(profiles : [ProfileDTO]){
+		
+		let filteredProfiles = profiles.filter{profile in
+			
+			if currentFilter == nil{
+				return true
+			}else{
+				switch currentFilter!.filterGroup{
+				case .BroadcastConcept:
+					return currentFilter == profile.broadcastConcept
+				case .PD:
+					return currentFilter == profile.pd
+				case .Language:
+					return currentFilter == profile.language
+				case .Etc:
+					return currentFilter == profile.etc
+				default:
+					return false
+				}
+			}
+			
+		}
+		
+		self.filteredProfiles = filteredProfiles
+		delegate?.onChangeProfiles(profiles: filteredProfiles)
 	}
 	
 	///이라면 필터 미적용(모두 검색)
-	var currentFilter : Filter? = nil
+	var currentFilter : Filter? = nil{
+		didSet{
+			changeProfiles(profiles: self.profiles)
+		}
+	}
 	
 	init() {loadDatas(.All)}
 	

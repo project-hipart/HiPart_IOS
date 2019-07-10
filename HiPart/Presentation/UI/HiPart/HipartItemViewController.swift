@@ -29,6 +29,7 @@ extension HipartItemViewController : HiPartViewModelDelegate{
 		viewModel.loadDatas(viewModel.currentTab)
 	}
 	func onChangeProfiles(profiles: [ProfileDTO]) {
+		debugE(profiles)
 		self.collectionView.reloadData()
 	}
 	func onChangeRefreshState(isRefreshing: Bool) {
@@ -62,14 +63,14 @@ extension HipartItemViewController{
 }
 extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.profiles.count
+		return viewModel.filteredProfiles.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
 			
 			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
-			cell.setProfile(profile: viewModel.profiles[indexPath.row])
+			cell.setProfile(profile: viewModel.filteredProfiles[indexPath.row])
 			cell.delegate = self
 			return cell
 			
@@ -83,7 +84,9 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
 			
 			let item = viewModel.profiles[indexPath.row]
+			
 			self.navigateDetailViewController(myProfile: false, type: item.type, nickname: item.nickname, imageViewHeroId: cell.thumbnailView.hero.id ?? "",profileImage: cell.thumbnailView.image)
+			
 		}
 	}
 }
@@ -99,6 +102,12 @@ extension HipartItemViewController : SearchCollectionViewCellDelegate{
 				profile.pickCount -= 1
 			}
 		}
+	}
+}
+
+extension HipartItemViewController{
+	func setFilter(filter : Filter?){
+		self.viewModel.currentFilter = filter
 	}
 }
 

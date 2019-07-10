@@ -10,7 +10,7 @@ import UIKit
 
 class HiPartViewController: UIViewController {
 
-	private var itemViewController : HipartItemViewController!
+	var itemViewController : HipartItemViewController!
 	
 	@IBOutlet var adViewContainer: UIView!
 	@IBOutlet var tabLayout: TabLayout!
@@ -28,7 +28,7 @@ class HiPartViewController: UIViewController {
 		debugE(segue.destination)
 		
 		if segue.destination is HipartItemViewController{
-			itemViewController = segue.destination as! HipartItemViewController
+			itemViewController = segue.destination as? HipartItemViewController
 		}
 	}
 }
@@ -40,11 +40,20 @@ extension HiPartViewController : TabLayoutDelegate{
 	}
 }
 
+extension HiPartViewController : FilterChangeDelegate{
+	func filterChanged(filter: Filter?) {
+		itemViewController.setFilter(filter: filter)
+	}
+}
+
 extension HiPartViewController{
 	@IBAction func tapEditFilter(_ sender: Any) {
 		let sb = UIStoryboard(name: "Common", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self))
+		let vc = sb.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self)) as! PortfolioFilterEditViewController
+		vc.delegate = self
+		vc.hidesBottomBarWhenPushed = true
+		vc.selectedFilter = self.itemViewController.viewModel.currentFilter
+		self.navigationController?.pushViewController(vc, animated: true)
 		
-		self.add(asChildViewController: vc, to: self.view)
 	}
 }

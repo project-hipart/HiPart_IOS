@@ -47,7 +47,6 @@ class APIClient{
 								return
 							}
 							let json = try? JSON(data: data)
-							debugE(json!)
 							single(.success(json!))
 						case .failure(let error):
 							single(.error(error))
