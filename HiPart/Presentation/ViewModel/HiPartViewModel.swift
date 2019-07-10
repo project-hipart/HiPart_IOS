@@ -6,7 +6,7 @@
 //  Copyright © 2019 HiPart. All rights reserved.
 //
 import Foundation
-import RxSwift
+
 import Alamofire
 import SwiftyJSON
 
@@ -75,15 +75,16 @@ class HiPartViewModel {
 		currentTab = flag
 		isRefreshing = true
 		
-		ProfileRepository.shared.list(flag: flag)
-			.do(onDispose: {self.isRefreshing = false})
-			.subscribe(onSuccess: { profiles in
+		ProfileRepository.shared.list(flag: flag){[unowned self] profiles in
+			
+			if let profiles = profiles{
 				self.profiles = profiles
 				self.isRefreshing = false
-			}, onError: {
-				debugE($0)
+			}else{
 				self.isRefreshing = false
-			})
+			}
+			
+		}
 	}
 	
 }

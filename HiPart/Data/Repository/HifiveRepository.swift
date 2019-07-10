@@ -1,14 +1,14 @@
-import RxSwift
+
 import Foundation
 import SwiftyJSON
 class HifiveRepositoy{
 	public static let shared = HifiveRepositoy()
 	private init(){}
 
-	func contact(nickname : String) -> Single<JSON>{
-		return HifiveAPI.requestContact(nickname: nickname)
+	func contact(nickname : String, completion : @escaping (JSON?) -> Void){
+		HifiveAPI.requestContact(nickname: nickname,completion: completion)
 	}
-	func number(nickname : String) -> Single<JSON>{
-		return HifiveAPI.requestNumber(nickname: nickname)
+	func number(nickname : String, completion : @escaping (JSON?) -> Void) {
+		HifiveAPI.requestNumber(nickname: nickname,completion: completion)
 	}
 }

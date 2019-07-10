@@ -8,7 +8,7 @@
 
 import UIKit
 import Hero
-import RxSwift
+
 import SwiftyJSON
 
 class PortfolioUploadTranslationViewController: UIViewController {
@@ -84,18 +84,15 @@ extension PortfolioUploadTranslationViewController{
 		
 		LoadingView.showLoadingView()
 		
-		PortfolioRepository.shared.translatorUpload(before: before, after: after)
-			.subscribe(onSuccess: {json in
-				debugE(json)
-				
+		PortfolioRepository.shared.translatorUpload(before: before, after: after){json in
+			if let json = json{
 				UploadSuccessView.showUploadSuccess()
 				
 				LoadingView.hideLoadingView()
-			}, onError: {err in
-				debugE(err)
-				
+			}else{
 				LoadingView.hideLoadingView()
-				})
+			}
+		}
 	}
 	
 }

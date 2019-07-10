@@ -1,6 +1,6 @@
 import Foundation
 import Alamofire
-import RxSwift
+
 import SwiftyJSON
 
 
@@ -42,11 +42,11 @@ enum HifiveAPI : APIConfiguration{
 		}
 	}
 	
-	static func requestContact(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: HifiveAPI.contact(nickname: nickname) ,encoding: URLEncoding.httpBody)
+	static func requestContact(nickname : String,completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: HifiveAPI.contact(nickname: nickname) ,encoding: URLEncoding.httpBody,completion : completion)
 	}
-	static func requestNumber(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: HifiveAPI.number(nickname: nickname))
+	static func requestNumber(nickname : String,completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: HifiveAPI.number(nickname: nickname),completion : completion)
 	}
 	
 	

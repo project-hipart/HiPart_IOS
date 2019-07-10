@@ -1,5 +1,5 @@
 import Alamofire
-import RxSwift
+
 import SwiftyJSON
 
 class AFDataError : Error{
@@ -81,16 +81,16 @@ enum AuthAPI : APIConfiguration{
 	}
 
 	
-	static func requestSignIn(email : String, password : String) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.signIn(email: email, password: password))
+	static func requestSignIn(email : String, password : String, completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: AuthAPI.signIn(email: email, password: password),completion : completion)
 	}
 	
-	static func requestSignUp(email : String, nickname : String, img : Data,imageUrl : String, password : String, number : String, type : Int) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img,imageUrl : imageUrl, password: password, number: number, type: type))
+	static func requestSignUp(email : String, nickname : String, img : Data,imageUrl : String, password : String, number : String, type : Int, completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img,imageUrl : imageUrl, password: password, number: number, type: type),completion : completion)
 	}
 	
-	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.duplicateCheck(flag: flag.rawValue, input: input))
+	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String, completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: AuthAPI.duplicateCheck(flag: flag.rawValue, input: input),completion : completion)
 	}
 	
 	

@@ -1,7 +1,7 @@
 
 import UIKit
 import SnapKit
-import RxSwift
+
 
 //import MaterialComponents.MaterialChips
 
@@ -10,10 +10,10 @@ protocol SearchCollectionViewCellDelegate : NSObjectProtocol{
 }
 
 class SearchCollectionViewCell: UICollectionViewCell {
-
+	
 	weak var delegate : SearchCollectionViewCellDelegate? = nil
 	
-//	@IBOutlet var platformStackView: UIStackView!
+	//	@IBOutlet var platformStackView: UIStackView!
 	@IBOutlet var platformImageView: UIImageView!
 	@IBOutlet var thumbnailView: UIImageView!
 	@IBOutlet var nicknameLabel: UILabel!
@@ -33,11 +33,11 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	private var profile : ProfileDTO!
 	
 	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+		super.awakeFromNib()
+		// Initialization code
 		
 		setupView()
-    }
+	}
 	
 	private func setupView(){
 		self.layer.masksToBounds = false
@@ -64,7 +64,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			paddingView.removeFromSuperview()
 			self.filterStackView.removeArrangedSubview(paddingView)
 		}
-	
+		
 		for filter in filters{
 			
 			let filterView = FilterChip()
@@ -74,26 +74,26 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			
 			self.filterViews.append(filterView)
 			self.filterStackView.addArrangedSubview(filterView)
-            
+			
 		}
 		
 		self.filterStackView.addPaddingView()
 		
 		if firstSelect{
-        	select(0)
+			select(0)
 		}
 	}
-    
-    private func select(_ index : Int){
-        for i in 0..<filterViews.count{
-            if i == index{
-                filterViews[i].chipSelected = true
-            }else{
-                 filterViews[i].chipSelected = false
-            }
-        }
-        
-    }
+	
+	private func select(_ index : Int){
+		for i in 0..<filterViews.count{
+			if i == index{
+				filterViews[i].chipSelected = true
+			}else{
+				filterViews[i].chipSelected = false
+			}
+		}
+		
+	}
 	
 	func setProfile(profile : ProfileDTO){
 		self.startAnim()
@@ -184,25 +184,27 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	@IBAction func tapPickButton(_ sender: Any) {
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
-	
+		
 		if picked{
-			PickRepository.shared.pickDelete(nickname: self.profile.nickname)
-				.subscribe(onSuccess: {[unowned self] success in
-					
+			PickRepository.shared.pickDelete(nickname: self.profile.nickname){[unowned self ] success in
+				
+				if let success = success{
 					if success{
 						self.picked = !self.picked
 						self.pickCountLabel.text = String((Int(self.pickCountLabel.text!) ?? 0) - 1)
 						self.delegate?.onChangePickState(profile : self.profile,picked: self.picked)
 					}
+				}else{
 					
-				}, onError: { err in
-					debugE(err)
-				})
+				}
+				
+				
+				
+			}
 		}else{
-			PickRepository.shared.pickAdd(nickname: self.profile.nickname)
-				.subscribe(onSuccess: {[unowned self] success in
-					
-					//픽 애드 성공
+			PickRepository.shared.pickAdd(nickname: self.profile.nickname){[unowned self] success in
+				
+				if let success = success{
 					if success{
 						self.picked = !self.picked
 						
@@ -210,12 +212,13 @@ class SearchCollectionViewCell: UICollectionViewCell {
 						PickDialogView.showPickDialog()
 						self.delegate?.onChangePickState(profile : self.profile,picked: self.picked)
 					}
+				}else{
 					
-					}, onError: { err in
-						debugE(err)
-				})
+				}
+				
+			}
+			
 		}
-		
 	}
 	
 	private func setPickButtonState(picked : Bool){
@@ -229,6 +232,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-
+	
 	
 }

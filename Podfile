@@ -12,7 +12,6 @@ target 'HiPart' do
 	pod 'Alamofire'
 	pod 'AlamofireImage', '~> 3.5'
 	pod 'BEMCheckBox'
-	pod 'RxSwift'
 	pod 'lottie-ios'
 	
 end

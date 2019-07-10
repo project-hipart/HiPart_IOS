@@ -1,4 +1,4 @@
-import RxSwift
+
 import Foundation
 
 
@@ -24,8 +24,8 @@ class SearchDetailViewModel{
 	
 	
 	func loadDatas(keyword : String){
-		MainRepository.shared.search(keyword: keyword)
-			.subscribe(onSuccess: { profiles in
+		MainRepository.shared.search(keyword: keyword){profiles in
+			if let profiles = profiles{
 				self.allProfiles = profiles
 				self.profiles = profiles.filter{[unowned self]profile in
 					if self.currentUserTypeFilter == .All{
@@ -33,9 +33,10 @@ class SearchDetailViewModel{
 					}
 					return [UserType.All, self.currentUserTypeFilter].contains(profile.type)
 				}
-			}, onError: { err in
-				debugE(err)
-			})
+			}else{
+				debugE("error")
+			}
+		}
 	}
 	
 	func changeTypeFilter(_ type : UserType){

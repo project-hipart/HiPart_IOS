@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxSwift
+
 import SwiftyJSON
 
 
@@ -16,26 +16,42 @@ class PickRepository{
 	private init(){
 		
 	}
-
-	func pickAdd(nickname : String) -> Single<Bool>{
-		return PickAPI.requestPickAdd(nickname: nickname).map{json in
-			return json["success"].boolValue
-		}
-	}
-	func pickDelete(nickname : String) -> Single<Bool>{
-		return PickAPI.requestPickDelete(nickname: nickname).map{json in
-			debugE(json)
-			return json["success"].boolValue
-		}
-	}
-	func pickGet() -> Single<Array<ProfileDTO>>{
-		return PickAPI.requestPickGet().map{json in
-			var result : [ProfileDTO] = []
-			for data in json["data"].arrayValue{
-				let profile = ProfileDTO.init(fromJSON: data)
-				result.append(profile)
+	
+	func pickAdd(nickname : String, completion : @escaping (Bool?) -> Void){
+		
+		PickAPI.requestPickAdd(nickname: nickname){json in
+			if let json = json{
+				completion(json["success"].boolValue)
+			}else{
+				completion(nil)
 			}
-			return result
+		}
+	}
+	func pickDelete(nickname : String, completion : @escaping (Bool?) -> Void){
+		
+		PickAPI.requestPickDelete(nickname: nickname){json in
+			if let json = json{
+				completion(json["success"].boolValue)
+			}else{
+				completion(nil)
+			}
+		}
+		
+	}
+	func pickGet(completion : @escaping (Array<ProfileDTO>?) -> Void){
+		PickAPI.requestPickGet{json in
+			if let json = json{
+				
+				var result : [ProfileDTO] = []
+				for data in json["data"].arrayValue{
+					let profile = ProfileDTO.init(fromJSON: data)
+					result.append(profile)
+				}
+				
+				completion(result)
+			}else{
+				completion(nil)
+			}
 		}
 	}
 }

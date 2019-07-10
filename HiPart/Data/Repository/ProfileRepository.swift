@@ -1,5 +1,5 @@
 import Foundation
-import RxSwift
+
 import SwiftyJSON
 
 class ProfileRepository{
@@ -7,29 +7,37 @@ class ProfileRepository{
 	private init(){}
 	
 	
-	func list(flag : ProfileFlag) -> Single<Array<ProfileDTO>>{
+	func list(flag : ProfileFlag, completion : @escaping (Array<ProfileDTO>?) -> Void){
 		
-		return ProfileAPI.requestList(flag: flag).map{json in
+		ProfileAPI.requestList(flag: flag){json in
 			
-			var result : [ProfileDTO] = []
-			let datas = json["data"].arrayValue
-			
-			for data in datas{
-				let profile = ProfileDTO.init(fromJSON: data)
-				result.append(profile)
+			if let json = json{
+				var result : [ProfileDTO] = []
+				let datas = json["data"].arrayValue
+				
+				for data in datas{
+					let profile = ProfileDTO.init(fromJSON: data)
+					result.append(profile)
+				}
+				completion(result)
+			}else{
+				completion(nil)
 			}
-			
-			return result
 			
 		}
 		
 	}
 	
-	func detail(nickname : String ,type : UserType) -> Single<ProfileDetailDTO>{
-		return ProfileAPI.requestDetail(nickname: nickname).map{json in
-			let profileDetail = ProfileDetailDTO.init(fromJSON: json["data"],type: type,fromProfile: true)
+	func detail(nickname : String ,type : UserType, completion : @escaping (ProfileDetailDTO?) -> Void){
+		
+		ProfileAPI.requestDetail(nickname: nickname){json in
+			if let json = json{
+				let profileDetail = ProfileDetailDTO.init(fromJSON: json["data"],type: type,fromProfile: true)
+				completion(profileDetail)
+			}else{
+				completion(nil)
+			}
 			
-			return profileDetail
 		}
 	}
 }

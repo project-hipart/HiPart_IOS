@@ -1,9 +1,9 @@
 import Foundation
-import RxSwift
 import Alamofire
 import SwiftyJSON
 
 class APIClient{
+	
 	fileprivate static let ALAMOFIREMANAGER: SessionManager = {
 		let configuration = URLSessionConfiguration.default
 		configuration.timeoutIntervalForRequest = 10
@@ -13,106 +13,98 @@ class APIClient{
 		
 	}()
 	
-	static func request(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
+	static func request(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default,  completion : @escaping ((JSON?) -> Void)){
 		switch api.contentType{
 			
 		case ContentType.json:
-			return requestJSON(api: api,encoding: encoding)
+			return requestJSON(api: api,encoding: encoding, completion: completion)
 		case ContentType.multipart:
-			return requestMultipartForm(api: api,encoding: encoding)
-		default:
-			fatalError()
+			return requestMultipartForm(api: api,encoding: encoding, completion: completion)
 		}
 	}
 	
-	private static func requestJSON(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
+	private static func requestJSON(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default,completion : @escaping ((JSON?) -> Void)){
 		let url = api.path.attachBaseURL()
 		
-		return Single.create{single in
-			
-			let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-			
-			if urlEncoded == nil{
-				single(.error(AFError.invalidURL(url: url)))
-			}else{
-				ALAMOFIREMANAGER.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: encoding, headers: TokenHelper.getCommonHeader())
-					.validate(statusCode: 200..<300)
-					.validate(contentType: [ContentType.json.rawValue])
-					.responseJSON { response in
-						switch response.result {
-						case .success:
-							
-							guard let data = response.data else {
-								single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
-								return
-							}
-							
-							let json = try? JSON(data: data)
-							single(.success(json!))
-						case .failure(let error):
-							single(.error(error))
+		
+		let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+		
+		if urlEncoded == nil{
+			completion(nil)
+		}else{
+			ALAMOFIREMANAGER.request(urlEncoded!, method: api.method, parameters: api.parameters, encoding: encoding, headers: TokenHelper.getCommonHeader())
+				.validate(statusCode: 200..<300)
+				.validate(contentType: [ContentType.json.rawValue])
+				.responseJSON { response in
+					switch response.result {
+					case .success:
+						
+						guard let data = response.data else {
+							completion(nil)
+							return
 						}
-				}
+						
+						let json = try? JSON(data: data)
+						completion(json!)
+					case .failure(let error):
+						debugE(error)
+						completion(nil)
+					}
 			}
-			
-			return Disposables.create()
 		}
+		
 	}
 	
-	private static func requestMultipartForm(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{
+	private static func requestMultipartForm(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default,completion : @escaping ((JSON?) -> Void)){
 		let url = api.path.attachBaseURL()
 		let params : [String:Any] = api.parameters ?? [:]
 		
-		return Single.create{single in
-			
-			let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-			
-			if urlEncoded == nil{
-				single(.error(AFError.invalidURL(url: url)))
-			}else{
-				ALAMOFIREMANAGER.upload(multipartFormData: { multipartFormData in
-					
-					
-					for (key, value) in params{
-						if value is String || value is Int {
-							multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
-						}
-						if value is Data{
-							let fileName = params[APIKeys.imageUrl] as! String
-							
-							multipartFormData.append(value as! Data, withName: key, fileName: fileName, mimeType: "image/jpeg")
-						}
+		
+		let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+		
+		if urlEncoded == nil{
+			completion(nil)
+		}else{
+			ALAMOFIREMANAGER.upload(multipartFormData: { multipartFormData in
+				
+				for (key, value) in params{
+					if value is String || value is Int {
+						multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
 					}
-					
-					
-					
-				}, to: urlEncoded!,headers: TokenHelper.getCommonHeader() , encodingCompletion:{ encodingResult in
-					switch encodingResult {
-					case .success(let upload, _, _):
+					if value is Data{
+						let fileName = params[APIKeys.imageUrl] as! String
 						
-						
-						upload.responseJSON { response in
-							switch response.result {
-							case .success:
-								guard let data = response.data else {
-									single(.error(AFError.responseValidationFailed(reason: .dataFileNil)))
-									return
-								}
-								
-								
-								let json = try? JSON(data: data)
-								single(.success(json!))
-							case .failure(let error):
-								debugE(error)
-								single(.error(error))
+						multipartFormData.append(value as! Data, withName: key, fileName: fileName, mimeType: "image/jpeg")
+					}
+				}
+				
+			}, to: urlEncoded!,headers: TokenHelper.getCommonHeader() , encodingCompletion:{ encodingResult in
+				switch encodingResult {
+				case .success(let upload, _, _):
+					
+					
+					upload.responseJSON { response in
+						switch response.result {
+						case .success:
+							guard let data = response.data else {
+								completion(nil)
+								return
 							}
+							
+							
+							let json = try? JSON(data: data)
+							completion(json!)
+						case .failure(let error):
+							debugE(error)
+							completion(nil)
 						}
-					case .failure(let encodingError):
-						debugE(encodingError)
 					}
-				})
-			}
-			return Disposables.create()
+				case .failure(let encodingError):
+					completion(nil)
+					debugE(encodingError)
+				}
+			})
 		}
 	}
+	
 }

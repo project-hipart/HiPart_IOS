@@ -8,7 +8,7 @@
 
 import UIKit
 import Hero
-import RxSwift
+
 import SnapKit
 
 class HipartDetailViewController: UIViewController {
@@ -77,7 +77,7 @@ extension HipartDetailViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-//		self.setupHero()
+		//		self.setupHero()
 		self.setupView()
 		self.setupBinding()
 		
@@ -189,7 +189,7 @@ extension HipartDetailViewController{
 			addTapTargets()
 			
 		}
-		//디테일 화면에서 보는 것이라면
+			//디테일 화면에서 보는 것이라면
 		else{
 			self.contactButton.isHidden = false
 			contactButton.addTarget(self, action: #selector(tapContactButton), for: .touchUpInside)
@@ -335,48 +335,74 @@ extension UIViewController{
 	
 	func navigateDetailViewController(myProfile : Bool,type : UserType, nickname : String?,imageViewHeroId : String = "", profileImage : UIImage? = nil ){
 		
-		let profileSingle : Single<ProfileDetailDTO>
 		
 		//Portfolio
 		if myProfile{
 			switch type{
 			case .Creator:
-				profileSingle = PortfolioRepository.shared.creatorDetail()
+				
+				PortfolioRepository.shared.creatorDetail{[unowned self]profileDetail in
+					if let profileDetail = profileDetail{
+						self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
+						LoadingView.hideLoadingView()
+					}else{
+						debugE("error")
+						LoadingView.hideLoadingView()
+					}
+				}
+				
 			case .PD:
-				profileSingle = PortfolioRepository.shared.editorDetail()
+				PortfolioRepository.shared.editorDetail{[unowned self]profileDetail in
+					if let profileDetail = profileDetail{
+						self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
+						LoadingView.hideLoadingView()
+					}else{
+						debugE("error")
+						LoadingView.hideLoadingView()
+					}
+				}
 			case .Translator:
-				profileSingle = PortfolioRepository.shared.translatorDetail()
+				PortfolioRepository.shared.translatorDetail{[unowned self]profileDetail in
+					if let profileDetail = profileDetail{
+						self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
+						LoadingView.hideLoadingView()
+					}else{
+						debugE("error")
+						LoadingView.hideLoadingView()
+					}
+				}
 			case .Etc:
-				profileSingle = PortfolioRepository.shared.etcDetail()
+				PortfolioRepository.shared.etcDetail{[unowned self]profileDetail in
+					if let profileDetail = profileDetail{
+						self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
+						LoadingView.hideLoadingView()
+					}else{
+						debugE("error")
+						LoadingView.hideLoadingView()
+					}
+				}
 			default:
 				fatalError()
 			}
-			
-			profileSingle.subscribe(onSuccess: {[unowned self] profileDetail in
-				self.navigateDetailViewController(profileDetail: profileDetail,isPortfolioView : true)
-				LoadingView.hideLoadingView()
-				
-				}, onError: {err in
-					debugE(err)
-					LoadingView.hideLoadingView()
-					
-			})
 			
 		}
 			//HipartDetail or HomeSearch
 		else{
 			
-			ProfileRepository.shared.detail(nickname: nickname!, type: type)
-				.subscribe(onSuccess: {[unowned self]  profileDetail in
+			ProfileRepository.shared.detail(nickname: nickname!, type: type){profileDetail in
+				
+				if let profileDetail = profileDetail{
 					
 					self.navigateDetailViewController(profileDetail: profileDetail, imageViewHeroId: imageViewHeroId, profileImage: profileImage)
 					LoadingView.hideLoadingView()
-					
-					}, onError: {err in
-						debugE(err)
-						LoadingView.hideLoadingView()
-				})
+				}else{
+					LoadingView.hideLoadingView()
+				}
+				
+				
+			}
 		}
+		
 	}
 	
 	fileprivate func navigateDetailViewController(profileDetail : ProfileDetailDTO, imageViewHeroId : String = "", profileImage : UIImage? = nil, isPortfolioView : Bool = false){

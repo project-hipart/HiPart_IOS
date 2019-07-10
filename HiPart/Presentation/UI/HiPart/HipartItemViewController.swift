@@ -1,6 +1,6 @@
 import UIKit
 import Hero
-import RxSwift
+
 
 class HipartItemViewController: UIViewController {
 	let viewModel = HiPartViewModel()

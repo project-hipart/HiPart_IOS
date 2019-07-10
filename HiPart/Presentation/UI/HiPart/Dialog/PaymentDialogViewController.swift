@@ -9,7 +9,7 @@ import SwiftyJSON
 import UIKit
 import BEMCheckBox
 import Hero
-import RxSwift
+
 
 class PaymentDialogViewController: UIViewController {
 	@IBOutlet var blockView: UIView!
@@ -31,8 +31,10 @@ class PaymentDialogViewController: UIViewController {
 	
 	@IBAction func tapOkButton(_ sender: Any) {
 		if checkBox.on{
-			HifiveRepositoy.shared.contact(nickname: profile.userNickname)
-				.subscribe(onSuccess: {[unowned self]json in
+
+			HifiveRepositoy.shared.contact(nickname: profile.userNickname){json in
+				
+				if let json = json{
 					if json["success"].boolValue{
 						debugE("성공")
 						
@@ -40,10 +42,11 @@ class PaymentDialogViewController: UIViewController {
 					}else{
 						debugE("실패")
 					}
-				}, onError: {err in
-					debugE(err)
-					})
-			
+				}else{
+					debugE("err")
+				}
+				
+			}
 		}else{
 			
 		}

@@ -1,6 +1,6 @@
 import Foundation
 import Alamofire
-import RxSwift
+
 import SwiftyJSON
 
 enum MainAPI : APIConfiguration{
@@ -40,10 +40,10 @@ enum MainAPI : APIConfiguration{
 		}
 	}
 	
-	static func requestSearch(keyword : String) -> Single<JSON>{
-		return APIClient.request(api: MainAPI.search(keyword: keyword))
+	static func requestSearch(keyword : String,completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: MainAPI.search(keyword: keyword),completion : completion)
 	}
-	static func requestNotification() -> Single<JSON>{
-		return APIClient.request(api: MainAPI.notification)
+	static func requestNotification(completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: MainAPI.notification,completion : completion)
 	}
 }

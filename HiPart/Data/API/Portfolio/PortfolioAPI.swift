@@ -1,6 +1,6 @@
 import Foundation
 import Alamofire
-import RxSwift
+
 import SwiftyJSON
 
 
@@ -74,30 +74,30 @@ enum PortfolioAPI : APIConfiguration{
 		}
 	}
 	
-	static func requestCreatorDetail() -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.creatorDetail)
+	static func requestCreatorDetail(completion : @escaping ((JSON?) -> Void)){
+		return APIClient.request(api: PortfolioAPI.creatorDetail,completion : completion)
 	}
-	static func requestEditorDetail() -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.editorDetail)
+	static func requestEditorDetail(completion : @escaping ((JSON?) -> Void)){
+		return APIClient.request(api: PortfolioAPI.editorDetail,completion : completion)
 	}
-	static func requestTranslatorDetail() -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.translatorDetail)
+	static func requestTranslatorDetail(completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.translatorDetail,completion : completion)
 	}
-	static func requestEtcDetail() -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.etcDetail)
+	static func requestEtcDetail(completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.etcDetail,completion : completion)
 	}
 	
-	static func requestCreatorUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String) -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.creatorUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content))
+	static func requestCreatorUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String,completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.creatorUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content),completion : completion)
 	}
-	static func requestEditorUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String) -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.editorUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content))
+	static func requestEditorUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String,completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.editorUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content),completion : completion)
 	}
-	static func requestEtcUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String) -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.etcUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content))
+	static func requestEtcUpload(thumbnail : Data, thumbnailUrl : String, url : String, title : String, content : String,completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.etcUpload(thumbnail: thumbnail, thumbnailUrl: thumbnailUrl, url: url, title: title, content: content),completion : completion)
 	}
-	static func requestTranslatorUpload(before : String, after : String) -> Single<JSON>{
-		return APIClient.request(api: PortfolioAPI.translatorUpload(before: before, after: after))
+	static func requestTranslatorUpload(before : String, after : String,completion : @escaping ((JSON?) -> Void)) {
+		return APIClient.request(api: PortfolioAPI.translatorUpload(before: before, after: after),completion : completion)
 	}
 	
 	

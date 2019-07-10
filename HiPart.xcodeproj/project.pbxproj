@@ -35,7 +35,6 @@
 		2D79368A22CF943F0081E065 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */; };
 		2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */; };
 		2D79368D22CF943F0081E065 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79368522CF943F0081E065 /* SearchViewModel.swift */; };
-		2D813DE522D0363400E02DD5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE422D0363400E02DD5 /* AuthRepository.swift */; };
 		2D813DE722D036AE00E02DD5 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE622D036AE00E02DD5 /* AuthAPI.swift */; };
 		2D813DE922D036D700E02DD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DE822D036D700E02DD5 /* Constants.swift */; };
 		2D813DEB22D0371500E02DD5 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D813DEA22D0371500E02DD5 /* APIConfiguration.swift */; };
@@ -167,7 +166,6 @@
 		2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D79368522CF943F0081E065 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = ../UI/Home/Search/SearchViewModel.swift; sourceTree = "<group>"; };
-		2D813DE422D0363400E02DD5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2D813DE622D036AE00E02DD5 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		2D813DE822D036D700E02DD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D813DEA22D0371500E02DD5 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 		2D813DE122D02E2100E02DD5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				2D813DE422D0363400E02DD5 /* AuthRepository.swift */,
 				2D8B4D8822D3A4E0004F48C7 /* MainRepository.swift */,
 				2D813E1C22D23F5E00E02DD5 /* ProfileRepository.swift */,
 				2D8B4D9222D3BADC004F48C7 /* PickRepository.swift */,
@@ -991,7 +988,6 @@
 				60463E2922CD513F00DFFF91 /* NoticeTableCell.swift in Sources */,
 				2D813E0022D0E64600E02DD5 /* MainAPI.swift in Sources */,
 				60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */,
-				2D813DE522D0363400E02DD5 /* AuthRepository.swift in Sources */,
 				2DDA058722CFDABD0057113F /* Filter.swift in Sources */,
 				60463E2722CD300A00DFFF91 /* HomeHiPartCollectionCell.swift in Sources */,
 				602FB3A522CBC3AE003ED6DB /* HomeCreaterViewController.swift in Sources */,

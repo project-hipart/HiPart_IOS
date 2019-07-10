@@ -1,6 +1,6 @@
 import Foundation
 import Alamofire
-import RxSwift
+
 import SwiftyJSON
 
 
@@ -45,14 +45,14 @@ enum PickAPI : APIConfiguration{
 		}
 	}
 	
-	static func requestPickAdd(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: PickAPI.pickAdd(nickname: nickname))
+	static func requestPickAdd(nickname : String,completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: PickAPI.pickAdd(nickname: nickname),completion : completion)
 	}
-	static func requestPickDelete(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: PickAPI.pickDelete(nickname: nickname),encoding: URLEncoding.httpBody)
+	static func requestPickDelete(nickname : String,completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: PickAPI.pickDelete(nickname: nickname),encoding: URLEncoding.httpBody,completion : completion)
 	}
-	static func requestPickGet() -> Single<JSON>{
-		return APIClient.request(api: PickAPI.pickGet)
+	static func requestPickGet(completion : @escaping (JSON?) -> Void) {
+		return APIClient.request(api: PickAPI.pickGet,completion : completion)
 	}
 	
 }

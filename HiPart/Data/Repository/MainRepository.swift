@@ -7,43 +7,53 @@
 //
 
 import Foundation
-import RxSwift
+
 
 
 class MainRepository{
 	static let shared = MainRepository()
 	private init(){}
 	
-	func search(keyword : String) -> Single<Array<ProfileDTO>>{
-		return MainAPI.requestSearch(keyword: keyword).map{json in
-			var result : [ProfileDTO] = []
-			let datas = json["data"].arrayValue
+	func search(keyword : String,completion : @escaping (Array<ProfileDTO>?) -> Void){
+		
+		MainAPI.requestSearch(keyword: keyword){json in
 			
-			for data in datas{
-				let profile = ProfileDTO.init(fromJSON: data)
-				result.append(profile)
+			if let json = json{
+				var result : [ProfileDTO] = []
+				let datas = json["data"].arrayValue
+				
+				for data in datas{
+					let profile = ProfileDTO.init(fromJSON: data)
+					result.append(profile)
+				}
+				completion(result)
+				
+			}else{
+				completion(nil)
 			}
 			
-			return result
 		}
 	}
 	
-	func notification() -> Single<Array<Notification>>{
-		return MainAPI.requestNotification().map{json in
-			
-			var result : [Notification] = []
-			
-			for data in json["data"].arrayValue{
+	func notification(completion : @escaping (Array<Notification>?) -> Void){
+		
+		MainAPI.requestNotification{json in
+			if let json = json{
+				var result : [Notification] = []
 				
-				let notification = Notification.init(fromJson: data)
+				for data in json["data"].arrayValue{
+					
+					let notification = Notification.init(fromJson: data)
+					
+					result.append(notification)
+					
+					
+				}
 				
-				result.append(notification)
-				
-				
+				completion(result)
+			}else{
+				completion(nil)
 			}
-			
-			return result
-			
 		}
 	}
 }

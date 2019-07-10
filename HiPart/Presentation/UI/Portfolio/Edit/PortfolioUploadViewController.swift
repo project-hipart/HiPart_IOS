@@ -8,7 +8,7 @@
 
 import UIKit
 import Hero
-import RxSwift
+
 
 class PortfolioUploadViewController: UIViewController {
 	@IBOutlet var urlTextField: UITextField!
@@ -102,20 +102,19 @@ extension PortfolioUploadViewController{
 		let url = self.urlTextField.text ?? ""
 		let title = self.titleLabel.text ?? ""
 		let content = self.contentLabel.text ?? ""
-		PortfolioRepository.shared.creatorUpload(thumbnail: thumbnail!, thumbnailUrl: thumbnailUrl.absoluteString!, url: url, title: title, content: content)
-			.subscribe(onSuccess: {json in
-				debugE(json)
+		PortfolioRepository.shared.creatorUpload(thumbnail: thumbnail!, thumbnailUrl: thumbnailUrl.absoluteString!, url: url, title: title, content: content){json in
+			
+			if let json = json{
 				
 				if json["success"].boolValue{
 					UploadSuccessView.showUploadSuccess()
 				}
 				LoadingView.hideLoadingView()
+			}else{
+				LoadingView.hideLoadingView()
 			}
-				, onError: {err in
-					debugE(err)
-					
-					LoadingView.hideLoadingView()
-			})
+			
+		}
 	}
 }
 
