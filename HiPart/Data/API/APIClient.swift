@@ -6,8 +6,8 @@ import SwiftyJSON
 class APIClient{
 	fileprivate static let ALAMOFIREMANAGER: SessionManager = {
 		let configuration = URLSessionConfiguration.default
-		configuration.timeoutIntervalForRequest = 5
-		configuration.timeoutIntervalForResource = 5
+		configuration.timeoutIntervalForRequest = 10
+		configuration.timeoutIntervalForResource = 10
 		let alamoFireManager = Alamofire.SessionManager(configuration: configuration)
 		return alamoFireManager
 		
@@ -47,6 +47,7 @@ class APIClient{
 								return
 							}
 							let json = try? JSON(data: data)
+							debugE(json!)
 							single(.success(json!))
 						case .failure(let error):
 							single(.error(error))

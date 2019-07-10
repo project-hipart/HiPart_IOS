@@ -1,7 +1,10 @@
 import Foundation
 
 struct APIConstants {
+	//EC2
 	static let baseURL = "http://52.78.120.232:3000"
+	//LOCAL
+//	static let baseURL = "http://172.30.1.7:3000"
 }
 struct APIKeys{
 	//Common

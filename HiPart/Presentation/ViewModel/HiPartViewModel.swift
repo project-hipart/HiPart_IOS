@@ -5,19 +5,21 @@
 //  Created by 최은희 on 30/06/2019.
 //  Copyright © 2019 HiPart. All rights reserved.
 //
-
 import Foundation
 import RxSwift
 import Alamofire
 import SwiftyJSON
 
 class HiPartViewModel {
+	
 	var currentTab : ProfileFlag = .All
 	
 	weak var delegate : HiPartViewModelDelegate? = nil{
 		didSet{
+			
 			self.delegate?.onChangeProfiles(profiles: profiles)
 			self.delegate?.onChangeRefreshState(isRefreshing: isRefreshing)
+			
 		}
 	}
 	
@@ -26,6 +28,7 @@ class HiPartViewModel {
 			delegate?.onChangeRefreshState(isRefreshing: self.isRefreshing)
 		}
 	}
+	var allProfiles : [ProfileDTO] = []
 	var profiles : [ProfileDTO] = []{
 		didSet{
 			delegate?.onChangeProfiles(profiles: profiles)
@@ -41,6 +44,7 @@ class HiPartViewModel {
 		ProfileRepository.shared.list(flag: flag)
 			.do(onDispose: {self.isRefreshing = false})
 			.subscribe(onSuccess: { profiles in
+				allProfiles = profiles
 				self.profiles = profiles
 				self.isRefreshing = false
 			}, onError: {
