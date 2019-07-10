@@ -44,9 +44,6 @@ class PortfolioFilterEditViewController: UIViewController {
     }
     
 
-	@IBAction func tapBackground(_ sender: Any) {
-		dismiss()
-	}
 	
 }
 extension PortfolioFilterEditViewController {
@@ -164,22 +161,3 @@ extension PortfolioFilterEditViewController {
 	
 }
 
-extension PortfolioFilterEditViewController : UIGestureRecognizerDelegate{
-	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-		return true
-	}
-	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-		if touch.view?.isDescendant(of: filterContainer) ?? false{
-			return false
-		}
-		return true
-	}
-}
-
-extension PortfolioFilterEditViewController{
-	
-	
-	private func dismiss(){
-		self.parent?.remove(asChildViewController: self)
-	}
-}
