@@ -9,29 +9,6 @@
 import UIKit
 import Hero
 
-<<<<<<< HEAD
-class PortfolioUploadViewController: UIViewController {
-	@IBOutlet var urlTextField: UITextField!
-	@IBOutlet var titleLabel: UILabel!
-	@IBOutlet var titlleHeaderLabel: UILabel!
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-		setupView()
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-=======
 
 class PortfolioUploadViewController: UIViewController {
 	@IBOutlet var urlTextField: UITextField!
@@ -108,13 +85,10 @@ extension PortfolioUploadViewController{
 		
 		self.present(picker, animated: true, completion: nil)
 	}
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	@IBAction func tapBackButton(_ sender: Any) {
 		self.hero.dismissViewController()
 	}
 	
-<<<<<<< HEAD
-=======
 	@IBAction func tapUploadButton(_ sender: Any) {
 		if !isImageUploaded || !isTitleUploaded || !isContentUploaded{
 			return
@@ -131,7 +105,6 @@ extension PortfolioUploadViewController{
 		PortfolioRepository.shared.creatorUpload(thumbnail: thumbnail!, thumbnailUrl: thumbnailUrl.absoluteString!, url: url, title: title, content: content){json in
 			
 			if let json = json{
-				
 				if json["success"].boolValue{
 					UploadSuccessView.showUploadSuccess()
 				}
@@ -160,26 +133,11 @@ extension PortfolioUploadViewController : UIImagePickerControllerDelegate, UINav
 		imageUploadContainerView.borderColor = UIColor.mainPurple
 		dismiss(animated: true, completion: nil)
 	}
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 extension PortfolioUploadViewController{
 	private func setupView(){
 		self.urlTextField.addLeftPadding(16)
-<<<<<<< HEAD
-		titleLabel.setLineHeight(lineHeight: 1.5)
-	}
-}
-extension UITextField{
-	func addLeftPadding(_ padding : CGFloat){
-		let view = UIView(frame:CGRect(x: 0, y: 0, width: padding, height: self.frame.height))
-		self.leftView = view
-		self.leftViewMode = .always
-	}
-}
-=======
 		contentLabel.setLineHeight(lineHeight: 1.5)
 		self.imageView.layer.masksToBounds = true
 	}
 }
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

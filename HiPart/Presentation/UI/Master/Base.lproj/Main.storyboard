@@ -12,11 +12,7 @@
         <!--Master View Controller-->
         <scene sceneID="ZPQ-lk-L9Z">
             <objects>
-<<<<<<< HEAD
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l2j-Vd-cN1" customClass="MasterViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
-=======
                 <tabBarController storyboardIdentifier="MasterViewController" automaticallyAdjustsScrollViewInsets="NO" id="l2j-Vd-cN1" customClass="MasterViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lR1-nD-Ybv">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

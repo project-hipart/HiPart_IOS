@@ -8,21 +8,13 @@
 
 import UIKit
 import Hero
-
-<<<<<<< HEAD
-=======
 import SnapKit
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 class HipartDetailViewController: UIViewController {
 	let viewModel = HiPartDetailViewModel()
 	
 	var isPortfolioView = false
 	
-<<<<<<< HEAD
-=======
 	@IBOutlet var uploadIcon: UIImageView!
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	@IBOutlet var youtubeLogo: UIImageView!
 	@IBOutlet var afreecaLogo: UIImageView!
 	@IBOutlet var twitchLogo: UIImageView!
@@ -33,41 +25,26 @@ class HipartDetailViewController: UIViewController {
 	@IBOutlet var appealLabel: UILabel!
 	
 	@IBOutlet var scrollView: UIScrollView!
-<<<<<<< HEAD
-	
-	var profile : ProfileDTO!
-=======
 	@IBOutlet var subscriberHeadLabel: UILabel!
 	@IBOutlet var hifiveHeadLabel: UILabel!
 	
 	var profile : ProfileDetailDTO!
 	//	var profile : ProfileDTO?
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	var profileImage : UIImage?
 	
 	@IBOutlet var subscriberLabel: UILabel!
 	@IBOutlet var hifiveLabel: UILabel!
 	
 	@IBOutlet var typeLabel: UILabel!
-<<<<<<< HEAD
-	@IBOutlet var uploadContainerView: UIView!
-	@IBOutlet var nicknameLabel: UILabel!
-	@IBOutlet var imageView: UIImageView!
-	var imageViewHeroId = ""
-=======
 	@IBOutlet var nicknameLabel: UILabel!
 	@IBOutlet var imageView: UIImageView!
 	var imageViewHeroId = ""
 	@IBOutlet var uploadContainer: UIView!
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 	@IBOutlet var backButton: UIButton!
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
 	
-<<<<<<< HEAD
-	private var embededViewController : PortfolioEditEmbedViewController!
-=======
 	@IBOutlet var portfolioBottomButtonContainer: UIView!
 	@IBOutlet var cancelButton: UIButton!
 	@IBOutlet var editButton: UIButton!
@@ -91,7 +68,6 @@ class HipartDetailViewController: UIViewController {
 }
 extension HipartDetailViewController : UIGestureRecognizerDelegate{
 	
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 
 extension HipartDetailViewController {
@@ -99,22 +75,6 @@ extension HipartDetailViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-<<<<<<< HEAD
-		self.setupHero()
-		self.setupView()
-		self.setupBinding()
-		
-		viewModel.loadData(profile: profile)
-	}
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.destination is PortfolioEditEmbedViewController{
-			embededViewController = segue.destination as! PortfolioEditEmbedViewController
-		}
-	}
-	
-}
-=======
 		//		self.setupHero()
 		self.setupView()
 		self.setupBinding()
@@ -156,16 +116,10 @@ extension HipartDetailViewController {
 }
 
 //MARK: Common Setups
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 extension HipartDetailViewController{
 	private func setupHero(){
 		self.hero.isEnabled=true
 		self.imageView.hero.id = imageViewHeroId
-<<<<<<< HEAD
-		self.imageView.hero.modifiers = [.translate(),.scale(x: 2, y: 2, z: 1)]
-	}
-	private func setupView(){
-=======
 		self.imageView.hero.modifiers = [.translate()]
 	}
 	
@@ -176,22 +130,10 @@ extension HipartDetailViewController{
 	
 	private func setupView(){
 		setupUploadViewController(type : profile.userType)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		if !isPortfolioView{
 			platformSelectImage.isHidden = true
 			afreecaLogo.isHidden = true
 			twitchLogo.isHidden = true
-<<<<<<< HEAD
-			
-		}
-		
-		setPlatformImage()
-		
-		
-		var filters : [Filter] = []
-		
-		if let filter = profile.broadcastConcept{
-=======
 		}
 		if self.profileImage != nil{
 			setupHero()
@@ -273,52 +215,19 @@ extension HipartDetailViewController{
 		
 		
 		if let filter = profile.concept{
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			filters.append(filter)
 		}
 		if let filter = profile.pd{
 			filters.append(filter)
 		}
-<<<<<<< HEAD
-		if let filter = profile.language{
-=======
 		if let filter = profile.lang{
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			filters.append(filter)
 		}
 		if let filter = profile.etc{
 			filters.append(filter)
 		}
-<<<<<<< HEAD
-		Filter.sortWithUserType(&filters, type: profile.type)
-		setFilters(filters,true)
-		
-		self.imageView.image = profileImage
-		self.nicknameLabel.text = profile.nickname
-		self.typeLabel.text = profile.type.name
-		
-		//		self.scrollView.contentInset = UIEdgeInsets.zero
-		//		self.scrollView.contentSize = CGSize(width: Device.screenWidth, height: self.scrollView.contentSize.height)
-		self.backButton.tintColor = UIColor.white
-		self.imageView.cornerRadius = 75/2
-		
-		
-	}
-	private func setPlatformImage(){
-		switch profile.platform{
-		case .youtube:
-			youtubeLogo.image = UIImage(named: "pofolYoutubeWhiteImg")
-		case .afreeca:
-			youtubeLogo.image = UIImage(named: "pofolAfreecaWhiteImg")
-		case .twitch:
-			youtubeLogo.image = UIImage(named: "pofolTwitchWhiteImg")
-		default:
-			break
-		}
-=======
 		Filter.sortWithUserType(&filters, type: profile.userType)
 		setFilters(filters,true)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	private func setFilters(_ filters : [Filter],_ needFirstSelect : Bool){
@@ -350,23 +259,6 @@ extension HipartDetailViewController{
 		
 	}
 }
-<<<<<<< HEAD
-
-extension HipartDetailViewController : HiPartDetailViewModelDelegate{
-	func onChangeProfileDetail(profileDetail: ProfileDetailDTO?) {
-		
-		if let detail = profileDetail{
-			
-			subscriberLabel.text = detail.detailSubscriber
-			hifiveLabel.text = "\(detail.hifive)"
-			oneLineLabel.text = detail.detailOneline
-			wantLabel.text = detail.detailWant
-			appealLabel.text = detail.detailAppeal
-			
-			embededViewController.datas = UploadVideo.getArrayWithDatas(thumbnails: detail.thumbnail, urls: detail.url, titles: detail.title, contents: detail.content)
-		}
-	}
-=======
 //MARK: Portfolio Edit Setups
 extension HipartDetailViewController{
 	private func addTapTargets(){
@@ -396,12 +288,9 @@ extension HipartDetailViewController{
 }
 
 extension HipartDetailViewController : HiPartDetailViewModelDelegate{
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
-	
 	func onChangeRefreshState(isRefreshing: Bool) {
 		
 	}
-	
 	
 }
 
@@ -416,12 +305,6 @@ extension HipartDetailViewController{
 			self.add(asChildViewController: vc, to: self.view)
 		}
 	}
-<<<<<<< HEAD
-	@IBAction func tapContactButton(_ sender: Any) {
-		
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self))
-=======
 	
 	///Cancel
 	@objc private func tapCancelButton(){
@@ -438,14 +321,11 @@ extension HipartDetailViewController{
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
 		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self)) as! PaymentDialogViewController
 		vc.profile = self.profile
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		
 		self.add(asChildViewController: vc, to: self.view)
 		//		self.present(vc, animated: false, completion: nil)
 	}
 }
-<<<<<<< HEAD
-=======
 
 extension UIViewController{
 	
@@ -540,4 +420,3 @@ extension UIViewController{
 	
 }
 
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

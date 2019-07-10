@@ -8,9 +8,6 @@
 
 import UIKit
 
-<<<<<<< HEAD
-class RecentlyCollectionViewCell: UICollectionViewCell {
-=======
 protocol RecentlyCollectionViewCellDelegate : NSObjectProtocol{
 	func onTapXButton(title : String, idx : Int)
 }
@@ -18,7 +15,6 @@ protocol RecentlyCollectionViewCellDelegate : NSObjectProtocol{
 class RecentlyCollectionViewCell: UICollectionViewCell {
 	var idx : Int = 0
 	weak var delegate : RecentlyCollectionViewCellDelegate? = nil
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	@IBOutlet var titleLabel: UILabel!
 	
 	var title : String = ""{
@@ -28,9 +24,6 @@ class RecentlyCollectionViewCell: UICollectionViewCell {
 	}
 	
 	@IBAction func tapXButton(_ sender: Any) {
-<<<<<<< HEAD
-=======
 		delegate?.onTapXButton(title : self.titleLabel.text ?? "", idx : idx)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 }

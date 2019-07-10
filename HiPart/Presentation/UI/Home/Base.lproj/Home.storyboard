@@ -78,10 +78,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="hiPartView" destination="kWL-vK-SQY" id="De9-cI-NYo"/>
-<<<<<<< HEAD
-                        <outlet property="userNameLabel" destination="61D-QL-UjK" id="Uuk-I6-0Em"/>
-=======
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,11 +194,7 @@
                 <viewControllerPlaceholder storyboardName="Notice" id="sBf-7R-Nu4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd5-sx-jng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="3376" y="-250"/>
-=======
-            <point key="canvasLocation" x="3184" y="-246.47676161919043"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--홈-->
         <scene sceneID="Flv-zC-0bu">

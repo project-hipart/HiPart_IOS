@@ -16,8 +16,6 @@ class SignUpFinishCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-<<<<<<< HEAD
-    
     required public init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
@@ -26,6 +24,4 @@ class SignUpFinishCell: UICollectionViewCell {
         layer.borderWidth = 1.0
         
     }
-=======
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }

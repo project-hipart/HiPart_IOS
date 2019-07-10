@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="171"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ma-TXT">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ma-TXT">
                         <rect key="frame" x="28" y="22" width="74" height="74"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -141,6 +141,6 @@
     </objects>
     <resources>
         <image name="mainPickOffIcon" width="19" height="19"/>
-        <image name="youtubeGreyImg" width="22.5" height="16"/>
+        <image name="youtubeGreyImg" width="22" height="15"/>
     </resources>
 </document>

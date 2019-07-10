@@ -2,9 +2,6 @@ import SnapKit
 import UIKit
 
 class PickDialogView: UIView {
-<<<<<<< HEAD
-
-=======
 	
 	public static func showPickDialog(){
 		if let window = UIApplication.shared.keyWindow{
@@ -34,7 +31,6 @@ class PickDialogView: UIView {
 		}
 	}
 	
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	private lazy var imageView : UIImageView = {
 		let view = UIImageView()
 		view.image = UIImage(named: "pickPopupImg")
@@ -61,11 +57,6 @@ class PickDialogView: UIView {
 		commonInit()
 	}
 	
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	private func commonInit(){
 		self.addSubview(imageView)
 		self.addSubview(bottomView)

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-
 import UIKit
 import Hero
 
-=======
-import UIKit
-import Hero
-
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 class HipartItemViewController: UIViewController {
 	let viewModel = HiPartViewModel()
 	
@@ -29,18 +21,6 @@ extension HipartItemViewController{
 		setupBinding()
 		// Do any additional setup after loading the view.
 	}
-<<<<<<< HEAD
-	
-	
-}
-extension HipartItemViewController : HiPartViewModelDelegate{
-	
-	@objc private func refresh(){
-		viewModel.loadDatas(viewModel.currentTab)
-	}
-	
-	func onChangeProfiles(profiles: [ProfileDTO]) {
-=======
 }
 
 extension HipartItemViewController : HiPartViewModelDelegate{
@@ -48,8 +28,6 @@ extension HipartItemViewController : HiPartViewModelDelegate{
 		viewModel.loadDatas(viewModel.currentTab)
 	}
 	func onChangeProfiles(profiles: [ProfileDTO]) {
-		debugE(profiles)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		self.collectionView.reloadData()
 	}
 	func onChangeRefreshState(isRefreshing: Bool) {
@@ -83,24 +61,14 @@ extension HipartItemViewController{
 }
 extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-<<<<<<< HEAD
-		return viewModel.profiles.count
-=======
 		return viewModel.filteredProfiles.count
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell{
-<<<<<<< HEAD
-			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
-			cell.setProfile(profile: viewModel.profiles[indexPath.row])
-=======
-			
 			cell.thumbnailView.hero.id = "SearchCollectionViewCellHeroId\(indexPath.item)"
 			cell.setProfile(profile: viewModel.filteredProfiles[indexPath.row])
 			cell.delegate = self
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			return cell
 			
 		}
@@ -111,28 +79,6 @@ extension HipartItemViewController : UICollectionViewDelegate, UICollectionViewD
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? SearchCollectionViewCell{
-<<<<<<< HEAD
-			let item = viewModel.profiles[indexPath.row]
-			navigateDetailViewController(cell: cell,profile: item)
-		}
-	}
-}
-extension HipartItemViewController{
-	private func navigateDetailViewController(cell : SearchCollectionViewCell,profile : ProfileDTO){
-		let sb = UIStoryboard(name: "HiPart", bundle: nil)
-		if let vc = sb.instantiateViewController(withIdentifier: String(describing: HipartDetailViewController.self)) as? HipartDetailViewController{
-			vc.imageViewHeroId = cell.thumbnailView.hero.id ?? ""
-			vc.hero.modalAnimationType = .fade
-			vc.profile = profile
-			vc.profileImage = cell.thumbnailView.image
-			self.present(vc, animated: true, completion: nil)
-		}
-		
-		
-	}
-}
-
-=======
 			
 			let item = viewModel.profiles[indexPath.row]
 			
@@ -162,5 +108,3 @@ extension HipartItemViewController{
 	}
 }
 
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

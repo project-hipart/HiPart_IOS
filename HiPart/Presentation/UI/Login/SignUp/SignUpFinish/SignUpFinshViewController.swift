@@ -40,19 +40,20 @@ class SignUpFinshViewController: UIViewController {
         let nick = loginText[2]
         let contact = loginText[3]
         
-        AuthAPI.requestSignUp(email: email, nickname: nick, img: loginData, imageUrl: imageUrl, password: pw, number: contact, type: loginPat)
-            .subscribe(onSuccess: { (json : JSON) -> Void in
-                
+        AuthAPI.requestSignUp(email: email, nickname: nick, img: loginData, imageUrl: imageUrl, password: pw, number: contact, type: loginPat){json in
+            if let json = json{
                 if json["success"].boolValue {
                     self.performSegue(withIdentifier: "toSignUpSuccess", sender: self)
                     debugE("로그인성공")
                     //성공
                 } else {
                     debugE("로그인 실패")
-                }      
-            }, onError: { (error : Error) -> Void in
+                }
+            }else{
+                debugE("통신 오류")
+            }
             
-        })
+        }
     }
     
 }

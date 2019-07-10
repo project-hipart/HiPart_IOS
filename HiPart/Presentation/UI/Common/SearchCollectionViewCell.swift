@@ -2,17 +2,6 @@
 import UIKit
 import SnapKit
 
-<<<<<<< HEAD
-//import MaterialComponents.MaterialChips
-
-class SearchCollectionViewCell: UICollectionViewCell {
-
-	
-	
-//	@IBOutlet var platformStackView: UIStackView!
-=======
-
-//import MaterialComponents.MaterialChips
 
 protocol SearchCollectionViewCellDelegate : NSObjectProtocol{
 	func onChangePickState(profile : ProfileDTO,picked : Bool)
@@ -23,7 +12,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	weak var delegate : SearchCollectionViewCellDelegate? = nil
 	
 	//	@IBOutlet var platformStackView: UIStackView!
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	@IBOutlet var platformImageView: UIImageView!
 	@IBOutlet var thumbnailView: UIImageView!
 	@IBOutlet var nicknameLabel: UILabel!
@@ -40,14 +28,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-<<<<<<< HEAD
-	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-		
-		setupView()
-    }
-=======
 	private var profile : ProfileDTO!
 	
 	override func awakeFromNib() {
@@ -56,7 +36,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		
 		setupView()
 	}
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 	private func setupView(){
 		self.layer.masksToBounds = false
@@ -83,11 +62,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			paddingView.removeFromSuperview()
 			self.filterStackView.removeArrangedSubview(paddingView)
 		}
-<<<<<<< HEAD
-	
-=======
-		
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		for filter in filters{
 			
 			let filterView = FilterChip()
@@ -97,34 +71,11 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			
 			self.filterViews.append(filterView)
 			self.filterStackView.addArrangedSubview(filterView)
-<<<<<<< HEAD
-            
-=======
-			
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		}
 		
 		self.filterStackView.addPaddingView()
 		
 		if firstSelect{
-<<<<<<< HEAD
-        	select(0)
-		}
-	}
-    
-    private func select(_ index : Int){
-        for i in 0..<filterViews.count{
-            if i == index{
-                filterViews[i].chipSelected = true
-            }else{
-                 filterViews[i].chipSelected = false
-            }
-        }
-        
-    }
-	
-	func setProfile(profile : ProfileDTO){
-=======
 			select(0)
 		}
 	}
@@ -145,7 +96,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		
 		
 		self.profile = profile
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		thumbnailView.setImage(withUrl: profile.image)
 		nicknameLabel.text = profile.nickname
 		typeLabel.text = profile.type.name
@@ -231,27 +181,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		
 		self.pickCountLabel.textColor = UIColor.mainPurple
 		
-<<<<<<< HEAD
-		let pickedView = PickDialogView()
-		
-		let window = UIApplication.shared.keyWindow
-		window?.addSubview(pickedView)
-		
-		pickedView.snp.makeConstraints{[weak window] make in
-			make.center.equalTo(window!.snp.center)
-			make.width.equalTo(110)
-			make.height.equalTo(110+15+28)
-		}
-		
-		UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-			pickedView.alpha = 0
-		}, completion: {[unowned pickedView] animated in
-			pickedView.removeFromSuperview()
-		})
-		
-		picked = !picked
-		
-=======
 		if picked{
 			PickRepository.shared.pickDelete(nickname: self.profile.nickname){[unowned self ] success in
 				
@@ -286,15 +215,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
 			}
 			
 		}
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	private func setPickButtonState(picked : Bool){
 		if picked{
-<<<<<<< HEAD
-=======
-			
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			self.pickButton.setImage(UIImage(named: "mainPickOnIcon"),for: .normal)
 			self.pickCountLabel.textColor = UIColor.mainPurple
 		}else{
@@ -303,10 +227,5 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 }

@@ -210,14 +210,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-<<<<<<< HEAD
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UHN-N0-pQR" firstAttribute="centerY" secondItem="fS7-bt-Vkm" secondAttribute="centerY" id="8F9-38-KVU"/>
-                            <constraint firstItem="UHN-N0-pQR" firstAttribute="height" secondItem="fS7-bt-Vkm" secondAttribute="height" id="HlB-n7-O0w"/>
-                            <constraint firstItem="UHN-N0-pQR" firstAttribute="centerX" secondItem="ffD-dk-Hf7" secondAttribute="centerX" id="ckP-1h-Uw4"/>
-=======
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-0a-wme" userLabel="NotFoundView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,7 +224,6 @@
                             <constraint firstItem="8UW-0a-wme" firstAttribute="height" secondItem="fS7-bt-Vkm" secondAttribute="height" id="Z7s-06-t91"/>
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="centerX" secondItem="ffD-dk-Hf7" secondAttribute="centerX" id="ckP-1h-Uw4"/>
                             <constraint firstItem="8UW-0a-wme" firstAttribute="centerY" secondItem="ffD-dk-Hf7" secondAttribute="centerY" id="q1C-LM-ssI"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             <constraint firstItem="UHN-N0-pQR" firstAttribute="width" secondItem="fS7-bt-Vkm" secondAttribute="width" id="skq-hD-OyP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ffD-dk-Hf7"/>
@@ -298,15 +289,6 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-<<<<<<< HEAD
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolYoutubeOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-Wx-HDt">
-                                                <rect key="frame" x="206.5" y="56" width="24" height="24"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolAfreecaWhiteOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mx-hug">
-                                                <rect key="frame" x="232.5" y="54" width="24" height="24"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolTwitchWhiteOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-7i-nzJ">
-=======
                                             <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolYoutubeOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-Wx-HDt">
                                                 <rect key="frame" x="206.5" y="56" width="24" height="24"/>
                                             </imageView>
@@ -314,7 +296,6 @@
                                                 <rect key="frame" x="232.5" y="54" width="24" height="24"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolTwitchWhiteOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-7i-nzJ">
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                                 <rect key="frame" x="258.5" y="56" width="24" height="24"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4351" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-pk-iYi">
@@ -437,12 +418,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="187" id="Z8k-Bw-B1S"/>
                                                         </constraints>
-<<<<<<< HEAD
-                                                        <connections>
-                                                            <segue destination="pam-6T-tb6" kind="embed" id="bAe-Kd-FNd"/>
-                                                        </connections>
-=======
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                                     </containerView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpc-i0-ooO">
                                                         <rect key="frame" x="25" y="123" width="22.5" height="16"/>
@@ -526,42 +501,6 @@
                                     <constraint firstItem="mgj-8x-ciL" firstAttribute="centerY" secondItem="7Aw-GH-dcK" secondAttribute="centerY" id="eH9-1z-2JT"/>
                                 </constraints>
                             </view>
-<<<<<<< HEAD
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXq-R8-u01" userLabel="BottomButton">
-                                <rect key="frame" x="13.5" y="902" width="348" height="41"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76G-3t-mWL">
-                                        <rect key="frame" x="0.0" y="0.0" width="348" height="41"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nR-Oc-kLx">
-                                                <rect key="frame" x="0.0" y="0.0" width="348" height="41"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="연락하기">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="tapContactButton:" destination="lvg-Af-pNy" eventType="touchUpInside" id="rWv-V3-3fl"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" name="mainPurple"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="42" id="D76-oq-X02"/>
-                                            <constraint firstItem="1nR-Oc-kLx" firstAttribute="centerX" secondItem="76G-3t-mWL" secondAttribute="centerX" id="IPJ-j3-RyD"/>
-                                            <constraint firstItem="1nR-Oc-kLx" firstAttribute="centerY" secondItem="76G-3t-mWL" secondAttribute="centerY" id="Mdw-c0-hUe"/>
-                                            <constraint firstItem="1nR-Oc-kLx" firstAttribute="width" secondItem="76G-3t-mWL" secondAttribute="width" id="aZO-le-frO"/>
-                                            <constraint firstItem="1nR-Oc-kLx" firstAttribute="height" secondItem="76G-3t-mWL" secondAttribute="height" id="eRp-iU-I1x"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-=======
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXq-R8-u01" userLabel="BottomButtonContainer">
                                 <rect key="frame" x="13.5" y="902" width="348" height="41"/>
                                 <subviews>
@@ -621,7 +560,6 @@
                                     <constraint firstItem="1nR-Oc-kLx" firstAttribute="height" secondItem="gXq-R8-u01" secondAttribute="height" id="6ji-Un-FeI"/>
                                     <constraint firstItem="1nR-Oc-kLx" firstAttribute="width" secondItem="gXq-R8-u01" secondAttribute="width" id="FfN-Xr-EkH"/>
                                     <constraint firstItem="1nR-Oc-kLx" firstAttribute="centerX" secondItem="gXq-R8-u01" secondAttribute="centerX" id="Kfy-Ui-ZOh"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                     <constraint firstItem="76G-3t-mWL" firstAttribute="centerX" secondItem="gXq-R8-u01" secondAttribute="centerX" id="ayZ-9o-noa"/>
                                     <constraint firstItem="76G-3t-mWL" firstAttribute="width" secondItem="gXq-R8-u01" secondAttribute="width" id="bCw-oj-FE0"/>
                                     <constraint firstItem="76G-3t-mWL" firstAttribute="centerY" secondItem="gXq-R8-u01" secondAttribute="centerY" id="nBD-hp-Fmq"/>
@@ -629,14 +567,11 @@
                                     <constraint firstAttribute="height" constant="41" id="nm2-1P-QwW"/>
                                     <constraint firstItem="76G-3t-mWL" firstAttribute="height" secondItem="gXq-R8-u01" secondAttribute="height" id="o4k-WZ-nvH"/>
                                 </constraints>
-<<<<<<< HEAD
-=======
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUH-ht-0GL">
                                 <rect key="frame" x="8" y="28" width="40" height="40"/>
@@ -676,27 +611,16 @@
                         <outlet property="afreecaLogo" destination="5fE-mx-hug" id="xvz-hU-tal"/>
                         <outlet property="appealLabel" destination="yAl-Q8-eyj" id="lyI-ri-UNW"/>
                         <outlet property="backButton" destination="jUH-ht-0GL" id="VeC-nt-WsT"/>
-<<<<<<< HEAD
-                        <outlet property="filterStackView" destination="CB1-74-0mk" id="KsU-Ts-AZo"/>
-=======
                         <outlet property="cancelButton" destination="dMX-Xg-z5p" id="7LK-zG-s9T"/>
                         <outlet property="contactButton" destination="1nR-Oc-kLx" id="5f9-kW-FyR"/>
                         <outlet property="editButton" destination="ssE-Ob-Vp9" id="U54-TZ-2IU"/>
                         <outlet property="filterStackView" destination="CB1-74-0mk" id="KsU-Ts-AZo"/>
                         <outlet property="hifiveHeadLabel" destination="hXx-vi-87E" id="yyy-V1-rrz"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                         <outlet property="hifiveLabel" destination="WeF-Ka-8vx" id="6WI-1U-SWt"/>
                         <outlet property="imageView" destination="Cae-ci-COm" id="bex-Gp-Rx1"/>
                         <outlet property="nicknameLabel" destination="Qyv-Zx-HHa" id="EQD-wm-Gia"/>
                         <outlet property="oneLineLabel" destination="w7g-a5-S25" id="Hk2-rw-fQm"/>
                         <outlet property="platformSelectImage" destination="iKf-pk-iYi" id="uab-RX-MEw"/>
-<<<<<<< HEAD
-                        <outlet property="scrollView" destination="mgj-8x-ciL" id="YJw-nK-jl9"/>
-                        <outlet property="subscriberLabel" destination="zfL-xE-qGX" id="IC1-jh-QR5"/>
-                        <outlet property="twitchLogo" destination="Dif-7i-nzJ" id="OxZ-qi-iza"/>
-                        <outlet property="typeLabel" destination="P49-Ts-mGc" id="0Pw-jR-cvC"/>
-                        <outlet property="uploadContainerView" destination="Hg0-Vq-gdL" id="n1f-Gj-Et4"/>
-=======
                         <outlet property="portfolioBottomButtonContainer" destination="76G-3t-mWL" id="m34-Qh-diU"/>
                         <outlet property="scrollView" destination="mgj-8x-ciL" id="YJw-nK-jl9"/>
                         <outlet property="subscriberHeadLabel" destination="gIY-jp-k7b" id="6fh-Qe-0Lo"/>
@@ -705,7 +629,6 @@
                         <outlet property="typeLabel" destination="P49-Ts-mGc" id="0Pw-jR-cvC"/>
                         <outlet property="uploadContainer" destination="Hg0-Vq-gdL" id="DsW-6S-6HZ"/>
                         <outlet property="uploadIcon" destination="5kh-7e-Idy" id="pT9-dP-0GQ"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                         <outlet property="wantLabel" destination="k10-7v-hYM" id="8D4-By-6IP"/>
                         <outlet property="youtubeLogo" destination="1n7-Wx-HDt" id="VO3-Xt-IbO"/>
                     </connections>
@@ -717,26 +640,15 @@
         <!--Portfolio Edit Embed View Controller-->
         <scene sceneID="PpW-gG-etn">
             <objects>
-<<<<<<< HEAD
-                <viewController id="pam-6T-tb6" customClass="PortfolioEditEmbedViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SsL-Pg-Glm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-=======
                 <viewController storyboardIdentifier="PortfolioEditEmbedViewController" id="pam-6T-tb6" customClass="PortfolioEditEmbedViewController" customModule="HiPart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SsL-Pg-Glm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                         <viewLayoutGuide key="safeArea" id="uwc-i5-Jcg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8L-ar-HyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="2537" y="-918"/>
-=======
             <point key="canvasLocation" x="2535" y="-1232"/>
         </scene>
         <!--Portfolio Edit Embed Trans View Controller-->
@@ -753,7 +665,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWg-Rr-Qpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3209" y="-1233"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
         <!--Payment Dialog View Controller-->
         <scene sceneID="n3N-bF-NA9">
@@ -767,11 +678,7 @@
                                 <rect key="frame" x="56.5" y="200" width="262.5" height="267"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-aU-ry6" customClass="BEMCheckBox">
-<<<<<<< HEAD
-                                        <rect key="frame" x="47.5" y="169.5" width="14" height="8"/>
-=======
                                         <rect key="frame" x="47.5" y="166.5" width="14" height="14"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                         <constraints>
                                             <constraint firstAttribute="width" constant="14" id="Qia-dB-jlh"/>
                                         </constraints>
@@ -801,15 +708,9 @@
                                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-AZ-Uxr">
-                                        <rect key="frame" x="26" y="206" width="210" height="42"/>
-                                        <color key="backgroundColor" name="mainPurple"/>
-=======
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-AZ-Uxr">
                                         <rect key="frame" x="26" y="206" width="210" height="42"/>
                                         <color key="backgroundColor" name="lightGrey"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="gMN-h1-pr6"/>
                                         </constraints>
@@ -822,12 +723,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-<<<<<<< HEAD
-=======
                                         <connections>
                                             <action selector="tapOkButton:" destination="Eys-OA-Kkb" eventType="touchUpInside" id="9Nk-5p-gYm"/>
                                         </connections>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -845,55 +743,34 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
-<<<<<<< HEAD
-                                <rect key="frame" x="115" y="240" width="145" height="43"/>
-=======
                                 <rect key="frame" x="111.5" y="240" width="152" height="40"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">연락처를 결제하려면
 </string>
                                         <attributes>
-<<<<<<< HEAD
-                                            <font key="NSFont" metaFont="system" size="18"/>
-=======
                                             <font key="NSFont" size="18" name="NanumSquareR"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="3팜">
                                         <attributes>
                                             <color key="NSColor" red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-<<<<<<< HEAD
-                                            <font key="NSFont" metaFont="system" size="18"/>
-=======
                                             <font key="NSFont" size="18" name="NanumSquareB"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="이 필요합니다">
                                         <attributes>
-<<<<<<< HEAD
-                                            <font key="NSFont" metaFont="system" size="18"/>
-=======
                                             <font key="NSFont" size="18" name="NanumSquareR"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
-                                <rect key="frame" x="104" y="335" width="167" height="14.5"/>
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
                                 <rect key="frame" x="104" y="332" width="167" height="14.5"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
                                 <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -921,11 +798,8 @@
                     </view>
                     <connections>
                         <outlet property="blockView" destination="e1G-PW-DEJ" id="j2i-u3-EIG"/>
-<<<<<<< HEAD
-=======
                         <outlet property="checkBox" destination="Orw-aU-ry6" id="SvL-cn-4JZ"/>
                         <outlet property="okButton" destination="89b-AZ-Uxr" id="P1A-CH-Ea5"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcZ-Aw-SBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -951,12 +825,9 @@
         <image name="pofolBackWhiteIcon" width="9.5" height="21"/>
         <image name="pofolTwitchWhiteOffImg" width="24" height="24"/>
         <image name="pofolYoutubeOffImg" width="24" height="24"/>
-<<<<<<< HEAD
-=======
         <namedColor name="lightGrey">
             <color red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         <namedColor name="mainGreen">
             <color red="0.24313725490196078" green="0.92549019607843142" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

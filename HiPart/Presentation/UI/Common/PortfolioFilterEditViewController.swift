@@ -10,11 +10,7 @@ import UIKit
 import Hero
 
 protocol FilterChangeDelegate : NSObjectProtocol{
-<<<<<<< HEAD
-	func filterChanged(filters : [Filter])
-=======
 	func filterChanged(filter : Filter?)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 
 class PortfolioFilterEditViewController: UIViewController {
@@ -34,11 +30,7 @@ class PortfolioFilterEditViewController: UIViewController {
 	private var etcChips : [FilterChip] = []
 	
 	
-<<<<<<< HEAD
-	
-=======
 	var selectedFilter : Filter? = nil
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 	@IBOutlet var filterContainer: UIView!
 	
@@ -51,13 +43,6 @@ class PortfolioFilterEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-<<<<<<< HEAD
-
-	@IBAction func tapBackground(_ sender: Any) {
-		dismiss()
-	}
-	
-=======
 	@IBAction func tapBackButton(_ sender: Any) {
 		self.hero.dismissViewController()
 	}
@@ -67,8 +52,6 @@ class PortfolioFilterEditViewController: UIViewController {
 		self.hero.dismissViewController()
 	}
 	
-	
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 }
 extension PortfolioFilterEditViewController {
 	private func setupView(){
@@ -127,12 +110,6 @@ extension PortfolioFilterEditViewController {
 		etcStackView1.addPaddingView()
 		etcStackView2.addPaddingView()
 		
-<<<<<<< HEAD
-	}
-	
-	private func makeFilterChip(filter : Filter) -> FilterChip{
-		let chip = FilterChip()
-=======
 		
 		///Filter Set
 		if let filter = self.selectedFilter{
@@ -144,7 +121,6 @@ extension PortfolioFilterEditViewController {
 	private func makeFilterChip(filter : Filter) -> FilterChip{
 		let chip = FilterChip(frame: .zero, fillMode: false)
 		chip.chipSelected = false
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		chip.textSizeInspector = 12
 		chip.setChipTitle(filter.rawValue)
 		chip.filter = filter
@@ -165,61 +141,6 @@ extension PortfolioFilterEditViewController {
 	}
 	private func tapChip(filter : Filter){
 		
-<<<<<<< HEAD
-		switch filter.filterGroup{
-		case FilterGroup.BroadcastConcept:
-			broadcastChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			broadcastChips.first{chip in
-				return chip.filter == filter
-			}?.chipSelected = true
-		case FilterGroup.PD:
-			pdChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			pdChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
-		case FilterGroup.Language:
-			languageChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			languageChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
-		case FilterGroup.Etc:
-			etcChips.forEach{chip in
-				chip.chipSelected = false
-			}
-			etcChips.first{chip in
-				return chip.filter == filter
-				}?.chipSelected = true
-		}
-	}
-	
-}
-
-extension PortfolioFilterEditViewController : UIGestureRecognizerDelegate{
-	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-		return true
-	}
-	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-		if touch.view?.isDescendant(of: filterContainer) ?? false{
-			return false
-		}
-		return true
-	}
-}
-
-extension PortfolioFilterEditViewController{
-	
-	
-	private func dismiss(){
-		self.parent?.remove(asChildViewController: self)
-	}
-}
-=======
 		self.selectedFilter = nil
 		
 		broadcastChips.forEach{chip in
@@ -278,5 +199,3 @@ extension PortfolioFilterEditViewController{
 
 	
 }
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a

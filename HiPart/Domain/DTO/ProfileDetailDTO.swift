@@ -9,25 +9,6 @@ import SwiftyJSON
 
 // MARK: - ResCreData
 struct ProfileDetailDTO {
-<<<<<<< HEAD
-	let hifiveState: Int
-	let userNickname: String
-	let userImg: String
-	let userType : UserType
-	let detailPlatform: Platform
-	let detailSubscriber, detailOneline, detailAppeal, detailWant: String
-	let hifive : Int
-	let thumbnail: [String]
-	let url, title, content: [String]
-	let pick: Int
-	let etc, concept, lang, pd: Filter?
-	
-	
-	init(fromJSON : JSON){
-		hifiveState = fromJSON["data"][APIKeys.hifiveState].intValue
-		
-		let data = fromJSON["data"]["resEdiData"]
-=======
 	var hifiveState: Int
 	var userNickname: String
 	var userImg: String
@@ -70,7 +51,6 @@ struct ProfileDetailDTO {
 		
 		
 		
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		
 		userNickname = data[APIKeys.userNickname].stringValue
 		userImg = data[APIKeys.userImage].stringValue
@@ -81,13 +61,9 @@ struct ProfileDetailDTO {
 		detailAppeal = data[APIKeys.detailAppeal].stringValue
 		detailWant = data[APIKeys.detailWant].stringValue
 		
-		
-<<<<<<< HEAD
-=======
 		workIndex = data[APIKeys.workIndex].arrayObject as? [Int] ?? []
 		before = data[APIKeys.before].arrayObject as? [String] ?? []
 		after = data[APIKeys.after].arrayObject as? [String] ?? []
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		thumbnail = data[APIKeys.thumbnail].arrayObject as? [String] ?? []
 		url = data[APIKeys.url].arrayObject as? [String] ?? []
 		title = data[APIKeys.title].arrayObject as? [String] ?? []

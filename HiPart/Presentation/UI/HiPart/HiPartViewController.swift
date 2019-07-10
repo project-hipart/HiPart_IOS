@@ -10,28 +10,14 @@ import UIKit
 
 class HiPartViewController: UIViewController {
 
-<<<<<<< HEAD
-	private var itemViewController : HipartItemViewController!
-=======
 	var itemViewController : HipartItemViewController!
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	
 	@IBOutlet var adViewContainer: UIView!
 	@IBOutlet var tabLayout: TabLayout!
 	
-<<<<<<< HEAD
-	
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-		self.setupView()
-        // Do any additional setup after loading the view.
-=======
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.setupView()
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
     }
 	
 	private func setupView(){
@@ -42,11 +28,7 @@ class HiPartViewController: UIViewController {
 		debugE(segue.destination)
 		
 		if segue.destination is HipartItemViewController{
-<<<<<<< HEAD
-			itemViewController = segue.destination as! HipartItemViewController
-=======
 			itemViewController = segue.destination as? HipartItemViewController
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 		}
 	}
 }
@@ -58,14 +40,6 @@ extension HiPartViewController : TabLayoutDelegate{
 	}
 }
 
-<<<<<<< HEAD
-extension HiPartViewController{
-	@IBAction func tapEditFilter(_ sender: Any) {
-		let sb = UIStoryboard(name: "Portfolio", bundle: nil)
-		let vc = sb.instantiateViewController(withIdentifier: String(describing: PortfolioFilterEditViewController.self))
-		
-		self.add(asChildViewController: vc, to: self.view)
-=======
 extension HiPartViewController : FilterChangeDelegate{
 	func filterChanged(filter: Filter?) {
 		itemViewController.setFilter(filter: filter)
@@ -81,6 +55,5 @@ extension HiPartViewController{
 		vc.selectedFilter = self.itemViewController.viewModel.currentFilter
 		self.navigationController?.pushViewController(vc, animated: true)
 		
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 }

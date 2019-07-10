@@ -1,9 +1,4 @@
 import Alamofire
-<<<<<<< HEAD
-import RxSwift
-=======
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 import SwiftyJSON
 
 class AFDataError : Error{
@@ -22,11 +17,7 @@ enum DuplicateCheckResult : Int{
 enum AuthAPI : APIConfiguration{
 	
 	case signIn(email:String, password:String)
-<<<<<<< HEAD
-	case signUp(email:String, nickname : String, img : Data, imageUrl : String, password : String, number : String, type : Int)
-=======
 	case signUp(email:String, nickname : String, img : Data,imageUrl : String,password : String, number : String, type : Int)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	case duplicateCheck(flag : Int, input : String)
 	case findId(input : String)
 	case findPassword(input : String)
@@ -67,11 +58,7 @@ enum AuthAPI : APIConfiguration{
 		case .signIn(let email, let password):
 			return [APIKeys.userEmail: email, APIKeys.userPassword: password]
 			
-<<<<<<< HEAD
-		case .signUp(let email, let nickname, let img, let imageUrl, let password, let number, let type):
-=======
 		case .signUp(let email, let nickname, let img,let imageUrl, let password, let number, let type):
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 			return [APIKeys.userEmail : email, APIKeys.userNickname : nickname, APIKeys.userImage : img, APIKeys.imageUrl : imageUrl,
 					APIKeys.userPassword : password, APIKeys.userNumber : number, APIKeys.userType : type]
 			
@@ -91,20 +78,6 @@ enum AuthAPI : APIConfiguration{
 			return ContentType.json
 		}
 	}
-<<<<<<< HEAD
-
-	
-	static func requestSignIn(email : String, password : String) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.signIn(email: email, password: password))
-	}
-	
-	static func requestSignUp(email : String, nickname : String, img : Data, imageUrl : String, password : String, number : String, type : Int) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.signUp(email: email, nickname: nickname, img: img, imageUrl : imageUrl, password: password, number: number, type: type))
-	}
-	
-	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String) -> Single<JSON>{
-		return APIClient.request(api: AuthAPI.duplicateCheck(flag: flag.rawValue, input: input))
-=======
 	
 	static func requestSignIn(email : String, password : String, completion : @escaping (JSON?) -> Void) {
 		return APIClient.request(api: AuthAPI.signIn(email: email, password: password),completion : completion)
@@ -116,7 +89,6 @@ enum AuthAPI : APIConfiguration{
 	
 	static func requestDuplicateCheck(flag : DuplicateCheckFlag,input : String, completion : @escaping (JSON?) -> Void) {
 		return APIClient.request(api: AuthAPI.duplicateCheck(flag: flag.rawValue, input: input),completion : completion)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	

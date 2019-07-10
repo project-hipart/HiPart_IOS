@@ -1,10 +1,5 @@
 import Foundation
 import Alamofire
-<<<<<<< HEAD
-import RxSwift
-=======
-
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 import SwiftyJSON
 
 enum ProfileFlag : Int{
@@ -52,18 +47,10 @@ enum ProfileAPI : APIConfiguration{
 		}
 	}
 	
-<<<<<<< HEAD
-	static func requestList(flag : ProfileFlag) -> Single<JSON>{
-		return APIClient.request(api: ProfileAPI.list(flag: flag))
-	}
-	static func requestDetail(nickname : String) -> Single<JSON>{
-		return APIClient.request(api: ProfileAPI.detail(nickname: nickname))
-=======
 	static func requestList(flag : ProfileFlag,completion : @escaping ((JSON?) -> Void)) {
 		return APIClient.request(api: ProfileAPI.list(flag: flag),completion : completion)
 	}
 	static func requestDetail(nickname : String,completion : @escaping ((JSON?) -> Void)) {
 		return APIClient.request(api: ProfileAPI.detail(nickname: nickname),completion : completion)
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 }

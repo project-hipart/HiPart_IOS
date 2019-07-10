@@ -3,10 +3,7 @@ import Foundation
 class UDUtil {
 	enum Keys : String{
 		case accessToken = "KEY_ACCESS_TOKEN"
-<<<<<<< HEAD
-=======
 		case recentlySearchKeyword = "RECENTLY_SEARCH_EKDKWADADASKDASD"
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
 	}
 	
 	static public func set(_ value:Any?, forKey: Keys){

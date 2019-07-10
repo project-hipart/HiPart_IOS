@@ -24,13 +24,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="회원 가입 완료"/>
-<<<<<<< HEAD
                                 <connections>
                                     <action selector="upLoadSignUpData:" destination="ebO-wO-hcQ" eventType="touchUpInside" id="Fgb-z8-88W"/>
                                     <segue destination="hCB-Z6-e0g" kind="presentation" identifier="toSignUpSuccess" id="S59-cx-6Cz"/>
                                 </connections>
-=======
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rNY-Ku-Hjk">
                                 <rect key="frame" x="50" y="169" width="274" height="274"/>
@@ -43,11 +40,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-<<<<<<< HEAD
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SignUpFinishCell" reuseIdentifier="SignUpFinishCell" id="M4N-6e-lI6" customClass="SignUpFinishCell" customModule="HiPart" customModuleProvider="target">
-=======
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SignUpFinishCell" id="M4N-6e-lI6" customClass="SignUpFinishCell" customModule="HiPart" customModuleProvider="target">
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -59,11 +52,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-9a-Pw7">
-<<<<<<< HEAD
                                                     <rect key="frame" x="46" y="86" width="40" height="14"/>
-=======
-                                                    <rect key="frame" x="47" y="86" width="38" height="14"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="darkGrey"/>
@@ -98,7 +87,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Sf-gt-2W5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="2068" y="53.523238380809602"/>
         </scene>
         <!--Login-->
@@ -108,9 +96,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccl-8A-nYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2719.1999999999998" y="-7.1964017991004505"/>
-=======
-            <point key="canvasLocation" x="1128.8" y="53.523238380809602"/>
->>>>>>> 1d34159a9b9e9d299576111709f556c1dab7e11a
         </scene>
     </scenes>
     <resources>
