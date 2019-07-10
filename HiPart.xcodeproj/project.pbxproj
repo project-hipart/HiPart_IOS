@@ -135,7 +135,6 @@
 		60B6A4B022CDDA5E003B88EC /* EllipsePurpleLongBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6A4AF22CDDA5E003B88EC /* EllipsePurpleLongBtn.swift */; };
 		60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AD22CF909E00BA1859 /* ViewExtension.swift */; };
 		60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */; };
-		60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B122CF90C700BA1859 /* BlurExtension.swift */; };
 		60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B322CF916600BA1859 /* DeviceExtension.swift */; };
 		60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */; };
 /* End PBXBuildFile section */
@@ -271,7 +270,6 @@
 		60B6A4AF22CDDA5E003B88EC /* EllipsePurpleLongBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsePurpleLongBtn.swift; sourceTree = "<group>"; };
 		60FB32AD22CF909E00BA1859 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		60FB32B122CF90C700BA1859 /* BlurExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurExtension.swift; sourceTree = "<group>"; };
 		60FB32B322CF916600BA1859 /* DeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
 		60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerExtension.swift; sourceTree = "<group>"; };
 		8456534407704897DD70736D /* Pods_HiPart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiPart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -462,7 +460,6 @@
 			children = (
 				60FB32AD22CF909E00BA1859 /* ViewExtension.swift */,
 				60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */,
-				60FB32B122CF90C700BA1859 /* BlurExtension.swift */,
 				60FB32B322CF916600BA1859 /* DeviceExtension.swift */,
 				60FB32B522CF91BD00BA1859 /* ViewLayerExtension.swift */,
 				2D8B4D9722D48A65004F48C7 /* Animations.swift */,
@@ -1012,7 +1009,6 @@
 				2D8B4D8B22D3A573004F48C7 /* Notification.swift in Sources */,
 				2D813DF922D0883800E02DD5 /* HipartDetailViewController.swift in Sources */,
 				2DFDA75C22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.swift in Sources */,
-				60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */,
 				2D813E0722D1C82000E02DD5 /* APIClient.swift in Sources */,
 				2D06750122D31B92006D9FB8 /* SignUpFinishData.swift in Sources */,
 				6014C98422C782C300ACB80E /* AppDelegate.swift in Sources */,

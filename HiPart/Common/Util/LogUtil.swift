@@ -1,6 +1,5 @@
-
-
 import Foundation
+
 func debugE(_ msg : Any...){
 	if msg.count == 0{
 		print("🌹",msg)

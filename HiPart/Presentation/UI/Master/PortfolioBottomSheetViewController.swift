@@ -69,7 +69,6 @@ extension PortfolioBottomSheetViewController{
 	@IBAction func tapBackground(_ sender: Any) {
 			if let parent = self.parent{
 				parent.remove(asChildViewController: self)
-				parent.view.removeBlurView()
 			}
 	}
 	

@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class HiPartViewModel {
 	var currentTab : ProfileFlag = .All
-	private let disposeBag = DisposeBag()
 	
 	weak var delegate : HiPartViewModelDelegate? = nil{
 		didSet{
@@ -33,26 +32,21 @@ class HiPartViewModel {
 		}
 	}
 	
-	init() {
-		loadDatas(.All)
-	}
+	init() {loadDatas(.All)}
 	
 	func loadDatas(_ flag : ProfileFlag){
 		currentTab = flag
 		isRefreshing = true
-
-
 		
 		ProfileRepository.shared.list(flag: flag)
 			.do(onDispose: {self.isRefreshing = false})
 			.subscribe(onSuccess: { profiles in
-			self.profiles = profiles
-				
+				self.profiles = profiles
 				self.isRefreshing = false
 			}, onError: {
 				debugE($0)
 				self.isRefreshing = false
-		}).disposed(by: self.disposeBag)
+			})
 	}
 	
 }

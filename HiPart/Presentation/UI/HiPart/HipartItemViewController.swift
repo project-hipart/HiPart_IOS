@@ -1,4 +1,3 @@
-
 import UIKit
 import Hero
 import RxSwift
@@ -23,15 +22,12 @@ extension HipartItemViewController{
 		setupBinding()
 		// Do any additional setup after loading the view.
 	}
-	
-	
 }
+
 extension HipartItemViewController : HiPartViewModelDelegate{
-	
 	@objc private func refresh(){
 		viewModel.loadDatas(viewModel.currentTab)
 	}
-	
 	func onChangeProfiles(profiles: [ProfileDTO]) {
 		self.collectionView.reloadData()
 	}

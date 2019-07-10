@@ -12,7 +12,6 @@ protocol SearchCollectionViewCellDelegate : NSObjectProtocol{
 class SearchCollectionViewCell: UICollectionViewCell {
 
 	weak var delegate : SearchCollectionViewCellDelegate? = nil
-	private let disposeBag = DisposeBag()
 	
 //	@IBOutlet var platformStackView: UIStackView!
 	@IBOutlet var platformImageView: UIImageView!
@@ -198,7 +197,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 					
 				}, onError: { err in
 					debugE(err)
-				}).disposed(by: disposeBag)
+				})
 		}else{
 			PickRepository.shared.pickAdd(nickname: self.profile.nickname)
 				.subscribe(onSuccess: {[unowned self] success in
@@ -214,7 +213,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 					
 					}, onError: { err in
 						debugE(err)
-				}).disposed(by: disposeBag)
+				})
 		}
 		
 	}

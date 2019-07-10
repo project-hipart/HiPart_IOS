@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import RxSwift
+import SnapKit
 
 class HipartDetailViewController: UIViewController {
 	let viewModel = HiPartDetailViewModel()
@@ -27,6 +28,7 @@ class HipartDetailViewController: UIViewController {
 	
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var subscriberHeadLabel: UILabel!
+	@IBOutlet var hifiveHeadLabel: UILabel!
 	
 	var profile : ProfileDetailDTO!
 	//	var profile : ProfileDTO?
@@ -45,8 +47,29 @@ class HipartDetailViewController: UIViewController {
 	@IBOutlet var filterStackView: UIStackView!
 	private var filterViews : [FilterChip] = []
 	
+	@IBOutlet var portfolioBottomButtonContainer: UIView!
+	@IBOutlet var cancelButton: UIButton!
+	@IBOutlet var editButton: UIButton!
+	@IBOutlet var contactButton: UIButton!
+	
 	private var uploadVideoViewController : PortfolioEditEmbedViewController?
 	private var uploadTransViewController : PortfolioEditEmbedTransViewController?
+	
+	
+	private  var platformIconTap : UITapGestureRecognizer {
+		let tap = UITapGestureRecognizer()
+		tap.delegate = self
+		tap.addTarget(self, action: #selector(tapPlatformIcon(_:)))
+		return tap
+	}
+	private  var subscriberTap : UITapGestureRecognizer {
+		let tap = UITapGestureRecognizer()
+		tap.delegate = self
+		return tap
+	}
+}
+extension HipartDetailViewController : UIGestureRecognizerDelegate{
+	
 }
 
 extension HipartDetailViewController {
@@ -93,6 +116,8 @@ extension HipartDetailViewController {
 		
 	}
 }
+
+//MARK: Common Setups
 extension HipartDetailViewController{
 	private func setupHero(){
 		self.hero.isEnabled=true
@@ -151,9 +176,28 @@ extension HipartDetailViewController{
 			self.subscriberLabel.isHidden = true
 			self.subscriberHeadLabel.isHidden = true
 			
+			hifiveHeadLabel.snp.remakeConstraints{[unowned self] make in
+				make.left.equalTo(self.imageView.snp.right).offset(14.5)
+			}
+		}
+		
+		//만약 포트폴리오에서 수정하는 화면이라면
+		if isPortfolioView{
+			self.portfolioBottomButtonContainer.isHidden = false
+			self.cancelButton.addTarget(self, action: #selector(tapCancelButton), for: .touchUpInside)
+			self.editButton.addTarget(self, action: #selector(tapEditButton), for: .touchUpInside)
+			addTapTargets()
+			
+		}
+		//디테일 화면에서 보는 것이라면
+		else{
+			self.contactButton.isHidden = false
+			contactButton.addTarget(self, action: #selector(tapContactButton), for: .touchUpInside)
 		}
 		
 	}
+	
+	
 	private func setPlatformImage(){
 		if let profile = self.profile{
 			switch profile.detailPlatform{
@@ -217,6 +261,33 @@ extension HipartDetailViewController{
 		
 	}
 }
+//MARK: Portfolio Edit Setups
+extension HipartDetailViewController{
+	private func addTapTargets(){
+		self.youtubeLogo.addGestureRecognizer(self.platformIconTap)
+		self.twitchLogo.addGestureRecognizer(self.platformIconTap)
+		self.afreecaLogo.addGestureRecognizer(self.platformIconTap)
+	}
+	
+	@objc private func tapPlatformIcon(_ tap : UITapGestureRecognizer){
+		switch tap.view{
+		case self.youtubeLogo:
+			youtubeLogo.image = UIImage(named : "pofolYoutubeWhiteImg")
+			afreecaLogo.image = UIImage(named : "")
+			twitchLogo.image = UIImage(named : "")
+		case self.afreecaLogo:
+			youtubeLogo.image = UIImage(named : "")
+			afreecaLogo.image = UIImage(named : "pofolAfreecaWhiteImg")
+			twitchLogo.image = UIImage(named : "")
+		case self.twitchLogo:
+			youtubeLogo.image = UIImage(named : "")
+			afreecaLogo.image = UIImage(named : "")
+			twitchLogo.image = UIImage(named : "pofolTwitchWhiteImg")
+		default:
+			break
+		}
+	}
+}
 
 extension HipartDetailViewController : HiPartDetailViewModelDelegate{
 	
@@ -238,7 +309,18 @@ extension HipartDetailViewController{
 			self.add(asChildViewController: vc, to: self.view)
 		}
 	}
-	@IBAction func tapContactButton(_ sender: Any) {
+	
+	///Cancel
+	@objc private func tapCancelButton(){
+		self.hero.dismissViewController()
+	}
+	///Edit
+	@objc private func tapEditButton(){
+		
+	}
+	
+	///Contact
+	@objc private func tapContactButton(_ sender: Any) {
 		
 		let sb = UIStoryboard(name: "HiPart", bundle: nil)
 		let vc = sb.instantiateViewController(withIdentifier: String(describing: PaymentDialogViewController.self)) as! PaymentDialogViewController

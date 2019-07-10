@@ -28,23 +28,6 @@ class Device {
     static var screenHeight: CGFloat{
         return UIScreen.main.bounds.height
     }
-    static var renderViewHeight: CGFloat{
-        return screenWidth * 4 / 3
-    }
-    static var bottomBoxHeight : CGFloat{
-        return screenHeight - renderViewHeight
-    }
-    static var bottomCollectionViewMaxHeight: CGFloat{
-        if UI_USER_INTERFACE_IDIOM() == .pad{
-            return (screenHeight - screenWidth)/2
-        }else{
-            return bottomBoxHeight/2
-        }
-    }
-    static var isIphoneSE :Bool{
-        
-        return screenWidth == 320 && screenHeight == 568
-    }
     static var topSafeAreaPadding : CGFloat{
         if #available(iOS 11.0, *) {
             return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0

@@ -23,7 +23,6 @@ class APIClient{
 		default:
 			fatalError()
 		}
-		
 	}
 	
 	private static func requestJSON(api : APIConfiguration,encoding : ParameterEncoding = URLEncoding.default) -> Single<JSON>{

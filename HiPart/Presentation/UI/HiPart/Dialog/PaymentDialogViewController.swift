@@ -12,7 +12,6 @@ import Hero
 import RxSwift
 
 class PaymentDialogViewController: UIViewController {
-	private let disposeBag = DisposeBag()
 	@IBOutlet var blockView: UIView!
 	@IBOutlet var okButton: UIButton!
 	@IBOutlet var checkBox: BEMCheckBox!
@@ -43,7 +42,7 @@ class PaymentDialogViewController: UIViewController {
 					}
 				}, onError: {err in
 					debugE(err)
-					}).disposed(by: disposeBag)
+					})
 			
 		}else{
 			

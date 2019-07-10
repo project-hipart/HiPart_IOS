@@ -12,7 +12,6 @@ import Alamofire
 import SwiftyJSON
 
 class HiPartDetailViewModel {
-	private let disposeBag = DisposeBag()
 	
 	weak var delegate : HiPartDetailViewModelDelegate? = nil{
 		didSet{

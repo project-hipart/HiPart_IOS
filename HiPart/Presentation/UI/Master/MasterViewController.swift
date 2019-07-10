@@ -76,7 +76,6 @@ extension MasterViewController{
 	@objc private func tapBackground(_ sender : UITapGestureRecognizer){
 		if let vc = self.portfolioBottomSheetVC{
 			self.remove(asChildViewController: vc)
-			self.view.removeBlurView()
 			self.view.removeGestureRecognizer(tapGestureRecognizer)
 		}
 	}

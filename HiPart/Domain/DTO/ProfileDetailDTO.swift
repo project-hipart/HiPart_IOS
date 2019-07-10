@@ -9,22 +9,22 @@ import SwiftyJSON
 
 // MARK: - ResCreData
 struct ProfileDetailDTO {
-	let hifiveState: Int
-	let userNickname: String
-	let userImg: String
-	let userType : UserType
-	let detailPlatform: Platform
+	var hifiveState: Int
+	var userNickname: String
+	var userImg: String
+	var userType : UserType
+	var detailPlatform: Platform
 	
-	let detailSubscriber, detailOneline, detailAppeal, detailWant: String
-	let hifive : Int
+	var detailSubscriber, detailOneline, detailAppeal, detailWant: String
+	var hifive : Int
 	
-	let workIndex : [Int]
-	let thumbnail: [String]
-	let url, title, content: [String]
-	let before,after : [String]
+	var workIndex : [Int]
+	var thumbnail: [String]
+	var url, title, content: [String]
+	var before,after : [String]
 	
-	let pick: Int
-	let etc, concept, lang, pd: Filter?
+	var pick: Int
+	var etc, concept, lang, pd: Filter?
 	
 	
 	init(fromJSON : JSON, type : UserType, fromProfile : Bool){

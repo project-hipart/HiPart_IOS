@@ -11,7 +11,6 @@ import Hero
 import RxSwift
 
 class PortfolioUploadViewController: UIViewController {
-	private let disposeBag = DisposeBag()
 	@IBOutlet var urlTextField: UITextField!
 	@IBOutlet var imageView: UIImageView!
 	
@@ -116,7 +115,7 @@ extension PortfolioUploadViewController{
 					debugE(err)
 					
 					LoadingView.hideLoadingView()
-			}).disposed(by: disposeBag)
+			})
 	}
 }
 

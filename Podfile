@@ -13,8 +13,6 @@ target 'HiPart' do
 	pod 'AlamofireImage', '~> 3.5'
 	pod 'BEMCheckBox'
 	pod 'RxSwift'
-	pod 'RxCocoa'
 	pod 'lottie-ios'
 	
-#	pod 'Alamofire-SwiftyJSON'
 end

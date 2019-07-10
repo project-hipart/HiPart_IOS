@@ -15,13 +15,9 @@ class HiPartViewController: UIViewController {
 	@IBOutlet var adViewContainer: UIView!
 	@IBOutlet var tabLayout: TabLayout!
 	
-	
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		self.setupView()
-        // Do any additional setup after loading the view.
     }
 	
 	private func setupView(){

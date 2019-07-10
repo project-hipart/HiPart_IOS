@@ -4,7 +4,6 @@ import Foundation
 
 class SearchDetailViewModel{
 	
-	private let disposeBag = DisposeBag()
 	
 	var allProfiles : [ProfileDTO] = []
 	
@@ -36,7 +35,7 @@ class SearchDetailViewModel{
 				}
 			}, onError: { err in
 				debugE(err)
-			}).disposed(by: disposeBag)
+			})
 	}
 	
 	func changeTypeFilter(_ type : UserType){
@@ -50,7 +49,6 @@ class SearchDetailViewModel{
 			return [UserType.All, self.currentUserTypeFilter].contains(profile.type)
 		}
 	}
-	
 }
 
 protocol SearchDetailViewModelDelegate : NSObjectProtocol{
