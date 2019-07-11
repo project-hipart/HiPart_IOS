@@ -23,6 +23,8 @@
 		2D06750D22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */; };
 		2D06750F22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */; };
 		2D06751122D3779B006D9FB8 /* UploadTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06751022D3779B006D9FB8 /* UploadTrans.swift */; };
+		2D18AC4222D70739009067E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18AC4122D70739009067E6 /* Assets.xcassets */; };
+		2D18AC4422D7077C009067E6 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18AC4322D7077C009067E6 /* PortfolioEditEmbedViewController.swift */; };
 		2D55F52A22CF9660008D2412 /* PortfolioBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */; };
 		2D55F52B22CF9660008D2412 /* PortfolioBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */; };
 		2D79367A22CF94200081E065 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79367622CF941F0081E065 /* SearchDetailViewController.swift */; };
@@ -134,9 +136,6 @@
 		60C7821F22D6567D005619E5 /* PatModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7821E22D6567D005619E5 /* PatModifyViewController.swift */; };
 		60C7822322D6748F005619E5 /* PatModifyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7822222D6748F005619E5 /* PatModifyCollectionCell.swift */; };
 		60C7822522D6749E005619E5 /* PatModifySetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7822422D6749E005619E5 /* PatModifySetData.swift */; };
-		60C7822722D694E3005619E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C7822622D694E3005619E5 /* Assets.xcassets */; };
-		60C7822922D6970C005619E5 /* PortfolioEditEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7822822D6970C005619E5 /* PortfolioEditEmbedViewController.swift */; };
-		60C7822B22D69717005619E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C7822A22D69717005619E5 /* Default-568h@2x.png */; };
 		60FB32AE22CF909E00BA1859 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AD22CF909E00BA1859 /* ViewExtension.swift */; };
 		60FB32B022CF90B500BA1859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */; };
 		60FB32B222CF90C700BA1859 /* BlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB32B122CF90C700BA1859 /* BlurExtension.swift */; };
@@ -160,6 +159,8 @@
 		2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioEditEmbedTransCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedTransViewController.swift; sourceTree = "<group>"; };
 		2D06751022D3779B006D9FB8 /* UploadTrans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadTrans.swift; sourceTree = "<group>"; };
+		2D18AC4122D70739009067E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D18AC4322D7077C009067E6 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
 		2D55F52822CF965E008D2412 /* PortfolioBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D55F52922CF965F008D2412 /* PortfolioBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioBottomSheetViewController.xib; sourceTree = "<group>"; };
 		2D79367622CF941F0081E065 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
@@ -275,9 +276,6 @@
 		60C7821E22D6567D005619E5 /* PatModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifyViewController.swift; sourceTree = "<group>"; };
 		60C7822222D6748F005619E5 /* PatModifyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifyCollectionCell.swift; sourceTree = "<group>"; };
 		60C7822422D6749E005619E5 /* PatModifySetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatModifySetData.swift; sourceTree = "<group>"; };
-		60C7822622D694E3005619E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
-		60C7822822D6970C005619E5 /* PortfolioEditEmbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioEditEmbedViewController.swift; path = ../../../../../../Downloads/PortfolioEditEmbedViewController.swift; sourceTree = "<group>"; };
-		60C7822A22D69717005619E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		60FB32AD22CF909E00BA1859 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		60FB32AF22CF90B500BA1859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		60FB32B122CF90C700BA1859 /* BlurExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurExtension.swift; sourceTree = "<group>"; };
@@ -412,14 +410,14 @@
 		2D813DF222D07B9C00E02DD5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				60C7822822D6970C005619E5 /* PortfolioEditEmbedViewController.swift */,
+				2D18AC4322D7077C009067E6 /* PortfolioEditEmbedViewController.swift */,
 				2D06750E22D3777D006D9FB8 /* PortfolioEditEmbedTransViewController.swift */,
 				2DF4C7ED22D0188400794FC1 /* PortfolioFilterEditViewController.swift */,
+				2D8B4D8422D3A023004F48C7 /* Common.storyboard */,
 				2D79368222CF943E0081E065 /* SearchCollectionViewCell.swift */,
 				2D79368422CF943F0081E065 /* SearchCollectionViewCell.xib */,
 				2D06750A22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.swift */,
 				2D06750B22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib */,
-				2D8B4D8422D3A023004F48C7 /* Common.storyboard */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -587,7 +585,6 @@
 		6014C97722C782C300ACB80E = {
 			isa = PBXGroup;
 			children = (
-				60C7822A22D69717005619E5 /* Default-568h@2x.png */,
 				602FB3A322CA7CD6003ED6DB /* SupportFiles */,
 				60B2EED122C78468000724B6 /* Resources */,
 				6014C98222C782C300ACB80E /* HiPart */,
@@ -659,7 +656,7 @@
 		60B2EED122C78468000724B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				60C7822622D694E3005619E5 /* Assets.xcassets */,
+				2D18AC4122D70739009067E6 /* Assets.xcassets */,
 				2DAF383122D00DFF00B91FE4 /* Fonts */,
 				60463E2122CD205A00DFFF91 /* ColorRes.swift */,
 				2DAF383622D00E9500B91FE4 /* Font.swift */,
@@ -890,6 +887,7 @@
 				2D8B4DBC22D4C8CC004F48C7 /* img_2.png in Resources */,
 				6014C98E22C782C400ACB80E /* LaunchScreen.storyboard in Resources */,
 				2D0674FF22D31B92006D9FB8 /* SignUpFinsh.storyboard in Resources */,
+				2D18AC4222D70739009067E6 /* Assets.xcassets in Resources */,
 				2DAF383B22D012A500B91FE4 /* NanumSquareBold.ttf in Resources */,
 				602FB3AC22CBC5B2003ED6DB /* Notice.storyboard in Resources */,
 				2D9E094122CFC443008DFA78 /* PortfolioEdit.storyboard in Resources */,
@@ -897,7 +895,6 @@
 				2D8B4DA922D4C482004F48C7 /* data.json in Resources */,
 				2D79368622CF943F0081E065 /* Search.storyboard in Resources */,
 				2D8B4DBD22D4C8CC004F48C7 /* img_3.png in Resources */,
-				60C7822722D694E3005619E5 /* Assets.xcassets in Resources */,
 				2D8B4D8522D3A023004F48C7 /* Common.storyboard in Resources */,
 				2D06750622D31B92006D9FB8 /* Login.storyboard in Resources */,
 				2DFDA75D22CFAD810066E541 /* PortfolioEditEmbedCollectionViewCell.xib in Resources */,
@@ -909,7 +906,6 @@
 				2D8B4DBE22D4C8CC004F48C7 /* img_4.png in Resources */,
 				2D8B4DBB22D4C8CC004F48C7 /* img_0.png in Resources */,
 				60B2EEE422C7960C000724B6 /* MyPage.storyboard in Resources */,
-				60C7822B22D69717005619E5 /* Default-568h@2x.png in Resources */,
 				2D06750D22D37570006D9FB8 /* PortfolioEditEmbedTransCollectionViewCell.xib in Resources */,
 				2D06750322D31B92006D9FB8 /* SignUp.storyboard in Resources */,
 				2D79368C22CF943F0081E065 /* SearchCollectionViewCell.xib in Resources */,
@@ -993,6 +989,7 @@
 				2D8B4D9F22D49561004F48C7 /* PortfolioRepository.swift in Sources */,
 				60B2EEEC22C8BB49000724B6 /* MyPageViewController.swift in Sources */,
 				2D813DE922D036D700E02DD5 /* Constants.swift in Sources */,
+				2D18AC4422D7077C009067E6 /* PortfolioEditEmbedViewController.swift in Sources */,
 				2D813DFE22D0A50700E02DD5 /* PickDialogView.swift in Sources */,
 				60FB32B422CF916600BA1859 /* DeviceExtension.swift in Sources */,
 				60463E1E22CCD43F00DFFF91 /* MyPageList.swift in Sources */,
@@ -1056,7 +1053,6 @@
 				60463E1A22CCCC3700DFFF91 /* MyPageListViewController.swift in Sources */,
 				2D0674FE22D31B92006D9FB8 /* SignUpFinshViewController.swift in Sources */,
 				60463E1822CCC5C500DFFF91 /* GreyBorderUIView.swift in Sources */,
-				60C7822922D6970C005619E5 /* PortfolioEditEmbedViewController.swift in Sources */,
 				60C7821F22D6567D005619E5 /* PatModifyViewController.swift in Sources */,
 				60FB32B622CF91BD00BA1859 /* ViewLayerExtension.swift in Sources */,
 				60B2EEFB22C8C2B5000724B6 /* MasterViewModel.swift in Sources */,
