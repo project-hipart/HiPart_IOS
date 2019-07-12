@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRegular.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PortfolioEditEmbedTransCollectionViewCell" customModule="HiPart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="191"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="191"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR4-Pp-G03">
+                        <rect key="frame" x="0.0" y="5" width="170" height="14.5"/>
+                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
+                        <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfo-dK-j0i">
+                        <rect key="frame" x="0.0" y="95" width="170" height="1"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="NO3-ho-Bol"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-OY-n13">
+                        <rect key="frame" x="0.0" y="101" width="170" height="14.5"/>
+                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
+                        <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="cUk-OY-n13" firstAttribute="top" secondItem="Jfo-dK-j0i" secondAttribute="bottom" constant="5" id="1hF-oW-F7T"/>
+                <constraint firstItem="XR4-Pp-G03" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4rU-TO-lLf"/>
+                <constraint firstItem="XR4-Pp-G03" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="54a-dI-vBw"/>
+                <constraint firstItem="Jfo-dK-j0i" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="D7E-yf-KNx"/>
+                <constraint firstItem="cUk-OY-n13" firstAttribute="centerX" secondItem="Jfo-dK-j0i" secondAttribute="centerX" id="Mc4-Z8-wlj"/>
+                <constraint firstItem="cUk-OY-n13" firstAttribute="width" secondItem="Jfo-dK-j0i" secondAttribute="width" id="TiI-2C-RYz"/>
+                <constraint firstItem="XR4-Pp-G03" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="bto-1e-XUa"/>
+                <constraint firstItem="Jfo-dK-j0i" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="e3a-is-rUc"/>
+                <constraint firstItem="Jfo-dK-j0i" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tcu-yT-FSO"/>
+            </constraints>
+            <size key="customSize" width="251" height="183"/>
+            <connections>
+                <outlet property="afterLabel" destination="cUk-OY-n13" id="Ra6-Ag-R4Y"/>
+                <outlet property="beforeLabel" destination="XR4-Pp-G03" id="xu1-Bm-sPf"/>
+            </connections>
+            <point key="canvasLocation" x="136" y="93"/>
+        </collectionViewCell>
+    </objects>
+</document>
