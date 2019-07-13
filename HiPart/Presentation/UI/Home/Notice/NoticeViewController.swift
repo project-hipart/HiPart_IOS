@@ -61,8 +61,7 @@ extension NoticeViewController {
         MainAPI.requestNotification { json in
             if let json = json {
                 debugE(json)
-                
-                var cellTextData: String?
+            
                 
                 if json["success"].boolValue {
                     

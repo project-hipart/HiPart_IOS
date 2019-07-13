@@ -310,7 +310,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyv-Zx-HHa">
-                                                <rect key="frame" x="127" y="59" width="65" height="22.5"/>
+                                                <rect key="frame" x="127" y="58" width="65" height="23.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="SbD-9f-zzd"/>
                                                 </constraints>
@@ -318,26 +318,26 @@
                                                     <fragment content="Nado">
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="20" name="NanumSquareB"/>
+                                                            <font key="NSFont" metaFont="system" size="20"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content=" 님">
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <font key="NSFont" size="14" name="NanumSquareB"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolYoutubeOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-Wx-HDt">
-                                                <rect key="frame" x="197" y="58.5" width="24" height="24"/>
+                                                <rect key="frame" x="197" y="58" width="24" height="24"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolAfreecaWhiteOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mx-hug">
-                                                <rect key="frame" x="223" y="56.5" width="24" height="24"/>
+                                                <rect key="frame" x="223" y="56" width="24" height="24"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofolTwitchWhiteOffImg" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-7i-nzJ">
-                                                <rect key="frame" x="249" y="58.5" width="24" height="24"/>
+                                                <rect key="frame" x="249" y="58" width="24" height="24"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4351" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-pk-iYi">
                                                 <rect key="frame" x="197" y="81.5" width="132" height="25"/>
@@ -813,10 +813,7 @@
                                 <rect key="frame" x="56.5" y="200" width="262.5" height="267"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-aU-ry6" customClass="BEMCheckBox">
-                                        <rect key="frame" x="47.5" y="166.5" width="14" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="14" id="Qia-dB-jlh"/>
-                                        </constraints>
+                                        <rect key="frame" x="48" y="168" width="16.5" height="13"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="enableMorphing" value="YES"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="_IBMarkType" value="checkmark"/>
@@ -838,7 +835,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하이파이브 하시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3w-ZN-8Nm">
-                                        <rect key="frame" x="70.5" y="165" width="148.5" height="17"/>
+                                        <rect key="frame" x="70.5" y="165" width="149" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="149" id="rnY-99-6Bf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
                                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -862,14 +862,48 @@
                                             <action selector="tapOkButton:" destination="Eys-OA-Kkb" eventType="touchUpInside" id="9Nk-5p-gYm"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb9-Sc-SdL">
+                                        <rect key="frame" x="0.0" y="34" width="262.5" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Ecm-Gz-hJL"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="연락처를">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                                    <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="결제하려면">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                                    <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="H3w-ZN-8Nm" firstAttribute="centerY" secondItem="Orw-aU-ry6" secondAttribute="centerY" id="Hx4-g2-aho"/>
                                     <constraint firstItem="89b-AZ-Uxr" firstAttribute="centerX" secondItem="e1G-PW-DEJ" secondAttribute="centerX" id="IJN-Mu-CHR"/>
-                                    <constraint firstItem="H3w-ZN-8Nm" firstAttribute="leading" secondItem="Orw-aU-ry6" secondAttribute="trailing" constant="9" id="Kuu-iz-HbU"/>
+                                    <constraint firstItem="Orw-aU-ry6" firstAttribute="leading" secondItem="e1G-PW-DEJ" secondAttribute="leading" constant="48" id="KOZ-i0-Juw"/>
+                                    <constraint firstAttribute="trailing" secondItem="H3w-ZN-8Nm" secondAttribute="trailing" constant="43" id="Yt8-Kp-Dis"/>
+                                    <constraint firstItem="Nb9-Sc-SdL" firstAttribute="centerX" secondItem="89b-AZ-Uxr" secondAttribute="centerX" id="cTv-oZ-9uq"/>
                                     <constraint firstItem="89b-AZ-Uxr" firstAttribute="width" secondItem="e1G-PW-DEJ" secondAttribute="width" multiplier="0.8" id="en9-Jc-M0X"/>
-                                    <constraint firstItem="89b-AZ-Uxr" firstAttribute="top" secondItem="H3w-ZN-8Nm" secondAttribute="bottom" constant="24" id="t2a-YY-wwR"/>
+                                    <constraint firstItem="Nb9-Sc-SdL" firstAttribute="top" secondItem="e1G-PW-DEJ" secondAttribute="top" constant="34" id="gJ6-OC-t2C"/>
+                                    <constraint firstItem="H3w-ZN-8Nm" firstAttribute="top" secondItem="Nb9-Sc-SdL" secondAttribute="bottom" constant="88" id="nVc-bg-qDd"/>
+                                    <constraint firstItem="Nb9-Sc-SdL" firstAttribute="leading" secondItem="e1G-PW-DEJ" secondAttribute="leading" id="uBw-QU-OeM"/>
+                                    <constraint firstItem="H3w-ZN-8Nm" firstAttribute="leading" secondItem="Orw-aU-ry6" secondAttribute="trailing" constant="6" id="wAY-8C-oOV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -877,53 +911,65 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-zF-ote">
-                                <rect key="frame" x="56.5" y="240" width="262.5" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
+                                <rect key="frame" x="104" y="333" width="167" height="15"/>
+                                <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
+                                <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlH-eG-km9">
+                                <rect key="frame" x="56" y="255" width="263" height="43"/>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">연락처를 결제하려면
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="NanumSquareR"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="3팜">
+                                    <fragment content="3">
                                         <attributes>
                                             <color key="NSColor" red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="NanumSquareB"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="이 필요합니다">
+                                    <fragment content="팜">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="NanumSquareR"/>
+                                            <color key="NSColor" red="0.47450980392156861" green="0.27843137254901962" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="이">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="필요합니다">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="구매조건 확인 및 결제조건 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-KH-s4k">
-                                <rect key="frame" x="104" y="332" width="167" height="14.5"/>
-                                <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
-                                <color key="textColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.67000000000000004" alpha="0.3966716609589041" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ppL-zF-ote" firstAttribute="top" secondItem="e1G-PW-DEJ" secondAttribute="top" constant="40" id="2ey-db-Dkd"/>
+                            <constraint firstItem="3CZ-KH-s4k" firstAttribute="centerX" secondItem="u22-Sr-fEN" secondAttribute="centerX" id="4Ie-9C-KyU"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="centerY" secondItem="u22-Sr-fEN" secondAttribute="centerY" id="585-b9-Cyj"/>
-                            <constraint firstItem="3CZ-KH-s4k" firstAttribute="top" secondItem="ppL-zF-ote" secondAttribute="bottom" constant="52" id="5n6-uR-NCq"/>
-                            <constraint firstItem="3CZ-KH-s4k" firstAttribute="centerX" secondItem="ppL-zF-ote" secondAttribute="centerX" id="Db8-HY-oS8"/>
-                            <constraint firstItem="Orw-aU-ry6" firstAttribute="leading" secondItem="3CZ-KH-s4k" secondAttribute="leading" id="I42-q7-bDx"/>
-                            <constraint firstItem="ppL-zF-ote" firstAttribute="width" secondItem="e1G-PW-DEJ" secondAttribute="width" id="YNJ-aH-9Mr"/>
+                            <constraint firstItem="3CZ-KH-s4k" firstAttribute="top" secondItem="KlH-eG-km9" secondAttribute="bottom" constant="29" id="MzV-x2-oec"/>
+                            <constraint firstItem="DK5-xH-ePd" firstAttribute="bottom" secondItem="3CZ-KH-s4k" secondAttribute="bottom" constant="319" id="Qdw-OZ-Wwo"/>
+                            <constraint firstItem="3CZ-KH-s4k" firstAttribute="centerX" secondItem="KlH-eG-km9" secondAttribute="centerX" id="ZJ2-rZ-o1U"/>
                             <constraint firstItem="Orw-aU-ry6" firstAttribute="top" secondItem="3CZ-KH-s4k" secondAttribute="bottom" constant="20" id="b8T-wt-tWs"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="centerX" secondItem="DK5-xH-ePd" secondAttribute="centerX" id="boL-jo-zQi"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="width" secondItem="u22-Sr-fEN" secondAttribute="width" multiplier="0.7" id="pJW-4O-2lO"/>
-                            <constraint firstItem="ppL-zF-ote" firstAttribute="centerX" secondItem="e1G-PW-DEJ" secondAttribute="centerX" id="q7c-XA-7iZ"/>
                             <constraint firstItem="DK5-xH-ePd" firstAttribute="bottom" secondItem="89b-AZ-Uxr" secondAttribute="bottom" constant="219" id="t5a-NK-XyS"/>
                             <constraint firstItem="e1G-PW-DEJ" firstAttribute="height" secondItem="u22-Sr-fEN" secondAttribute="height" multiplier="0.4" id="x2p-BX-2dY"/>
                         </constraints>
@@ -946,7 +992,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2778" y="-421"/>
+            <point key="canvasLocation" x="2776.8000000000002" y="-421.43928035982015"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="4KE-vP-ZRU">

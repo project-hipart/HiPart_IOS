@@ -57,8 +57,13 @@ extension MyPageListViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             let dvc = storyboard?.instantiateViewController(withIdentifier: "MyPagePick") as! MyPagePickViewController
             navigationController?.pushViewController(dvc, animated: true)
-        } else if indexPath.row == 1 {
-            
+        } else if (indexPath.row == 1) || (indexPath.row == 2) || (indexPath.row == 3) {
+            let alert = UIAlertController(title: "서비스 준비 중", message: "조금만 기다려주세요.", preferredStyle: .alert)
+            let confirm = UIAlertAction(title: "확인", style: .cancel) {
+                (cancel) in
+            }
+            alert.addAction(confirm)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

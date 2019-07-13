@@ -2,22 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>이미지를 불러오기위해 사진첩 사용을 허용하시겠습니까?</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NanumSquareBold.ttf</string>
-		<string>NanumSquareRegular.ttf</string>
-		<string>NanumSquareLight.ttf</string>
-		<string>NanumSquareExtraBold.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>HiPat</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -34,6 +22,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>이미지를 불러오기위해 사진첩 사용을 허용하시겠습니까?</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumSquareBold.ttf</string>
+		<string>NanumSquareRegular.ttf</string>
+		<string>NanumSquareLight.ttf</string>
+		<string>NanumSquareExtraBold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
