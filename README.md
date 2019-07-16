@@ -7,6 +7,9 @@
 ## Service Development Environment
 * Apple Swift version 5.0.1
 
+## Work Flow
+![WorkFlow](https://user-images.githubusercontent.com/37900669/61273563-ca4df700-a7e4-11e9-87bb-8682b56d8289.png)
+
 
 **Used Libraries**
 
